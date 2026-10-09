@@ -1079,10 +1079,6 @@ private static final long serialVersionUID = 0L;
   public static final int TYPE_FIELD_NUMBER = 1;
   private int type_ = 0;
   /**
-   * <pre>
-   * The feature type.
-   * </pre>
-   *
    * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
    * @return The enum numeric value on the wire for type.
    */
@@ -1090,10 +1086,6 @@ private static final long serialVersionUID = 0L;
     return type_;
   }
   /**
-   * <pre>
-   * The feature type.
-   * </pre>
-   *
    * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
    * @return The type.
    */
@@ -1483,10 +1475,6 @@ private static final long serialVersionUID = 0L;
 
     private int type_ = 0;
     /**
-     * <pre>
-     * The feature type.
-     * </pre>
-     *
      * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
@@ -1494,10 +1482,6 @@ private static final long serialVersionUID = 0L;
       return type_;
     }
     /**
-     * <pre>
-     * The feature type.
-     * </pre>
-     *
      * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
      * @param value The enum numeric value on the wire for type to set.
      * @return This builder for chaining.
@@ -1509,10 +1493,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The feature type.
-     * </pre>
-     *
      * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
      * @return The type.
      */
@@ -1522,10 +1502,6 @@ private static final long serialVersionUID = 0L;
       return result == null ? ai.visma.ssn.annotator.v1.Feature.Type.UNRECOGNIZED : result;
     }
     /**
-     * <pre>
-     * The feature type.
-     * </pre>
-     *
      * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
      * @param value The type to set.
      * @return This builder for chaining.
@@ -1540,10 +1516,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The feature type.
-     * </pre>
-     *
      * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
      * @return This builder for chaining.
      */

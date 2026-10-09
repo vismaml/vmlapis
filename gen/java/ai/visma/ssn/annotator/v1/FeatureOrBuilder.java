@@ -10,19 +10,11 @@ public interface FeatureOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * The feature type.
-   * </pre>
-   *
    * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
    * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
-   * <pre>
-   * The feature type.
-   * </pre>
-   *
    * <code>.ssn.annotator.v1.Feature.Type type = 1 [json_name = "type"];</code>
    * @return The type.
    */

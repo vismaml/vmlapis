@@ -144,12 +144,32 @@ public final class ProductServiceProto {
       "kRequest\032\026.google.protobuf.Empty\",\202\323\344\223\002&" +
       "\"!/v2/models/product-types:feedback:\001*\0322" +
       "\222A/\022-Suggest product types from text des" +
-      "criptions.B\320\001\n\020ai.visma.asgt.v2B\023Product" +
+      "criptions.B\361\007\n\020ai.visma.asgt.v2B\023Product" +
       "ServiceProtoP\001Z+github.com/e-conomic/vml" +
       "apis/gen/go/asgt/v2\242\002\003AXX\252\002\007Asgt.V2\312\002\007As" +
       "gt\\V2\342\002\023Asgt\\V2\\GPBMetadata\352\002\010Asgt::V2\222A" +
-      "<\022\023\n\rProduct Types2\002v2*\001\0022\020application/j" +
-      "son:\020application/jsonb\006proto3"
+      "\334\006\022\314\005\n\rProduct Types\022\266\005Product Types cla" +
+      "ssifies free-text descriptions, such as " +
+      "invoice lines or bank transactions, into" +
+      " 74 standardized product types, and retu" +
+      "rns ranked candidates with confidence sc" +
+      "ores.\n\n**Hosts:** `api.prod.asgt.visma.a" +
+      "i` for production and `api.stag.asgt.vis" +
+      "ma.ai` for staging.\n\n**Authentication:**" +
+      " send your project token as `Authorizati" +
+      "on: Bearer <token>`. See [Authentication" +
+      "](https://docs.vml.visma.ai/authenticati" +
+      "on/).\n\n**Errors:** a failed call returns" +
+      " an HTTP error status with a JSON body t" +
+      "hat holds `code`, `message` and `details" +
+      "`.\n\n**Guides:** [Product Types](https://" +
+      "docs.vml.visma.ai/producttypes/getting-s" +
+      "tarted/) and [limits and rate limits](ht" +
+      "tps://docs.vml.visma.ai/rate-limit/).2\002v" +
+      "2*\001\0022\020application/json:\020application/json" +
+      "ZR\nP\n\nBearerAuth\022B\010\002\022-Your project token" +
+      ", sent as `Bearer <token>`.\032\rAuthorizati" +
+      "on \002b\020\n\016\n\nBearerAuth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -1,0 +1,330 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Product Types",
+    "description": "Product Types classifies free-text descriptions, such as invoice lines or bank transactions, into 74 standardized product types, and returns ranked candidates with confidence scores.\n\n**Hosts:** `api.prod.asgt.visma.ai` for production and `api.stag.asgt.visma.ai` for staging.\n\n**Authentication:** send your project token as `Authorization: Bearer \u003ctoken\u003e`. See [Authentication](https://docs.vml.visma.ai/authentication/).\n\n**Errors:** a failed call returns an HTTP error status with a JSON body that holds `code`, `message` and `details`.\n\n**Guides:** [Product Types](https://docs.vml.visma.ai/producttypes/getting-started/) and [limits and rate limits](https://docs.vml.visma.ai/rate-limit/).",
+    "version": "v2"
+  },
+  "tags": [
+    {
+      "name": "ProductTypeService",
+      "description": "Suggest product types from text descriptions."
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v2/models/product-types:batchSuggest": {
+      "post": {
+        "summary": "Suggest product types for a batch of text inputs.",
+        "operationId": "ProductTypeService_BatchSuggest",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v2ProductTypeBatchSuggestResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v2ProductTypeBatchSuggestRequest"
+            }
+          }
+        ],
+        "tags": [
+          "ProductTypeService"
+        ]
+      }
+    },
+    "/v2/models/product-types:feedback": {
+      "post": {
+        "summary": "Submit feedback for product type predictions.",
+        "operationId": "ProductTypeService_Feedback",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v2ProductTypeFeedbackRequest"
+            }
+          }
+        ],
+        "tags": [
+          "ProductTypeService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "v2ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN",
+        "VERY_LOW",
+        "LOW",
+        "MID",
+        "HIGH",
+        "VERY_HIGH"
+      ],
+      "default": "UNKNOWN"
+    },
+    "v2InternalProductTypeBatchSuggestResponse": {
+      "type": "object",
+      "properties": {
+        "suggestions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v2ProductTypeSuggestion"
+          }
+        },
+        "logits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v2ProductTypeLogits"
+          }
+        }
+      }
+    },
+    "v2ProductType": {
+      "type": "string",
+      "enum": [
+        "UNDEFINED",
+        "ACCOUNTING_AUDIT",
+        "ACCOUNTING_SOFTWARE",
+        "ADVERTISING",
+        "ALCOHOL_TOBACCO",
+        "MEDICAL_LAB_EQUIPMENT",
+        "BANKING_INVESTMENT",
+        "BOOKS",
+        "BUSINESS_CONSULTING",
+        "CHEMICALS",
+        "CLEANING_SERVICES",
+        "CLEANING_SUPPLIES",
+        "CLOTHING",
+        "ELECTRONICS",
+        "CONSTRUCTION_MATERIALS",
+        "DECORATIONS_ART",
+        "DEFENSE_SECURITY",
+        "DEPOSITS",
+        "DOMESTIC_APPLIANCES",
+        "EDUCATION_TRAINING",
+        "ENERGY",
+        "FACILITY_MAINTENANCE",
+        "AGRICULTURE",
+        "FEES",
+        "FINES",
+        "FOOD_BEVERAGES",
+        "FUEL_LUBRICANTS",
+        "FURNITURE",
+        "GIFTS",
+        "GLASS_CERAMICS",
+        "GOVERNMENT_SERVICES",
+        "GRAPHIC_DESIGN",
+        "FITNESS_CLUBS",
+        "HEALTHCARE",
+        "HOTELS",
+        "INDUSTRIAL_MACHINERY",
+        "MANUFACTURING",
+        "INSURANCE",
+        "INTERNET_MEDIA",
+        "PROPERTY_RENTAL",
+        "LEGAL",
+        "PLANTS_ANIMALS",
+        "MACHINERY_LEASING",
+        "MARKETING",
+        "MEETINGS",
+        "MUSIC",
+        "OFFICE_SUPPLIES",
+        "PACKAGING",
+        "PARKING",
+        "PASSENGER_TRANSPORT",
+        "PAYMENTS",
+        "PAYROLL",
+        "PERSONAL_SERVICES",
+        "PERSONAL_CARE",
+        "PHARMACEUTICALS",
+        "MEDIA_SERVICES",
+        "RECREATIONAL_SERVICES",
+        "RESEARCH_TECH_CONSULTING",
+        "RESTAURANTS",
+        "RETIREMENT",
+        "LOGISTICS",
+        "SOFTWARE",
+        "SPORTS_EQUIPMENT",
+        "STORAGE",
+        "TAXATION",
+        "TELEPHONY",
+        "TEXTILES",
+        "JEWELRY",
+        "TOLLS",
+        "TOYS",
+        "TRADE_REPAIR",
+        "VEHICLE_RENTALS",
+        "VEHICLES",
+        "WATER_WASTE",
+        "WEBSITE"
+      ],
+      "default": "UNDEFINED"
+    },
+    "v2ProductTypeBatchSuggestRequest": {
+      "type": "object",
+      "properties": {
+        "texts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Text descriptions to classify into product types."
+        }
+      }
+    },
+    "v2ProductTypeBatchSuggestResponse": {
+      "type": "object",
+      "properties": {
+        "suggestions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v2ProductTypeSuggestion"
+          }
+        }
+      }
+    },
+    "v2ProductTypeCandidate": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/v2ProductType"
+        },
+        "label": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "number",
+          "format": "float"
+        },
+        "confidenceLevel": {
+          "$ref": "#/definitions/v2ConfidenceLevel"
+        }
+      }
+    },
+    "v2ProductTypeFeedbackRequest": {
+      "type": "object",
+      "properties": {
+        "texts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "trueCategories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "v2ProductTypeLogits": {
+      "type": "object",
+      "properties": {
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      }
+    },
+    "v2ProductTypeSuggestion": {
+      "type": "object",
+      "properties": {
+        "candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v2ProductTypeCandidate"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "BearerAuth": {
+      "type": "apiKey",
+      "description": "Your project token, sent as `Bearer \u003ctoken\u003e`.",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ]
+}

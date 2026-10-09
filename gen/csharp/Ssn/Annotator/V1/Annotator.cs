@@ -163,13 +163,35 @@ namespace Ssn.Annotator.V1 {
             "ZToBKhKXAQoWQW5zd2VyRG9jdW1lbnRRdWVzdGlvbhIpLnNzbi5hbm5vdGF0",
             "b3IudjEuRG9jdW1lbnRRdWVzdGlvblJlcXVlc3QaKi5zc24uYW5ub3RhdG9y",
             "LnYxLkRvY3VtZW50UXVlc3Rpb25SZXNwb25zZSImgtPkkwIgIhsvdjEvZG9j",
-            "dW1lbnQ6YW5zd2VycXVlc3Rpb246ASpCiAIKGWFpLnZpc21hLnNzbi5hbm5v",
+            "dW1lbnQ6YW5zd2VycXVlc3Rpb246ASpC3AkKGWFpLnZpc21hLnNzbi5hbm5v",
             "dGF0b3IudjFCDkFubm90YXRvclByb3RvUAFaPmdpdGh1Yi5jb20vZS1jb25v",
             "bWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi9hbm5vdGF0b3IvdjE7YW5ub3RhdG9y",
             "ogIDU0FYqgIQU3NuLkFubm90YXRvci5WMcoCEFNzblxBbm5vdGF0b3JcVjHi",
             "AhxTc25cQW5ub3RhdG9yXFYxXEdQQk1ldGFkYXRh6gISU3NuOjpBbm5vdGF0",
-            "b3I6OlYxkkE4Eg8KCVNtYXJ0U2NhbjICdjEqAQIyEGFwcGxpY2F0aW9uL2pz",
-            "b246EGFwcGxpY2F0aW9uL2pzb25iBnByb3RvMw=="));
+            "b3I6OlYxkkGLCBL7BgoJU21hcnRzY2FuEukGU21hcnRzY2FuIGV4dHJhY3Rz",
+            "IGRhdGEgZnJvbSB1bnN0cnVjdHVyZWQgZG9jdW1lbnRzIHN1Y2ggYXMgaW52",
+            "b2ljZXMgYW5kIHJlY2VpcHRzLCBhbmQgcmV0dXJucyB0aGUgcmVzdWx0cyBp",
+            "biB0aGUgc2FtZSBjYWxsLiBUaGlzIHJlZmVyZW5jZSBhbHNvIGNvdmVycyBm",
+            "ZWVkYmFjayBhbmQgdmFsZXQga2V5cy4gQXN5bmMgdHJhbnNhY3Rpb25zIGhh",
+            "dmUgdGhlaXIgb3duIHJlZmVyZW5jZSwgdW5kZXIgW1NtYXJ0c2NhbiBBc3lu",
+            "Y10oaHR0cHM6Ly9kb2NzLnZtbC52aXNtYS5haS9zbWFydHNjYW4tYXN5bmMv",
+            "Z2V0dGluZy1zdGFydGVkLykuCgoqKkhvc3RzOioqIGBhcGkucHJvZC5zc24u",
+            "dmlzbWEuYWlgIGZvciBwcm9kdWN0aW9uIGFuZCBgYXBpLnN0YWcuc3NuLnZp",
+            "c21hLmFpYCBmb3Igc3RhZ2luZy4KCioqQXV0aGVudGljYXRpb246Kiogc2Vu",
+            "ZCB5b3VyIHByb2plY3QgdG9rZW4gYXMgYEF1dGhvcml6YXRpb246IEJlYXJl",
+            "ciA8dG9rZW4+YC4gTW9iaWxlIGFuZCB3ZWIgY2xpZW50cyBjYW4gdXNlIGEg",
+            "c2hvcnQtbGl2ZWQgdmFsZXQga2V5IGluc3RlYWQuIFNlZSBbQXV0aGVudGlj",
+            "YXRpb25dKGh0dHBzOi8vZG9jcy52bWwudmlzbWEuYWkvYXV0aGVudGljYXRp",
+            "b24vKS4KCioqRXJyb3JzOioqIGEgZmFpbGVkIGNhbGwgcmV0dXJucyBhbiBI",
+            "VFRQIGVycm9yIHN0YXR1cyB3aXRoIGEgSlNPTiBib2R5IHRoYXQgaG9sZHMg",
+            "YGNvZGVgLCBgbWVzc2FnZWAgYW5kIGBkZXRhaWxzYC4KCioqR3VpZGVzOioq",
+            "IFtTbWFydHNjYW5dKGh0dHBzOi8vZG9jcy52bWwudmlzbWEuYWkvc21hcnRz",
+            "Y2FuL2dldHRpbmctc3RhcnRlZC8pIGFuZCBbbGltaXRzIGFuZCByYXRlIGxp",
+            "bWl0c10oaHR0cHM6Ly9kb2NzLnZtbC52aXNtYS5haS9yYXRlLWxpbWl0Lyku",
+            "MgJ2MSoBAjIQYXBwbGljYXRpb24vanNvbjoQYXBwbGljYXRpb24vanNvblpS",
+            "ClAKCkJlYXJlckF1dGgSQggCEi1Zb3VyIHByb2plY3QgdG9rZW4sIHNlbnQg",
+            "YXMgYEJlYXJlciA8dG9rZW4+YC4aDUF1dGhvcml6YXRpb24gAmIQCg4KCkJl",
+            "YXJlckF1dGgSAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Type.AddressReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.HotelDatesReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -236,9 +258,6 @@ namespace Ssn.Annotator.V1 {
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
     private global::Ssn.Annotator.V1.Feature.Types.Type type_ = global::Ssn.Annotator.V1.Feature.Types.Type.Default;
-    /// <summary>
-    /// The feature type.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Annotator.V1.Feature.Types.Type Type {

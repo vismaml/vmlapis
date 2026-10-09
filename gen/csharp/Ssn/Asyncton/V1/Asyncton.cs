@@ -99,13 +99,34 @@ namespace Ssn.Asyncton.V1 {
             "c24uYXN5bmN0b24udjEuVXBkYXRlVHJhbnNhY3Rpb25SZXN1bHRzUmVxdWVz",
             "dBoxLnNzbi5hc3luY3Rvbi52MS5VcGRhdGVUcmFuc2FjdGlvblJlc3VsdHNS",
             "ZXNwb25zZSJEgtPkkwI+Gh0vdjEvdHJhbnNhY3Rpb25zL3tpZH0vcmVzdWx0",
-            "czoBKloaGhgvdjEvdHJhbnNhY3Rpb25zL3Jlc3VsdHNCgwIKGGFpLnZpc21h",
+            "czoBKloaGhgvdjEvdHJhbnNhY3Rpb25zL3Jlc3VsdHNCnAkKGGFpLnZpc21h",
             "LnNzbi5hc3luY3Rvbi52MUINQXN5bmN0b25Qcm90b1ABWj9naXRodWIuY29t",
             "L2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vYXN5bmN0b24vdjE7dHJh",
             "bnNhY3Rpb26iAgNTQViqAg9Tc24uQXN5bmN0b24uVjHKAg9Tc25cQXN5bmN0",
             "b25cVjHiAhtTc25cQXN5bmN0b25cVjFcR1BCTWV0YWRhdGHqAhFTc246OkFz",
-            "eW5jdG9uOjpWMZJBOBIPCglBc3luYyBBUEkyAnYxKgECMhBhcHBsaWNhdGlv",
-            "bi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
+            "eW5jdG9uOjpWMZJB0AcSwAYKD1NtYXJ0c2NhbiBBc3luYxKoBlNtYXJ0c2Nh",
+            "biBBc3luYyBsZXRzIHlvdSBzdWJtaXQgYSBkb2N1bWVudCBmb3IgcHJvY2Vz",
+            "c2luZyBhbmQgZmV0Y2ggdGhlIHJlc3VsdHMgbGF0ZXIuIEl0IHN1aXRzIGxh",
+            "cmdlIGRvY3VtZW50cywgYW5kIGl0J3MgdGhlIG9ubHkgd2F5IHRvIHVzZSB0",
+            "aGUgVUxUUkEgdGllci4gQ3JlYXRlIGEgdHJhbnNhY3Rpb24sIHBvbGwgaXRz",
+            "IHN0YXR1cywgdGhlbiBmZXRjaCB0aGUgcmVzdWx0cy4KCioqSG9zdHM6Kiog",
+            "YGFwaS5wcm9kLnNzbi52aXNtYS5haWAgZm9yIHByb2R1Y3Rpb24gYW5kIGBh",
+            "cGkuc3RhZy5zc24udmlzbWEuYWlgIGZvciBzdGFnaW5nLgoKKipBdXRoZW50",
+            "aWNhdGlvbjoqKiBzZW5kIHlvdXIgcHJvamVjdCB0b2tlbiBhcyBgQXV0aG9y",
+            "aXphdGlvbjogQmVhcmVyIDx0b2tlbj5gLiBTZWUgW0F1dGhlbnRpY2F0aW9u",
+            "XShodHRwczovL2RvY3Mudm1sLnZpc21hLmFpL2F1dGhlbnRpY2F0aW9uLyku",
+            "CgoqKkVycm9yczoqKiBhIGZhaWxlZCBjYWxsIHJldHVybnMgYW4gSFRUUCBl",
+            "cnJvciBzdGF0dXMgd2l0aCBhIEpTT04gYm9keSB0aGF0IGhvbGRzIGBjb2Rl",
+            "YCwgYG1lc3NhZ2VgIGFuZCBgZGV0YWlsc2AuCgoqKkd1aWRlczoqKiBbU21h",
+            "cnRzY2FuIEFzeW5jXShodHRwczovL2RvY3Mudm1sLnZpc21hLmFpL3NtYXJ0",
+            "c2Nhbi1hc3luYy9nZXR0aW5nLXN0YXJ0ZWQvKSwgdGhlIFtmZWF0dXJlIGxp",
+            "c3RdKGh0dHBzOi8vZG9jcy52bWwudmlzbWEuYWkvc21hcnRzY2FuLWFzeW5j",
+            "L2ZlYXR1cmVzLykgYW5kIFtsaW1pdHMgYW5kIHJhdGUgbGltaXRzXShodHRw",
+            "czovL2RvY3Mudm1sLnZpc21hLmFpL3JhdGUtbGltaXQvKS4yAnYxKgECMhBh",
+            "cHBsaWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9qc29uWlIKUAoKQmVhcmVy",
+            "QXV0aBJCCAISLVlvdXIgcHJvamVjdCB0b2tlbiwgc2VudCBhcyBgQmVhcmVy",
+            "IDx0b2tlbj5gLhoNQXV0aG9yaXphdGlvbiACYhAKDgoKQmVhcmVyQXV0aBIA",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.AddressReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -237,9 +258,6 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "tier" field.</summary>
     public const int TierFieldNumber = 5;
     private global::Ssn.Type.Tier tier_ = global::Ssn.Type.Tier.Default;
-    /// <summary>
-    /// Tier determines the type of the SSN model used
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.Tier Tier {

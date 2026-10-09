@@ -225,14 +225,39 @@ public final class AnnotatorProto {
       "e:\001*\022\227\001\n\026AnswerDocumentQuestion\022).ssn.an" +
       "notator.v1.DocumentQuestionRequest\032*.ssn" +
       ".annotator.v1.DocumentQuestionResponse\"&" +
-      "\202\323\344\223\002 \"\033/v1/document:answerquestion:\001*B\210" +
-      "\002\n\031ai.visma.ssn.annotator.v1B\016AnnotatorP" +
+      "\202\323\344\223\002 \"\033/v1/document:answerquestion:\001*B\334" +
+      "\t\n\031ai.visma.ssn.annotator.v1B\016AnnotatorP" +
       "rotoP\001Z>github.com/e-conomic/vmlapis/gen" +
       "/go/ssn/annotator/v1;annotator\242\002\003SAX\252\002\020S" +
       "sn.Annotator.V1\312\002\020Ssn\\Annotator\\V1\342\002\034Ssn" +
       "\\Annotator\\V1\\GPBMetadata\352\002\022Ssn::Annotat" +
-      "or::V1\222A8\022\017\n\tSmartScan2\002v1*\001\0022\020applicati" +
-      "on/json:\020application/jsonb\006proto3"
+      "or::V1\222A\213\010\022\373\006\n\tSmartscan\022\351\006Smartscan ext" +
+      "racts data from unstructured documents s" +
+      "uch as invoices and receipts, and return" +
+      "s the results in the same call. This ref" +
+      "erence also covers feedback and valet ke" +
+      "ys. Async transactions have their own re" +
+      "ference, under [Smartscan Async](https:/" +
+      "/docs.vml.visma.ai/smartscan-async/getti" +
+      "ng-started/).\n\n**Hosts:** `api.prod.ssn." +
+      "visma.ai` for production and `api.stag.s" +
+      "sn.visma.ai` for staging.\n\n**Authenticat" +
+      "ion:** send your project token as `Autho" +
+      "rization: Bearer <token>`. Mobile and we" +
+      "b clients can use a short-lived valet ke" +
+      "y instead. See [Authentication](https://" +
+      "docs.vml.visma.ai/authentication/).\n\n**E" +
+      "rrors:** a failed call returns an HTTP e" +
+      "rror status with a JSON body that holds " +
+      "`code`, `message` and `details`.\n\n**Guid" +
+      "es:** [Smartscan](https://docs.vml.visma" +
+      ".ai/smartscan/getting-started/) and [lim" +
+      "its and rate limits](https://docs.vml.vi" +
+      "sma.ai/rate-limit/).2\002v1*\001\0022\020application" +
+      "/json:\020application/jsonZR\nP\n\nBearerAuth\022" +
+      "B\010\002\022-Your project token, sent as `Bearer" +
+      " <token>`.\032\rAuthorization \002b\020\n\016\n\nBearerA" +
+      "uth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

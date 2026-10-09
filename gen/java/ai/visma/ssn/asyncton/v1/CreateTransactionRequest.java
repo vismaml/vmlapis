@@ -241,10 +241,6 @@ private static final long serialVersionUID = 0L;
   public static final int TIER_FIELD_NUMBER = 5;
   private int tier_ = 0;
   /**
-   * <pre>
-   * Tier determines the type of the SSN model used
-   * </pre>
-   *
    * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
    * @return The enum numeric value on the wire for tier.
    */
@@ -252,10 +248,6 @@ private static final long serialVersionUID = 0L;
     return tier_;
   }
   /**
-   * <pre>
-   * Tier determines the type of the SSN model used
-   * </pre>
-   *
    * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
    * @return The tier.
    */
@@ -1324,10 +1316,6 @@ private static final long serialVersionUID = 0L;
 
     private int tier_ = 0;
     /**
-     * <pre>
-     * Tier determines the type of the SSN model used
-     * </pre>
-     *
      * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
      * @return The enum numeric value on the wire for tier.
      */
@@ -1335,10 +1323,6 @@ private static final long serialVersionUID = 0L;
       return tier_;
     }
     /**
-     * <pre>
-     * Tier determines the type of the SSN model used
-     * </pre>
-     *
      * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
      * @param value The enum numeric value on the wire for tier to set.
      * @return This builder for chaining.
@@ -1350,10 +1334,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Tier determines the type of the SSN model used
-     * </pre>
-     *
      * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
      * @return The tier.
      */
@@ -1363,10 +1343,6 @@ private static final long serialVersionUID = 0L;
       return result == null ? ai.visma.ssn.type.Tier.UNRECOGNIZED : result;
     }
     /**
-     * <pre>
-     * Tier determines the type of the SSN model used
-     * </pre>
-     *
      * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
      * @param value The tier to set.
      * @return This builder for chaining.
@@ -1381,10 +1357,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Tier determines the type of the SSN model used
-     * </pre>
-     *
      * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
      * @return This builder for chaining.
      */

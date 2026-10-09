@@ -1,0 +1,1783 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Smartscan Async",
+    "description": "Smartscan Async lets you submit a document for processing and fetch the results later. It suits large documents, and it's the only way to use the ULTRA tier. Create a transaction, poll its status, then fetch the results.\n\n**Hosts:** `api.prod.ssn.visma.ai` for production and `api.stag.ssn.visma.ai` for staging.\n\n**Authentication:** send your project token as `Authorization: Bearer \u003ctoken\u003e`. See [Authentication](https://docs.vml.visma.ai/authentication/).\n\n**Errors:** a failed call returns an HTTP error status with a JSON body that holds `code`, `message` and `details`.\n\n**Guides:** [Smartscan Async](https://docs.vml.visma.ai/smartscan-async/getting-started/), the [feature list](https://docs.vml.visma.ai/smartscan-async/features/) and [limits and rate limits](https://docs.vml.visma.ai/rate-limit/).",
+    "version": "v1"
+  },
+  "tags": [
+    {
+      "name": "TransactionService"
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v1/tags/{tagName}": {
+      "delete": {
+        "operationId": "TransactionService_DeleteTag",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "tagName",
+            "description": "text-no-spaces",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      }
+    },
+    "/v1/transactions": {
+      "delete": {
+        "operationId": "TransactionService_DeleteTransaction2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "customId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      },
+      "post": {
+        "operationId": "TransactionService_CreateTransaction",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CreateTransactionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CreateTransactionRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      }
+    },
+    "/v1/transactions/results": {
+      "get": {
+        "operationId": "TransactionService_GetTransactionResults2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetTransactionResultsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "customId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "minConfidence",
+            "description": "GetTransactionResultsRequest message can potentially have a list of features to filter the response\ne.g. repeated string features like in CreateTransactionRequest",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "UNKNOWN",
+              "VERY_LOW",
+              "LOW",
+              "MID",
+              "HIGH",
+              "VERY_HIGH",
+              "VERIFIED"
+            ],
+            "default": "UNKNOWN"
+          },
+          {
+            "name": "maxResults",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      },
+      "put": {
+        "operationId": "TransactionService_UpdateTransactionResults2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1UpdateTransactionResultsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "customId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      }
+    },
+    "/v1/transactions/status": {
+      "get": {
+        "operationId": "TransactionService_GetTransactionStatus2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetTransactionStatusResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "customId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      }
+    },
+    "/v1/transactions/{id}": {
+      "delete": {
+        "operationId": "TransactionService_DeleteTransaction",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "customId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      }
+    },
+    "/v1/transactions/{id}/results": {
+      "get": {
+        "operationId": "TransactionService_GetTransactionResults",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetTransactionResultsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "customId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "minConfidence",
+            "description": "GetTransactionResultsRequest message can potentially have a list of features to filter the response\ne.g. repeated string features like in CreateTransactionRequest",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "UNKNOWN",
+              "VERY_LOW",
+              "LOW",
+              "MID",
+              "HIGH",
+              "VERY_HIGH",
+              "VERIFIED"
+            ],
+            "default": "UNKNOWN"
+          },
+          {
+            "name": "maxResults",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      },
+      "put": {
+        "operationId": "TransactionService_UpdateTransactionResults",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1UpdateTransactionResultsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TransactionServiceUpdateTransactionResultsBody"
+            }
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      }
+    },
+    "/v1/transactions/{id}/status": {
+      "get": {
+        "operationId": "TransactionService_GetTransactionStatus",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetTransactionStatusResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "customId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "BlockBlockType": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN",
+        "TEXT",
+        "TABLE",
+        "PICTURE",
+        "RULER",
+        "BARCODE"
+      ],
+      "default": "UNKNOWN",
+      "description": "Type of a block (text, image etc) as identified by OCR.\n\n - UNKNOWN: Unknown block type.\n - TEXT: Regular text block.\n - TABLE: Table block.\n - PICTURE: Image block.\n - RULER: Horizontal/vertical line box.\n - BARCODE: Barcode block."
+    },
+    "ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN",
+        "VERY_LOW",
+        "LOW",
+        "MID",
+        "HIGH",
+        "VERY_HIGH",
+        "VERIFIED"
+      ],
+      "default": "UNKNOWN"
+    },
+    "DetectedBreakBreakType": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN",
+        "SPACE",
+        "SURE_SPACE",
+        "EOL_SURE_SPACE",
+        "HYPHEN",
+        "LINE_BREAK"
+      ],
+      "default": "UNKNOWN",
+      "description": "Enum to denote the type of break found. New line, space etc.\n\n - UNKNOWN: Unknown break label type.\n - SPACE: Regular space.\n - SURE_SPACE: Sure space (very wide).\n - EOL_SURE_SPACE: Line-wrapping break.\n - HYPHEN: End-line hyphen that is not present in text; does not co-occur with\n`SPACE`, `LEADER_SPACE`, or `LINE_BREAK`.\n - LINE_BREAK: Line break that ends a paragraph."
+    },
+    "TextAnnotationDetectedBreak": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "Detected break type.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/DetectedBreakBreakType"
+            }
+          ]
+        },
+        "isPrefix": {
+          "type": "boolean",
+          "description": "True if break prepends the element."
+        }
+      },
+      "description": "Detected start or end of a structural component."
+    },
+    "TextAnnotationDetectedLanguage": {
+      "type": "object",
+      "properties": {
+        "languageCode": {
+          "type": "string",
+          "description": "The BCP-47 language code, such as \"en-US\" or \"sr-Latn\". For more\ninformation, see\nhttp://www.unicode.org/reports/tr35/#Unicode_locale_identifier."
+        },
+        "confidence": {
+          "type": "number",
+          "format": "float",
+          "description": "Confidence of detected language. Range [0, 1]."
+        }
+      },
+      "description": "Detected language for a structural component."
+    },
+    "TextAnnotationTextProperty": {
+      "type": "object",
+      "properties": {
+        "detectedLanguages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/TextAnnotationDetectedLanguage"
+          },
+          "description": "A list of detected languages together with confidence."
+        },
+        "detectedBreak": {
+          "description": "Detected start or end of a text segment.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TextAnnotationDetectedBreak"
+            }
+          ]
+        }
+      },
+      "description": "Additional information detected on the structural component."
+    },
+    "TransactionServiceUpdateTransactionResultsBody": {
+      "type": "object",
+      "properties": {
+        "customId": {
+          "type": "string"
+        },
+        "annotations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/asynctonv1Annotation"
+          }
+        }
+      },
+      "title": "--- put: \"/v1/transactions/{id}/results\" ---"
+    },
+    "asynctonv1Annotation": {
+      "type": "object",
+      "properties": {
+        "feature": {
+          "type": "string",
+          "title": "feature name e.g. \"TOTAL_INCL_VAT\""
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "ssn candidates"
+        },
+        "purchaseLineCandidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typePurchaseLineCandidate"
+          },
+          "title": "purchase line candidates (old format)"
+        },
+        "answerCandidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeAnswerCandidate"
+          },
+          "title": "qa candidates"
+        },
+        "textAnnotation": {
+          "title": "text annotation",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeTextAnnotation"
+            }
+          ]
+        },
+        "pageTexts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typePageText"
+          },
+          "title": "page texts"
+        },
+        "vatDistributionCandidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeVatDistributionCandidate"
+          },
+          "title": "vat distribution candidates (old format)"
+        },
+        "qrCodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeQrCodeData"
+          },
+          "title": "qr codes detected in document"
+        },
+        "swissQrBills": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeSwissQrBill"
+          },
+          "title": "swiss qr bills detected in document"
+        },
+        "purchaseLinesDetails": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typePurchaseLine"
+          },
+          "description": "Purchase lines for the document. This is a list where each field is a candidate."
+        },
+        "vatDistributionDetails": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeVatDistribution"
+          },
+          "description": "VAT distribution for the document. This is a list where each field is a candidate."
+        },
+        "structuredAddress": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeStructuredAddress"
+          },
+          "description": "Structured address, parsed from the raw address using the geo service."
+        }
+      }
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "typeAnswerCandidate": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string",
+          "title": "Question asked in the request"
+        },
+        "answer": {
+          "type": "string",
+          "title": "Model prediction for the question"
+        },
+        "confidence": {
+          "title": "Confidence of the prediction",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeConfidence"
+            }
+          ]
+        },
+        "modelMetadata": {
+          "title": "Model metadata",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeModelSpec"
+            }
+          ]
+        },
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the candidate was found."
+        }
+      }
+    },
+    "typeBlock": {
+      "type": "object",
+      "properties": {
+        "property": {
+          "description": "Additional information detected for the block.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TextAnnotationTextProperty"
+            }
+          ]
+        },
+        "boundingBox": {
+          "description": "* when the text is horizontal it might look like:\n\n        0----1\n        |    |\n        3----2\n\n* when it's rotated 180 degrees around the top-left corner it becomes:\n\n        2----3\n        |    |\n        1----0\n\n  and the vertex order will still be (0, 1, 2, 3).",
+          "title": "The bounding box for the block.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeBoundingPoly"
+            }
+          ]
+        },
+        "paragraphs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeParagraph"
+          },
+          "description": "List of paragraphs in this block (if this blocks is of type text)."
+        },
+        "blockType": {
+          "description": "Detected block type (text, image etc) for this block.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/BlockBlockType"
+            }
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "format": "float",
+          "description": "Confidence of the OCR results on the block. Range [0, 1]."
+        }
+      },
+      "description": "Logical element on the page."
+    },
+    "typeBoundingPoly": {
+      "type": "object",
+      "properties": {
+        "vertices": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeVertex"
+          },
+          "description": "The bounding polygon vertices."
+        },
+        "normalizedVertices": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeNormalizedVertex"
+          },
+          "description": "The bounding polygon normalized vertices."
+        }
+      },
+      "description": "A bounding polygon for the detected image annotation."
+    },
+    "typeCandidate": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "title": "Normalized value 01-01-2019"
+        },
+        "text": {
+          "type": "string",
+          "title": "The text as found on the document \"1. Jan\"\nuseful for overlays"
+        },
+        "confidence": {
+          "title": "Confidence",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeConfidence"
+            }
+          ]
+        },
+        "boundingBox": {
+          "description": "* when the text is horizontal it might look like:\n\n        0----1\n        |    |\n        3----2\n\n* when it's rotated 180 degrees around the top-left corner it becomes:\n\n        2----3\n        |    |\n        1----0\n\n  and the vertex order will still be (0, 1, 2, 3).",
+          "title": "The bounding box for the block.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeBoundingPoly"
+            }
+          ]
+        },
+        "type": {
+          "title": "Indicate the type of the candidate",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeCandidateType"
+            }
+          ]
+        },
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the candidate was found.\npage_ref start from 1."
+        },
+        "modelMetadata": {
+          "title": "Model spec of the TensorFlow Serving model that predicted this candidate",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeModelSpec"
+            }
+          ]
+        },
+        "corrected": {
+          "type": "boolean",
+          "title": "Whether the candidate has been corrected by verification heuristics"
+        }
+      }
+    },
+    "typeCandidateType": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN",
+        "FIELD",
+        "DOCUMENT"
+      ],
+      "default": "UNKNOWN"
+    },
+    "typeConfidence": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "description": "A bucketized representation of confidence, which is intended to give clients\nhighly stable results across model upgrades.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ConfidenceLevel"
+            }
+          ]
+        },
+        "value": {
+          "type": "number",
+          "format": "float",
+          "title": "The confidence value"
+        }
+      }
+    },
+    "typeModelSpec": {
+      "type": "object",
+      "properties": {
+        "modelName": {
+          "type": "string",
+          "title": "The name of the TensorFlow Serving model"
+        },
+        "modelVer": {
+          "type": "string",
+          "format": "int64",
+          "title": "The version number of the TensorFlow Serving model"
+        }
+      }
+    },
+    "typeNormalizedVertex": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number",
+          "format": "float",
+          "description": "X coordinate."
+        },
+        "y": {
+          "type": "number",
+          "format": "float",
+          "description": "Y coordinate."
+        }
+      },
+      "description": "A vertex represents a 2D point in the image.\nNOTE: the normalized vertex coordinates are relative to the original image\nand range from 0 to 1."
+    },
+    "typePage": {
+      "type": "object",
+      "properties": {
+        "property": {
+          "description": "Additional information detected on the page.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TextAnnotationTextProperty"
+            }
+          ]
+        },
+        "width": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Page width. For PDFs the unit is points. For images (including\nTIFFs) the unit is pixels."
+        },
+        "height": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Page height. For PDFs the unit is points. For images (including\nTIFFs) the unit is pixels."
+        },
+        "blocks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeBlock"
+          },
+          "description": "List of blocks of text, images etc on this page."
+        },
+        "confidence": {
+          "type": "number",
+          "format": "float",
+          "description": "Confidence of the OCR results on the page. Range [0, 1]."
+        }
+      },
+      "description": "Detected page from OCR."
+    },
+    "typePageText": {
+      "type": "object",
+      "properties": {
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the text was found."
+        },
+        "text": {
+          "type": "string",
+          "title": "The text content of the page"
+        }
+      }
+    },
+    "typeParagraph": {
+      "type": "object",
+      "properties": {
+        "property": {
+          "description": "Additional information detected for the paragraph.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TextAnnotationTextProperty"
+            }
+          ]
+        },
+        "boundingBox": {
+          "description": "The bounding box for the paragraph.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:\n  * when the text is horizontal it might look like:\n     0----1\n     |    |\n     3----2\n  * when it's rotated 180 degrees around the top-left corner it becomes:\n     2----3\n     |    |\n     1----0\n  and the vertex order will still be (0, 1, 2, 3).",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeBoundingPoly"
+            }
+          ]
+        },
+        "words": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeWord"
+          },
+          "description": "List of words in this paragraph."
+        },
+        "confidence": {
+          "type": "number",
+          "format": "float",
+          "description": "Confidence of the OCR results for the paragraph. Range [0, 1]."
+        }
+      },
+      "description": "Structural unit of text representing a number of words in certain order."
+    },
+    "typePurchaseLine": {
+      "type": "object",
+      "properties": {
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the line was found.\npage_ref start from 1."
+        },
+        "code": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Code is an ID that supplier uses to identify the item"
+        },
+        "description": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Description is a piece of text that describes the item"
+        },
+        "quantity": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Quantity is the number of items"
+        },
+        "itemNumber": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "ItemNumber is the number of the item"
+        },
+        "unit": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Unit is the unit of the item"
+        },
+        "totalDiscount": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Total discount is the total discount of the line"
+        },
+        "percentageDiscount": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Percentage discount is the percentage discount of the line"
+        },
+        "totalInclVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Total incl vat is the total price of the line including vat"
+        },
+        "totalExclVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Total excl vat is the total price of the line excluding vat"
+        },
+        "totalVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Total vat is the total vat of the line"
+        },
+        "percentageVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Percentage vat is the percentage vat of the line"
+        },
+        "unitPriceInclVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Unit price incl vat is the unit price of the line including vat"
+        },
+        "unitPriceExclVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Unit price excl vat is the unit price of the line excluding vat"
+        },
+        "total": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Total is the total price of the line (with/without vat)"
+        },
+        "unitPrice": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Unit price is the unit price of the line (with/without vat)"
+        },
+        "modelMetadata": {
+          "title": "Model metadata",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeModelSpec"
+            }
+          ]
+        },
+        "productType": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v2ProductTypeCandidate"
+          },
+          "title": "Product type classification for the line"
+        },
+        "kind": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "description": "Kind classifies what the line charges for, e.g. \"item\", \"freight\", \"fee\",\n\"levy\", \"service_charge\", \"gratuity\", \"discount\" or \"deposit\"."
+        }
+      }
+    },
+    "typePurchaseLineCandidate": {
+      "type": "object",
+      "properties": {
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the line was found.\npage_ref start from 1."
+        },
+        "code": {
+          "type": "string",
+          "title": "Code is an ID that supplier uses to identify the item"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description is a piece of text that describes the item"
+        },
+        "quantity": {
+          "type": "string",
+          "title": "Quantity is the number of items"
+        },
+        "itemNumber": {
+          "type": "string",
+          "title": "ItemNumber is the number of the item"
+        },
+        "unit": {
+          "type": "string",
+          "title": "Unit is the unit of the item"
+        },
+        "totalDiscount": {
+          "type": "string",
+          "title": "Total discount is the total discount of the line"
+        },
+        "percentageDiscount": {
+          "type": "string",
+          "title": "Percentage discount is the percentage discount of the line"
+        },
+        "totalInclVat": {
+          "type": "string",
+          "title": "Total incl vat is the total price of the line including vat"
+        },
+        "totalExclVat": {
+          "type": "string",
+          "title": "Total excl vat is the total price of the line excluding vat"
+        },
+        "totalVat": {
+          "type": "string",
+          "title": "Total vat is the total vat of the line"
+        },
+        "percentageVat": {
+          "type": "string",
+          "title": "Percentage vat is the percentage vat of the line"
+        },
+        "unitPriceInclVat": {
+          "type": "string",
+          "title": "Unit price incl vat is the unit price of the line including vat"
+        },
+        "unitPriceExclVat": {
+          "type": "string",
+          "title": "Unit price excl vat is the unit price of the line excluding vat"
+        },
+        "total": {
+          "type": "string",
+          "title": "Total is the total price of the line (with/without vat)"
+        },
+        "unitPrice": {
+          "type": "string",
+          "title": "Unit price is the unit price of the line (with/without vat)"
+        },
+        "modelMetadata": {
+          "title": "Model metadata",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeModelSpec"
+            }
+          ]
+        },
+        "productType": {
+          "type": "string",
+          "title": "Product type classification for the line"
+        }
+      }
+    },
+    "typeQrCodeData": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string"
+        }
+      }
+    },
+    "typeStructuredAddress": {
+      "type": "object",
+      "properties": {
+        "street": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "countryCode": {
+          "type": "string",
+          "title": "ISO 3166-1 alpha-2"
+        }
+      }
+    },
+    "typeSwissQrBill": {
+      "type": "object",
+      "properties": {
+        "qrType": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "codingType": {
+          "type": "string"
+        },
+        "account": {
+          "type": "string"
+        },
+        "creditorAddressType": {
+          "type": "string"
+        },
+        "creditorName": {
+          "type": "string"
+        },
+        "creditorAddressLine1": {
+          "type": "string"
+        },
+        "creditorAddressLine2": {
+          "type": "string"
+        },
+        "creditorAddressPostalCode": {
+          "type": "string"
+        },
+        "creditorAddressCity": {
+          "type": "string"
+        },
+        "creditorAddressCountry": {
+          "type": "string"
+        },
+        "ultimateCreditorAddressType": {
+          "type": "string"
+        },
+        "ultimateCreditorName": {
+          "type": "string"
+        },
+        "ultimateCreditorAddressLine1": {
+          "type": "string"
+        },
+        "ultimateCreditorAddressLine2": {
+          "type": "string"
+        },
+        "ultimateCreditorAddressPostalCode": {
+          "type": "string"
+        },
+        "ultimateCreditorAddressCity": {
+          "type": "string"
+        },
+        "ultimateCreditorAddressCountry": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "ultimateDebtorAddressType": {
+          "type": "string"
+        },
+        "ultimateDebtorName": {
+          "type": "string"
+        },
+        "ultimateDebtorAddressLine1": {
+          "type": "string"
+        },
+        "ultimateDebtorAddressLine2": {
+          "type": "string"
+        },
+        "ultimateDebtorAddressPostalCode": {
+          "type": "string"
+        },
+        "ultimateDebtorAddressCity": {
+          "type": "string"
+        },
+        "ultimateDebtorAddressCountry": {
+          "type": "string"
+        },
+        "paymentReferenceType": {
+          "type": "string"
+        },
+        "paymentReference": {
+          "type": "string"
+        },
+        "unstructuredMessage": {
+          "type": "string"
+        },
+        "trailer": {
+          "type": "string"
+        },
+        "billingInformation": {
+          "type": "string"
+        },
+        "av1Parameters": {
+          "type": "string"
+        },
+        "av2Parameters": {
+          "type": "string"
+        }
+      }
+    },
+    "typeSymbol": {
+      "type": "object",
+      "properties": {
+        "property": {
+          "description": "Additional information detected for the symbol.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TextAnnotationTextProperty"
+            }
+          ]
+        },
+        "boundingBox": {
+          "description": "The bounding box for the symbol.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:\n  * when the text is horizontal it might look like:\n     0----1\n     |    |\n     3----2\n  * when it's rotated 180 degrees around the top-left corner it becomes:\n     2----3\n     |    |\n     1----0\n  and the vertice order will still be (0, 1, 2, 3).",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeBoundingPoly"
+            }
+          ]
+        },
+        "text": {
+          "type": "string",
+          "description": "The actual UTF-8 representation of the symbol."
+        },
+        "confidence": {
+          "type": "number",
+          "format": "float",
+          "description": "Confidence of the OCR results for the symbol. Range [0, 1]."
+        }
+      },
+      "description": "A single symbol representation."
+    },
+    "typeTextAnnotation": {
+      "type": "object",
+      "properties": {
+        "pages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typePage"
+          },
+          "description": "List of pages detected by OCR."
+        },
+        "text": {
+          "type": "string",
+          "description": "UTF-8 text detected on the pages."
+        }
+      },
+      "description": "TextAnnotation contains a structured representation of OCR extracted text.\nThe hierarchy of an OCR extracted text structure is like this:\n    TextAnnotation -\u003e Page -\u003e Block -\u003e Paragraph -\u003e Word -\u003e Symbol\nEach structural component, starting from Page, may further have their own\nproperties. Properties describe detected languages, breaks etc.. Please refer\nto the\n[TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty]\nmessage definition below for more detail."
+    },
+    "typeTier": {
+      "type": "string",
+      "enum": [
+        "DEFAULT",
+        "STANDARD",
+        "PREMIUM",
+        "ULTRA",
+        "HUMAN"
+      ],
+      "default": "DEFAULT",
+      "description": " - DEFAULT: Use the default tier. Defaults to the STANDARD option or account default, if set."
+    },
+    "typeVatDistribution": {
+      "type": "object",
+      "properties": {
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the candidate was found."
+        },
+        "percentage": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "The vat distribution candidate percentage"
+        },
+        "totalInclVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "The vat distribution candidate incl vat"
+        },
+        "totalExclVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "The vat distribution candidate excl vat"
+        },
+        "totalVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "The vat distribution candidate"
+        },
+        "modelMetadata": {
+          "title": "Model metadata",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeModelSpec"
+            }
+          ]
+        }
+      }
+    },
+    "typeVatDistributionCandidate": {
+      "type": "object",
+      "properties": {
+        "percentage": {
+          "type": "string",
+          "title": "The vat distribution candidate percentage"
+        },
+        "amount": {
+          "type": "string",
+          "title": "The vat distribution candidate amount"
+        },
+        "modelMetadata": {
+          "title": "Model metadata",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeModelSpec"
+            }
+          ]
+        },
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the candidate was found."
+        },
+        "exclVat": {
+          "type": "string",
+          "title": "The vat distribution candidate excl vat"
+        },
+        "inclVat": {
+          "type": "string",
+          "title": "The vat distribution candidate incl vat"
+        }
+      }
+    },
+    "typeVertex": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "integer",
+          "format": "int32",
+          "description": "X coordinate."
+        },
+        "y": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Y coordinate."
+        }
+      },
+      "description": "A vertex represents a 2D point in the image.\nNOTE: the vertex coordinates are in the same scale as the original image."
+    },
+    "typeWord": {
+      "type": "object",
+      "properties": {
+        "property": {
+          "description": "Additional information detected for the word.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TextAnnotationTextProperty"
+            }
+          ]
+        },
+        "boundingBox": {
+          "description": "The bounding box for the word.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:\n  * when the text is horizontal it might look like:\n     0----1\n     |    |\n     3----2\n  * when it's rotated 180 degrees around the top-left corner it becomes:\n     2----3\n     |    |\n     1----0\n  and the vertex order will still be (0, 1, 2, 3).",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeBoundingPoly"
+            }
+          ]
+        },
+        "symbols": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeSymbol"
+          },
+          "description": "List of symbols in the word.\nThe order of the symbols follows the natural reading order."
+        },
+        "confidence": {
+          "type": "number",
+          "format": "float",
+          "description": "Confidence of the OCR results for the word. Range [0, 1]."
+        }
+      },
+      "description": "A word representation."
+    },
+    "v1CreateTransactionRequest": {
+      "type": "object",
+      "properties": {
+        "document": {
+          "title": "we could have an ID here, in case they wanted to provide their own",
+          "allOf": [
+            {
+              "$ref": "#/definitions/v1Document"
+            }
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Let's enforce the tags"
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "e.g. \"TOTAL_INCL_VAT\", \"PURCHASE_LINES\""
+        },
+        "customId": {
+          "type": "string"
+        },
+        "tier": {
+          "$ref": "#/definitions/typeTier"
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Questions to ask about the document"
+        }
+      },
+      "title": "--- post: \"/v1/transactions\" ---"
+    },
+    "v1CreateTransactionResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "customId": {
+          "type": "string",
+          "title": "CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)\n but I think I'm more prone to separate them in /results endpoint"
+        }
+      }
+    },
+    "v1Document": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string",
+          "format": "byte",
+          "description": "Document content, represented as a stream of bytes.\nNote: As with all `bytes` fields, protobuffers use a pure binary\nrepresentation, whereas JSON representations use base64."
+        },
+        "source": {
+          "description": "Google Cloud Storage image location, or publicly-accessible image\nURL. If both `content` and `source` are provided for a document, `content`\ntakes precedence and is used to perform the scan request.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/v1DocumentSource"
+            }
+          ]
+        }
+      }
+    },
+    "v1DocumentSource": {
+      "type": "object",
+      "properties": {
+        "httpUri": {
+          "type": "string",
+          "description": "1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from\n   HTTP/HTTPS URLs, We cannot guarantee that the request will be\n   completed. Your request may fail if the specified host denies the\n   request (e.g. due to request throttling or DOS prevention).",
+          "title": "The URI of the source document. Can be either:"
+        }
+      }
+    },
+    "v1GetTransactionResultsResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "annotations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/asynctonv1Annotation"
+          },
+          "title": "map: FEATURE NAME --\u003e SSN CANDIDATES\nempty when processing is still running"
+        },
+        "errorMessage": {
+          "type": "string"
+        },
+        "customId": {
+          "type": "string"
+        }
+      }
+    },
+    "v1GetTransactionStatusResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "title": "e.g. \"RUNNING\", \"SUCCESSFUL\", \"PARTIAL\", \"FAILED\"\n\"PARTIAL\" is when some features failed - e.g. SSN succeeded but purchase lines failed"
+        },
+        "errorMessage": {
+          "type": "string",
+          "title": "Only populated when status == \"FAILED\" or status == \"PARTIAL\""
+        },
+        "customId": {
+          "type": "string",
+          "title": "maybe a timestamp on different status would be nice here"
+        }
+      }
+    },
+    "v1UpdateTransactionResultsResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "customId": {
+          "type": "string"
+        }
+      }
+    },
+    "v2ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN",
+        "VERY_LOW",
+        "LOW",
+        "MID",
+        "HIGH",
+        "VERY_HIGH"
+      ],
+      "default": "UNKNOWN"
+    },
+    "v2ProductType": {
+      "type": "string",
+      "enum": [
+        "UNDEFINED",
+        "ACCOUNTING_AUDIT",
+        "ACCOUNTING_SOFTWARE",
+        "ADVERTISING",
+        "ALCOHOL_TOBACCO",
+        "MEDICAL_LAB_EQUIPMENT",
+        "BANKING_INVESTMENT",
+        "BOOKS",
+        "BUSINESS_CONSULTING",
+        "CHEMICALS",
+        "CLEANING_SERVICES",
+        "CLEANING_SUPPLIES",
+        "CLOTHING",
+        "ELECTRONICS",
+        "CONSTRUCTION_MATERIALS",
+        "DECORATIONS_ART",
+        "DEFENSE_SECURITY",
+        "DEPOSITS",
+        "DOMESTIC_APPLIANCES",
+        "EDUCATION_TRAINING",
+        "ENERGY",
+        "FACILITY_MAINTENANCE",
+        "AGRICULTURE",
+        "FEES",
+        "FINES",
+        "FOOD_BEVERAGES",
+        "FUEL_LUBRICANTS",
+        "FURNITURE",
+        "GIFTS",
+        "GLASS_CERAMICS",
+        "GOVERNMENT_SERVICES",
+        "GRAPHIC_DESIGN",
+        "FITNESS_CLUBS",
+        "HEALTHCARE",
+        "HOTELS",
+        "INDUSTRIAL_MACHINERY",
+        "MANUFACTURING",
+        "INSURANCE",
+        "INTERNET_MEDIA",
+        "PROPERTY_RENTAL",
+        "LEGAL",
+        "PLANTS_ANIMALS",
+        "MACHINERY_LEASING",
+        "MARKETING",
+        "MEETINGS",
+        "MUSIC",
+        "OFFICE_SUPPLIES",
+        "PACKAGING",
+        "PARKING",
+        "PASSENGER_TRANSPORT",
+        "PAYMENTS",
+        "PAYROLL",
+        "PERSONAL_SERVICES",
+        "PERSONAL_CARE",
+        "PHARMACEUTICALS",
+        "MEDIA_SERVICES",
+        "RECREATIONAL_SERVICES",
+        "RESEARCH_TECH_CONSULTING",
+        "RESTAURANTS",
+        "RETIREMENT",
+        "LOGISTICS",
+        "SOFTWARE",
+        "SPORTS_EQUIPMENT",
+        "STORAGE",
+        "TAXATION",
+        "TELEPHONY",
+        "TEXTILES",
+        "JEWELRY",
+        "TOLLS",
+        "TOYS",
+        "TRADE_REPAIR",
+        "VEHICLE_RENTALS",
+        "VEHICLES",
+        "WATER_WASTE",
+        "WEBSITE"
+      ],
+      "default": "UNDEFINED"
+    },
+    "v2ProductTypeCandidate": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/v2ProductType"
+        },
+        "label": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "number",
+          "format": "float"
+        },
+        "confidenceLevel": {
+          "$ref": "#/definitions/v2ConfidenceLevel"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "BearerAuth": {
+      "type": "apiKey",
+      "description": "Your project token, sent as `Bearer \u003ctoken\u003e`.",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ]
+}

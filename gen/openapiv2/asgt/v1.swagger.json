@@ -469,8 +469,12 @@
       "type": "object",
       "properties": {
         "level": {
-          "$ref": "#/definitions/asgttypeConfidenceLevel",
-          "description": "A bucketized representation of confidence, which is intended to give clients\nhighly stable results across model upgrades."
+          "description": "A bucketized representation of confidence, which is intended to give clients\nhighly stable results across model upgrades.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/asgttypeConfidenceLevel"
+            }
+          ]
         },
         "value": {
           "type": "number",
@@ -545,16 +549,28 @@
       "type": "object",
       "properties": {
         "transaction": {
-          "$ref": "#/definitions/typeTransaction",
-          "title": "Transaction-level information; at this time used only with bank transactions"
+          "title": "Transaction-level information; at this time used only with bank transactions",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeTransaction"
+            }
+          ]
         },
         "invoice": {
-          "$ref": "#/definitions/typeInvoice",
-          "title": "Invoice-level information for e-invoices and scanned invoices and receipts"
+          "title": "Invoice-level information for e-invoices and scanned invoices and receipts",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeInvoice"
+            }
+          ]
         },
         "invoiceLine": {
-          "$ref": "#/definitions/typeInvoiceLine",
-          "title": "Line-level information for e-invoices; use one sample per invoice line"
+          "title": "Line-level information for e-invoices; use one sample per invoice line",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeInvoiceLine"
+            }
+          ]
         }
       }
     },
@@ -612,8 +628,12 @@
           "format": "date-time"
         },
         "supplier": {
-          "$ref": "#/definitions/typeSupplier",
-          "description": "supplier of the invoice. Used in electronic-invoice-line requests."
+          "description": "supplier of the invoice. Used in electronic-invoice-line requests.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeSupplier"
+            }
+          ]
         },
         "customerRef": {
           "type": "string",
@@ -916,8 +936,12 @@
           "$ref": "#/definitions/typeDataset"
         },
         "model": {
-          "$ref": "#/definitions/typeModel",
-          "title": "The most recently trained model; empty if no model has been trained"
+          "title": "The most recently trained model; empty if no model has been trained",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeModel"
+            }
+          ]
         }
       }
     },

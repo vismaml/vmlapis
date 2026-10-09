@@ -174,13 +174,36 @@ public final class AsynctonProto {
       "equest\0321.ssn.asyncton.v1.UpdateTransacti" +
       "onResultsResponse\"D\202\323\344\223\002>\032\035/v1/transacti" +
       "ons/{id}/results:\001*Z\032\032\030/v1/transactions/" +
-      "resultsB\203\002\n\030ai.visma.ssn.asyncton.v1B\rAs" +
+      "resultsB\234\t\n\030ai.visma.ssn.asyncton.v1B\rAs" +
       "ynctonProtoP\001Z?github.com/e-conomic/vmla" +
       "pis/gen/go/ssn/asyncton/v1;transaction\242\002" +
       "\003SAX\252\002\017Ssn.Asyncton.V1\312\002\017Ssn\\Asyncton\\V1" +
       "\342\002\033Ssn\\Asyncton\\V1\\GPBMetadata\352\002\021Ssn::As" +
-      "yncton::V1\222A8\022\017\n\tAsync API2\002v1*\001\0022\020appli" +
-      "cation/json:\020application/jsonb\006proto3"
+      "yncton::V1\222A\320\007\022\300\006\n\017Smartscan Async\022\250\006Sma" +
+      "rtscan Async lets you submit a document " +
+      "for processing and fetch the results lat" +
+      "er. It suits large documents, and it\'s t" +
+      "he only way to use the ULTRA tier. Creat" +
+      "e a transaction, poll its status, then f" +
+      "etch the results.\n\n**Hosts:** `api.prod." +
+      "ssn.visma.ai` for production and `api.st" +
+      "ag.ssn.visma.ai` for staging.\n\n**Authent" +
+      "ication:** send your project token as `A" +
+      "uthorization: Bearer <token>`. See [Auth" +
+      "entication](https://docs.vml.visma.ai/au" +
+      "thentication/).\n\n**Errors:** a failed ca" +
+      "ll returns an HTTP error status with a J" +
+      "SON body that holds `code`, `message` an" +
+      "d `details`.\n\n**Guides:** [Smartscan Asy" +
+      "nc](https://docs.vml.visma.ai/smartscan-" +
+      "async/getting-started/), the [feature li" +
+      "st](https://docs.vml.visma.ai/smartscan-" +
+      "async/features/) and [limits and rate li" +
+      "mits](https://docs.vml.visma.ai/rate-lim" +
+      "it/).2\002v1*\001\0022\020application/json:\020applicat" +
+      "ion/jsonZR\nP\n\nBearerAuth\022B\010\002\022-Your proje" +
+      "ct token, sent as `Bearer <token>`.\032\rAut" +
+      "horization \002b\020\n\016\n\nBearerAuth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

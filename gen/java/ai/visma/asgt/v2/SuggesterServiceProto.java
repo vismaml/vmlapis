@@ -105,13 +105,33 @@ public final class SuggesterServiceProto {
       ".v2.BatchSuggestRequest\032\035.asgt.v2.BatchS" +
       "uggestResponse\"9\202\323\344\223\0023\"./v2/datasets/{da" +
       "taset_name}/model:batchSuggest:\001*\032(\222A%\022#" +
-      "Make predictions against a dataset.B\320\001\n\020" +
+      "Make predictions against a dataset.B\200\010\n\020" +
       "ai.visma.asgt.v2B\025SuggesterServiceProtoP" +
       "\001Z+github.com/e-conomic/vmlapis/gen/go/a" +
       "sgt/v2\242\002\003AXX\252\002\007Asgt.V2\312\002\007Asgt\\V2\342\002\023Asgt\\" +
-      "V2\\GPBMetadata\352\002\010Asgt::V2\222A:\022\021\n\013AutoSugg" +
-      "est2\002v2*\001\0022\020application/json:\020applicatio" +
-      "n/jsonb\006proto3"
+      "V2\\GPBMetadata\352\002\010Asgt::V2\222A\351\006\022\331\005\n\013Autosu" +
+      "ggest\022\305\005Autosuggest is the process autom" +
+      "ation toolkit for ERPs, designed for tra" +
+      "nsaction workflows. Upload examples to a" +
+      " dataset, and Autosuggest trains models " +
+      "that suggest target values for new input" +
+      "s.\n\n**Hosts:** `api.prod.asgt.visma.ai` " +
+      "for production and `api.stag.asgt.visma." +
+      "ai` for staging.\n\n**Authentication:** se" +
+      "nd your project token as `Authorization:" +
+      " Bearer <token>`. See [Authentication](h" +
+      "ttps://docs.vml.visma.ai/authentication/" +
+      ").\n\n**Errors:** a failed call returns an" +
+      " HTTP error status with a JSON body that" +
+      " holds `code`, `message` and `details`.\n" +
+      "\n**Guides:** [Autosuggest v2](https://do" +
+      "cs.vml.visma.ai/autosuggest-v2/getting-s" +
+      "tarted/) and [limits and rate limits](ht" +
+      "tps://docs.vml.visma.ai/rate-limit/).2\002v" +
+      "2*\001\0022\020application/json:\020application/json" +
+      "ZR\nP\n\nBearerAuth\022B\010\002\022-Your project token" +
+      ", sent as `Bearer <token>`.\032\rAuthorizati" +
+      "on \002b\020\n\016\n\nBearerAuth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
