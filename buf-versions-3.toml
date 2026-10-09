@@ -179,32 +179,32 @@ deps = [
 
 [[plugins]]
 name = "buf.build/protocolbuffers/pyi"
-plugin_version = "v29.3"
+plugin_version = "v33.5"
 output_languages = [
     "python",
 ]
 
 [plugins.registry.python]
 package_type = "stub-only"
-requires_python = ">=3.8"
+requires_python = ">=3.9"
 deps = [
-    "protobuf~=5.29.3",
-    "types-protobuf~=5.29",
+    "protobuf~=6.33.5",
+    "types-protobuf~=6.32",
 ]
 
 [[plugins]]
 name = "buf.build/protocolbuffers/python"
-plugin_version = "v29.3"
+plugin_version = "v33.5"
 output_languages = [
     "python",
 ]
 deps = [
-    { p_name = "buf.build/protocolbuffers/pyi", version = "v29.3" },
+    { p_name = "buf.build/protocolbuffers/pyi", version = "v33.5" },
 ]
 
 [plugins.registry.python]
 package_type = "runtime"
-requires_python = ">=3.8"
+requires_python = ">=3.9"
 deps = [
-    "protobuf~=5.29.3",
+    "protobuf~=6.33.5",
 ]

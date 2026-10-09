@@ -4,7 +4,8 @@ from ssn.type import text_annotation_pb2 as _text_annotation_pb2
 from google.protobuf.internal import containers as _containers
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from collections.abc import Iterable as _Iterable, Mapping as _Mapping
+from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -16,7 +17,7 @@ class GetTextAnnotationRequest(_message.Message):
     document: _annotator_pb2.Document
     preview: bool
     preview_last: bool
-    def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., preview: bool = ..., preview_last: bool = ...) -> None: ...
+    def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., preview: _Optional[bool] = ..., preview_last: _Optional[bool] = ...) -> None: ...
 
 class GetTextAnnotationResponse(_message.Message):
     __slots__ = ("text_annotation", "image", "last_image")
@@ -78,7 +79,7 @@ class AsyncGetOperationStatusResponse(_message.Message):
     done: bool
     status_code: int
     error_message: str
-    def __init__(self, operation_name: _Optional[str] = ..., done: bool = ..., status_code: _Optional[int] = ..., error_message: _Optional[str] = ...) -> None: ...
+    def __init__(self, operation_name: _Optional[str] = ..., done: _Optional[bool] = ..., status_code: _Optional[int] = ..., error_message: _Optional[str] = ...) -> None: ...
 
 class OcrScanImageRequest(_message.Message):
     __slots__ = ("data",)

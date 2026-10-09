@@ -1,3 +1,5 @@
+import datetime
+
 from asgt.type import dataset_pb2 as _dataset_pb2
 from asgt.type import model_pb2 as _model_pb2
 from asgt.type import prediction_pb2 as _prediction_pb2
@@ -11,7 +13,8 @@ from ssn.dataservice.v1 import dataservice_pb2 as _dataservice_pb2
 from google.protobuf.internal import containers as _containers
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from collections.abc import Iterable as _Iterable, Mapping as _Mapping
+from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -25,7 +28,7 @@ class CalculateMetricsRequest(_message.Message):
     end_time: _timestamp_pb2.Timestamp
     tags: _containers.RepeatedScalarFieldContainer[str]
     legacy: bool
-    def __init__(self, start_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., end_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., legacy: bool = ...) -> None: ...
+    def __init__(self, start_time: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., end_time: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., legacy: _Optional[bool] = ...) -> None: ...
 
 class CalculateMetricsResponse(_message.Message):
     __slots__ = ("metrics",)
