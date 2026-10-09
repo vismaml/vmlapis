@@ -8,6 +8,7 @@ import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/wrappers.proto";
 import "google/type/date.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
 import "ssn/type/tier.proto";
@@ -16,11 +17,29 @@ option csharp_namespace = "Ssn.Dataservice.V1";
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/dataservice/v1;dataservice";
 option java_outer_classname = "DataServiceProto";
 
+// Send feedback on Smartscan results, and delete it by tag.
 service DataService {
+  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Send feedback on Smartscan results, and delete it by tag."};
+
   rpc CreateDocument(CreateDocumentRequest) returns (CreateDocumentResponse);
   rpc ReadDocument(ReadDocumentRequest) returns (ReadDocumentResponse);
   // For feedback
   rpc PrepareFeedback(PrepareFeedbackRequest) returns (google.protobuf.Empty);
+  // Send the correct values for an annotated document.
+  //
+  // Send the values your user confirmed for a document you sent to
+  // POST /v1/document:annotate, identified by the `feedbackId` from that
+  // response. Feedback powers your quality metrics, and it's used to improve
+  // the models. Send it once per document, within 90 days of the annotate
+  // call, and tag it so you can delete it later with POST /v1/feedback:delete.
+  // A successful call returns an empty object.
+  //
+  // Errors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,
+  // 404 if the ID is unknown or the annotate call was more than 90 days ago,
+  // and 409 if feedback for the ID was already sent.
+  //
+  // For Smartscan Async transactions, send corrections with
+  // PUT /v1/transactions/{id}/results instead.
   rpc Feedback(FeedbackRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1/feedback:create"
@@ -29,6 +48,14 @@ service DataService {
   }
   rpc CalculateMetrics(MetricsRequest) returns (FeedbackMetrics);
   rpc CalculateMetricsV2(MetricsRequest) returns (FeedbackMetricsV2Response);
+  // Delete feedback by tag.
+  //
+  // Deletes your project's feedback that has at least one of the given tags,
+  // together with the document image and text stored with it. Only feedback
+  // sent before this call is deleted. The call records the request and
+  // returns an empty object right away; a daily job then deletes the data.
+  //
+  // Errors: 400 if no tag is given, and 403 if you call it with a valet key.
   rpc Delete(DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1/feedback:delete"
@@ -62,55 +89,116 @@ message Document {
   string document_text = 12 [(gen_bq_schema.bigquery).ignore = true];
 }
 
+// The correct values for a document, as your user confirmed them. Send the
+// final value of each field your user reviewed, whether they kept the
+// suggestion or changed it. Field names match the annotate response.
 message TrueValues {
+  // Total including VAT, as a number.
   google.protobuf.DoubleValue total_incl_vat = 1;
+  // Total VAT, as a number.
   google.protobuf.DoubleValue total_vat = 2;
+  // Total excluding VAT, as a number.
   google.protobuf.DoubleValue total_excl_vat = 3;
+  // [DEPRECATED] Send `documentDate` instead.
   google.type.Date order_date = 4 [(gen_bq_schema.bigquery).type_override = "DATE"];
+  // Last day for the payment, as an object with year, month and day. The day
+  // must be 1 to 31 and the month 1 to 12, or the call returns 400.
   google.type.Date payment_due_date = 5 [(gen_bq_schema.bigquery).type_override = "DATE"];
+  // Document type, using the values the annotate response returns, for
+  // example "Invoice".
   google.protobuf.StringValue document_type = 6;
+  // Three-letter ISO 4217 currency code, for example "DKK".
   google.protobuf.StringValue currency = 7;
+  // Last four digits of the card used for payment, for example "2345".
   google.protobuf.StringValue credit_card_last_four = 8;
+  // Payment method, using the values the annotate response returns: "Cash",
+  // "CreditCard" or "BankTransfer".
   google.protobuf.StringValue payment_method = 9;
+  // Type field of a Danish FIK payment line.
   google.protobuf.StringValue ocr_line_dk_type = 10;
+  // Payment reference of a Danish FIK payment line.
   google.protobuf.StringValue ocr_line_dk_payment_id = 11;
+  // Creditor account number of a Danish FIK payment line.
   google.protobuf.StringValue ocr_line_dk_creditor_id = 12;
+  // Swedish payment reference.
   google.protobuf.StringValue ocr_line_se_payment_id = 13;
+  // Swedish Bankgiro number of the creditor.
   google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;
+  // Swedish PlusGiro number of the creditor.
   google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;
+  // Norwegian payment reference (KID).
   google.protobuf.StringValue ocr_line_no_payment_id = 16;
+  // Finnish payment reference (viitenumero).
   google.protobuf.StringValue ocr_line_fi_payment_id = 17;
+  // Dutch payment reference (betalingskenmerk).
   google.protobuf.StringValue ocr_line_nl_payment_id = 18;
+  // [DEPRECATED] Send `supplierOrganisationNumber` instead.
   google.protobuf.StringValue supplier_corporate_id = 19;
+  // Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+  // example "DK".
   google.protobuf.StringValue supplier_country_code = 20;
+  // [DEPRECATED] Send `documentNumber` instead.
   google.protobuf.StringValue invoice_number = 21;
+  // IBAN.
   google.protobuf.StringValue iban = 22;
+  // Order reference on the document. No Smartscan feature extracts it.
   google.protobuf.StringValue order_reference = 23;
+  // Bank account number.
   google.protobuf.StringValue bank_account_number = 24;
+  // Bank registration number, in countries that use one, such as Denmark.
   google.protobuf.StringValue bank_registration_number = 25;
+  // Name of the supplier.
   google.protobuf.StringValue supplier_name = 26;
+  // BIC code.
   google.protobuf.StringValue bic = 27;
+  // Number that identifies the document, such as the invoice number.
   google.protobuf.StringValue document_number = 28;
+  // Date the document was issued, as an object with year, month and day. The
+  // day must be 1 to 31 and the month 1 to 12, or the call returns 400.
   google.type.Date document_date = 29 [(gen_bq_schema.bigquery).type_override = "DATE"];
+  // Order number, if the document shows one.
   google.protobuf.StringValue order_number = 30;
+  // VAT number of the supplier.
   google.protobuf.StringValue supplier_vat_number = 31;
+  // National company ID of the supplier, such as the CVR number in Denmark or
+  // the KvK number in the Netherlands.
   google.protobuf.StringValue supplier_organisation_number = 32;
+  // Address of the supplier.
   google.protobuf.StringValue supplier_address = 33;
+  // Number that identifies the customer.
   google.protobuf.StringValue customer_number = 34;
+  // Receiver's order number.
   google.protobuf.StringValue receiver_order_number = 35;
+  // Belgian structured payment reference (OGM), for example
+  // "+++123/1234/12345+++".
   google.protobuf.StringValue ocr_line_be_payment_id = 36;
+  // Address of the receiver.
   google.protobuf.StringValue receiver_address = 37;
+  // Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
   google.protobuf.StringValue receiver_country_code = 38;
+  // Name of the receiver.
   google.protobuf.StringValue receiver_name = 39;
+  // VAT number of the receiver.
   google.protobuf.StringValue receiver_vat_number = 40;
 
+  // Purchase lines, in the same format as `purchaseLines` in the annotate
+  // response.
   repeated ssn.type.PurchaseLineCandidate purchase_lines = 41;
+  // Answers to the questions asked in the annotate request, in the same
+  // format as `answers` in the annotate response.
   repeated ssn.type.AnswerCandidate answers = 42;
+  // VAT levels, in the same format as `vatDistribution` in the annotate
+  // response.
   repeated ssn.type.VatDistributionCandidate vat_distribution = 43;
 
+  // Check-in date on an accommodation document, as an object with year,
+  // month and day.
   google.type.Date check_in_date = 44 [(gen_bq_schema.bigquery).type_override = "DATE"];
+  // Check-out date on an accommodation document, as an object with year,
+  // month and day.
   google.type.Date check_out_date = 45 [(gen_bq_schema.bigquery).type_override = "DATE"];
 
+  // Polish KSeF e-invoicing identifier.
   google.protobuf.StringValue ksef = 46;
 }
 
@@ -296,9 +384,14 @@ message PrepareFeedbackRequest {
   repeated Returned returned = 11;
 }
 
+// Feedback for one annotated document.
 message FeedbackRequest {
+  // The `feedbackId` from the annotate response for the document. Required.
   string id = 1;
   TrueValues true_values = 2;
+  // Labels to store with the feedback, for example your customer's ID. To
+  // delete the feedback later, call POST /v1/feedback:delete with one of
+  // them. Tags sent with the annotate request aren't copied to the feedback.
   repeated string tags = 3;
 }
 
@@ -326,7 +419,10 @@ message Correctness {
   int32 support = 5;
 }
 
+// Tags of the feedback to delete.
 message DeleteRequest {
+  // Feedback with at least one of these tags is deleted. At least one tag is
+  // required.
   repeated string tags = 1;
 }
 

@@ -3,10 +3,31 @@ syntax = "proto3";
 package ssn.access.v1;
 
 import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/access/v1;access";
 
+// Issue valet keys: short-lived tokens for web and mobile apps.
 service Access {
+  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Create valet keys, short-lived tokens for web and mobile apps."};
+
+  // Create a valet key, a short-lived token for a web or mobile app.
+  //
+  // Call this from your backend with your project token, and give the
+  // returned token to the app. The app sends it as
+  // `Authorization: Bearer <token>`, so your project token never has to be
+  // in an untrusted client. The key expires 8 hours after it's issued,
+  // unless you set `exp`.
+  //
+  // A valet key can call POST /v1/document:annotate and
+  // POST /v1/feedback:create, the Smartscan Async endpoints that create a
+  // transaction, get its status or results, and update its results, and the
+  // three Autosuggest suggest endpoints and GET /v2/trainings. Every other
+  // endpoint in the API reference returns 403 for a valet key, and so does
+  // any call after the key expires. Keys can't be revoked.
+  //
+  // Errors: 400 if `exp` is more than 48 hours from now, and 403 if you call
+  // this endpoint with a valet key or the demo token.
   rpc GenerateValetKey(ValetKeyRequest) returns (ValetKeyResponse) {
     option (google.api.http) = {
       post: "/v1/access/valetkey"
@@ -15,19 +36,21 @@ service Access {
   }
 }
 
+// Options for a new valet key.
 message ValetKeyRequest {
-  // Principal / Data Subject, ie. user id
-  // https://tools.ietf.org/html/rfc7519#section-4.1.2
+  // Optional. Who the key is for, for example your user's ID. It's stored in
+  // the token as its subject (the `sub` claim).
   string sub = 1;
-  // Timestamp for when this key expires
-  // Default 8 hours from now, max 48h
-  // https://tools.ietf.org/html/rfc7519#section-4.1.4
+  // When the key expires, as a Unix timestamp in seconds. At most 48 hours
+  // from now. Defaults to 8 hours after the key is issued.
   int64 exp = 2;
 }
 
+// A new valet key.
 message ValetKeyResponse {
-  // Key for this key
+  // Unique ID of the key, also stored in the token as its `jti` claim.
   string id = 1;
-  // A JWT Token
+  // The valet key, a signed JSON Web Token (JWT). Send it as
+  // `Authorization: Bearer <token>`.
   string token = 2;
 }
