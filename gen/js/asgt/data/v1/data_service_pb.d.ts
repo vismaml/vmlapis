@@ -5,6 +5,7 @@ import * as asgt_type_model_pb from '../../../asgt/type/model_pb'; // proto impo
 import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb'; // proto import: "asgt/type/prediction.proto"
 import * as asgt_type_retention_policy_pb from '../../../asgt/type/retention_policy_pb'; // proto import: "asgt/type/retention_policy.proto"
 import * as asgt_type_sample_pb from '../../../asgt/type/sample_pb'; // proto import: "asgt/type/sample.proto"
+import * as asgt_type_tier_pb from '../../../asgt/type/tier_pb'; // proto import: "asgt/type/tier.proto"
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
 import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb'; // proto import: "google/protobuf/empty.proto"
 import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb'; // proto import: "google/protobuf/timestamp.proto"
@@ -324,6 +325,9 @@ export class RegisterQueryStatsRequest extends jspb.Message {
   getReturnedUltraHigh(): number;
   setReturnedUltraHigh(value: number): RegisterQueryStatsRequest;
 
+  getTier(): asgt_type_tier_pb.Tier;
+  setTier(value: asgt_type_tier_pb.Tier): RegisterQueryStatsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RegisterQueryStatsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: RegisterQueryStatsRequest): RegisterQueryStatsRequest.AsObject;
@@ -344,6 +348,7 @@ export namespace RegisterQueryStatsRequest {
     returnedHigh: number,
     returnedVeryHigh: number,
     returnedUltraHigh: number,
+    tier: asgt_type_tier_pb.Tier,
   }
 }
 

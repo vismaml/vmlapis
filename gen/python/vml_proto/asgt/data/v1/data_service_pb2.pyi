@@ -3,6 +3,7 @@ from asgt.type import model_pb2 as _model_pb2
 from asgt.type import prediction_pb2 as _prediction_pb2
 from asgt.type import retention_policy_pb2 as _retention_policy_pb2
 from asgt.type import sample_pb2 as _sample_pb2
+from asgt.type import tier_pb2 as _tier_pb2
 from google.api import annotations_pb2 as _annotations_pb2
 from google.protobuf import empty_pb2 as _empty_pb2
 from google.protobuf import timestamp_pb2 as _timestamp_pb2
@@ -109,7 +110,7 @@ class GetInfoResponse(_message.Message):
     def __init__(self, dataset: _Optional[_Union[_dataset_pb2.Dataset, _Mapping]] = ..., model: _Optional[_Union[_model_pb2.Model, _Mapping]] = ...) -> None: ...
 
 class RegisterQueryStatsRequest(_message.Message):
-    __slots__ = ("dataset", "model_type", "batch_size", "tags", "returned_very_low", "returned_low", "returned_mid", "returned_high", "returned_very_high", "returned_ultra_high")
+    __slots__ = ("dataset", "model_type", "batch_size", "tags", "returned_very_low", "returned_low", "returned_mid", "returned_high", "returned_very_high", "returned_ultra_high", "tier")
     DATASET_FIELD_NUMBER: _ClassVar[int]
     MODEL_TYPE_FIELD_NUMBER: _ClassVar[int]
     BATCH_SIZE_FIELD_NUMBER: _ClassVar[int]
@@ -120,6 +121,7 @@ class RegisterQueryStatsRequest(_message.Message):
     RETURNED_HIGH_FIELD_NUMBER: _ClassVar[int]
     RETURNED_VERY_HIGH_FIELD_NUMBER: _ClassVar[int]
     RETURNED_ULTRA_HIGH_FIELD_NUMBER: _ClassVar[int]
+    TIER_FIELD_NUMBER: _ClassVar[int]
     dataset: str
     model_type: str
     batch_size: int
@@ -130,4 +132,5 @@ class RegisterQueryStatsRequest(_message.Message):
     returned_high: int
     returned_very_high: int
     returned_ultra_high: int
-    def __init__(self, dataset: _Optional[str] = ..., model_type: _Optional[str] = ..., batch_size: _Optional[int] = ..., tags: _Optional[_Iterable[str]] = ..., returned_very_low: _Optional[int] = ..., returned_low: _Optional[int] = ..., returned_mid: _Optional[int] = ..., returned_high: _Optional[int] = ..., returned_very_high: _Optional[int] = ..., returned_ultra_high: _Optional[int] = ...) -> None: ...
+    tier: _tier_pb2.Tier
+    def __init__(self, dataset: _Optional[str] = ..., model_type: _Optional[str] = ..., batch_size: _Optional[int] = ..., tags: _Optional[_Iterable[str]] = ..., returned_very_low: _Optional[int] = ..., returned_low: _Optional[int] = ..., returned_mid: _Optional[int] = ..., returned_high: _Optional[int] = ..., returned_very_high: _Optional[int] = ..., returned_ultra_high: _Optional[int] = ..., tier: _Optional[_Union[_tier_pb2.Tier, str]] = ...) -> None: ...
