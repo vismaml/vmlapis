@@ -15,16 +15,19 @@ import "validate/validate.proto";
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2";
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
   info: {
-    title: "Autosuggest"
+    title: "Autosuggest and Product Types"
     version: "v2"
     description:
       "Autosuggest is the process automation toolkit for ERPs, designed for transaction workflows. "
-      "Upload examples to a dataset, and Autosuggest trains models that suggest target values for new inputs.\n\n"
+      "Upload examples to a dataset, and Autosuggest trains models that suggest target values for new inputs. "
+      "This reference also covers Product Types, which classifies free-text descriptions, such as invoice lines "
+      "or bank transactions, into 74 standardized product types.\n\n"
       "**Hosts:** `api.prod.asgt.visma.ai` for production and `api.stag.asgt.visma.ai` for staging.\n\n"
       "**Authentication:** send your project token as `Authorization: Bearer <token>`. "
       "See [Authentication](https://docs.vml.visma.ai/authentication/).\n\n"
       "**Errors:** a failed call returns an HTTP error status with a JSON body that holds `code`, `message` and `details`.\n\n"
-      "**Guides:** [Autosuggest v2](https://docs.vml.visma.ai/autosuggest-v2/getting-started/) and "
+      "**Guides:** [Autosuggest v2](https://docs.vml.visma.ai/autosuggest-v2/getting-started/), "
+      "[Product Types](https://docs.vml.visma.ai/producttypes/getting-started/) and "
       "[limits and rate limits](https://docs.vml.visma.ai/rate-limit/)."
   }
   schemes: HTTPS
