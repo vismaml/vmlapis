@@ -2,7 +2,8 @@ from google.protobuf.internal import containers as _containers
 from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from collections.abc import Iterable as _Iterable, Mapping as _Mapping
+from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -104,4 +105,4 @@ class Branch(_message.Message):
     next_step_id: str
     is_escalation: bool
     rationale: str
-    def __init__(self, branch_id: _Optional[str] = ..., label: _Optional[str] = ..., criterion: _Optional[str] = ..., when: _Optional[str] = ..., output_value: _Optional[str] = ..., next_step_id: _Optional[str] = ..., is_escalation: bool = ..., rationale: _Optional[str] = ...) -> None: ...
+    def __init__(self, branch_id: _Optional[str] = ..., label: _Optional[str] = ..., criterion: _Optional[str] = ..., when: _Optional[str] = ..., output_value: _Optional[str] = ..., next_step_id: _Optional[str] = ..., is_escalation: _Optional[bool] = ..., rationale: _Optional[str] = ...) -> None: ...

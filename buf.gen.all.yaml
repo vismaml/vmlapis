@@ -10,7 +10,7 @@ plugins:
   - plugin: buf.build/protocolbuffers/go:v1.33.0
     out: gen/go
     opt: paths=source_relative
-  - plugin: buf.build/protocolbuffers/python:v29.3
+  - plugin: buf.build/protocolbuffers/python:v33.5
     out: gen/python/vml_proto
   - plugin: buf.build/protocolbuffers/js:v3.21.2
     out: gen/js

@@ -10,7 +10,8 @@ from validate import validate_pb2 as _validate_pb2
 from google.protobuf.internal import containers as _containers
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from collections.abc import Iterable as _Iterable, Mapping as _Mapping
+from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -26,7 +27,7 @@ class SuggestOptions(_message.Message):
     model_type: _model_type_pb2.ModelType
     include_product_types: bool
     tier: _tier_pb2.Tier
-    def __init__(self, suggest_limit: _Optional[int] = ..., min_confidence: _Optional[_Union[_prediction_pb2.Confidence.Level, str]] = ..., model_type: _Optional[_Union[_model_type_pb2.ModelType, str]] = ..., include_product_types: bool = ..., tier: _Optional[_Union[_tier_pb2.Tier, str]] = ...) -> None: ...
+    def __init__(self, suggest_limit: _Optional[int] = ..., min_confidence: _Optional[_Union[_prediction_pb2.Confidence.Level, str]] = ..., model_type: _Optional[_Union[_model_type_pb2.ModelType, str]] = ..., include_product_types: _Optional[bool] = ..., tier: _Optional[_Union[_tier_pb2.Tier, str]] = ...) -> None: ...
 
 class SuggestRequest(_message.Message):
     __slots__ = ("dataset_name", "input", "options")

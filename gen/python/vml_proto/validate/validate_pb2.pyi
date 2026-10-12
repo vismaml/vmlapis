@@ -1,3 +1,5 @@
+import datetime
+
 from google.protobuf import descriptor_pb2 as _descriptor_pb2
 from google.protobuf import duration_pb2 as _duration_pb2
 from google.protobuf import timestamp_pb2 as _timestamp_pb2
@@ -5,7 +7,8 @@ from google.protobuf.internal import containers as _containers
 from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from collections.abc import Iterable as _Iterable, Mapping as _Mapping
+from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -91,7 +94,7 @@ class FloatRules(_message.Message):
     gte: float
     not_in: _containers.RepeatedScalarFieldContainer[float]
     ignore_empty: bool
-    def __init__(self, const: _Optional[float] = ..., lt: _Optional[float] = ..., lte: _Optional[float] = ..., gt: _Optional[float] = ..., gte: _Optional[float] = ..., not_in: _Optional[_Iterable[float]] = ..., ignore_empty: bool = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[float] = ..., lt: _Optional[float] = ..., lte: _Optional[float] = ..., gt: _Optional[float] = ..., gte: _Optional[float] = ..., not_in: _Optional[_Iterable[float]] = ..., ignore_empty: _Optional[bool] = ..., **kwargs) -> None: ...
 
 class DoubleRules(_message.Message):
     __slots__ = ("const", "lt", "lte", "gt", "gte", "not_in", "ignore_empty")
@@ -110,7 +113,7 @@ class DoubleRules(_message.Message):
     gte: float
     not_in: _containers.RepeatedScalarFieldContainer[float]
     ignore_empty: bool
-    def __init__(self, const: _Optional[float] = ..., lt: _Optional[float] = ..., lte: _Optional[float] = ..., gt: _Optional[float] = ..., gte: _Optional[float] = ..., not_in: _Optional[_Iterable[float]] = ..., ignore_empty: bool = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[float] = ..., lt: _Optional[float] = ..., lte: _Optional[float] = ..., gt: _Optional[float] = ..., gte: _Optional[float] = ..., not_in: _Optional[_Iterable[float]] = ..., ignore_empty: _Optional[bool] = ..., **kwargs) -> None: ...
 
 class Int32Rules(_message.Message):
     __slots__ = ("const", "lt", "lte", "gt", "gte", "not_in", "ignore_empty")
@@ -129,7 +132,7 @@ class Int32Rules(_message.Message):
     gte: int
     not_in: _containers.RepeatedScalarFieldContainer[int]
     ignore_empty: bool
-    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: bool = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: _Optional[bool] = ..., **kwargs) -> None: ...
 
 class Int64Rules(_message.Message):
     __slots__ = ("const", "lt", "lte", "gt", "gte", "not_in", "ignore_empty")
@@ -148,7 +151,7 @@ class Int64Rules(_message.Message):
     gte: int
     not_in: _containers.RepeatedScalarFieldContainer[int]
     ignore_empty: bool
-    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: bool = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: _Optional[bool] = ..., **kwargs) -> None: ...
 
 class UInt32Rules(_message.Message):
     __slots__ = ("const", "lt", "lte", "gt", "gte", "not_in", "ignore_empty")
@@ -167,7 +170,7 @@ class UInt32Rules(_message.Message):
     gte: int
     not_in: _containers.RepeatedScalarFieldContainer[int]
     ignore_empty: bool
-    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: bool = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: _Optional[bool] = ..., **kwargs) -> None: ...
 
 class UInt64Rules(_message.Message):
     __slots__ = ("const", "lt", "lte", "gt", "gte", "not_in", "ignore_empty")
@@ -186,7 +189,7 @@ class UInt64Rules(_message.Message):
     gte: int
     not_in: _containers.RepeatedScalarFieldContainer[int]
     ignore_empty: bool
-    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: bool = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: _Optional[bool] = ..., **kwargs) -> None: ...
 
 class SInt32Rules(_message.Message):
     __slots__ = ("const", "lt", "lte", "gt", "gte", "not_in", "ignore_empty")
@@ -205,7 +208,7 @@ class SInt32Rules(_message.Message):
     gte: int
     not_in: _containers.RepeatedScalarFieldContainer[int]
     ignore_empty: bool
-    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: bool = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: _Optional[bool] = ..., **kwargs) -> None: ...
 
 class SInt64Rules(_message.Message):
     __slots__ = ("const", "lt", "lte", "gt", "gte", "not_in", "ignore_empty")
@@ -224,7 +227,7 @@ class SInt64Rules(_message.Message):
     gte: int
     not_in: _containers.RepeatedScalarFieldContainer[int]
     ignore_empty: bool
-    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: bool = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: _Optional[bool] = ..., **kwargs) -> None: ...
 
 class Fixed32Rules(_message.Message):
     __slots__ = ("const", "lt", "lte", "gt", "gte", "not_in", "ignore_empty")
@@ -243,7 +246,7 @@ class Fixed32Rules(_message.Message):
     gte: int
     not_in: _containers.RepeatedScalarFieldContainer[int]
     ignore_empty: bool
-    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: bool = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: _Optional[bool] = ..., **kwargs) -> None: ...
 
 class Fixed64Rules(_message.Message):
     __slots__ = ("const", "lt", "lte", "gt", "gte", "not_in", "ignore_empty")
@@ -262,7 +265,7 @@ class Fixed64Rules(_message.Message):
     gte: int
     not_in: _containers.RepeatedScalarFieldContainer[int]
     ignore_empty: bool
-    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: bool = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: _Optional[bool] = ..., **kwargs) -> None: ...
 
 class SFixed32Rules(_message.Message):
     __slots__ = ("const", "lt", "lte", "gt", "gte", "not_in", "ignore_empty")
@@ -281,7 +284,7 @@ class SFixed32Rules(_message.Message):
     gte: int
     not_in: _containers.RepeatedScalarFieldContainer[int]
     ignore_empty: bool
-    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: bool = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: _Optional[bool] = ..., **kwargs) -> None: ...
 
 class SFixed64Rules(_message.Message):
     __slots__ = ("const", "lt", "lte", "gt", "gte", "not_in", "ignore_empty")
@@ -300,13 +303,13 @@ class SFixed64Rules(_message.Message):
     gte: int
     not_in: _containers.RepeatedScalarFieldContainer[int]
     ignore_empty: bool
-    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: bool = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[int] = ..., lt: _Optional[int] = ..., lte: _Optional[int] = ..., gt: _Optional[int] = ..., gte: _Optional[int] = ..., not_in: _Optional[_Iterable[int]] = ..., ignore_empty: _Optional[bool] = ..., **kwargs) -> None: ...
 
 class BoolRules(_message.Message):
     __slots__ = ("const",)
     CONST_FIELD_NUMBER: _ClassVar[int]
     const: bool
-    def __init__(self, const: bool = ...) -> None: ...
+    def __init__(self, const: _Optional[bool] = ...) -> None: ...
 
 class StringRules(_message.Message):
     __slots__ = ("const", "len", "min_len", "max_len", "len_bytes", "min_bytes", "max_bytes", "pattern", "prefix", "suffix", "contains", "not_contains", "not_in", "email", "hostname", "ip", "ipv4", "ipv6", "uri", "uri_ref", "address", "uuid", "well_known_regex", "strict", "ignore_empty")
@@ -361,7 +364,7 @@ class StringRules(_message.Message):
     well_known_regex: KnownRegex
     strict: bool
     ignore_empty: bool
-    def __init__(self, const: _Optional[str] = ..., len: _Optional[int] = ..., min_len: _Optional[int] = ..., max_len: _Optional[int] = ..., len_bytes: _Optional[int] = ..., min_bytes: _Optional[int] = ..., max_bytes: _Optional[int] = ..., pattern: _Optional[str] = ..., prefix: _Optional[str] = ..., suffix: _Optional[str] = ..., contains: _Optional[str] = ..., not_contains: _Optional[str] = ..., not_in: _Optional[_Iterable[str]] = ..., email: bool = ..., hostname: bool = ..., ip: bool = ..., ipv4: bool = ..., ipv6: bool = ..., uri: bool = ..., uri_ref: bool = ..., address: bool = ..., uuid: bool = ..., well_known_regex: _Optional[_Union[KnownRegex, str]] = ..., strict: bool = ..., ignore_empty: bool = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[str] = ..., len: _Optional[int] = ..., min_len: _Optional[int] = ..., max_len: _Optional[int] = ..., len_bytes: _Optional[int] = ..., min_bytes: _Optional[int] = ..., max_bytes: _Optional[int] = ..., pattern: _Optional[str] = ..., prefix: _Optional[str] = ..., suffix: _Optional[str] = ..., contains: _Optional[str] = ..., not_contains: _Optional[str] = ..., not_in: _Optional[_Iterable[str]] = ..., email: _Optional[bool] = ..., hostname: _Optional[bool] = ..., ip: _Optional[bool] = ..., ipv4: _Optional[bool] = ..., ipv6: _Optional[bool] = ..., uri: _Optional[bool] = ..., uri_ref: _Optional[bool] = ..., address: _Optional[bool] = ..., uuid: _Optional[bool] = ..., well_known_regex: _Optional[_Union[KnownRegex, str]] = ..., strict: _Optional[bool] = ..., ignore_empty: _Optional[bool] = ..., **kwargs) -> None: ...
 
 class BytesRules(_message.Message):
     __slots__ = ("const", "len", "min_len", "max_len", "pattern", "prefix", "suffix", "contains", "not_in", "ip", "ipv4", "ipv6", "ignore_empty")
@@ -392,7 +395,7 @@ class BytesRules(_message.Message):
     ipv4: bool
     ipv6: bool
     ignore_empty: bool
-    def __init__(self, const: _Optional[bytes] = ..., len: _Optional[int] = ..., min_len: _Optional[int] = ..., max_len: _Optional[int] = ..., pattern: _Optional[str] = ..., prefix: _Optional[bytes] = ..., suffix: _Optional[bytes] = ..., contains: _Optional[bytes] = ..., not_in: _Optional[_Iterable[bytes]] = ..., ip: bool = ..., ipv4: bool = ..., ipv6: bool = ..., ignore_empty: bool = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[bytes] = ..., len: _Optional[int] = ..., min_len: _Optional[int] = ..., max_len: _Optional[int] = ..., pattern: _Optional[str] = ..., prefix: _Optional[bytes] = ..., suffix: _Optional[bytes] = ..., contains: _Optional[bytes] = ..., not_in: _Optional[_Iterable[bytes]] = ..., ip: _Optional[bool] = ..., ipv4: _Optional[bool] = ..., ipv6: _Optional[bool] = ..., ignore_empty: _Optional[bool] = ..., **kwargs) -> None: ...
 
 class EnumRules(_message.Message):
     __slots__ = ("const", "defined_only", "not_in")
@@ -403,7 +406,7 @@ class EnumRules(_message.Message):
     const: int
     defined_only: bool
     not_in: _containers.RepeatedScalarFieldContainer[int]
-    def __init__(self, const: _Optional[int] = ..., defined_only: bool = ..., not_in: _Optional[_Iterable[int]] = ..., **kwargs) -> None: ...
+    def __init__(self, const: _Optional[int] = ..., defined_only: _Optional[bool] = ..., not_in: _Optional[_Iterable[int]] = ..., **kwargs) -> None: ...
 
 class MessageRules(_message.Message):
     __slots__ = ("skip", "required")
@@ -411,7 +414,7 @@ class MessageRules(_message.Message):
     REQUIRED_FIELD_NUMBER: _ClassVar[int]
     skip: bool
     required: bool
-    def __init__(self, skip: bool = ..., required: bool = ...) -> None: ...
+    def __init__(self, skip: _Optional[bool] = ..., required: _Optional[bool] = ...) -> None: ...
 
 class RepeatedRules(_message.Message):
     __slots__ = ("min_items", "max_items", "unique", "items", "ignore_empty")
@@ -425,7 +428,7 @@ class RepeatedRules(_message.Message):
     unique: bool
     items: FieldRules
     ignore_empty: bool
-    def __init__(self, min_items: _Optional[int] = ..., max_items: _Optional[int] = ..., unique: bool = ..., items: _Optional[_Union[FieldRules, _Mapping]] = ..., ignore_empty: bool = ...) -> None: ...
+    def __init__(self, min_items: _Optional[int] = ..., max_items: _Optional[int] = ..., unique: _Optional[bool] = ..., items: _Optional[_Union[FieldRules, _Mapping]] = ..., ignore_empty: _Optional[bool] = ...) -> None: ...
 
 class MapRules(_message.Message):
     __slots__ = ("min_pairs", "max_pairs", "no_sparse", "keys", "values", "ignore_empty")
@@ -441,7 +444,7 @@ class MapRules(_message.Message):
     keys: FieldRules
     values: FieldRules
     ignore_empty: bool
-    def __init__(self, min_pairs: _Optional[int] = ..., max_pairs: _Optional[int] = ..., no_sparse: bool = ..., keys: _Optional[_Union[FieldRules, _Mapping]] = ..., values: _Optional[_Union[FieldRules, _Mapping]] = ..., ignore_empty: bool = ...) -> None: ...
+    def __init__(self, min_pairs: _Optional[int] = ..., max_pairs: _Optional[int] = ..., no_sparse: _Optional[bool] = ..., keys: _Optional[_Union[FieldRules, _Mapping]] = ..., values: _Optional[_Union[FieldRules, _Mapping]] = ..., ignore_empty: _Optional[bool] = ...) -> None: ...
 
 class AnyRules(_message.Message):
     __slots__ = ("required", "not_in")
@@ -450,7 +453,7 @@ class AnyRules(_message.Message):
     NOT_IN_FIELD_NUMBER: _ClassVar[int]
     required: bool
     not_in: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, required: bool = ..., not_in: _Optional[_Iterable[str]] = ..., **kwargs) -> None: ...
+    def __init__(self, required: _Optional[bool] = ..., not_in: _Optional[_Iterable[str]] = ..., **kwargs) -> None: ...
 
 class DurationRules(_message.Message):
     __slots__ = ("required", "const", "lt", "lte", "gt", "gte", "not_in")
@@ -469,7 +472,7 @@ class DurationRules(_message.Message):
     gt: _duration_pb2.Duration
     gte: _duration_pb2.Duration
     not_in: _containers.RepeatedCompositeFieldContainer[_duration_pb2.Duration]
-    def __init__(self, required: bool = ..., const: _Optional[_Union[_duration_pb2.Duration, _Mapping]] = ..., lt: _Optional[_Union[_duration_pb2.Duration, _Mapping]] = ..., lte: _Optional[_Union[_duration_pb2.Duration, _Mapping]] = ..., gt: _Optional[_Union[_duration_pb2.Duration, _Mapping]] = ..., gte: _Optional[_Union[_duration_pb2.Duration, _Mapping]] = ..., not_in: _Optional[_Iterable[_Union[_duration_pb2.Duration, _Mapping]]] = ..., **kwargs) -> None: ...
+    def __init__(self, required: _Optional[bool] = ..., const: _Optional[_Union[datetime.timedelta, _duration_pb2.Duration, _Mapping]] = ..., lt: _Optional[_Union[datetime.timedelta, _duration_pb2.Duration, _Mapping]] = ..., lte: _Optional[_Union[datetime.timedelta, _duration_pb2.Duration, _Mapping]] = ..., gt: _Optional[_Union[datetime.timedelta, _duration_pb2.Duration, _Mapping]] = ..., gte: _Optional[_Union[datetime.timedelta, _duration_pb2.Duration, _Mapping]] = ..., not_in: _Optional[_Iterable[_Union[datetime.timedelta, _duration_pb2.Duration, _Mapping]]] = ..., **kwargs) -> None: ...
 
 class TimestampRules(_message.Message):
     __slots__ = ("required", "const", "lt", "lte", "gt", "gte", "lt_now", "gt_now", "within")
@@ -491,4 +494,4 @@ class TimestampRules(_message.Message):
     lt_now: bool
     gt_now: bool
     within: _duration_pb2.Duration
-    def __init__(self, required: bool = ..., const: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., lt: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., lte: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., gt: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., gte: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., lt_now: bool = ..., gt_now: bool = ..., within: _Optional[_Union[_duration_pb2.Duration, _Mapping]] = ...) -> None: ...
+    def __init__(self, required: _Optional[bool] = ..., const: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., lt: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., lte: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., gt: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., gte: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., lt_now: _Optional[bool] = ..., gt_now: _Optional[bool] = ..., within: _Optional[_Union[datetime.timedelta, _duration_pb2.Duration, _Mapping]] = ...) -> None: ...

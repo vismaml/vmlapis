@@ -3,7 +3,7 @@ name = "vml_proto"
 version = "0.0.0"
 description = "A package containing vml protobuf definitions for python"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 authors = [
     { name = "vismaml", email = "worksmarter@visma.com" },
 ]
@@ -19,8 +19,8 @@ classifiers = [
 dependencies = [
     "googleapis-common-protos",
     "grpcio",
-    "protobuf~=5.29.3",
-    "types-protobuf~=5.29",
+    "protobuf~=6.33.5",
+    "types-protobuf~=6.32",
 ]
 
 [project.urls]

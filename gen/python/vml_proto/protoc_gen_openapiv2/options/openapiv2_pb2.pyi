@@ -3,7 +3,8 @@ from google.protobuf.internal import containers as _containers
 from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from collections.abc import Iterable as _Iterable, Mapping as _Mapping
+from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -106,7 +107,7 @@ class Operation(_message.Message):
     security: _containers.RepeatedCompositeFieldContainer[SecurityRequirement]
     extensions: _containers.MessageMap[str, _struct_pb2.Value]
     parameters: Parameters
-    def __init__(self, tags: _Optional[_Iterable[str]] = ..., summary: _Optional[str] = ..., description: _Optional[str] = ..., external_docs: _Optional[_Union[ExternalDocumentation, _Mapping]] = ..., operation_id: _Optional[str] = ..., consumes: _Optional[_Iterable[str]] = ..., produces: _Optional[_Iterable[str]] = ..., responses: _Optional[_Mapping[str, Response]] = ..., schemes: _Optional[_Iterable[_Union[Scheme, str]]] = ..., deprecated: bool = ..., security: _Optional[_Iterable[_Union[SecurityRequirement, _Mapping]]] = ..., extensions: _Optional[_Mapping[str, _struct_pb2.Value]] = ..., parameters: _Optional[_Union[Parameters, _Mapping]] = ...) -> None: ...
+    def __init__(self, tags: _Optional[_Iterable[str]] = ..., summary: _Optional[str] = ..., description: _Optional[str] = ..., external_docs: _Optional[_Union[ExternalDocumentation, _Mapping]] = ..., operation_id: _Optional[str] = ..., consumes: _Optional[_Iterable[str]] = ..., produces: _Optional[_Iterable[str]] = ..., responses: _Optional[_Mapping[str, Response]] = ..., schemes: _Optional[_Iterable[_Union[Scheme, str]]] = ..., deprecated: _Optional[bool] = ..., security: _Optional[_Iterable[_Union[SecurityRequirement, _Mapping]]] = ..., extensions: _Optional[_Mapping[str, _struct_pb2.Value]] = ..., parameters: _Optional[_Union[Parameters, _Mapping]] = ...) -> None: ...
 
 class Parameters(_message.Message):
     __slots__ = ("headers",)
@@ -138,7 +139,7 @@ class HeaderParameter(_message.Message):
     type: HeaderParameter.Type
     format: str
     required: bool
-    def __init__(self, name: _Optional[str] = ..., description: _Optional[str] = ..., type: _Optional[_Union[HeaderParameter.Type, str]] = ..., format: _Optional[str] = ..., required: bool = ...) -> None: ...
+    def __init__(self, name: _Optional[str] = ..., description: _Optional[str] = ..., type: _Optional[_Union[HeaderParameter.Type, str]] = ..., format: _Optional[str] = ..., required: _Optional[bool] = ...) -> None: ...
 
 class Header(_message.Message):
     __slots__ = ("description", "type", "format", "default", "pattern")
@@ -252,7 +253,7 @@ class Schema(_message.Message):
     read_only: bool
     external_docs: ExternalDocumentation
     example: str
-    def __init__(self, json_schema: _Optional[_Union[JSONSchema, _Mapping]] = ..., discriminator: _Optional[str] = ..., read_only: bool = ..., external_docs: _Optional[_Union[ExternalDocumentation, _Mapping]] = ..., example: _Optional[str] = ...) -> None: ...
+    def __init__(self, json_schema: _Optional[_Union[JSONSchema, _Mapping]] = ..., discriminator: _Optional[str] = ..., read_only: _Optional[bool] = ..., external_docs: _Optional[_Union[ExternalDocumentation, _Mapping]] = ..., example: _Optional[str] = ...) -> None: ...
 
 class JSONSchema(_message.Message):
     __slots__ = ("ref", "title", "description", "default", "read_only", "example", "multiple_of", "maximum", "exclusive_maximum", "minimum", "exclusive_minimum", "max_length", "min_length", "pattern", "max_items", "min_items", "unique_items", "max_properties", "min_properties", "required", "array", "type", "format", "enum", "field_configuration", "extensions")
@@ -338,7 +339,7 @@ class JSONSchema(_message.Message):
     enum: _containers.RepeatedScalarFieldContainer[str]
     field_configuration: JSONSchema.FieldConfiguration
     extensions: _containers.MessageMap[str, _struct_pb2.Value]
-    def __init__(self, ref: _Optional[str] = ..., title: _Optional[str] = ..., description: _Optional[str] = ..., default: _Optional[str] = ..., read_only: bool = ..., example: _Optional[str] = ..., multiple_of: _Optional[float] = ..., maximum: _Optional[float] = ..., exclusive_maximum: bool = ..., minimum: _Optional[float] = ..., exclusive_minimum: bool = ..., max_length: _Optional[int] = ..., min_length: _Optional[int] = ..., pattern: _Optional[str] = ..., max_items: _Optional[int] = ..., min_items: _Optional[int] = ..., unique_items: bool = ..., max_properties: _Optional[int] = ..., min_properties: _Optional[int] = ..., required: _Optional[_Iterable[str]] = ..., array: _Optional[_Iterable[str]] = ..., type: _Optional[_Iterable[_Union[JSONSchema.JSONSchemaSimpleTypes, str]]] = ..., format: _Optional[str] = ..., enum: _Optional[_Iterable[str]] = ..., field_configuration: _Optional[_Union[JSONSchema.FieldConfiguration, _Mapping]] = ..., extensions: _Optional[_Mapping[str, _struct_pb2.Value]] = ...) -> None: ...
+    def __init__(self, ref: _Optional[str] = ..., title: _Optional[str] = ..., description: _Optional[str] = ..., default: _Optional[str] = ..., read_only: _Optional[bool] = ..., example: _Optional[str] = ..., multiple_of: _Optional[float] = ..., maximum: _Optional[float] = ..., exclusive_maximum: _Optional[bool] = ..., minimum: _Optional[float] = ..., exclusive_minimum: _Optional[bool] = ..., max_length: _Optional[int] = ..., min_length: _Optional[int] = ..., pattern: _Optional[str] = ..., max_items: _Optional[int] = ..., min_items: _Optional[int] = ..., unique_items: _Optional[bool] = ..., max_properties: _Optional[int] = ..., min_properties: _Optional[int] = ..., required: _Optional[_Iterable[str]] = ..., array: _Optional[_Iterable[str]] = ..., type: _Optional[_Iterable[_Union[JSONSchema.JSONSchemaSimpleTypes, str]]] = ..., format: _Optional[str] = ..., enum: _Optional[_Iterable[str]] = ..., field_configuration: _Optional[_Union[JSONSchema.FieldConfiguration, _Mapping]] = ..., extensions: _Optional[_Mapping[str, _struct_pb2.Value]] = ...) -> None: ...
 
 class Tag(_message.Message):
     __slots__ = ("name", "description", "external_docs", "extensions")

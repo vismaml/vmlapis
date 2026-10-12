@@ -1,8 +1,11 @@
+import datetime
+
 from google.protobuf import timestamp_pb2 as _timestamp_pb2
 from validate import validate_pb2 as _validate_pb2
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from collections.abc import Mapping as _Mapping
+from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -36,7 +39,7 @@ class InvoiceLine(_message.Message):
     customer_ref: str
     currency: str
     amount: float
-    def __init__(self, item_id: _Optional[str] = ..., text: _Optional[str] = ..., issue_date: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., supplier: _Optional[_Union[Supplier, _Mapping]] = ..., customer_ref: _Optional[str] = ..., currency: _Optional[str] = ..., amount: _Optional[float] = ...) -> None: ...
+    def __init__(self, item_id: _Optional[str] = ..., text: _Optional[str] = ..., issue_date: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., supplier: _Optional[_Union[Supplier, _Mapping]] = ..., customer_ref: _Optional[str] = ..., currency: _Optional[str] = ..., amount: _Optional[float] = ...) -> None: ...
 
 class Supplier(_message.Message):
     __slots__ = ("id", "name", "global_id")

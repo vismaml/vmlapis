@@ -1,3 +1,5 @@
+import datetime
+
 from google.api import annotations_pb2 as _annotations_pb2
 from google.protobuf import timestamp_pb2 as _timestamp_pb2
 from google.protobuf import wrappers_pb2 as _wrappers_pb2
@@ -8,7 +10,8 @@ from google.protobuf.internal import containers as _containers
 from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from collections.abc import Iterable as _Iterable, Mapping as _Mapping
+from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -47,7 +50,7 @@ class InternalEntry(_message.Message):
     swiss_qr_bill: _qr_pb2.SwissQrBill
     answer: _candidate_pb2.AnswerCandidate
     address: _address_pb2.StructuredAddress
-    def __init__(self, source: _Optional[_Union[CandidateSource, str]] = ..., source_id: _Optional[str] = ..., created_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., candidate_id: _Optional[int] = ..., candidate: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., line: _Optional[_Union[_candidate_pb2.PurchaseLine, _Mapping]] = ..., distribution: _Optional[_Union[_candidate_pb2.VatDistribution, _Mapping]] = ..., qr_code_data: _Optional[_Union[_qr_pb2.QrCodeData, _Mapping]] = ..., swiss_qr_bill: _Optional[_Union[_qr_pb2.SwissQrBill, _Mapping]] = ..., answer: _Optional[_Union[_candidate_pb2.AnswerCandidate, _Mapping]] = ..., address: _Optional[_Union[_address_pb2.StructuredAddress, _Mapping]] = ...) -> None: ...
+    def __init__(self, source: _Optional[_Union[CandidateSource, str]] = ..., source_id: _Optional[str] = ..., created_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., candidate_id: _Optional[int] = ..., candidate: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., line: _Optional[_Union[_candidate_pb2.PurchaseLine, _Mapping]] = ..., distribution: _Optional[_Union[_candidate_pb2.VatDistribution, _Mapping]] = ..., qr_code_data: _Optional[_Union[_qr_pb2.QrCodeData, _Mapping]] = ..., swiss_qr_bill: _Optional[_Union[_qr_pb2.SwissQrBill, _Mapping]] = ..., answer: _Optional[_Union[_candidate_pb2.AnswerCandidate, _Mapping]] = ..., address: _Optional[_Union[_address_pb2.StructuredAddress, _Mapping]] = ...) -> None: ...
 
 class InternalFieldAnnotation(_message.Message):
     __slots__ = ("feature", "entries")
@@ -71,7 +74,7 @@ class GetDocumentDataRequest(_message.Message):
     include_feedbacks: bool
     include_labels: bool
     environment: str
-    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., include_predictions: bool = ..., include_feedbacks: bool = ..., include_labels: bool = ..., environment: _Optional[str] = ...) -> None: ...
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., include_predictions: _Optional[bool] = ..., include_feedbacks: _Optional[bool] = ..., include_labels: _Optional[bool] = ..., environment: _Optional[str] = ...) -> None: ...
 
 class GetDocumentDataResponse(_message.Message):
     __slots__ = ("feedback_id", "consumer", "file_url", "render_urls", "text_annotation_url", "fields", "expires_at", "requested_features", "updated_at", "tags", "for_annotation", "deletion_requested_at")
@@ -99,7 +102,7 @@ class GetDocumentDataResponse(_message.Message):
     tags: _containers.RepeatedScalarFieldContainer[str]
     for_annotation: bool
     deletion_requested_at: _timestamp_pb2.Timestamp
-    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_url: _Optional[str] = ..., render_urls: _Optional[_Iterable[str]] = ..., text_annotation_url: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., fields: _Optional[_Iterable[_Union[InternalFieldAnnotation, _Mapping]]] = ..., expires_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., requested_features: _Optional[_Iterable[str]] = ..., updated_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., for_annotation: bool = ..., deletion_requested_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_url: _Optional[str] = ..., render_urls: _Optional[_Iterable[str]] = ..., text_annotation_url: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., fields: _Optional[_Iterable[_Union[InternalFieldAnnotation, _Mapping]]] = ..., expires_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., requested_features: _Optional[_Iterable[str]] = ..., updated_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., for_annotation: _Optional[bool] = ..., deletion_requested_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
 
 class SetDocumentBlobsRequest(_message.Message):
     __slots__ = ("feedback_id", "consumer", "file_uri", "render_uris", "ta_uri", "expires_at", "environment", "requested_features", "tags", "content", "ta_content", "render_contents")
@@ -127,7 +130,7 @@ class SetDocumentBlobsRequest(_message.Message):
     content: bytes
     ta_content: bytes
     render_contents: _containers.RepeatedScalarFieldContainer[bytes]
-    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., render_uris: _Optional[_Iterable[str]] = ..., ta_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., expires_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., environment: _Optional[str] = ..., requested_features: _Optional[_Iterable[str]] = ..., tags: _Optional[_Iterable[str]] = ..., content: _Optional[bytes] = ..., ta_content: _Optional[bytes] = ..., render_contents: _Optional[_Iterable[bytes]] = ...) -> None: ...
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., render_uris: _Optional[_Iterable[str]] = ..., ta_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., expires_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., environment: _Optional[str] = ..., requested_features: _Optional[_Iterable[str]] = ..., tags: _Optional[_Iterable[str]] = ..., content: _Optional[bytes] = ..., ta_content: _Optional[bytes] = ..., render_contents: _Optional[_Iterable[bytes]] = ...) -> None: ...
 
 class SetDocumentBlobsResponse(_message.Message):
     __slots__ = ()
@@ -189,7 +192,7 @@ class SetForAnnotationRequest(_message.Message):
     consumer: str
     environment: str
     for_annotation: bool
-    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., environment: _Optional[str] = ..., for_annotation: bool = ...) -> None: ...
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., environment: _Optional[str] = ..., for_annotation: _Optional[bool] = ...) -> None: ...
 
 class SetForAnnotationResponse(_message.Message):
     __slots__ = ()
