@@ -201,6 +201,37 @@ public final class DocumentDataServiceGrpc {
     return getSetForAnnotationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexRequest,
+      ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexResponse> getQueryDocumentIndexMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "QueryDocumentIndex",
+      requestType = ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexRequest.class,
+      responseType = ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexRequest,
+      ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexResponse> getQueryDocumentIndexMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexRequest, ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexResponse> getQueryDocumentIndexMethod;
+    if ((getQueryDocumentIndexMethod = DocumentDataServiceGrpc.getQueryDocumentIndexMethod) == null) {
+      synchronized (DocumentDataServiceGrpc.class) {
+        if ((getQueryDocumentIndexMethod = DocumentDataServiceGrpc.getQueryDocumentIndexMethod) == null) {
+          DocumentDataServiceGrpc.getQueryDocumentIndexMethod = getQueryDocumentIndexMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexRequest, ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "QueryDocumentIndex"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DocumentDataServiceMethodDescriptorSupplier("QueryDocumentIndex"))
+              .build();
+        }
+      }
+    }
+    return getQueryDocumentIndexMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -337,6 +368,19 @@ public final class DocumentDataServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetForAnnotationMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * QueryDocumentIndex runs a read-only GoogleSQL SELECT over the BigQuery
+     * snapshot of the document index (refreshed daily) and returns the rows page
+     * by page. The index table is referenced unqualified as `document_index`.
+     * Anything that is not a single SELECT over that one table is rejected.
+     * </pre>
+     */
+    default void queryDocumentIndex(ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getQueryDocumentIndexMethod(), responseObserver);
+    }
   }
 
   /**
@@ -445,6 +489,20 @@ public final class DocumentDataServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetForAnnotationMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * QueryDocumentIndex runs a read-only GoogleSQL SELECT over the BigQuery
+     * snapshot of the document index (refreshed daily) and returns the rows page
+     * by page. The index table is referenced unqualified as `document_index`.
+     * Anything that is not a single SELECT over that one table is rejected.
+     * </pre>
+     */
+    public void queryDocumentIndex(ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getQueryDocumentIndexMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -536,6 +594,19 @@ public final class DocumentDataServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetForAnnotationMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * QueryDocumentIndex runs a read-only GoogleSQL SELECT over the BigQuery
+     * snapshot of the document index (refreshed daily) and returns the rows page
+     * by page. The index table is referenced unqualified as `document_index`.
+     * Anything that is not a single SELECT over that one table is rejected.
+     * </pre>
+     */
+    public ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexResponse queryDocumentIndex(ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getQueryDocumentIndexMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -626,6 +697,19 @@ public final class DocumentDataServiceGrpc {
     public ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse setForAnnotation(ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetForAnnotationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * QueryDocumentIndex runs a read-only GoogleSQL SELECT over the BigQuery
+     * snapshot of the document index (refreshed daily) and returns the rows page
+     * by page. The index table is referenced unqualified as `document_index`.
+     * Anything that is not a single SELECT over that one table is rejected.
+     * </pre>
+     */
+    public ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexResponse queryDocumentIndex(ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getQueryDocumentIndexMethod(), getCallOptions(), request);
     }
   }
 
@@ -724,6 +808,20 @@ public final class DocumentDataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetForAnnotationMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * QueryDocumentIndex runs a read-only GoogleSQL SELECT over the BigQuery
+     * snapshot of the document index (refreshed daily) and returns the rows page
+     * by page. The index table is referenced unqualified as `document_index`.
+     * Anything that is not a single SELECT over that one table is rejected.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexResponse> queryDocumentIndex(
+        ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getQueryDocumentIndexMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_DOCUMENT_DATA = 0;
@@ -732,6 +830,7 @@ public final class DocumentDataServiceGrpc {
   private static final int METHODID_DELETE_DOCUMENT = 3;
   private static final int METHODID_DELETE_ANNOTATIONS = 4;
   private static final int METHODID_SET_FOR_ANNOTATION = 5;
+  private static final int METHODID_QUERY_DOCUMENT_INDEX = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -773,6 +872,10 @@ public final class DocumentDataServiceGrpc {
         case METHODID_SET_FOR_ANNOTATION:
           serviceImpl.setForAnnotation((ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse>) responseObserver);
+          break;
+        case METHODID_QUERY_DOCUMENT_INDEX:
+          serviceImpl.queryDocumentIndex((ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -834,6 +937,13 @@ public final class DocumentDataServiceGrpc {
               ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest,
               ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse>(
                 service, METHODID_SET_FOR_ANNOTATION)))
+        .addMethod(
+          getQueryDocumentIndexMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexRequest,
+              ai.visma.ssn.documentdataservice.v1.QueryDocumentIndexResponse>(
+                service, METHODID_QUERY_DOCUMENT_INDEX)))
         .build();
   }
 
@@ -888,6 +998,7 @@ public final class DocumentDataServiceGrpc {
               .addMethod(getDeleteDocumentMethod())
               .addMethod(getDeleteAnnotationsMethod())
               .addMethod(getSetForAnnotationMethod())
+              .addMethod(getQueryDocumentIndexMethod())
               .build();
         }
       }

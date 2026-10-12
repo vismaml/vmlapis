@@ -69,6 +69,10 @@ namespace Ssn.Documentdataservice.V1 {
     static readonly grpc::Marshaller<global::Ssn.Documentdataservice.V1.SetForAnnotationRequest> __Marshaller_ssn_documentdataservice_v1_SetForAnnotationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Documentdataservice.V1.SetForAnnotationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ssn.Documentdataservice.V1.SetForAnnotationResponse> __Marshaller_ssn_documentdataservice_v1_SetForAnnotationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Documentdataservice.V1.SetForAnnotationResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ssn.Documentdataservice.V1.QueryDocumentIndexRequest> __Marshaller_ssn_documentdataservice_v1_QueryDocumentIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Documentdataservice.V1.QueryDocumentIndexRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ssn.Documentdataservice.V1.QueryDocumentIndexResponse> __Marshaller_ssn_documentdataservice_v1_QueryDocumentIndexResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Documentdataservice.V1.QueryDocumentIndexResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ssn.Documentdataservice.V1.GetDocumentDataRequest, global::Ssn.Documentdataservice.V1.GetDocumentDataResponse> __Method_GetDocumentData = new grpc::Method<global::Ssn.Documentdataservice.V1.GetDocumentDataRequest, global::Ssn.Documentdataservice.V1.GetDocumentDataResponse>(
@@ -117,6 +121,14 @@ namespace Ssn.Documentdataservice.V1 {
         "SetForAnnotation",
         __Marshaller_ssn_documentdataservice_v1_SetForAnnotationRequest,
         __Marshaller_ssn_documentdataservice_v1_SetForAnnotationResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ssn.Documentdataservice.V1.QueryDocumentIndexRequest, global::Ssn.Documentdataservice.V1.QueryDocumentIndexResponse> __Method_QueryDocumentIndex = new grpc::Method<global::Ssn.Documentdataservice.V1.QueryDocumentIndexRequest, global::Ssn.Documentdataservice.V1.QueryDocumentIndexResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "QueryDocumentIndex",
+        __Marshaller_ssn_documentdataservice_v1_QueryDocumentIndexRequest,
+        __Marshaller_ssn_documentdataservice_v1_QueryDocumentIndexResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -210,6 +222,21 @@ namespace Ssn.Documentdataservice.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Documentdataservice.V1.SetForAnnotationResponse> SetForAnnotation(global::Ssn.Documentdataservice.V1.SetForAnnotationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// QueryDocumentIndex runs a read-only GoogleSQL SELECT over the BigQuery
+      /// snapshot of the document index (refreshed daily) and returns the rows page
+      /// by page. The index table is referenced unqualified as `document_index`.
+      /// Anything that is not a single SELECT over that one table is rejected.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ssn.Documentdataservice.V1.QueryDocumentIndexResponse> QueryDocumentIndex(global::Ssn.Documentdataservice.V1.QueryDocumentIndexRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -587,6 +614,66 @@ namespace Ssn.Documentdataservice.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetForAnnotation, null, options, request);
       }
+      /// <summary>
+      /// QueryDocumentIndex runs a read-only GoogleSQL SELECT over the BigQuery
+      /// snapshot of the document index (refreshed daily) and returns the rows page
+      /// by page. The index table is referenced unqualified as `document_index`.
+      /// Anything that is not a single SELECT over that one table is rejected.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ssn.Documentdataservice.V1.QueryDocumentIndexResponse QueryDocumentIndex(global::Ssn.Documentdataservice.V1.QueryDocumentIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryDocumentIndex(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// QueryDocumentIndex runs a read-only GoogleSQL SELECT over the BigQuery
+      /// snapshot of the document index (refreshed daily) and returns the rows page
+      /// by page. The index table is referenced unqualified as `document_index`.
+      /// Anything that is not a single SELECT over that one table is rejected.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ssn.Documentdataservice.V1.QueryDocumentIndexResponse QueryDocumentIndex(global::Ssn.Documentdataservice.V1.QueryDocumentIndexRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_QueryDocumentIndex, null, options, request);
+      }
+      /// <summary>
+      /// QueryDocumentIndex runs a read-only GoogleSQL SELECT over the BigQuery
+      /// snapshot of the document index (refreshed daily) and returns the rows page
+      /// by page. The index table is referenced unqualified as `document_index`.
+      /// Anything that is not a single SELECT over that one table is rejected.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Documentdataservice.V1.QueryDocumentIndexResponse> QueryDocumentIndexAsync(global::Ssn.Documentdataservice.V1.QueryDocumentIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryDocumentIndexAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// QueryDocumentIndex runs a read-only GoogleSQL SELECT over the BigQuery
+      /// snapshot of the document index (refreshed daily) and returns the rows page
+      /// by page. The index table is referenced unqualified as `document_index`.
+      /// Anything that is not a single SELECT over that one table is rejected.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Documentdataservice.V1.QueryDocumentIndexResponse> QueryDocumentIndexAsync(global::Ssn.Documentdataservice.V1.QueryDocumentIndexRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_QueryDocumentIndex, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DocumentDataServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -606,7 +693,8 @@ namespace Ssn.Documentdataservice.V1 {
           .AddMethod(__Method_AddAnnotations, serviceImpl.AddAnnotations)
           .AddMethod(__Method_DeleteDocument, serviceImpl.DeleteDocument)
           .AddMethod(__Method_DeleteAnnotations, serviceImpl.DeleteAnnotations)
-          .AddMethod(__Method_SetForAnnotation, serviceImpl.SetForAnnotation).Build();
+          .AddMethod(__Method_SetForAnnotation, serviceImpl.SetForAnnotation)
+          .AddMethod(__Method_QueryDocumentIndex, serviceImpl.QueryDocumentIndex).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -622,6 +710,7 @@ namespace Ssn.Documentdataservice.V1 {
       serviceBinder.AddMethod(__Method_DeleteDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Documentdataservice.V1.DeleteDocumentRequest, global::Ssn.Documentdataservice.V1.DeleteDocumentResponse>(serviceImpl.DeleteDocument));
       serviceBinder.AddMethod(__Method_DeleteAnnotations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Documentdataservice.V1.DeleteAnnotationsRequest, global::Ssn.Documentdataservice.V1.DeleteAnnotationsResponse>(serviceImpl.DeleteAnnotations));
       serviceBinder.AddMethod(__Method_SetForAnnotation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Documentdataservice.V1.SetForAnnotationRequest, global::Ssn.Documentdataservice.V1.SetForAnnotationResponse>(serviceImpl.SetForAnnotation));
+      serviceBinder.AddMethod(__Method_QueryDocumentIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Documentdataservice.V1.QueryDocumentIndexRequest, global::Ssn.Documentdataservice.V1.QueryDocumentIndexResponse>(serviceImpl.QueryDocumentIndex));
     }
 
   }

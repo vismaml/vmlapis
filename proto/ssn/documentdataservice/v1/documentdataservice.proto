@@ -3,6 +3,7 @@ syntax = "proto3";
 package ssn.documentdataservice.v1;
 
 import "google/api/annotations.proto";
+import "google/protobuf/struct.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
 import "ssn/type/address.proto";
@@ -132,6 +133,17 @@ service DocumentDataService {
       body: "*"
     };
   }
+
+  // QueryDocumentIndex runs a read-only GoogleSQL SELECT over the BigQuery
+  // snapshot of the document index (refreshed daily) and returns the rows page
+  // by page. The index table is referenced unqualified as `document_index`.
+  // Anything that is not a single SELECT over that one table is rejected.
+  rpc QueryDocumentIndex(QueryDocumentIndexRequest) returns (QueryDocumentIndexResponse) {
+    option (google.api.http) = {
+      post: "/v1/document-index:query"
+      body: "*"
+    };
+  }
 }
 
 // ---- Request / Response messages ----
@@ -255,3 +267,40 @@ message SetForAnnotationRequest {
 }
 
 message SetForAnnotationResponse {}
+
+message QueryDocumentIndexRequest {
+  // GoogleSQL SELECT. The index table is referenced unqualified as
+  // `document_index`; DDS supplies the project and dataset. Ignored when
+  // page_token is set.
+  string sql = 1;
+  // Rows per page. 0 means 500; values above 2000 are clamped to 2000.
+  int32 page_size = 2;
+  // Continuation token from a previous response. Empty starts a new query.
+  string page_token = 3;
+}
+
+// IndexColumn describes one result column.
+message IndexColumn {
+  string name = 1;
+  // BigQuery field type: STRING, INTEGER, FLOAT, BOOLEAN, TIMESTAMP, DATE,
+  // TIME, DATETIME, NUMERIC, BIGNUMERIC, BYTES, JSON, GEOGRAPHY, RECORD, ...
+  string type = 2;
+  bool repeated = 3;
+}
+
+message QueryDocumentIndexResponse {
+  // Result columns in SELECT order. Sent on every page.
+  repeated IndexColumn schema = 1;
+  // One Struct per row, keyed by column name. Encoding: STRING/DATE/
+  // TIMESTAMP (RFC 3339)/DATETIME/TIME/JSON/GEOGRAPHY as strings; INTEGER and
+  // FLOAT as numbers (INTEGER exact to 2^53); NUMERIC and BIGNUMERIC as decimal
+  // strings; BOOLEAN as bool; BYTES as base64; NULL as null; REPEATED as list;
+  // RECORD as nested struct.
+  repeated google.protobuf.Struct rows = 2;
+  // Empty on the last page. Tokens expire about 24 hours after the query ran.
+  string next_page_token = 3;
+  // Total rows in the result, not in this page.
+  int64 total_rows = 4;
+  // Bytes BigQuery processed for the whole query.
+  int64 total_bytes_processed = 5;
+}
