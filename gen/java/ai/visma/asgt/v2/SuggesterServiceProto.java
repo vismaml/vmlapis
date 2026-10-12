@@ -106,33 +106,39 @@ public final class SuggesterServiceProto {
       "ggestResponse\"9\202\323\344\223\0023\"./v2/datasets/{dat" +
       "aset_name}/model:batchSuggest:\001*\0329\222A6\0224G" +
       "et suggestions from the model trained on" +
-      " a dataset.B\200\010\n\020ai.visma.asgt.v2B\025Sugges" +
+      " a dataset.B\377\t\n\020ai.visma.asgt.v2B\025Sugges" +
       "terServiceProtoP\001Z+github.com/e-conomic/" +
       "vmlapis/gen/go/asgt/v2\242\002\003AXX\252\002\007Asgt.V2\312\002" +
       "\007Asgt\\V2\342\002\023Asgt\\V2\\GPBMetadata\352\002\010Asgt::V" +
-      "2\222A\351\006\022\331\005\n\013Autosuggest\022\305\005Autosuggest is t" +
-      "he process automation toolkit for ERPs, " +
-      "designed for transaction workflows. Uplo" +
-      "ad examples to a dataset, and Autosugges" +
-      "t trains models that suggest target valu" +
-      "es for new inputs.\n\n**Hosts:** `api.prod" +
-      ".asgt.visma.ai` for production and `api." +
-      "stag.asgt.visma.ai` for staging.\n\n**Auth" +
-      "entication:** send your project token as" +
-      " `Authorization: Bearer <token>`. See [A" +
-      "uthentication](https://docs.vml.visma.ai" +
-      "/authentication/).\n\n**Errors:** a failed" +
-      " call returns an HTTP error status with " +
-      "a JSON body that holds `code`, `message`" +
-      " and `details`.\n\n**Guides:** [Autosugges" +
-      "t v2](https://docs.vml.visma.ai/autosugg" +
-      "est-v2/getting-started/) and [limits and" +
-      " rate limits](https://docs.vml.visma.ai/" +
-      "rate-limit/).2\002v2*\001\0022\020application/json:\020" +
-      "application/jsonZR\nP\n\nBearerAuth\022B\010\002\022-Yo" +
-      "ur project token, sent as `Bearer <token" +
-      ">`.\032\rAuthorization \002b\020\n\016\n\nBearerAuth\022\000b\006" +
-      "proto3"
+      "2\222A\350\010\022\330\007\n\035Autosuggest and Product Types\022" +
+      "\262\007Autosuggest is the process automation " +
+      "toolkit for ERPs, designed for transacti" +
+      "on workflows. Upload examples to a datas" +
+      "et, and Autosuggest trains models that s" +
+      "uggest target values for new inputs. Thi" +
+      "s reference also covers Product Types, w" +
+      "hich classifies free-text descriptions, " +
+      "such as invoice lines or bank transactio" +
+      "ns, into 74 standardized product types.\n" +
+      "\n**Hosts:** `api.prod.asgt.visma.ai` for" +
+      " production and `api.stag.asgt.visma.ai`" +
+      " for staging.\n\n**Authentication:** send " +
+      "your project token as `Authorization: Be" +
+      "arer <token>`. See [Authentication](http" +
+      "s://docs.vml.visma.ai/authentication/).\n" +
+      "\n**Errors:** a failed call returns an HT" +
+      "TP error status with a JSON body that ho" +
+      "lds `code`, `message` and `details`.\n\n**" +
+      "Guides:** [Autosuggest v2](https://docs." +
+      "vml.visma.ai/autosuggest-v2/getting-star" +
+      "ted/), [Product Types](https://docs.vml." +
+      "visma.ai/producttypes/getting-started/) " +
+      "and [limits and rate limits](https://doc" +
+      "s.vml.visma.ai/rate-limit/).2\002v2*\001\0022\020app" +
+      "lication/json:\020application/jsonZR\nP\n\nBea" +
+      "rerAuth\022B\010\002\022-Your project token, sent as" +
+      " `Bearer <token>`.\032\rAuthorization \002b\020\n\016\n" +
+      "\nBearerAuth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
