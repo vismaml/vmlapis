@@ -19,12 +19,13 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	DocumentDataService_GetDocumentData_FullMethodName   = "/ssn.documentdataservice.v1.DocumentDataService/GetDocumentData"
-	DocumentDataService_SetDocumentBlobs_FullMethodName  = "/ssn.documentdataservice.v1.DocumentDataService/SetDocumentBlobs"
-	DocumentDataService_AddAnnotations_FullMethodName    = "/ssn.documentdataservice.v1.DocumentDataService/AddAnnotations"
-	DocumentDataService_DeleteDocument_FullMethodName    = "/ssn.documentdataservice.v1.DocumentDataService/DeleteDocument"
-	DocumentDataService_DeleteAnnotations_FullMethodName = "/ssn.documentdataservice.v1.DocumentDataService/DeleteAnnotations"
-	DocumentDataService_SetForAnnotation_FullMethodName  = "/ssn.documentdataservice.v1.DocumentDataService/SetForAnnotation"
+	DocumentDataService_GetDocumentData_FullMethodName    = "/ssn.documentdataservice.v1.DocumentDataService/GetDocumentData"
+	DocumentDataService_SetDocumentBlobs_FullMethodName   = "/ssn.documentdataservice.v1.DocumentDataService/SetDocumentBlobs"
+	DocumentDataService_AddAnnotations_FullMethodName     = "/ssn.documentdataservice.v1.DocumentDataService/AddAnnotations"
+	DocumentDataService_DeleteDocument_FullMethodName     = "/ssn.documentdataservice.v1.DocumentDataService/DeleteDocument"
+	DocumentDataService_DeleteAnnotations_FullMethodName  = "/ssn.documentdataservice.v1.DocumentDataService/DeleteAnnotations"
+	DocumentDataService_SetForAnnotation_FullMethodName   = "/ssn.documentdataservice.v1.DocumentDataService/SetForAnnotation"
+	DocumentDataService_QueryDocumentIndex_FullMethodName = "/ssn.documentdataservice.v1.DocumentDataService/QueryDocumentIndex"
 )
 
 // DocumentDataServiceClient is the client API for DocumentDataService service.
@@ -57,6 +58,11 @@ type DocumentDataServiceClient interface {
 	// deletion policy then removes it. The customer-facing behaviour of
 	// DeleteDocument is unchanged.
 	SetForAnnotation(ctx context.Context, in *SetForAnnotationRequest, opts ...grpc.CallOption) (*SetForAnnotationResponse, error)
+	// QueryDocumentIndex runs a read-only GoogleSQL SELECT over the BigQuery
+	// snapshot of the document index (refreshed daily) and returns the rows page
+	// by page. The index table is referenced unqualified as `document_index`.
+	// Anything that is not a single SELECT over that one table is rejected.
+	QueryDocumentIndex(ctx context.Context, in *QueryDocumentIndexRequest, opts ...grpc.CallOption) (*QueryDocumentIndexResponse, error)
 }
 
 type documentDataServiceClient struct {
@@ -121,6 +127,15 @@ func (c *documentDataServiceClient) SetForAnnotation(ctx context.Context, in *Se
 	return out, nil
 }
 
+func (c *documentDataServiceClient) QueryDocumentIndex(ctx context.Context, in *QueryDocumentIndexRequest, opts ...grpc.CallOption) (*QueryDocumentIndexResponse, error) {
+	out := new(QueryDocumentIndexResponse)
+	err := c.cc.Invoke(ctx, DocumentDataService_QueryDocumentIndex_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DocumentDataServiceServer is the server API for DocumentDataService service.
 // All implementations should embed UnimplementedDocumentDataServiceServer
 // for forward compatibility
@@ -151,6 +166,11 @@ type DocumentDataServiceServer interface {
 	// deletion policy then removes it. The customer-facing behaviour of
 	// DeleteDocument is unchanged.
 	SetForAnnotation(context.Context, *SetForAnnotationRequest) (*SetForAnnotationResponse, error)
+	// QueryDocumentIndex runs a read-only GoogleSQL SELECT over the BigQuery
+	// snapshot of the document index (refreshed daily) and returns the rows page
+	// by page. The index table is referenced unqualified as `document_index`.
+	// Anything that is not a single SELECT over that one table is rejected.
+	QueryDocumentIndex(context.Context, *QueryDocumentIndexRequest) (*QueryDocumentIndexResponse, error)
 }
 
 // UnimplementedDocumentDataServiceServer should be embedded to have forward compatible implementations.
@@ -174,6 +194,9 @@ func (UnimplementedDocumentDataServiceServer) DeleteAnnotations(context.Context,
 }
 func (UnimplementedDocumentDataServiceServer) SetForAnnotation(context.Context, *SetForAnnotationRequest) (*SetForAnnotationResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetForAnnotation not implemented")
+}
+func (UnimplementedDocumentDataServiceServer) QueryDocumentIndex(context.Context, *QueryDocumentIndexRequest) (*QueryDocumentIndexResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method QueryDocumentIndex not implemented")
 }
 
 // UnsafeDocumentDataServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -295,6 +318,24 @@ func _DocumentDataService_SetForAnnotation_Handler(srv interface{}, ctx context.
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DocumentDataService_QueryDocumentIndex_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(QueryDocumentIndexRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DocumentDataServiceServer).QueryDocumentIndex(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DocumentDataService_QueryDocumentIndex_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DocumentDataServiceServer).QueryDocumentIndex(ctx, req.(*QueryDocumentIndexRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // DocumentDataService_ServiceDesc is the grpc.ServiceDesc for DocumentDataService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -325,6 +366,10 @@ var DocumentDataService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SetForAnnotation",
 			Handler:    _DocumentDataService_SetForAnnotation_Handler,
+		},
+		{
+			MethodName: "QueryDocumentIndex",
+			Handler:    _DocumentDataService_QueryDocumentIndex_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

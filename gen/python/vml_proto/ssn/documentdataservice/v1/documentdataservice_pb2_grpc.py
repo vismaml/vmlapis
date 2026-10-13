@@ -46,6 +46,11 @@ class DocumentDataServiceStub(object):
                 request_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationRequest.SerializeToString,
                 response_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationResponse.FromString,
                 _registered_method=True)
+        self.QueryDocumentIndex = channel.unary_unary(
+                '/ssn.documentdataservice.v1.DocumentDataService/QueryDocumentIndex',
+                request_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.QueryDocumentIndexRequest.SerializeToString,
+                response_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.QueryDocumentIndexResponse.FromString,
+                _registered_method=True)
 
 
 class DocumentDataServiceServicer(object):
@@ -109,6 +114,16 @@ class DocumentDataServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def QueryDocumentIndex(self, request, context):
+        """QueryDocumentIndex runs a read-only GoogleSQL SELECT over the BigQuery
+        snapshot of the document index (refreshed daily) and returns the rows page
+        by page. The index table is referenced unqualified as `document_index`.
+        Anything that is not a single SELECT over that one table is rejected.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_DocumentDataServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -141,6 +156,11 @@ def add_DocumentDataServiceServicer_to_server(servicer, server):
                     servicer.SetForAnnotation,
                     request_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationRequest.FromString,
                     response_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationResponse.SerializeToString,
+            ),
+            'QueryDocumentIndex': grpc.unary_unary_rpc_method_handler(
+                    servicer.QueryDocumentIndex,
+                    request_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.QueryDocumentIndexRequest.FromString,
+                    response_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.QueryDocumentIndexResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -307,6 +327,33 @@ class DocumentDataService(object):
             '/ssn.documentdataservice.v1.DocumentDataService/SetForAnnotation',
             ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationRequest.SerializeToString,
             ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def QueryDocumentIndex(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.documentdataservice.v1.DocumentDataService/QueryDocumentIndex',
+            ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.QueryDocumentIndexRequest.SerializeToString,
+            ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.QueryDocumentIndexResponse.FromString,
             options,
             channel_credentials,
             insecure,

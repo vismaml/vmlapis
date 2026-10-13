@@ -411,6 +411,33 @@ func local_request_DocumentDataService_SetForAnnotation_0(ctx context.Context, m
 	return msg, metadata, err
 }
 
+func request_DocumentDataService_QueryDocumentIndex_0(ctx context.Context, marshaler runtime.Marshaler, client DocumentDataServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var (
+		protoReq QueryDocumentIndexRequest
+		metadata runtime.ServerMetadata
+	)
+	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil && !errors.Is(err, io.EOF) {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	if req.Body != nil {
+		_, _ = io.Copy(io.Discard, req.Body)
+	}
+	msg, err := client.QueryDocumentIndex(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	return msg, metadata, err
+}
+
+func local_request_DocumentDataService_QueryDocumentIndex_0(ctx context.Context, marshaler runtime.Marshaler, server DocumentDataServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var (
+		protoReq QueryDocumentIndexRequest
+		metadata runtime.ServerMetadata
+	)
+	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil && !errors.Is(err, io.EOF) {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	msg, err := server.QueryDocumentIndex(ctx, &protoReq)
+	return msg, metadata, err
+}
+
 // RegisterDocumentDataServiceHandlerServer registers the http handlers for service DocumentDataService to "mux".
 // UnaryRPC     :call DocumentDataServiceServer directly.
 // StreamingRPC :currently unsupported pending https://github.com/grpc/grpc-go/issues/906.
@@ -536,6 +563,26 @@ func RegisterDocumentDataServiceHandlerServer(ctx context.Context, mux *runtime.
 			return
 		}
 		forward_DocumentDataService_SetForAnnotation_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+	})
+	mux.Handle(http.MethodPost, pattern_DocumentDataService_QueryDocumentIndex_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/ssn.documentdataservice.v1.DocumentDataService/QueryDocumentIndex", runtime.WithHTTPPathPattern("/v1/document-index:query"))
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := local_request_DocumentDataService_QueryDocumentIndex_0(annotatedContext, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
+		annotatedContext = runtime.NewServerMetadataContext(annotatedContext, md)
+		if err != nil {
+			runtime.HTTPError(annotatedContext, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		forward_DocumentDataService_QueryDocumentIndex_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 	})
 
 	return nil
@@ -679,23 +726,42 @@ func RegisterDocumentDataServiceHandlerClient(ctx context.Context, mux *runtime.
 		}
 		forward_DocumentDataService_SetForAnnotation_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 	})
+	mux.Handle(http.MethodPost, pattern_DocumentDataService_QueryDocumentIndex_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/ssn.documentdataservice.v1.DocumentDataService/QueryDocumentIndex", runtime.WithHTTPPathPattern("/v1/document-index:query"))
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := request_DocumentDataService_QueryDocumentIndex_0(annotatedContext, inboundMarshaler, client, req, pathParams)
+		annotatedContext = runtime.NewServerMetadataContext(annotatedContext, md)
+		if err != nil {
+			runtime.HTTPError(annotatedContext, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		forward_DocumentDataService_QueryDocumentIndex_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+	})
 	return nil
 }
 
 var (
-	pattern_DocumentDataService_GetDocumentData_0   = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"v1", "consumers", "consumer", "documents", "feedback_id"}, ""))
-	pattern_DocumentDataService_SetDocumentBlobs_0  = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4, 2, 5}, []string{"v1", "consumers", "consumer", "documents", "feedback_id", "blobs"}, ""))
-	pattern_DocumentDataService_AddAnnotations_0    = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4, 2, 5}, []string{"v1", "consumers", "consumer", "documents", "feedback_id", "annotations"}, ""))
-	pattern_DocumentDataService_DeleteDocument_0    = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"v1", "consumers", "consumer", "documents", "feedback_id"}, ""))
-	pattern_DocumentDataService_DeleteAnnotations_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4, 2, 5}, []string{"v1", "consumers", "consumer", "documents", "feedback_id", "annotations"}, ""))
-	pattern_DocumentDataService_SetForAnnotation_0  = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4, 2, 5}, []string{"v1", "consumers", "consumer", "documents", "feedback_id", "for-annotation"}, ""))
+	pattern_DocumentDataService_GetDocumentData_0    = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"v1", "consumers", "consumer", "documents", "feedback_id"}, ""))
+	pattern_DocumentDataService_SetDocumentBlobs_0   = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4, 2, 5}, []string{"v1", "consumers", "consumer", "documents", "feedback_id", "blobs"}, ""))
+	pattern_DocumentDataService_AddAnnotations_0     = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4, 2, 5}, []string{"v1", "consumers", "consumer", "documents", "feedback_id", "annotations"}, ""))
+	pattern_DocumentDataService_DeleteDocument_0     = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4}, []string{"v1", "consumers", "consumer", "documents", "feedback_id"}, ""))
+	pattern_DocumentDataService_DeleteAnnotations_0  = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4, 2, 5}, []string{"v1", "consumers", "consumer", "documents", "feedback_id", "annotations"}, ""))
+	pattern_DocumentDataService_SetForAnnotation_0   = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3, 1, 0, 4, 1, 5, 4, 2, 5}, []string{"v1", "consumers", "consumer", "documents", "feedback_id", "for-annotation"}, ""))
+	pattern_DocumentDataService_QueryDocumentIndex_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "document-index"}, "query"))
 )
 
 var (
-	forward_DocumentDataService_GetDocumentData_0   = runtime.ForwardResponseMessage
-	forward_DocumentDataService_SetDocumentBlobs_0  = runtime.ForwardResponseMessage
-	forward_DocumentDataService_AddAnnotations_0    = runtime.ForwardResponseMessage
-	forward_DocumentDataService_DeleteDocument_0    = runtime.ForwardResponseMessage
-	forward_DocumentDataService_DeleteAnnotations_0 = runtime.ForwardResponseMessage
-	forward_DocumentDataService_SetForAnnotation_0  = runtime.ForwardResponseMessage
+	forward_DocumentDataService_GetDocumentData_0    = runtime.ForwardResponseMessage
+	forward_DocumentDataService_SetDocumentBlobs_0   = runtime.ForwardResponseMessage
+	forward_DocumentDataService_AddAnnotations_0     = runtime.ForwardResponseMessage
+	forward_DocumentDataService_DeleteDocument_0     = runtime.ForwardResponseMessage
+	forward_DocumentDataService_DeleteAnnotations_0  = runtime.ForwardResponseMessage
+	forward_DocumentDataService_SetForAnnotation_0   = runtime.ForwardResponseMessage
+	forward_DocumentDataService_QueryDocumentIndex_0 = runtime.ForwardResponseMessage
 )

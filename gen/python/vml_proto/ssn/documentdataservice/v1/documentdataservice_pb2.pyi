@@ -1,6 +1,7 @@
 import datetime
 
 from google.api import annotations_pb2 as _annotations_pb2
+from google.protobuf import struct_pb2 as _struct_pb2
 from google.protobuf import timestamp_pb2 as _timestamp_pb2
 from google.protobuf import wrappers_pb2 as _wrappers_pb2
 from ssn.type import address_pb2 as _address_pb2
@@ -197,3 +198,37 @@ class SetForAnnotationRequest(_message.Message):
 class SetForAnnotationResponse(_message.Message):
     __slots__ = ()
     def __init__(self) -> None: ...
+
+class QueryDocumentIndexRequest(_message.Message):
+    __slots__ = ("sql", "page_size", "page_token")
+    SQL_FIELD_NUMBER: _ClassVar[int]
+    PAGE_SIZE_FIELD_NUMBER: _ClassVar[int]
+    PAGE_TOKEN_FIELD_NUMBER: _ClassVar[int]
+    sql: str
+    page_size: int
+    page_token: str
+    def __init__(self, sql: _Optional[str] = ..., page_size: _Optional[int] = ..., page_token: _Optional[str] = ...) -> None: ...
+
+class IndexColumn(_message.Message):
+    __slots__ = ("name", "type", "repeated")
+    NAME_FIELD_NUMBER: _ClassVar[int]
+    TYPE_FIELD_NUMBER: _ClassVar[int]
+    REPEATED_FIELD_NUMBER: _ClassVar[int]
+    name: str
+    type: str
+    repeated: bool
+    def __init__(self, name: _Optional[str] = ..., type: _Optional[str] = ..., repeated: bool = ...) -> None: ...
+
+class QueryDocumentIndexResponse(_message.Message):
+    __slots__ = ("schema", "rows", "next_page_token", "total_rows", "total_bytes_processed")
+    SCHEMA_FIELD_NUMBER: _ClassVar[int]
+    ROWS_FIELD_NUMBER: _ClassVar[int]
+    NEXT_PAGE_TOKEN_FIELD_NUMBER: _ClassVar[int]
+    TOTAL_ROWS_FIELD_NUMBER: _ClassVar[int]
+    TOTAL_BYTES_PROCESSED_FIELD_NUMBER: _ClassVar[int]
+    schema: _containers.RepeatedCompositeFieldContainer[IndexColumn]
+    rows: _containers.RepeatedCompositeFieldContainer[_struct_pb2.Struct]
+    next_page_token: str
+    total_rows: int
+    total_bytes_processed: int
+    def __init__(self, schema: _Optional[_Iterable[_Union[IndexColumn, _Mapping]]] = ..., rows: _Optional[_Iterable[_Union[_struct_pb2.Struct, _Mapping]]] = ..., next_page_token: _Optional[str] = ..., total_rows: _Optional[int] = ..., total_bytes_processed: _Optional[int] = ...) -> None: ...

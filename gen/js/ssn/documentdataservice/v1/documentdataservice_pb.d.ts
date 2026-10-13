@@ -1,6 +1,7 @@
 import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
+import * as google_protobuf_struct_pb from 'google-protobuf/google/protobuf/struct_pb'; // proto import: "google/protobuf/struct.proto"
 import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb'; // proto import: "google/protobuf/timestamp.proto"
 import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb'; // proto import: "google/protobuf/wrappers.proto"
 import * as ssn_type_address_pb from '../../../ssn/type/address_pb'; // proto import: "ssn/type/address.proto"
@@ -500,6 +501,96 @@ export class SetForAnnotationResponse extends jspb.Message {
 
 export namespace SetForAnnotationResponse {
   export type AsObject = {
+  }
+}
+
+export class QueryDocumentIndexRequest extends jspb.Message {
+  getSql(): string;
+  setSql(value: string): QueryDocumentIndexRequest;
+
+  getPageSize(): number;
+  setPageSize(value: number): QueryDocumentIndexRequest;
+
+  getPageToken(): string;
+  setPageToken(value: string): QueryDocumentIndexRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): QueryDocumentIndexRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: QueryDocumentIndexRequest): QueryDocumentIndexRequest.AsObject;
+  static serializeBinaryToWriter(message: QueryDocumentIndexRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): QueryDocumentIndexRequest;
+  static deserializeBinaryFromReader(message: QueryDocumentIndexRequest, reader: jspb.BinaryReader): QueryDocumentIndexRequest;
+}
+
+export namespace QueryDocumentIndexRequest {
+  export type AsObject = {
+    sql: string,
+    pageSize: number,
+    pageToken: string,
+  }
+}
+
+export class IndexColumn extends jspb.Message {
+  getName(): string;
+  setName(value: string): IndexColumn;
+
+  getType(): string;
+  setType(value: string): IndexColumn;
+
+  getRepeated(): boolean;
+  setRepeated(value: boolean): IndexColumn;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): IndexColumn.AsObject;
+  static toObject(includeInstance: boolean, msg: IndexColumn): IndexColumn.AsObject;
+  static serializeBinaryToWriter(message: IndexColumn, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): IndexColumn;
+  static deserializeBinaryFromReader(message: IndexColumn, reader: jspb.BinaryReader): IndexColumn;
+}
+
+export namespace IndexColumn {
+  export type AsObject = {
+    name: string,
+    type: string,
+    repeated: boolean,
+  }
+}
+
+export class QueryDocumentIndexResponse extends jspb.Message {
+  getSchemaList(): Array<IndexColumn>;
+  setSchemaList(value: Array<IndexColumn>): QueryDocumentIndexResponse;
+  clearSchemaList(): QueryDocumentIndexResponse;
+  addSchema(value?: IndexColumn, index?: number): IndexColumn;
+
+  getRowsList(): Array<google_protobuf_struct_pb.Struct>;
+  setRowsList(value: Array<google_protobuf_struct_pb.Struct>): QueryDocumentIndexResponse;
+  clearRowsList(): QueryDocumentIndexResponse;
+  addRows(value?: google_protobuf_struct_pb.Struct, index?: number): google_protobuf_struct_pb.Struct;
+
+  getNextPageToken(): string;
+  setNextPageToken(value: string): QueryDocumentIndexResponse;
+
+  getTotalRows(): number;
+  setTotalRows(value: number): QueryDocumentIndexResponse;
+
+  getTotalBytesProcessed(): number;
+  setTotalBytesProcessed(value: number): QueryDocumentIndexResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): QueryDocumentIndexResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: QueryDocumentIndexResponse): QueryDocumentIndexResponse.AsObject;
+  static serializeBinaryToWriter(message: QueryDocumentIndexResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): QueryDocumentIndexResponse;
+  static deserializeBinaryFromReader(message: QueryDocumentIndexResponse, reader: jspb.BinaryReader): QueryDocumentIndexResponse;
+}
+
+export namespace QueryDocumentIndexResponse {
+  export type AsObject = {
+    schemaList: Array<IndexColumn.AsObject>,
+    rowsList: Array<google_protobuf_struct_pb.Struct.AsObject>,
+    nextPageToken: string,
+    totalRows: number,
+    totalBytesProcessed: number,
   }
 }
 

@@ -22,6 +22,8 @@ grpc.web = require('grpc-web');
 
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 
+var google_protobuf_struct_pb = require('google-protobuf/google/protobuf/struct_pb.js')
+
 var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js')
 
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js')
@@ -451,6 +453,67 @@ proto.ssn.documentdataservice.v1.DocumentDataServicePromiseClient.prototype.setF
       request,
       metadata || {},
       methodDescriptor_DocumentDataService_SetForAnnotation);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.documentdataservice.v1.QueryDocumentIndexRequest,
+ *   !proto.ssn.documentdataservice.v1.QueryDocumentIndexResponse>}
+ */
+const methodDescriptor_DocumentDataService_QueryDocumentIndex = new grpc.web.MethodDescriptor(
+  '/ssn.documentdataservice.v1.DocumentDataService/QueryDocumentIndex',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.documentdataservice.v1.QueryDocumentIndexRequest,
+  proto.ssn.documentdataservice.v1.QueryDocumentIndexResponse,
+  /**
+   * @param {!proto.ssn.documentdataservice.v1.QueryDocumentIndexRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.documentdataservice.v1.QueryDocumentIndexResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.documentdataservice.v1.QueryDocumentIndexRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.documentdataservice.v1.QueryDocumentIndexResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.documentdataservice.v1.QueryDocumentIndexResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.documentdataservice.v1.DocumentDataServiceClient.prototype.queryDocumentIndex =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.documentdataservice.v1.DocumentDataService/QueryDocumentIndex',
+      request,
+      metadata || {},
+      methodDescriptor_DocumentDataService_QueryDocumentIndex,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.documentdataservice.v1.QueryDocumentIndexRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.documentdataservice.v1.QueryDocumentIndexResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.documentdataservice.v1.DocumentDataServicePromiseClient.prototype.queryDocumentIndex =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.documentdataservice.v1.DocumentDataService/QueryDocumentIndex',
+      request,
+      metadata || {},
+      methodDescriptor_DocumentDataService_QueryDocumentIndex);
 };
 
 

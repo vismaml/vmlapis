@@ -50,6 +50,13 @@ export class DocumentDataServiceClient {
                response: ssn_documentdataservice_v1_documentdataservice_pb.SetForAnnotationResponse) => void
   ): grpcWeb.ClientReadableStream<ssn_documentdataservice_v1_documentdataservice_pb.SetForAnnotationResponse>;
 
+  queryDocumentIndex(
+    request: ssn_documentdataservice_v1_documentdataservice_pb.QueryDocumentIndexRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: ssn_documentdataservice_v1_documentdataservice_pb.QueryDocumentIndexResponse) => void
+  ): grpcWeb.ClientReadableStream<ssn_documentdataservice_v1_documentdataservice_pb.QueryDocumentIndexResponse>;
+
 }
 
 export class DocumentDataServicePromiseClient {
@@ -86,6 +93,11 @@ export class DocumentDataServicePromiseClient {
     request: ssn_documentdataservice_v1_documentdataservice_pb.SetForAnnotationRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<ssn_documentdataservice_v1_documentdataservice_pb.SetForAnnotationResponse>;
+
+  queryDocumentIndex(
+    request: ssn_documentdataservice_v1_documentdataservice_pb.QueryDocumentIndexRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<ssn_documentdataservice_v1_documentdataservice_pb.QueryDocumentIndexResponse>;
 
 }
 
