@@ -45,7 +45,8 @@ type DocumentDataServiceClient interface {
 	// To preserve history, use a distinct source_id (e.g. append a version suffix).
 	AddAnnotations(ctx context.Context, in *AddAnnotationsRequest, opts ...grpc.CallOption) (*AddAnnotationsResponse, error)
 	// DeleteDocument schedules asynchronous deletion of a document and all its
-	// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+	// blobs and annotations. Deletion is by expiry: the row and blobs are removed
+	// within a day of the effective expiry.
 	DeleteDocument(ctx context.Context, in *DeleteDocumentRequest, opts ...grpc.CallOption) (*DeleteDocumentResponse, error)
 	// DeleteAnnotations removes annotations for a specific feature, optionally
 	// narrowed by source and source_id. Cleans up the field_annotation marker
@@ -153,7 +154,8 @@ type DocumentDataServiceServer interface {
 	// To preserve history, use a distinct source_id (e.g. append a version suffix).
 	AddAnnotations(context.Context, *AddAnnotationsRequest) (*AddAnnotationsResponse, error)
 	// DeleteDocument schedules asynchronous deletion of a document and all its
-	// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+	// blobs and annotations. Deletion is by expiry: the row and blobs are removed
+	// within a day of the effective expiry.
 	DeleteDocument(context.Context, *DeleteDocumentRequest) (*DeleteDocumentResponse, error)
 	// DeleteAnnotations removes annotations for a specific feature, optionally
 	// narrowed by source and source_id. Cleans up the field_annotation marker

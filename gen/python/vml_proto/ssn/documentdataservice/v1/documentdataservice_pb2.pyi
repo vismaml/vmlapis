@@ -138,16 +138,18 @@ class SetDocumentBlobsResponse(_message.Message):
     def __init__(self) -> None: ...
 
 class AddAnnotationsRequest(_message.Message):
-    __slots__ = ("feedback_id", "consumer", "annotations", "environment")
+    __slots__ = ("feedback_id", "consumer", "annotations", "environment", "replace_sources")
     FEEDBACK_ID_FIELD_NUMBER: _ClassVar[int]
     CONSUMER_FIELD_NUMBER: _ClassVar[int]
     ANNOTATIONS_FIELD_NUMBER: _ClassVar[int]
     ENVIRONMENT_FIELD_NUMBER: _ClassVar[int]
+    REPLACE_SOURCES_FIELD_NUMBER: _ClassVar[int]
     feedback_id: str
     consumer: str
     annotations: _containers.RepeatedCompositeFieldContainer[InternalFieldAnnotation]
     environment: str
-    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., annotations: _Optional[_Iterable[_Union[InternalFieldAnnotation, _Mapping]]] = ..., environment: _Optional[str] = ...) -> None: ...
+    replace_sources: bool
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., annotations: _Optional[_Iterable[_Union[InternalFieldAnnotation, _Mapping]]] = ..., environment: _Optional[str] = ..., replace_sources: _Optional[bool] = ...) -> None: ...
 
 class AddAnnotationsResponse(_message.Message):
     __slots__ = ()
