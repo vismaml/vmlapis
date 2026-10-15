@@ -184,7 +184,8 @@ namespace Ssn.Documentdataservice.V1 {
 
       /// <summary>
       /// DeleteDocument schedules asynchronous deletion of a document and all its
-      /// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+      /// blobs and annotations. Deletion is by expiry: the row and blobs are removed
+      /// within a day of the effective expiry.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -440,7 +441,8 @@ namespace Ssn.Documentdataservice.V1 {
       }
       /// <summary>
       /// DeleteDocument schedules asynchronous deletion of a document and all its
-      /// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+      /// blobs and annotations. Deletion is by expiry: the row and blobs are removed
+      /// within a day of the effective expiry.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -454,7 +456,8 @@ namespace Ssn.Documentdataservice.V1 {
       }
       /// <summary>
       /// DeleteDocument schedules asynchronous deletion of a document and all its
-      /// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+      /// blobs and annotations. Deletion is by expiry: the row and blobs are removed
+      /// within a day of the effective expiry.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -466,7 +469,8 @@ namespace Ssn.Documentdataservice.V1 {
       }
       /// <summary>
       /// DeleteDocument schedules asynchronous deletion of a document and all its
-      /// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+      /// blobs and annotations. Deletion is by expiry: the row and blobs are removed
+      /// within a day of the effective expiry.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -480,7 +484,8 @@ namespace Ssn.Documentdataservice.V1 {
       }
       /// <summary>
       /// DeleteDocument schedules asynchronous deletion of a document and all its
-      /// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+      /// blobs and annotations. Deletion is by expiry: the row and blobs are removed
+      /// within a day of the effective expiry.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

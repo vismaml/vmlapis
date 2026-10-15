@@ -109,7 +109,8 @@ service DocumentDataService {
   }
 
   // DeleteDocument schedules asynchronous deletion of a document and all its
-  // blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+  // blobs and annotations. Deletion is by expiry: the row and blobs are removed
+  // within a day of the effective expiry.
   rpc DeleteDocument(DeleteDocumentRequest) returns (DeleteDocumentResponse) {
     option (google.api.http) = {delete: "/v1/consumers/{consumer}/documents/{feedback_id}"};
   }
@@ -227,6 +228,13 @@ message AddAnnotationsRequest {
   repeated InternalFieldAnnotation annotations = 3;
   // Target environment: "snbx", "stag", "prod".
   string environment = 4;
+  // When true, every (source, source_id) group present in annotations first
+  // loses its entries under features this request does not carry, so the
+  // request becomes the group's complete content across the document (e.g.
+  // a customer's full feedback replacing the previous one). Requires the
+  // document to exist: returns NOT_FOUND otherwise, instead of creating a
+  // document row without blobs or expiry.
+  bool replace_sources = 5;
 }
 
 message AddAnnotationsResponse {}
