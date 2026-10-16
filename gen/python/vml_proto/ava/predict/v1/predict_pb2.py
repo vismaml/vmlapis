@@ -22,7 +22,7 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
-from ava.procedure.v1 import procedure_pb2 as ava_dot_procedure_dot_v1_dot_procedure__pb2
+from vml_proto.ava.procedure.v1 import procedure_pb2 as ava_dot_procedure_dot_v1_dot_procedure__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 

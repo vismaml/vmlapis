@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from ava.predict.v1 import predict_pb2 as ava_dot_predict_dot_v1_dot_predict__pb2
+from vml_proto.ava.predict.v1 import predict_pb2 as ava_dot_predict_dot_v1_dot_predict__pb2
 
 
 class PredictorStub(object):
