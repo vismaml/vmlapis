@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+package ava.predict.v1;
+
+import "ava/procedure/v1/procedure.proto";
+import "google/api/annotations.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ava/predict/v1";
+
+// Predictor runs an AVA procedure on ad-hoc input and returns the decision synchronously.
+service Predictor {
+  rpc Predict(PredictRequest) returns (PredictResponse) {
+    option (google.api.http) = {
+      post: "/v1/ava:predict"
+      body: "*"
+    };
+  }
+}
+
+message PredictRequest {
+  string dataset_name = 1;
+  string output_name = 2;
+  string text = 3;
+}
+
+message PredictResponse {
+  string workflow_id = 1;
+  string output_value = 2;
+  string escalation_reason = 3;
+  string reasoning = 4;
+  string procedure_dataset = 5;
+  int64 version = 6;
+  repeated Fact facts = 7;
+  Trace trace = 8;
+}
+
+message Fact {
+  string name = 1;
+  ava.procedure.v1.FactType type = 2;
+  repeated string permitted = 3;
+  repeated FactSource sources = 4;
+  string value = 5;
+}
+
+message FactSource {
+  ava.procedure.v1.SourceKind kind = 1;
+  string name = 2;
+  string field = 3;
+  repeated string args = 4;
+  string question = 5;
+  string guidance = 6;
+  string value = 7;
+  string skipped = 8;
+  optional double probability = 9;
+}
+
+message Trace {
+  string output_name = 1;
+  repeated TraceStep steps = 2;
+}
+
+message TraceStep {
+  string step_id = 1;
+  string branch_id = 2;
+  string question = 3;
+  string answer = 4;
+  Evidence evidence = 5;
+  string output_value = 6;
+  string next_step_id = 7;
+  string reason = 8;
+}
+
+message Evidence {
+  string cel = 1;
+  repeated string tested = 2;
+  map<string, string> read = 3;
+  repeated string unknown = 4;
+}
