@@ -1,6 +1,6 @@
 steps:
   - id: deploy-python
-    name: "ghcr.io/astral-sh/uv:trixie-slim"
+    name: "ghcr.io/astral-sh/uv:0.13.5-trixie-slim"
     entrypoint: "bash"
     args:
       - "-c"
