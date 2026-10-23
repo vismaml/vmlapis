@@ -87,7 +87,8 @@ class DocumentDataServiceServicer(object):
 
     def DeleteDocument(self, request, context):
         """DeleteDocument schedules asynchronous deletion of a document and all its
-        blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+        blobs and annotations. Deletion is by expiry: the row and blobs are removed
+        within a day of the effective expiry.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
