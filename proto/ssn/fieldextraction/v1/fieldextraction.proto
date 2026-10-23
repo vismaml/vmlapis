@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package ssn.fieldextraction.v1;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/fieldextraction/v1;fieldextraction";
+option java_outer_classname = "FieldExtractionProto";
+
+// FieldExtractionService runs inference sources over DDS documents and stores
+// the extracted Smartscan fields in DDS as predictions.
+service FieldExtractionService {
+  // Extract starts one extraction workflow per source and returns immediately.
+  // Results are read from DDS (source_id = the source's versioned ID).
+  rpc Extract(ExtractRequest) returns (ExtractResponse);
+}
+
+message ExtractRequest {
+  // DDS feedback_id of the document.
+  string bq_id = 1;
+  string consumer_name = 2;
+  // Inference sources to run, e.g. "nemotron-vl". Empty means the default source.
+  repeated string sources = 3;
+}
+
+message ExtractResponse {
+  // One per requested source, in request order. A workflow already running for
+  // the same source and document is returned instead of starting a new one.
+  repeated string workflow_ids = 1;
+}
