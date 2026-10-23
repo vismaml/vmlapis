@@ -217,7 +217,7 @@ class IndexColumn(_message.Message):
     name: str
     type: str
     repeated: bool
-    def __init__(self, name: _Optional[str] = ..., type: _Optional[str] = ..., repeated: bool = ...) -> None: ...
+    def __init__(self, name: _Optional[str] = ..., type: _Optional[str] = ..., repeated: _Optional[bool] = ...) -> None: ...
 
 class QueryDocumentIndexResponse(_message.Message):
     __slots__ = ("schema", "rows", "next_page_token", "total_rows", "total_bytes_processed")
