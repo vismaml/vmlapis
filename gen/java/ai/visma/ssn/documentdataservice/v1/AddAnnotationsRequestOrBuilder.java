@@ -76,4 +76,19 @@ public interface AddAnnotationsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getEnvironmentBytes();
+
+  /**
+   * <pre>
+   * When true, every (source, source_id) group present in annotations first
+   * loses its entries under features this request does not carry, so the
+   * request becomes the group's complete content across the document (e.g.
+   * a customer's full feedback replacing the previous one). Requires the
+   * document to exist: returns NOT_FOUND otherwise, instead of creating a
+   * document row without blobs or expiry.
+   * </pre>
+   *
+   * <code>bool replace_sources = 5 [json_name = "replaceSources"];</code>
+   * @return The replaceSources.
+   */
+  boolean getReplaceSources();
 }
