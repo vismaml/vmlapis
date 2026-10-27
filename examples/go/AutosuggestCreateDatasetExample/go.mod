@@ -1,6 +1,6 @@
 module example
 
-go 1.26.2
+go 1.26.10
 
 require (
 	github.com/e-conomic/vmlapis v1.6.2
@@ -8,9 +8,9 @@ require (
 )
 
 require (
-	golang.org/x/net v0.56.0 // indirect
-	golang.org/x/sys v0.46.0 // indirect
-	golang.org/x/text v0.39.0 // indirect
+	golang.org/x/net v0.60.0 // indirect
+	golang.org/x/sys v0.48.0 // indirect
+	golang.org/x/text v0.42.0 // indirect
 	google.golang.org/genproto v0.0.0-20230110181048-76db0878b65f // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 )
