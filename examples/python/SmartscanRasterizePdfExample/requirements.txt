@@ -1,3 +1,0 @@
-vml-proto==1.6.2
-grpcio==1.70.0
-protobuf==5.29.3
