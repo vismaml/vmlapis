@@ -45,9 +45,18 @@ class ExampleLogits(_message.Message):
     def __init__(self, example_id: _Optional[str] = ..., logits: _Optional[_Iterable[float]] = ...) -> None: ...
 
 class BatchSuggestWithLogitsRequest(_message.Message):
-    __slots__ = ("examples", "suggest_limit")
+    __slots__ = ("examples", "suggest_limit", "target_class_counts")
+    class TargetClassCountsEntry(_message.Message):
+        __slots__ = ("key", "value")
+        KEY_FIELD_NUMBER: _ClassVar[int]
+        VALUE_FIELD_NUMBER: _ClassVar[int]
+        key: str
+        value: int
+        def __init__(self, key: _Optional[str] = ..., value: _Optional[int] = ...) -> None: ...
     EXAMPLES_FIELD_NUMBER: _ClassVar[int]
     SUGGEST_LIMIT_FIELD_NUMBER: _ClassVar[int]
+    TARGET_CLASS_COUNTS_FIELD_NUMBER: _ClassVar[int]
     examples: _containers.RepeatedCompositeFieldContainer[ExampleLogits]
     suggest_limit: int
-    def __init__(self, examples: _Optional[_Iterable[_Union[ExampleLogits, _Mapping]]] = ..., suggest_limit: _Optional[int] = ...) -> None: ...
+    target_class_counts: _containers.ScalarMap[str, int]
+    def __init__(self, examples: _Optional[_Iterable[_Union[ExampleLogits, _Mapping]]] = ..., suggest_limit: _Optional[int] = ..., target_class_counts: _Optional[_Mapping[str, int]] = ...) -> None: ...
