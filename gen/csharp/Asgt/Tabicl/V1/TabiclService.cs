@@ -39,27 +39,32 @@ namespace Asgt.Tabicl.V1 {
             "Ik8KFEJhdGNoU3VnZ2VzdFJlc3BvbnNlEjcKC3ByZWRpY3Rpb25zGAEgAygL",
             "MhUuYXNndC50eXBlLlByZWRpY3Rpb25SC3ByZWRpY3Rpb25zIlkKDUV4YW1w",
             "bGVMb2dpdHMSJgoKZXhhbXBsZV9pZBgBIAEoCUIH+kIEcgIQAVIJZXhhbXBs",
-            "ZUlkEiAKBmxvZ2l0cxgCIAMoAkII+kIFkgECCAFSBmxvZ2l0cyKVAQodQmF0",
+            "ZUlkEiAKBmxvZ2l0cxgCIAMoAkII+kIFkgECCAFSBmxvZ2l0cyLmAgodQmF0",
             "Y2hTdWdnZXN0V2l0aExvZ2l0c1JlcXVlc3QSRgoIZXhhbXBsZXMYASADKAsy",
             "HS5hc2d0LnRhYmljbC52MS5FeGFtcGxlTG9naXRzQgv6QgiSAQUIARCABFII",
             "ZXhhbXBsZXMSLAoNc3VnZ2VzdF9saW1pdBgCIAEoBUIH+kIEGgIgAFIMc3Vn",
-            "Z2VzdExpbWl0Mt0BCg1UYWJpY2xTZXJ2aWNlElsKDEJhdGNoU3VnZ2VzdBIj",
-            "LmFzZ3QudGFiaWNsLnYxLkJhdGNoU3VnZ2VzdFJlcXVlc3QaJC5hc2d0LnRh",
-            "YmljbC52MS5CYXRjaFN1Z2dlc3RSZXNwb25zZSIAEm8KFkJhdGNoU3VnZ2Vz",
-            "dFdpdGhMb2dpdHMSLS5hc2d0LnRhYmljbC52MS5CYXRjaFN1Z2dlc3RXaXRo",
-            "TG9naXRzUmVxdWVzdBokLmFzZ3QudGFiaWNsLnYxLkJhdGNoU3VnZ2VzdFJl",
-            "c3BvbnNlIgBCwgEKF2FpLnZpc21hLmFzZ3QudGFiaWNsLnYxQhJUYWJpY2xT",
-            "ZXJ2aWNlUHJvdG9QAVo5Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9n",
-            "ZW4vZ28vYXNndC90YWJpY2wvdjE7dGFiaWNsogIDQVRYqgIOQXNndC5UYWJp",
-            "Y2wuVjHKAg5Bc2d0XFRhYmljbFxWMeICGkFzZ3RcVGFiaWNsXFYxXEdQQk1l",
-            "dGFkYXRh6gIQQXNndDo6VGFiaWNsOjpWMWIGcHJvdG8z"));
+            "Z2VzdExpbWl0EogBChN0YXJnZXRfY2xhc3NfY291bnRzGAMgAygLMkQuYXNn",
+            "dC50YWJpY2wudjEuQmF0Y2hTdWdnZXN0V2l0aExvZ2l0c1JlcXVlc3QuVGFy",
+            "Z2V0Q2xhc3NDb3VudHNFbnRyeUIS+kIPmgEMIgRyAhABKgQaAiAAUhF0YXJn",
+            "ZXRDbGFzc0NvdW50cxpEChZUYXJnZXRDbGFzc0NvdW50c0VudHJ5EhAKA2tl",
+            "eRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgFUgV2YWx1ZToCOAEy3QEKDVRh",
+            "YmljbFNlcnZpY2USWwoMQmF0Y2hTdWdnZXN0EiMuYXNndC50YWJpY2wudjEu",
+            "QmF0Y2hTdWdnZXN0UmVxdWVzdBokLmFzZ3QudGFiaWNsLnYxLkJhdGNoU3Vn",
+            "Z2VzdFJlc3BvbnNlIgASbwoWQmF0Y2hTdWdnZXN0V2l0aExvZ2l0cxItLmFz",
+            "Z3QudGFiaWNsLnYxLkJhdGNoU3VnZ2VzdFdpdGhMb2dpdHNSZXF1ZXN0GiQu",
+            "YXNndC50YWJpY2wudjEuQmF0Y2hTdWdnZXN0UmVzcG9uc2UiAELCAQoXYWku",
+            "dmlzbWEuYXNndC50YWJpY2wudjFCElRhYmljbFNlcnZpY2VQcm90b1ABWjln",
+            "aXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3RhYmlj",
+            "bC92MTt0YWJpY2yiAgNBVFiqAg5Bc2d0LlRhYmljbC5WMcoCDkFzZ3RcVGFi",
+            "aWNsXFYx4gIaQXNndFxUYWJpY2xcVjFcR1BCTWV0YWRhdGHqAhBBc2d0OjpU",
+            "YWJpY2w6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Tabicl.V1.BatchSuggestRequest), global::Asgt.Tabicl.V1.BatchSuggestRequest.Parser, new[]{ "DatasetName", "ConsumerName", "Inputs", "SuggestLimit", "TargetClassCounts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Tabicl.V1.BatchSuggestResponse), global::Asgt.Tabicl.V1.BatchSuggestResponse.Parser, new[]{ "Predictions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Tabicl.V1.ExampleLogits), global::Asgt.Tabicl.V1.ExampleLogits.Parser, new[]{ "ExampleId", "Logits" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest), global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest.Parser, new[]{ "Examples", "SuggestLimit" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest), global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest.Parser, new[]{ "Examples", "SuggestLimit", "TargetClassCounts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -843,6 +848,7 @@ namespace Asgt.Tabicl.V1 {
     public BatchSuggestWithLogitsRequest(BatchSuggestWithLogitsRequest other) : this() {
       examples_ = other.examples_.Clone();
       suggestLimit_ = other.suggestLimit_;
+      targetClassCounts_ = other.targetClassCounts_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -875,6 +881,17 @@ namespace Asgt.Tabicl.V1 {
       }
     }
 
+    /// <summary>Field number for the "target_class_counts" field.</summary>
+    public const int TargetClassCountsFieldNumber = 3;
+    private static readonly pbc::MapField<string, int>.Codec _map_targetClassCounts_codec
+        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 26);
+    private readonly pbc::MapField<string, int> targetClassCounts_ = new pbc::MapField<string, int>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, int> TargetClassCounts {
+      get { return targetClassCounts_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -892,6 +909,7 @@ namespace Asgt.Tabicl.V1 {
       }
       if(!examples_.Equals(other.examples_)) return false;
       if (SuggestLimit != other.SuggestLimit) return false;
+      if (!TargetClassCounts.Equals(other.TargetClassCounts)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -901,6 +919,7 @@ namespace Asgt.Tabicl.V1 {
       int hash = 1;
       hash ^= examples_.GetHashCode();
       if (SuggestLimit != 0) hash ^= SuggestLimit.GetHashCode();
+      hash ^= TargetClassCounts.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -924,6 +943,7 @@ namespace Asgt.Tabicl.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(SuggestLimit);
       }
+      targetClassCounts_.WriteTo(output, _map_targetClassCounts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -939,6 +959,7 @@ namespace Asgt.Tabicl.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(SuggestLimit);
       }
+      targetClassCounts_.WriteTo(ref output, _map_targetClassCounts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -953,6 +974,7 @@ namespace Asgt.Tabicl.V1 {
       if (SuggestLimit != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SuggestLimit);
       }
+      size += targetClassCounts_.CalculateSize(_map_targetClassCounts_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -969,6 +991,7 @@ namespace Asgt.Tabicl.V1 {
       if (other.SuggestLimit != 0) {
         SuggestLimit = other.SuggestLimit;
       }
+      targetClassCounts_.MergeFrom(other.targetClassCounts_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -996,6 +1019,10 @@ namespace Asgt.Tabicl.V1 {
             SuggestLimit = input.ReadInt32();
             break;
           }
+          case 26: {
+            targetClassCounts_.AddEntriesFrom(input, _map_targetClassCounts_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1021,6 +1048,10 @@ namespace Asgt.Tabicl.V1 {
           }
           case 16: {
             SuggestLimit = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            targetClassCounts_.AddEntriesFrom(ref input, _map_targetClassCounts_codec);
             break;
           }
         }

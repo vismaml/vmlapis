@@ -50,6 +50,11 @@ public final class TabiclServiceProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_asgt_tabicl_v1_BatchSuggestWithLogitsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_tabicl_v1_BatchSuggestWithLogitsRequest_TargetClassCountsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_asgt_tabicl_v1_BatchSuggestWithLogitsRequest_TargetClassCountsEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -76,22 +81,27 @@ public final class TabiclServiceProto {
       "onse\0227\n\013predictions\030\001 \003(\0132\025.asgt.type.Pr" +
       "edictionR\013predictions\"Y\n\rExampleLogits\022&" +
       "\n\nexample_id\030\001 \001(\tB\007\372B\004r\002\020\001R\texampleId\022 " +
-      "\n\006logits\030\002 \003(\002B\010\372B\005\222\001\002\010\001R\006logits\"\225\001\n\035Bat" +
+      "\n\006logits\030\002 \003(\002B\010\372B\005\222\001\002\010\001R\006logits\"\346\002\n\035Bat" +
       "chSuggestWithLogitsRequest\022F\n\010examples\030\001" +
       " \003(\0132\035.asgt.tabicl.v1.ExampleLogitsB\013\372B\010" +
       "\222\001\005\010\001\020\200\004R\010examples\022,\n\rsuggest_limit\030\002 \001(" +
-      "\005B\007\372B\004\032\002 \000R\014suggestLimit2\335\001\n\rTabiclServi" +
-      "ce\022[\n\014BatchSuggest\022#.asgt.tabicl.v1.Batc" +
-      "hSuggestRequest\032$.asgt.tabicl.v1.BatchSu" +
-      "ggestResponse\"\000\022o\n\026BatchSuggestWithLogit" +
-      "s\022-.asgt.tabicl.v1.BatchSuggestWithLogit" +
-      "sRequest\032$.asgt.tabicl.v1.BatchSuggestRe" +
-      "sponse\"\000B\302\001\n\027ai.visma.asgt.tabicl.v1B\022Ta" +
-      "biclServiceProtoP\001Z9github.com/e-conomic" +
-      "/vmlapis/gen/go/asgt/tabicl/v1;tabicl\242\002\003" +
-      "ATX\252\002\016Asgt.Tabicl.V1\312\002\016Asgt\\Tabicl\\V1\342\002\032" +
-      "Asgt\\Tabicl\\V1\\GPBMetadata\352\002\020Asgt::Tabic" +
-      "l::V1b\006proto3"
+      "\005B\007\372B\004\032\002 \000R\014suggestLimit\022\210\001\n\023target_clas" +
+      "s_counts\030\003 \003(\0132D.asgt.tabicl.v1.BatchSug" +
+      "gestWithLogitsRequest.TargetClassCountsE" +
+      "ntryB\022\372B\017\232\001\014\"\004r\002\020\001*\004\032\002 \000R\021targetClassCou" +
+      "nts\032D\n\026TargetClassCountsEntry\022\020\n\003key\030\001 \001" +
+      "(\tR\003key\022\024\n\005value\030\002 \001(\005R\005value:\0028\0012\335\001\n\rTa" +
+      "biclService\022[\n\014BatchSuggest\022#.asgt.tabic" +
+      "l.v1.BatchSuggestRequest\032$.asgt.tabicl.v" +
+      "1.BatchSuggestResponse\"\000\022o\n\026BatchSuggest" +
+      "WithLogits\022-.asgt.tabicl.v1.BatchSuggest" +
+      "WithLogitsRequest\032$.asgt.tabicl.v1.Batch" +
+      "SuggestResponse\"\000B\302\001\n\027ai.visma.asgt.tabi" +
+      "cl.v1B\022TabiclServiceProtoP\001Z9github.com/" +
+      "e-conomic/vmlapis/gen/go/asgt/tabicl/v1;" +
+      "tabicl\242\002\003ATX\252\002\016Asgt.Tabicl.V1\312\002\016Asgt\\Tab" +
+      "icl\\V1\342\002\032Asgt\\Tabicl\\V1\\GPBMetadata\352\002\020As" +
+      "gt::Tabicl::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -129,7 +139,13 @@ public final class TabiclServiceProto {
     internal_static_asgt_tabicl_v1_BatchSuggestWithLogitsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_tabicl_v1_BatchSuggestWithLogitsRequest_descriptor,
-        new java.lang.String[] { "Examples", "SuggestLimit", });
+        new java.lang.String[] { "Examples", "SuggestLimit", "TargetClassCounts", });
+    internal_static_asgt_tabicl_v1_BatchSuggestWithLogitsRequest_TargetClassCountsEntry_descriptor =
+      internal_static_asgt_tabicl_v1_BatchSuggestWithLogitsRequest_descriptor.getNestedTypes().get(0);
+    internal_static_asgt_tabicl_v1_BatchSuggestWithLogitsRequest_TargetClassCountsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_asgt_tabicl_v1_BatchSuggestWithLogitsRequest_TargetClassCountsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     descriptor.resolveAllFeaturesImmutable();
     ai.visma.asgt.type.DataProto.getDescriptor();
     ai.visma.asgt.type.PredictionProto.getDescriptor();

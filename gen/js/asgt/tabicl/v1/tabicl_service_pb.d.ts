@@ -94,6 +94,9 @@ export class BatchSuggestWithLogitsRequest extends jspb.Message {
   getSuggestLimit(): number;
   setSuggestLimit(value: number): BatchSuggestWithLogitsRequest;
 
+  getTargetClassCountsMap(): jspb.Map<string, number>;
+  clearTargetClassCountsMap(): BatchSuggestWithLogitsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): BatchSuggestWithLogitsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: BatchSuggestWithLogitsRequest): BatchSuggestWithLogitsRequest.AsObject;
@@ -106,6 +109,7 @@ export namespace BatchSuggestWithLogitsRequest {
   export type AsObject = {
     examplesList: Array<ExampleLogits.AsObject>,
     suggestLimit: number,
+    targetClassCountsMap: Array<[string, number]>,
   }
 }
 

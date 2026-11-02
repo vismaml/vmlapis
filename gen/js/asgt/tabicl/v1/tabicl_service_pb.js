@@ -788,7 +788,8 @@ proto.asgt.tabicl.v1.BatchSuggestWithLogitsRequest.toObject = function(includeIn
   var f, obj = {
     examplesList: jspb.Message.toObjectList(msg.getExamplesList(),
     proto.asgt.tabicl.v1.ExampleLogits.toObject, includeInstance),
-    suggestLimit: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    suggestLimit: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    targetClassCountsMap: (f = msg.getTargetClassCountsMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
   if (includeInstance) {
@@ -834,6 +835,12 @@ proto.asgt.tabicl.v1.BatchSuggestWithLogitsRequest.deserializeBinaryFromReader =
       var value = /** @type {number} */ (reader.readInt32());
       msg.setSuggestLimit(value);
       break;
+    case 3:
+      var value = msg.getTargetClassCountsMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readInt32, null, "", 0);
+         });
+      break;
     default:
       reader.skipField();
       break;
@@ -877,6 +884,10 @@ proto.asgt.tabicl.v1.BatchSuggestWithLogitsRequest.serializeBinaryToWriter = fun
       2,
       f
     );
+  }
+  f = message.getTargetClassCountsMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(3, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeInt32);
   }
 };
 
@@ -934,6 +945,29 @@ proto.asgt.tabicl.v1.BatchSuggestWithLogitsRequest.prototype.getSuggestLimit = f
  */
 proto.asgt.tabicl.v1.BatchSuggestWithLogitsRequest.prototype.setSuggestLimit = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * map<string, int32> target_class_counts = 3;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,number>}
+ */
+proto.asgt.tabicl.v1.BatchSuggestWithLogitsRequest.prototype.getTargetClassCountsMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,number>} */ (
+      jspb.Message.getMapField(this, 3, opt_noLazyCreate,
+      null));
+};
+
+
+/**
+ * Clears values from the map. The map will be non-null.
+ * @return {!proto.asgt.tabicl.v1.BatchSuggestWithLogitsRequest} returns this
+ */
+proto.asgt.tabicl.v1.BatchSuggestWithLogitsRequest.prototype.clearTargetClassCountsMap = function() {
+  this.getTargetClassCountsMap().clear();
+  return this;
 };
 
 
