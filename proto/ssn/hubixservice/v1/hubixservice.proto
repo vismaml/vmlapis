@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+package ssn.hubixservice.v1;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "ssn/type/candidate.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/hubixservice/v1;hubixservice";
+
+// HubixService is an internal service that gets a document verified by Hubix
+// reviewers. It knows nothing about its callers' entities: a caller names the
+// subject and polls for the result. The caller is the ctxvml username on the
+// call; every verification is scoped by it, and a caller sees only its own.
+//
+// Errors carry a google.rpc.ErrorInfo with domain "hubix-service" and a
+// reason such as "declined:format:too-large" or "not-found".
+service HubixService {
+  // Idempotent per (caller, subject, idempotency_key): a repeat returns the
+  // existing verification and ignores the new document.
+  rpc StartVerification(StartVerificationRequest) returns (Verification);
+  rpc GetVerification(GetVerificationRequest) returns (Verification);
+  // Deletes every verification of the subject: rows, stored documents, raw
+  // results. Idempotent.
+  rpc DeleteVerifications(DeleteVerificationsRequest) returns (google.protobuf.Empty);
+}
+
+message StartVerificationRequest {
+  // The caller's entity the verification is about, and the unit of deletion.
+  string subject = 1;
+  // Separates deliberate re-runs on the same subject: a new key buys a new
+  // verification.
+  string idempotency_key = 2;
+  bytes document = 3; // PDF or TIF, at most 5 MiB
+  string country_hint = 4; // ISO 3166-1 alpha-2, used when the result carries no supplier VAT country
+}
+
+message GetVerificationRequest {
+  string verification_id = 1;
+}
+
+message DeleteVerificationsRequest {
+  string subject = 1;
+}
+
+message Verification {
+  enum State {
+    STATE_UNSPECIFIED = 0;
+    STATE_ACCEPTED = 1; // stored, not yet bought
+    STATE_SUBMITTED = 2; // bought, waiting for the reviewers
+    STATE_VERIFIED = 3; // fields hold the reviewed values
+    STATE_SKIPPED = 4; // configured verification type is Skip: nothing was reviewed
+    STATE_EXPIRED = 5; // no result within the TTL
+    STATE_FAILED = 6; // see reason_code
+  }
+  // UUIDv5 over caller/subject/idempotency_key.
+  string verification_id = 1;
+  string subject = 2;
+  string idempotency_key = 3;
+  State state = 4;
+  string reason_code = 5; // set on terminal states, e.g. "done:verified", "failed:ttl-expired"
+  google.protobuf.Timestamp submitted_at = 6;
+  google.protobuf.Timestamp completed_at = 7;
+  repeated VerifiedField fields = 8;
+}
+
+// At most one per mapped field: the first value the parser can read.
+message VerifiedField {
+  string name = 1; // SSN field name, e.g. "total_incl_vat"
+  // VERIFIED, model name "human_expert". Corrected is left unset: only the
+  // caller knows its stored answer.
+  ssn.type.Candidate candidate = 2;
+}
