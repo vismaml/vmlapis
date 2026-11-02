@@ -49,4 +49,12 @@ message BatchSuggestWithLogitsRequest {
     max_items: 512
   }];
   int32 suggest_limit = 2 [(validate.rules).int32 = {gt: 0}];
+  map<string, int32> target_class_counts = 3 [(validate.rules).map = {
+    keys: {
+      string: {min_len: 1}
+    }
+    values: {
+      int32: {gt: 0}
+    }
+  }];
 }
