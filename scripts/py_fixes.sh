@@ -9,6 +9,8 @@ sed -i 's/from ssn/from vml_proto.ssn/' gen/python/vml_proto/**/*.py
 sed -i 's/from validate/from vml_proto.validate/' gen/python/vml_proto/**/*.py
 # replace for gen_bq_schema modules
 sed -i 's/from gen_bq_schema/from vml_proto.gen_bq_schema/' gen/python/vml_proto/**/*.py
+# replace for ava modules
+sed -i 's/from ava\./from vml_proto.ava./' gen/python/vml_proto/**/*.py
 # google modules: scoped to the vendored tree only. Everything outside it must resolve google/api +
 # google/type from googleapis-common-protos, or the same proto file names register twice in the
 # default descriptor pool and protobuf's upb backend rejects it (TypeError: duplicate file name).
