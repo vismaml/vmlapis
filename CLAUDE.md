@@ -113,4 +113,4 @@ vml-buf sync-packages python go java csharp javascript  # sync language deps
 Generated packages are published automatically on merge to master:
 - **Python** → GCP Artifact Registry
 - **Java** → Maven (GCP Artifact Registry)
-- **C#** → NuGet under `VMLAssets` organisation
+- **C#** → NuGet under `VMLAssets` organisation, via GitHub Actions (`.github/workflows/publish-nuget.yml`) using nuget.org Trusted Publishing — no API key
