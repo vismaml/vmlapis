@@ -34,8 +34,8 @@ all:
 #	generates .pyi files for python intellisense
 	buf generate proto --template buf.gen.python.yaml --include-imports
 
-#	server-side validation, only targeting go code and only for asgt v2 api and tabicl
-	buf generate proto --template buf.gen.validate.go.yaml --path proto/asgt/v2 --path proto/asgt/tabicl --verbose
+#	server-side validation, only targeting go code and only for asgt v2 api, tabicl and ava v1
+	buf generate proto --template buf.gen.validate.go.yaml --path proto/asgt/v2 --path proto/asgt/tabicl --path proto/ava/v1 --verbose
 
 #	openapiv2 (documentation and swagger) for asgt 
 	sed "s/{_FILE_NAME}/asgt\/v1.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.asgt.v1.yaml
@@ -59,6 +59,7 @@ all:
 		--path proto/asgt/data/v1/data_service.proto \
 		--path proto/asgt/v2/dataset_service.proto \
 		--path proto/asgt/v2/suggester_service.proto \
+		--path proto/ava/v1/prediction_service.proto \
 		--path proto/cv/scanner/v1/scanner.proto \
 
 
