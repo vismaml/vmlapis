@@ -2963,7 +2963,8 @@ proto.ssn.documentdataservice.v1.AddAnnotationsRequest.toObject = function(inclu
     consumer: jspb.Message.getFieldWithDefault(msg, 2, ""),
     annotationsList: jspb.Message.toObjectList(msg.getAnnotationsList(),
     proto.ssn.documentdataservice.v1.InternalFieldAnnotation.toObject, includeInstance),
-    environment: jspb.Message.getFieldWithDefault(msg, 4, "")
+    environment: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    replaceSources: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
   };
 
   if (includeInstance) {
@@ -3016,6 +3017,10 @@ proto.ssn.documentdataservice.v1.AddAnnotationsRequest.deserializeBinaryFromRead
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.setEnvironment(value);
+      break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setReplaceSources(value);
       break;
     default:
       reader.skipField();
@@ -3072,6 +3077,13 @@ proto.ssn.documentdataservice.v1.AddAnnotationsRequest.serializeBinaryToWriter =
   if (f.length > 0) {
     writer.writeString(
       4,
+      f
+    );
+  }
+  f = message.getReplaceSources();
+  if (f) {
+    writer.writeBool(
+      5,
       f
     );
   }
@@ -3167,6 +3179,24 @@ proto.ssn.documentdataservice.v1.AddAnnotationsRequest.prototype.getEnvironment 
  */
 proto.ssn.documentdataservice.v1.AddAnnotationsRequest.prototype.setEnvironment = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional bool replace_sources = 5;
+ * @return {boolean}
+ */
+proto.ssn.documentdataservice.v1.AddAnnotationsRequest.prototype.getReplaceSources = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ssn.documentdataservice.v1.AddAnnotationsRequest} returns this
+ */
+proto.ssn.documentdataservice.v1.AddAnnotationsRequest.prototype.setReplaceSources = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 5, value);
 };
 
 

@@ -345,6 +345,9 @@ export class AddAnnotationsRequest extends jspb.Message {
   getEnvironment(): string;
   setEnvironment(value: string): AddAnnotationsRequest;
 
+  getReplaceSources(): boolean;
+  setReplaceSources(value: boolean): AddAnnotationsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddAnnotationsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: AddAnnotationsRequest): AddAnnotationsRequest.AsObject;
@@ -359,6 +362,7 @@ export namespace AddAnnotationsRequest {
     consumer: string,
     annotationsList: Array<InternalFieldAnnotation.AsObject>,
     environment: string,
+    replaceSources: boolean,
   }
 }
 

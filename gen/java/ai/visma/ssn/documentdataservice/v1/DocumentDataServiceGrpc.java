@@ -334,7 +334,8 @@ public final class DocumentDataServiceGrpc {
     /**
      * <pre>
      * DeleteDocument schedules asynchronous deletion of a document and all its
-     * blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+     * blobs and annotations. Deletion is by expiry: the row and blobs are removed
+     * within a day of the effective expiry.
      * </pre>
      */
     default void deleteDocument(ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest request,
@@ -452,7 +453,8 @@ public final class DocumentDataServiceGrpc {
     /**
      * <pre>
      * DeleteDocument schedules asynchronous deletion of a document and all its
-     * blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+     * blobs and annotations. Deletion is by expiry: the row and blobs are removed
+     * within a day of the effective expiry.
      * </pre>
      */
     public void deleteDocument(ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest request,
@@ -560,7 +562,8 @@ public final class DocumentDataServiceGrpc {
     /**
      * <pre>
      * DeleteDocument schedules asynchronous deletion of a document and all its
-     * blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+     * blobs and annotations. Deletion is by expiry: the row and blobs are removed
+     * within a day of the effective expiry.
      * </pre>
      */
     public ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse deleteDocument(ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest request) {
@@ -664,7 +667,8 @@ public final class DocumentDataServiceGrpc {
     /**
      * <pre>
      * DeleteDocument schedules asynchronous deletion of a document and all its
-     * blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+     * blobs and annotations. Deletion is by expiry: the row and blobs are removed
+     * within a day of the effective expiry.
      * </pre>
      */
     public ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse deleteDocument(ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest request) {
@@ -771,7 +775,8 @@ public final class DocumentDataServiceGrpc {
     /**
      * <pre>
      * DeleteDocument schedules asynchronous deletion of a document and all its
-     * blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+     * blobs and annotations. Deletion is by expiry: the row and blobs are removed
+     * within a day of the effective expiry.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse> deleteDocument(
