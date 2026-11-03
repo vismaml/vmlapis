@@ -45,6 +45,11 @@ public final class PredictionServiceProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ava_v1_WalkedStep_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ava_v1_Confidence_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ava_v1_Confidence_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -55,36 +60,46 @@ public final class PredictionServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\037ava/v1/prediction_service.proto\022\006ava.v" +
-      "1\032\034google/api/annotations.proto\032.protoc-" +
-      "gen-openapiv2/options/annotations.proto\032" +
-      "\027validate/validate.proto\"\374\001\n\rDecideReque" +
-      "st\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-" +
-      "Za-z0-9.][A-Za-z0-9_.>-]*$R\013datasetName\022" +
-      "(\n\013output_name\030\002 \001(\tB\007\372B\004r\002\020\001R\noutputNam" +
-      "e\0229\n\006fields\030\003 \003(\0132!.ava.v1.DecideRequest" +
-      ".FieldsEntryR\006fields\0329\n\013FieldsEntry\022\020\n\003k" +
-      "ey\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"" +
-      "\233\001\n\016DecideResponse\022\024\n\005value\030\001 \001(\tR\005value" +
-      "\022\034\n\tescalated\030\002 \001(\010R\tescalated\022(\n\005steps\030" +
-      "\003 \003(\0132\022.ava.v1.WalkedStepR\005steps\022+\n\021proc" +
-      "edure_version\030\004 \001(\005R\020procedureVersion\"@\n" +
-      "\nWalkedStep\022\032\n\010question\030\001 \001(\tR\010question\022" +
-      "\026\n\006answer\030\002 \001(\tR\006answer2\260\001\n\021PredictionSe" +
-      "rvice\022f\n\006Decide\022\025.ava.v1.DecideRequest\032\026" +
-      ".ava.v1.DecideResponse\"-\202\323\344\223\002\'\"\"/v2/data" +
-      "sets/{dataset_name}:decide:\001*\0323\222A0\022.Deci" +
-      "de outputs with a dataset\'s AVA procedur" +
-      "e.B\303\001\n\017ai.visma.ava.v1B\026PredictionServic" +
-      "eProtoP\001Z*github.com/e-conomic/vmlapis/g" +
-      "en/go/ava/v1\242\002\003AXX\252\002\006Ava.V1\312\002\006Ava\\V1\342\002\022A" +
-      "va\\V1\\GPBMetadata\352\002\007Ava::V1\222A2\022\t\n\003AVA2\002v" +
-      "1*\001\0022\020application/json:\020application/json" +
-      "b\006proto3"
+      "1\032\034google/api/annotations.proto\032\036google/" +
+      "protobuf/wrappers.proto\032.protoc-gen-open" +
+      "apiv2/options/annotations.proto\032\027validat" +
+      "e/validate.proto\"\253\002\n\rDecideRequest\022K\n\014da" +
+      "taset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9." +
+      "][A-Za-z0-9_.>-]*$R\013datasetName\022(\n\013outpu" +
+      "t_name\030\002 \001(\tB\007\372B\004r\002\020\001R\noutputName\0229\n\006fie" +
+      "lds\030\003 \003(\0132!.ava.v1.DecideRequest.FieldsE" +
+      "ntryR\006fields\022-\n\005model\030\004 \001(\0162\r.ava.v1.Mod" +
+      "elB\010\372B\005\202\001\002\020\001R\005model\0329\n\013FieldsEntry\022\020\n\003ke" +
+      "y\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\233" +
+      "\001\n\016DecideResponse\022\024\n\005value\030\001 \001(\tR\005value\022" +
+      "\034\n\tescalated\030\002 \001(\010R\tescalated\022(\n\005steps\030\003" +
+      " \003(\0132\022.ava.v1.WalkedStepR\005steps\022+\n\021proce" +
+      "dure_version\030\004 \001(\005R\020procedureVersion\"t\n\n" +
+      "WalkedStep\022\032\n\010question\030\001 \001(\tR\010question\022\026" +
+      "\n\006answer\030\002 \001(\tR\006answer\0222\n\nconfidence\030\003 \001" +
+      "(\0132\022.ava.v1.ConfidenceR\nconfidence\"\276\001\n\nC" +
+      "onfidence\022.\n\005level\030\001 \001(\0162\030.ava.v1.Confid" +
+      "ence.LevelR\005level\0221\n\005value\030\002 \001(\0132\033.googl" +
+      "e.protobuf.FloatValueR\005value\"M\n\005Level\022\013\n" +
+      "\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID" +
+      "\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005*%\n\005Model\022\010\n\004" +
+      "QWEN\020\000\022\010\n\004CLEF\020\001\022\010\n\004BERT\020\0022\260\001\n\021Predictio" +
+      "nService\022f\n\006Decide\022\025.ava.v1.DecideReques" +
+      "t\032\026.ava.v1.DecideResponse\"-\202\323\344\223\002\'\"\"/v2/d" +
+      "atasets/{dataset_name}:decide:\001*\0323\222A0\022.D" +
+      "ecide outputs with a dataset\'s AVA proce" +
+      "dure.B\303\001\n\017ai.visma.ava.v1B\026PredictionSer" +
+      "viceProtoP\001Z*github.com/e-conomic/vmlapi" +
+      "s/gen/go/ava/v1\242\002\003AXX\252\002\006Ava.V1\312\002\006Ava\\V1\342" +
+      "\002\022Ava\\V1\\GPBMetadata\352\002\007Ava::V1\222A2\022\t\n\003AVA" +
+      "2\002v1*\001\0022\020application/json:\020application/j" +
+      "sonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
           ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
           ai.visma.validate.ValidateProto.getDescriptor(),
         });
@@ -93,7 +108,7 @@ public final class PredictionServiceProto {
     internal_static_ava_v1_DecideRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ava_v1_DecideRequest_descriptor,
-        new java.lang.String[] { "DatasetName", "OutputName", "Fields", });
+        new java.lang.String[] { "DatasetName", "OutputName", "Fields", "Model", });
     internal_static_ava_v1_DecideRequest_FieldsEntry_descriptor =
       internal_static_ava_v1_DecideRequest_descriptor.getNestedTypes().get(0);
     internal_static_ava_v1_DecideRequest_FieldsEntry_fieldAccessorTable = new
@@ -111,9 +126,16 @@ public final class PredictionServiceProto {
     internal_static_ava_v1_WalkedStep_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ava_v1_WalkedStep_descriptor,
-        new java.lang.String[] { "Question", "Answer", });
+        new java.lang.String[] { "Question", "Answer", "Confidence", });
+    internal_static_ava_v1_Confidence_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_ava_v1_Confidence_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ava_v1_Confidence_descriptor,
+        new java.lang.String[] { "Level", "Value", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
     ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
     ai.visma.validate.ValidateProto.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =

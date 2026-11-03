@@ -22,6 +22,8 @@ grpc.web = require('grpc-web');
 
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js')
 
+var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js')
+
 var protoc$gen$openapiv2_options_annotations_pb = require('../../protoc-gen-openapiv2/options/annotations_pb.js')
 
 var validate_validate_pb = require('../../validate/validate_pb.js')

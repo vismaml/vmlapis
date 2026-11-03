@@ -92,6 +92,17 @@ func (m *DecideRequest) validate(all bool) error {
 
 	// no validation rules for Fields
 
+	if _, ok := Model_name[int32(m.GetModel())]; !ok {
+		err := DecideRequestValidationError{
+			field:  "Model",
+			reason: "value must be one of the defined enum values",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
 	if len(errors) > 0 {
 		return DecideRequestMultiError(errors)
 	}
@@ -338,6 +349,35 @@ func (m *WalkedStep) validate(all bool) error {
 
 	// no validation rules for Answer
 
+	if all {
+		switch v := interface{}(m.GetConfidence()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, WalkedStepValidationError{
+					field:  "Confidence",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, WalkedStepValidationError{
+					field:  "Confidence",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetConfidence()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return WalkedStepValidationError{
+				field:  "Confidence",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
 	if len(errors) > 0 {
 		return WalkedStepMultiError(errors)
 	}
@@ -414,3 +454,133 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = WalkedStepValidationError{}
+
+// Validate checks the field values on Confidence with the rules defined in the
+// proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
+func (m *Confidence) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on Confidence with the rules defined in
+// the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in ConfidenceMultiError, or
+// nil if none found.
+func (m *Confidence) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *Confidence) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	// no validation rules for Level
+
+	if all {
+		switch v := interface{}(m.GetValue()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, ConfidenceValidationError{
+					field:  "Value",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, ConfidenceValidationError{
+					field:  "Value",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetValue()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ConfidenceValidationError{
+				field:  "Value",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if len(errors) > 0 {
+		return ConfidenceMultiError(errors)
+	}
+
+	return nil
+}
+
+// ConfidenceMultiError is an error wrapping multiple validation errors
+// returned by Confidence.ValidateAll() if the designated constraints aren't met.
+type ConfidenceMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m ConfidenceMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m ConfidenceMultiError) AllErrors() []error { return m }
+
+// ConfidenceValidationError is the validation error returned by
+// Confidence.Validate if the designated constraints aren't met.
+type ConfidenceValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ConfidenceValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ConfidenceValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ConfidenceValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ConfidenceValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ConfidenceValidationError) ErrorName() string { return "ConfidenceValidationError" }
+
+// Error satisfies the builtin error interface
+func (e ConfidenceValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sConfidence.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ConfidenceValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ConfidenceValidationError{}

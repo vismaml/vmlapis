@@ -102,4 +102,23 @@ java.lang.String defaultValue);
    */
   java.lang.String getFieldsOrThrow(
       java.lang.String key);
+
+  /**
+   * <pre>
+   * Model that answers the procedure's questions; defaults to QWEN
+   * </pre>
+   *
+   * <code>.ava.v1.Model model = 4 [json_name = "model", (.validate.rules) = { ... }</code>
+   * @return The enum numeric value on the wire for model.
+   */
+  int getModelValue();
+  /**
+   * <pre>
+   * Model that answers the procedure's questions; defaults to QWEN
+   * </pre>
+   *
+   * <code>.ava.v1.Model model = 4 [json_name = "model", (.validate.rules) = { ... }</code>
+   * @return The model.
+   */
+  ai.visma.ava.v1.Model getModel();
 }

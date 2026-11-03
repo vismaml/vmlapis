@@ -48,4 +48,31 @@ public interface WalkedStepOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAnswerBytes();
+
+  /**
+   * <pre>
+   * Confidence in the answer
+   * </pre>
+   *
+   * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+   * @return Whether the confidence field is set.
+   */
+  boolean hasConfidence();
+  /**
+   * <pre>
+   * Confidence in the answer
+   * </pre>
+   *
+   * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+   * @return The confidence.
+   */
+  ai.visma.ava.v1.Confidence getConfidence();
+  /**
+   * <pre>
+   * Confidence in the answer
+   * </pre>
+   *
+   * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+   */
+  ai.visma.ava.v1.ConfidenceOrBuilder getConfidenceOrBuilder();
 }

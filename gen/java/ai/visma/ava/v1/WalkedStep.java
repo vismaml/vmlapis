@@ -44,6 +44,7 @@ private static final long serialVersionUID = 0L;
             ai.visma.ava.v1.WalkedStep.class, ai.visma.ava.v1.WalkedStep.Builder.class);
   }
 
+  private int bitField0_;
   public static final int QUESTION_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object question_ = "";
@@ -138,6 +139,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CONFIDENCE_FIELD_NUMBER = 3;
+  private ai.visma.ava.v1.Confidence confidence_;
+  /**
+   * <pre>
+   * Confidence in the answer
+   * </pre>
+   *
+   * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+   * @return Whether the confidence field is set.
+   */
+  @java.lang.Override
+  public boolean hasConfidence() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * Confidence in the answer
+   * </pre>
+   *
+   * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+   * @return The confidence.
+   */
+  @java.lang.Override
+  public ai.visma.ava.v1.Confidence getConfidence() {
+    return confidence_ == null ? ai.visma.ava.v1.Confidence.getDefaultInstance() : confidence_;
+  }
+  /**
+   * <pre>
+   * Confidence in the answer
+   * </pre>
+   *
+   * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ava.v1.ConfidenceOrBuilder getConfidenceOrBuilder() {
+    return confidence_ == null ? ai.visma.ava.v1.Confidence.getDefaultInstance() : confidence_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -158,6 +197,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(answer_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, answer_);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(3, getConfidence());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -172,6 +214,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(answer_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, answer_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getConfidence());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -192,6 +238,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getQuestion())) return false;
     if (!getAnswer()
         .equals(other.getAnswer())) return false;
+    if (hasConfidence() != other.hasConfidence()) return false;
+    if (hasConfidence()) {
+      if (!getConfidence()
+          .equals(other.getConfidence())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -207,6 +258,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getQuestion().hashCode();
     hash = (37 * hash) + ANSWER_FIELD_NUMBER;
     hash = (53 * hash) + getAnswer().hashCode();
+    if (hasConfidence()) {
+      hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
+      hash = (53 * hash) + getConfidence().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -326,13 +381,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using ai.visma.ava.v1.WalkedStep.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        getConfidenceFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -340,6 +401,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       question_ = "";
       answer_ = "";
+      confidence_ = null;
+      if (confidenceBuilder_ != null) {
+        confidenceBuilder_.dispose();
+        confidenceBuilder_ = null;
+      }
       return this;
     }
 
@@ -379,6 +445,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.answer_ = answer_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.confidence_ = confidenceBuilder_ == null
+            ? confidence_
+            : confidenceBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -402,6 +476,9 @@ private static final long serialVersionUID = 0L;
         answer_ = other.answer_;
         bitField0_ |= 0x00000002;
         onChanged();
+      }
+      if (other.hasConfidence()) {
+        mergeConfidence(other.getConfidence());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -439,6 +516,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getConfidenceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -638,6 +722,163 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+
+    private ai.visma.ava.v1.Confidence confidence_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ava.v1.Confidence, ai.visma.ava.v1.Confidence.Builder, ai.visma.ava.v1.ConfidenceOrBuilder> confidenceBuilder_;
+    /**
+     * <pre>
+     * Confidence in the answer
+     * </pre>
+     *
+     * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+     * @return Whether the confidence field is set.
+     */
+    public boolean hasConfidence() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Confidence in the answer
+     * </pre>
+     *
+     * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+     * @return The confidence.
+     */
+    public ai.visma.ava.v1.Confidence getConfidence() {
+      if (confidenceBuilder_ == null) {
+        return confidence_ == null ? ai.visma.ava.v1.Confidence.getDefaultInstance() : confidence_;
+      } else {
+        return confidenceBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Confidence in the answer
+     * </pre>
+     *
+     * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+     */
+    public Builder setConfidence(ai.visma.ava.v1.Confidence value) {
+      if (confidenceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        confidence_ = value;
+      } else {
+        confidenceBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Confidence in the answer
+     * </pre>
+     *
+     * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+     */
+    public Builder setConfidence(
+        ai.visma.ava.v1.Confidence.Builder builderForValue) {
+      if (confidenceBuilder_ == null) {
+        confidence_ = builderForValue.build();
+      } else {
+        confidenceBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Confidence in the answer
+     * </pre>
+     *
+     * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+     */
+    public Builder mergeConfidence(ai.visma.ava.v1.Confidence value) {
+      if (confidenceBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          confidence_ != null &&
+          confidence_ != ai.visma.ava.v1.Confidence.getDefaultInstance()) {
+          getConfidenceBuilder().mergeFrom(value);
+        } else {
+          confidence_ = value;
+        }
+      } else {
+        confidenceBuilder_.mergeFrom(value);
+      }
+      if (confidence_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Confidence in the answer
+     * </pre>
+     *
+     * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+     */
+    public Builder clearConfidence() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      confidence_ = null;
+      if (confidenceBuilder_ != null) {
+        confidenceBuilder_.dispose();
+        confidenceBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Confidence in the answer
+     * </pre>
+     *
+     * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+     */
+    public ai.visma.ava.v1.Confidence.Builder getConfidenceBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getConfidenceFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Confidence in the answer
+     * </pre>
+     *
+     * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+     */
+    public ai.visma.ava.v1.ConfidenceOrBuilder getConfidenceOrBuilder() {
+      if (confidenceBuilder_ != null) {
+        return confidenceBuilder_.getMessageOrBuilder();
+      } else {
+        return confidence_ == null ?
+            ai.visma.ava.v1.Confidence.getDefaultInstance() : confidence_;
+      }
+    }
+    /**
+     * <pre>
+     * Confidence in the answer
+     * </pre>
+     *
+     * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ava.v1.Confidence, ai.visma.ava.v1.Confidence.Builder, ai.visma.ava.v1.ConfidenceOrBuilder> 
+        getConfidenceFieldBuilder() {
+      if (confidenceBuilder_ == null) {
+        confidenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ava.v1.Confidence, ai.visma.ava.v1.Confidence.Builder, ai.visma.ava.v1.ConfidenceOrBuilder>(
+                getConfidence(),
+                getParentForChildren(),
+                isClean());
+        confidence_ = null;
+      }
+      return confidenceBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ava.v1.WalkedStep)

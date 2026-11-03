@@ -3,6 +3,7 @@ syntax = "proto3";
 package ava.v1;
 
 import "google/api/annotations.proto";
+import "google/protobuf/wrappers.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "validate/validate.proto";
 
@@ -40,6 +41,14 @@ message DecideRequest {
   string output_name = 2 [(validate.rules).string.min_len = 1];
   // Input fields; only "text" is read, and it is required
   map<string, string> fields = 3;
+  // Model that answers the procedure's questions; defaults to QWEN
+  Model model = 4 [(validate.rules).enum.defined_only = true];
+}
+
+enum Model {
+  QWEN = 0;
+  CLEF = 1;
+  BERT = 2;
 }
 
 message DecideResponse {
@@ -58,4 +67,21 @@ message WalkedStep {
   string question = 1;
   // The answer the step read; empty when the question went unanswered
   string answer = 2;
+  // Confidence in the answer
+  Confidence confidence = 3;
+}
+
+message Confidence {
+  enum Level {
+    UNKNOWN = 0;
+    VERY_LOW = 1;
+    LOW = 2;
+    MID = 3;
+    HIGH = 4;
+    VERY_HIGH = 5;
+  }
+  // A bucketized representation of confidence
+  Level level = 1;
+  // The confidence value, in [0, 1]
+  google.protobuf.FloatValue value = 2;
 }

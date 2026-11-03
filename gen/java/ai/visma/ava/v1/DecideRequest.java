@@ -29,6 +29,7 @@ private static final long serialVersionUID = 0L;
   private DecideRequest() {
     datasetName_ = "";
     outputName_ = "";
+    model_ = 0;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -245,6 +246,32 @@ java.lang.String defaultValue) {
     return map.get(key);
   }
 
+  public static final int MODEL_FIELD_NUMBER = 4;
+  private int model_ = 0;
+  /**
+   * <pre>
+   * Model that answers the procedure's questions; defaults to QWEN
+   * </pre>
+   *
+   * <code>.ava.v1.Model model = 4 [json_name = "model", (.validate.rules) = { ... }</code>
+   * @return The enum numeric value on the wire for model.
+   */
+  @java.lang.Override public int getModelValue() {
+    return model_;
+  }
+  /**
+   * <pre>
+   * Model that answers the procedure's questions; defaults to QWEN
+   * </pre>
+   *
+   * <code>.ava.v1.Model model = 4 [json_name = "model", (.validate.rules) = { ... }</code>
+   * @return The model.
+   */
+  @java.lang.Override public ai.visma.ava.v1.Model getModel() {
+    ai.visma.ava.v1.Model result = ai.visma.ava.v1.Model.forNumber(model_);
+    return result == null ? ai.visma.ava.v1.Model.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -271,6 +298,9 @@ java.lang.String defaultValue) {
         internalGetFields(),
         FieldsDefaultEntryHolder.defaultEntry,
         3);
+    if (model_ != ai.visma.ava.v1.Model.QWEN.getNumber()) {
+      output.writeEnum(4, model_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -296,6 +326,10 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, fields__);
     }
+    if (model_ != ai.visma.ava.v1.Model.QWEN.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, model_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -317,6 +351,7 @@ java.lang.String defaultValue) {
         .equals(other.getOutputName())) return false;
     if (!internalGetFields().equals(
         other.internalGetFields())) return false;
+    if (model_ != other.model_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -336,6 +371,8 @@ java.lang.String defaultValue) {
       hash = (37 * hash) + FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetFields().hashCode();
     }
+    hash = (37 * hash) + MODEL_FIELD_NUMBER;
+    hash = (53 * hash) + model_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -492,6 +529,7 @@ java.lang.String defaultValue) {
       datasetName_ = "";
       outputName_ = "";
       internalGetMutableFields().clear();
+      model_ = 0;
       return this;
     }
 
@@ -535,6 +573,9 @@ java.lang.String defaultValue) {
         result.fields_ = internalGetFields();
         result.fields_.makeImmutable();
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.model_ = model_;
+      }
     }
 
     @java.lang.Override
@@ -562,6 +603,9 @@ java.lang.String defaultValue) {
       internalGetMutableFields().mergeFrom(
           other.internalGetFields());
       bitField0_ |= 0x00000004;
+      if (other.model_ != 0) {
+        setModelValue(other.getModelValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -607,6 +651,11 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              model_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -960,6 +1009,79 @@ java.lang.String defaultValue) {
       internalGetMutableFields().getMutableMap()
           .putAll(values);
       bitField0_ |= 0x00000004;
+      return this;
+    }
+
+    private int model_ = 0;
+    /**
+     * <pre>
+     * Model that answers the procedure's questions; defaults to QWEN
+     * </pre>
+     *
+     * <code>.ava.v1.Model model = 4 [json_name = "model", (.validate.rules) = { ... }</code>
+     * @return The enum numeric value on the wire for model.
+     */
+    @java.lang.Override public int getModelValue() {
+      return model_;
+    }
+    /**
+     * <pre>
+     * Model that answers the procedure's questions; defaults to QWEN
+     * </pre>
+     *
+     * <code>.ava.v1.Model model = 4 [json_name = "model", (.validate.rules) = { ... }</code>
+     * @param value The enum numeric value on the wire for model to set.
+     * @return This builder for chaining.
+     */
+    public Builder setModelValue(int value) {
+      model_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Model that answers the procedure's questions; defaults to QWEN
+     * </pre>
+     *
+     * <code>.ava.v1.Model model = 4 [json_name = "model", (.validate.rules) = { ... }</code>
+     * @return The model.
+     */
+    @java.lang.Override
+    public ai.visma.ava.v1.Model getModel() {
+      ai.visma.ava.v1.Model result = ai.visma.ava.v1.Model.forNumber(model_);
+      return result == null ? ai.visma.ava.v1.Model.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Model that answers the procedure's questions; defaults to QWEN
+     * </pre>
+     *
+     * <code>.ava.v1.Model model = 4 [json_name = "model", (.validate.rules) = { ... }</code>
+     * @param value The model to set.
+     * @return This builder for chaining.
+     */
+    public Builder setModel(ai.visma.ava.v1.Model value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      model_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Model that answers the procedure's questions; defaults to QWEN
+     * </pre>
+     *
+     * <code>.ava.v1.Model model = 4 [json_name = "model", (.validate.rules) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearModel() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      model_ = 0;
+      onChanged();
       return this;
     }
 

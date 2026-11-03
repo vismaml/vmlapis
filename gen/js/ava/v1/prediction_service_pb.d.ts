@@ -1,6 +1,7 @@
 import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
+import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb'; // proto import: "google/protobuf/wrappers.proto"
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
 import * as validate_validate_pb from '../../validate/validate_pb'; // proto import: "validate/validate.proto"
 
@@ -15,6 +16,9 @@ export class DecideRequest extends jspb.Message {
   getFieldsMap(): jspb.Map<string, string>;
   clearFieldsMap(): DecideRequest;
 
+  getModel(): Model;
+  setModel(value: Model): DecideRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DecideRequest.AsObject;
   static toObject(includeInstance: boolean, msg: DecideRequest): DecideRequest.AsObject;
@@ -28,6 +32,7 @@ export namespace DecideRequest {
     datasetName: string,
     outputName: string,
     fieldsMap: Array<[string, string]>,
+    model: Model,
   }
 }
 
@@ -70,6 +75,11 @@ export class WalkedStep extends jspb.Message {
   getAnswer(): string;
   setAnswer(value: string): WalkedStep;
 
+  getConfidence(): Confidence | undefined;
+  setConfidence(value?: Confidence): WalkedStep;
+  hasConfidence(): boolean;
+  clearConfidence(): WalkedStep;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): WalkedStep.AsObject;
   static toObject(includeInstance: boolean, msg: WalkedStep): WalkedStep.AsObject;
@@ -82,6 +92,45 @@ export namespace WalkedStep {
   export type AsObject = {
     question: string,
     answer: string,
+    confidence?: Confidence.AsObject,
   }
 }
 
+export class Confidence extends jspb.Message {
+  getLevel(): Confidence.Level;
+  setLevel(value: Confidence.Level): Confidence;
+
+  getValue(): google_protobuf_wrappers_pb.FloatValue | undefined;
+  setValue(value?: google_protobuf_wrappers_pb.FloatValue): Confidence;
+  hasValue(): boolean;
+  clearValue(): Confidence;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Confidence.AsObject;
+  static toObject(includeInstance: boolean, msg: Confidence): Confidence.AsObject;
+  static serializeBinaryToWriter(message: Confidence, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Confidence;
+  static deserializeBinaryFromReader(message: Confidence, reader: jspb.BinaryReader): Confidence;
+}
+
+export namespace Confidence {
+  export type AsObject = {
+    level: Confidence.Level,
+    value?: google_protobuf_wrappers_pb.FloatValue.AsObject,
+  }
+
+  export enum Level { 
+    UNKNOWN = 0,
+    VERY_LOW = 1,
+    LOW = 2,
+    MID = 3,
+    HIGH = 4,
+    VERY_HIGH = 5,
+  }
+}
+
+export enum Model { 
+  QWEN = 0,
+  CLEF = 1,
+  BERT = 2,
+}
