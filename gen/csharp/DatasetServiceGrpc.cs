@@ -76,6 +76,10 @@ namespace Asgt.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Asgt.V2.ModelsResponse> __Marshaller_asgt_v2_ModelsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.V2.ModelsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Asgt.V2.GetDatasetInfoRequest> __Marshaller_asgt_v2_GetDatasetInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.V2.GetDatasetInfoRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Asgt.V2.GetDatasetInfoResponse> __Marshaller_asgt_v2_GetDatasetInfoResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.V2.GetDatasetInfoResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Asgt.V2.GetTrainingsRequest> __Marshaller_asgt_v2_GetTrainingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.V2.GetTrainingsRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -165,6 +169,14 @@ namespace Asgt.V2 {
         "GetDatasetModels",
         __Marshaller_asgt_v2_GetDatasetModelsRequest,
         __Marshaller_asgt_v2_ModelsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Asgt.V2.GetDatasetInfoRequest, global::Asgt.V2.GetDatasetInfoResponse> __Method_GetDatasetInfo = new grpc::Method<global::Asgt.V2.GetDatasetInfoRequest, global::Asgt.V2.GetDatasetInfoResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDatasetInfo",
+        __Marshaller_asgt_v2_GetDatasetInfoRequest,
+        __Marshaller_asgt_v2_GetDatasetInfoResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Asgt.V2.GetTrainingsRequest, global::Asgt.V2.TrainingsResponse> __Method_GetTrainings = new grpc::Method<global::Asgt.V2.GetTrainingsRequest, global::Asgt.V2.TrainingsResponse>(
@@ -322,6 +334,18 @@ namespace Asgt.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Asgt.V2.ModelsResponse> GetDatasetModels(global::Asgt.V2.GetDatasetModelsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get a summary of a dataset: its settings, latest training and the model currently used for suggestions.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Asgt.V2.GetDatasetInfoResponse> GetDatasetInfo(global::Asgt.V2.GetDatasetInfoRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -937,6 +961,54 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetDatasetModels, null, options, request);
       }
       /// <summary>
+      /// Get a summary of a dataset: its settings, latest training and the model currently used for suggestions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Asgt.V2.GetDatasetInfoResponse GetDatasetInfo(global::Asgt.V2.GetDatasetInfoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDatasetInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a summary of a dataset: its settings, latest training and the model currently used for suggestions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Asgt.V2.GetDatasetInfoResponse GetDatasetInfo(global::Asgt.V2.GetDatasetInfoRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDatasetInfo, null, options, request);
+      }
+      /// <summary>
+      /// Get a summary of a dataset: its settings, latest training and the model currently used for suggestions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Asgt.V2.GetDatasetInfoResponse> GetDatasetInfoAsync(global::Asgt.V2.GetDatasetInfoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDatasetInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a summary of a dataset: its settings, latest training and the model currently used for suggestions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Asgt.V2.GetDatasetInfoResponse> GetDatasetInfoAsync(global::Asgt.V2.GetDatasetInfoRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDatasetInfo, null, options, request);
+      }
+      /// <summary>
       /// Get the specified number of the most recent trainings accross all consumer's datasets.
       /// Number of requested trainings has to be larger than 0 but no larger than 100.
       /// </summary>
@@ -1013,6 +1085,7 @@ namespace Asgt.V2 {
           .AddMethod(__Method_TruncateDataset, serviceImpl.TruncateDataset)
           .AddMethod(__Method_GetDatasetTrainings, serviceImpl.GetDatasetTrainings)
           .AddMethod(__Method_GetDatasetModels, serviceImpl.GetDatasetModels)
+          .AddMethod(__Method_GetDatasetInfo, serviceImpl.GetDatasetInfo)
           .AddMethod(__Method_GetTrainings, serviceImpl.GetTrainings).Build();
     }
 
@@ -1034,6 +1107,7 @@ namespace Asgt.V2 {
       serviceBinder.AddMethod(__Method_TruncateDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.V2.TruncateDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.TruncateDataset));
       serviceBinder.AddMethod(__Method_GetDatasetTrainings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.V2.GetDatasetTrainingsRequest, global::Asgt.V2.TrainingsResponse>(serviceImpl.GetDatasetTrainings));
       serviceBinder.AddMethod(__Method_GetDatasetModels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.V2.GetDatasetModelsRequest, global::Asgt.V2.ModelsResponse>(serviceImpl.GetDatasetModels));
+      serviceBinder.AddMethod(__Method_GetDatasetInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.V2.GetDatasetInfoRequest, global::Asgt.V2.GetDatasetInfoResponse>(serviceImpl.GetDatasetInfo));
       serviceBinder.AddMethod(__Method_GetTrainings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.V2.GetTrainingsRequest, global::Asgt.V2.TrainingsResponse>(serviceImpl.GetTrainings));
     }
 

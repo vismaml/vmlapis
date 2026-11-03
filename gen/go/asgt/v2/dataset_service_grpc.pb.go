@@ -32,6 +32,7 @@ const (
 	DatasetService_TruncateDataset_FullMethodName       = "/asgt.v2.DatasetService/TruncateDataset"
 	DatasetService_GetDatasetTrainings_FullMethodName   = "/asgt.v2.DatasetService/GetDatasetTrainings"
 	DatasetService_GetDatasetModels_FullMethodName      = "/asgt.v2.DatasetService/GetDatasetModels"
+	DatasetService_GetDatasetInfo_FullMethodName        = "/asgt.v2.DatasetService/GetDatasetInfo"
 	DatasetService_GetTrainings_FullMethodName          = "/asgt.v2.DatasetService/GetTrainings"
 )
 
@@ -71,6 +72,8 @@ type DatasetServiceClient interface {
 	// Get the specified number of the most recent dataset's trained models.
 	// Number of requested models has to be larger than 0 but no larger than 100.
 	GetDatasetModels(ctx context.Context, in *GetDatasetModelsRequest, opts ...grpc.CallOption) (*ModelsResponse, error)
+	// Get a summary of a dataset: its settings, latest training and the model currently used for suggestions.
+	GetDatasetInfo(ctx context.Context, in *GetDatasetInfoRequest, opts ...grpc.CallOption) (*GetDatasetInfoResponse, error)
 	// Get the specified number of the most recent trainings accross all consumer's datasets.
 	// Number of requested trainings has to be larger than 0 but no larger than 100.
 	GetTrainings(ctx context.Context, in *GetTrainingsRequest, opts ...grpc.CallOption) (*TrainingsResponse, error)
@@ -183,6 +186,15 @@ func (c *datasetServiceClient) GetDatasetModels(ctx context.Context, in *GetData
 	return out, nil
 }
 
+func (c *datasetServiceClient) GetDatasetInfo(ctx context.Context, in *GetDatasetInfoRequest, opts ...grpc.CallOption) (*GetDatasetInfoResponse, error) {
+	out := new(GetDatasetInfoResponse)
+	err := c.cc.Invoke(ctx, DatasetService_GetDatasetInfo_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *datasetServiceClient) GetTrainings(ctx context.Context, in *GetTrainingsRequest, opts ...grpc.CallOption) (*TrainingsResponse, error) {
 	out := new(TrainingsResponse)
 	err := c.cc.Invoke(ctx, DatasetService_GetTrainings_FullMethodName, in, out, opts...)
@@ -228,6 +240,8 @@ type DatasetServiceServer interface {
 	// Get the specified number of the most recent dataset's trained models.
 	// Number of requested models has to be larger than 0 but no larger than 100.
 	GetDatasetModels(context.Context, *GetDatasetModelsRequest) (*ModelsResponse, error)
+	// Get a summary of a dataset: its settings, latest training and the model currently used for suggestions.
+	GetDatasetInfo(context.Context, *GetDatasetInfoRequest) (*GetDatasetInfoResponse, error)
 	// Get the specified number of the most recent trainings accross all consumer's datasets.
 	// Number of requested trainings has to be larger than 0 but no larger than 100.
 	GetTrainings(context.Context, *GetTrainingsRequest) (*TrainingsResponse, error)
@@ -269,6 +283,9 @@ func (UnimplementedDatasetServiceServer) GetDatasetTrainings(context.Context, *G
 }
 func (UnimplementedDatasetServiceServer) GetDatasetModels(context.Context, *GetDatasetModelsRequest) (*ModelsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetDatasetModels not implemented")
+}
+func (UnimplementedDatasetServiceServer) GetDatasetInfo(context.Context, *GetDatasetInfoRequest) (*GetDatasetInfoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDatasetInfo not implemented")
 }
 func (UnimplementedDatasetServiceServer) GetTrainings(context.Context, *GetTrainingsRequest) (*TrainingsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetTrainings not implemented")
@@ -483,6 +500,24 @@ func _DatasetService_GetDatasetModels_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DatasetService_GetDatasetInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetDatasetInfoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatasetServiceServer).GetDatasetInfo(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DatasetService_GetDatasetInfo_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatasetServiceServer).GetDatasetInfo(ctx, req.(*GetDatasetInfoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _DatasetService_GetTrainings_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetTrainingsRequest)
 	if err := dec(in); err != nil {
@@ -551,6 +586,10 @@ var DatasetService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetDatasetModels",
 			Handler:    _DatasetService_GetDatasetModels_Handler,
+		},
+		{
+			MethodName: "GetDatasetInfo",
+			Handler:    _DatasetService_GetDatasetInfo_Handler,
 		},
 		{
 			MethodName: "GetTrainings",

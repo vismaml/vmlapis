@@ -2270,3 +2270,318 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = ModelsResponseValidationError{}
+
+// Validate checks the field values on GetDatasetInfoRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the first error encountered is returned, or nil if there are no violations.
+func (m *GetDatasetInfoRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on GetDatasetInfoRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// GetDatasetInfoRequestMultiError, or nil if none found.
+func (m *GetDatasetInfoRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *GetDatasetInfoRequest) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	if len(m.GetDatasetName()) > 256 {
+		err := GetDatasetInfoRequestValidationError{
+			field:  "DatasetName",
+			reason: "value length must be at most 256 bytes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if !_GetDatasetInfoRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
+		err := GetDatasetInfoRequestValidationError{
+			field:  "DatasetName",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return GetDatasetInfoRequestMultiError(errors)
+	}
+
+	return nil
+}
+
+// GetDatasetInfoRequestMultiError is an error wrapping multiple validation
+// errors returned by GetDatasetInfoRequest.ValidateAll() if the designated
+// constraints aren't met.
+type GetDatasetInfoRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m GetDatasetInfoRequestMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m GetDatasetInfoRequestMultiError) AllErrors() []error { return m }
+
+// GetDatasetInfoRequestValidationError is the validation error returned by
+// GetDatasetInfoRequest.Validate if the designated constraints aren't met.
+type GetDatasetInfoRequestValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e GetDatasetInfoRequestValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e GetDatasetInfoRequestValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e GetDatasetInfoRequestValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e GetDatasetInfoRequestValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e GetDatasetInfoRequestValidationError) ErrorName() string {
+	return "GetDatasetInfoRequestValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e GetDatasetInfoRequestValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sGetDatasetInfoRequest.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = GetDatasetInfoRequestValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = GetDatasetInfoRequestValidationError{}
+
+var _GetDatasetInfoRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+
+// Validate checks the field values on GetDatasetInfoResponse with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the first error encountered is returned, or nil if there are no violations.
+func (m *GetDatasetInfoResponse) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on GetDatasetInfoResponse with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// GetDatasetInfoResponseMultiError, or nil if none found.
+func (m *GetDatasetInfoResponse) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *GetDatasetInfoResponse) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	if all {
+		switch v := interface{}(m.GetDataset()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, GetDatasetInfoResponseValidationError{
+					field:  "Dataset",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, GetDatasetInfoResponseValidationError{
+					field:  "Dataset",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetDataset()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return GetDatasetInfoResponseValidationError{
+				field:  "Dataset",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if all {
+		switch v := interface{}(m.GetLatestTraining()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, GetDatasetInfoResponseValidationError{
+					field:  "LatestTraining",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, GetDatasetInfoResponseValidationError{
+					field:  "LatestTraining",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetLatestTraining()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return GetDatasetInfoResponseValidationError{
+				field:  "LatestTraining",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if all {
+		switch v := interface{}(m.GetActiveModel()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, GetDatasetInfoResponseValidationError{
+					field:  "ActiveModel",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, GetDatasetInfoResponseValidationError{
+					field:  "ActiveModel",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetActiveModel()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return GetDatasetInfoResponseValidationError{
+				field:  "ActiveModel",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if len(errors) > 0 {
+		return GetDatasetInfoResponseMultiError(errors)
+	}
+
+	return nil
+}
+
+// GetDatasetInfoResponseMultiError is an error wrapping multiple validation
+// errors returned by GetDatasetInfoResponse.ValidateAll() if the designated
+// constraints aren't met.
+type GetDatasetInfoResponseMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m GetDatasetInfoResponseMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m GetDatasetInfoResponseMultiError) AllErrors() []error { return m }
+
+// GetDatasetInfoResponseValidationError is the validation error returned by
+// GetDatasetInfoResponse.Validate if the designated constraints aren't met.
+type GetDatasetInfoResponseValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e GetDatasetInfoResponseValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e GetDatasetInfoResponseValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e GetDatasetInfoResponseValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e GetDatasetInfoResponseValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e GetDatasetInfoResponseValidationError) ErrorName() string {
+	return "GetDatasetInfoResponseValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e GetDatasetInfoResponseValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sGetDatasetInfoResponse.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = GetDatasetInfoResponseValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = GetDatasetInfoResponseValidationError{}

@@ -88,7 +88,11 @@ proto.asgt.v2.type.Model.toObject = function(includeInstance, msg) {
   var f, obj = {
     createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f),
-    targetsList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f
+    targetsList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
+    version: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    datasetSize: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    trainingSize: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    validationSize: jspb.Message.getFieldWithDefault(msg, 7, 0)
   };
 
   if (includeInstance) {
@@ -139,6 +143,22 @@ proto.asgt.v2.type.Model.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {string} */ (reader.readString());
       msg.addTargets(value);
       break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setVersion(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setDatasetSize(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTrainingSize(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setValidationSize(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -188,6 +208,34 @@ proto.asgt.v2.type.Model.serializeBinaryToWriter = function(message, writer) {
   if (f.length > 0) {
     writer.writeRepeatedString(
       3,
+      f
+    );
+  }
+  f = message.getVersion();
+  if (f !== 0) {
+    writer.writeInt64(
+      4,
+      f
+    );
+  }
+  f = message.getDatasetSize();
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
+      f
+    );
+  }
+  f = message.getTrainingSize();
+  if (f !== 0) {
+    writer.writeInt32(
+      6,
+      f
+    );
+  }
+  f = message.getValidationSize();
+  if (f !== 0) {
+    writer.writeInt32(
+      7,
       f
     );
   }
@@ -302,6 +350,78 @@ proto.asgt.v2.type.Model.prototype.addTargets = function(value, opt_index) {
  */
 proto.asgt.v2.type.Model.prototype.clearTargetsList = function() {
   return this.setTargetsList([]);
+};
+
+
+/**
+ * optional int64 version = 4;
+ * @return {number}
+ */
+proto.asgt.v2.type.Model.prototype.getVersion = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.v2.type.Model} returns this
+ */
+proto.asgt.v2.type.Model.prototype.setVersion = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional int32 dataset_size = 5;
+ * @return {number}
+ */
+proto.asgt.v2.type.Model.prototype.getDatasetSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.v2.type.Model} returns this
+ */
+proto.asgt.v2.type.Model.prototype.setDatasetSize = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional int32 training_size = 6;
+ * @return {number}
+ */
+proto.asgt.v2.type.Model.prototype.getTrainingSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.v2.type.Model} returns this
+ */
+proto.asgt.v2.type.Model.prototype.setTrainingSize = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional int32 validation_size = 7;
+ * @return {number}
+ */
+proto.asgt.v2.type.Model.prototype.getValidationSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.v2.type.Model} returns this
+ */
+proto.asgt.v2.type.Model.prototype.setValidationSize = function(value) {
+  return jspb.Message.setProto3IntField(this, 7, value);
 };
 
 

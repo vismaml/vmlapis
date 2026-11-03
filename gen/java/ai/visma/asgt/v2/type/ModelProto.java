@@ -41,15 +41,19 @@ public final class ModelProto {
     java.lang.String[] descriptorData = {
       "\n\030asgt/v2/type/model.proto\022\014asgt.v2.type" +
       "\032\027asgt/type/dataset.proto\032\037google/protob" +
-      "uf/timestamp.proto\"\212\001\n\005Model\0229\n\ncreated_" +
+      "uf/timestamp.proto\"\225\002\n\005Model\0229\n\ncreated_" +
       "at\030\001 \001(\0132\032.google.protobuf.TimestampR\tcr" +
       "eatedAt\022,\n\007dataset\030\002 \001(\0132\022.asgt.type.Dat" +
-      "asetR\007dataset\022\030\n\007targets\030\003 \003(\tR\007targetsB" +
-      "\260\001\n\025ai.visma.asgt.v2.typeB\nModelProtoP\001Z" +
-      "9github.com/e-conomic/vmlapis/gen/go/asg" +
-      "t/v2/type;asgttype\242\002\003AVT\252\002\014Asgt.V2.Type\312" +
-      "\002\014Asgt\\V2\\Type\342\002\030Asgt\\V2\\Type\\GPBMetadat" +
-      "a\352\002\016Asgt::V2::Typeb\006proto3"
+      "asetR\007dataset\022\030\n\007targets\030\003 \003(\tR\007targets\022" +
+      "\030\n\007version\030\004 \001(\003R\007version\022!\n\014dataset_siz" +
+      "e\030\005 \001(\005R\013datasetSize\022#\n\rtraining_size\030\006 " +
+      "\001(\005R\014trainingSize\022\'\n\017validation_size\030\007 \001" +
+      "(\005R\016validationSizeB\260\001\n\025ai.visma.asgt.v2." +
+      "typeB\nModelProtoP\001Z9github.com/e-conomic" +
+      "/vmlapis/gen/go/asgt/v2/type;asgttype\242\002\003" +
+      "AVT\252\002\014Asgt.V2.Type\312\002\014Asgt\\V2\\Type\342\002\030Asgt" +
+      "\\V2\\Type\\GPBMetadata\352\002\016Asgt::V2::Typeb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -62,7 +66,7 @@ public final class ModelProto {
     internal_static_asgt_v2_type_Model_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_v2_type_Model_descriptor,
-        new java.lang.String[] { "CreatedAt", "Dataset", "Targets", });
+        new java.lang.String[] { "CreatedAt", "Dataset", "Targets", "Version", "DatasetSize", "TrainingSize", "ValidationSize", });
     descriptor.resolveAllFeaturesImmutable();
     ai.visma.asgt.type.DatasetProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
