@@ -1,0 +1,87 @@
+syntax = "proto3";
+
+package ava.v1;
+
+import "google/api/annotations.proto";
+import "google/protobuf/wrappers.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+import "validate/validate.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ava/v1";
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+  info: {
+    title: "AVA"
+    version: "v1"
+    description: ""
+  }
+  schemes: HTTPS
+  consumes: "application/json"
+  produces: "application/json"
+};
+
+service PredictionService {
+  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Decide outputs with a dataset's AVA procedure."};
+
+  // Decide one output for one document with the dataset's promoted procedure.
+  rpc Decide(DecideRequest) returns (DecideResponse) {
+    option (google.api.http) = {
+      post: "/v2/datasets/{dataset_name}:decide"
+      body: "*"
+    };
+  }
+}
+
+message DecideRequest {
+  // Name of the dataset whose procedure decides
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
+    max_bytes: 256
+  }]; // text-no-spaces
+  // Name of the output to decide, e.g. Account
+  string output_name = 2 [(validate.rules).string.min_len = 1];
+  // Input fields; only "text" is read, and it is required
+  map<string, string> fields = 3;
+  // Model that answers the procedure's questions; defaults to QWEN
+  Model model = 4 [(validate.rules).enum.defined_only = true];
+}
+
+enum Model {
+  QWEN = 0;
+  CLEF = 1;
+  BERT = 2;
+}
+
+message DecideResponse {
+  // The decided value; empty when escalated
+  string value = 1;
+  // True when the procedure did not decide
+  bool escalated = 2;
+  // The steps walked, root first
+  repeated WalkedStep steps = 3;
+  // Version of the procedure that decided
+  int32 procedure_version = 4;
+}
+
+message WalkedStep {
+  // The question the step asked
+  string question = 1;
+  // The answer the step read; empty when the question went unanswered
+  string answer = 2;
+  // Confidence in the answer
+  Confidence confidence = 3;
+}
+
+message Confidence {
+  enum Level {
+    UNKNOWN = 0;
+    VERY_LOW = 1;
+    LOW = 2;
+    MID = 3;
+    HIGH = 4;
+    VERY_HIGH = 5;
+  }
+  // A bucketized representation of confidence
+  Level level = 1;
+  // The confidence value, in [0, 1]
+  google.protobuf.FloatValue value = 2;
+}
