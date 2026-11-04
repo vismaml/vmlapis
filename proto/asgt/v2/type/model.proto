@@ -14,4 +14,12 @@ message Model {
   asgt.type.Dataset dataset = 2;
   // Targets the model was trained on
   repeated string targets = 3;
+  // Model version (creation time in Unix nanoseconds).
+  int64 version = 4;
+  // Number of examples available when the model was trained.
+  int32 dataset_size = 5;
+  // Number of examples used for training.
+  int32 training_size = 6;
+  // Number of examples used for validation.
+  int32 validation_size = 7;
 }

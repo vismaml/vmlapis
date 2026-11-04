@@ -94,6 +94,11 @@ service DatasetService {
     option (google.api.http) = {get: "/v2/datasets/{dataset_name}/models"};
   }
 
+  // Get a summary of a dataset: its settings, latest training and the model currently used for suggestions.
+  rpc GetDatasetInfo(GetDatasetInfoRequest) returns (GetDatasetInfoResponse) {
+    option (google.api.http) = {get: "/v2/datasets/{dataset_name}/info"};
+  }
+
   // Get the specified number of the most recent trainings accross all consumer's datasets.
   // Number of requested trainings has to be larger than 0 but no larger than 100.
   rpc GetTrainings(GetTrainingsRequest) returns (TrainingsResponse) {
@@ -217,4 +222,20 @@ message TrainingsResponse {
 
 message ModelsResponse {
   repeated asgt.v2.type.Model models = 1;
+}
+
+message GetDatasetInfoRequest {
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
+    max_bytes: 256
+  }]; // text-no-spaces
+}
+
+message GetDatasetInfoResponse {
+  // The dataset, as returned by GetDataset.
+  asgt.type.Dataset dataset = 1;
+  // The most recent training. Unset if the dataset was never trained.
+  asgt.v2.type.Training latest_training = 2;
+  // The model currently used for suggestions. Unset if no model is trained yet.
+  asgt.v2.type.Model active_model = 3;
 }

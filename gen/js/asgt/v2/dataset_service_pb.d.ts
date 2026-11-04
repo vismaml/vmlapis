@@ -347,3 +347,53 @@ export namespace ModelsResponse {
   }
 }
 
+export class GetDatasetInfoRequest extends jspb.Message {
+  getDatasetName(): string;
+  setDatasetName(value: string): GetDatasetInfoRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetDatasetInfoRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetDatasetInfoRequest): GetDatasetInfoRequest.AsObject;
+  static serializeBinaryToWriter(message: GetDatasetInfoRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetDatasetInfoRequest;
+  static deserializeBinaryFromReader(message: GetDatasetInfoRequest, reader: jspb.BinaryReader): GetDatasetInfoRequest;
+}
+
+export namespace GetDatasetInfoRequest {
+  export type AsObject = {
+    datasetName: string,
+  }
+}
+
+export class GetDatasetInfoResponse extends jspb.Message {
+  getDataset(): asgt_type_dataset_pb.Dataset | undefined;
+  setDataset(value?: asgt_type_dataset_pb.Dataset): GetDatasetInfoResponse;
+  hasDataset(): boolean;
+  clearDataset(): GetDatasetInfoResponse;
+
+  getLatestTraining(): asgt_v2_type_training_pb.Training | undefined;
+  setLatestTraining(value?: asgt_v2_type_training_pb.Training): GetDatasetInfoResponse;
+  hasLatestTraining(): boolean;
+  clearLatestTraining(): GetDatasetInfoResponse;
+
+  getActiveModel(): asgt_v2_type_model_pb.Model | undefined;
+  setActiveModel(value?: asgt_v2_type_model_pb.Model): GetDatasetInfoResponse;
+  hasActiveModel(): boolean;
+  clearActiveModel(): GetDatasetInfoResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetDatasetInfoResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: GetDatasetInfoResponse): GetDatasetInfoResponse.AsObject;
+  static serializeBinaryToWriter(message: GetDatasetInfoResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetDatasetInfoResponse;
+  static deserializeBinaryFromReader(message: GetDatasetInfoResponse, reader: jspb.BinaryReader): GetDatasetInfoResponse;
+}
+
+export namespace GetDatasetInfoResponse {
+  export type AsObject = {
+    dataset?: asgt_type_dataset_pb.Dataset.AsObject,
+    latestTraining?: asgt_v2_type_training_pb.Training.AsObject,
+    activeModel?: asgt_v2_type_model_pb.Model.AsObject,
+  }
+}
+

@@ -316,6 +316,38 @@
         ]
       }
     },
+    "/v2/datasets/{datasetName}/info": {
+      "get": {
+        "summary": "Get a summary of a dataset: its settings, latest training and the model currently used for suggestions.",
+        "operationId": "DatasetService_GetDatasetInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v2GetDatasetInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "datasetName",
+            "description": "text-no-spaces",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      }
+    },
     "/v2/datasets/{datasetName}/model:batchSuggest": {
       "post": {
         "summary": "Suggest target values for multiple inputs using the most recently trained model in a dataset.\nReturns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.",
@@ -893,6 +925,26 @@
             "type": "string"
           },
           "title": "Targets the model was trained on"
+        },
+        "version": {
+          "type": "string",
+          "format": "int64",
+          "description": "Model version (creation time in Unix nanoseconds)."
+        },
+        "datasetSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Number of examples available when the model was trained."
+        },
+        "trainingSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Number of examples used for training."
+        },
+        "validationSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Number of examples used for validation."
         }
       }
     },
@@ -1323,6 +1375,23 @@
         },
         "retentionPolicy": {
           "$ref": "#/definitions/typeRetentionPolicy"
+        }
+      }
+    },
+    "v2GetDatasetInfoResponse": {
+      "type": "object",
+      "properties": {
+        "dataset": {
+          "$ref": "#/definitions/typeDataset",
+          "description": "The dataset, as returned by GetDataset."
+        },
+        "latestTraining": {
+          "$ref": "#/definitions/typeTraining",
+          "description": "The most recent training. Unset if the dataset was never trained."
+        },
+        "activeModel": {
+          "$ref": "#/definitions/asgtv2typeModel",
+          "description": "The model currently used for suggestions. Unset if no model is trained yet."
         }
       }
     },

@@ -17,26 +17,21 @@ steps:
     env:
       - "TAG_NAME=$TAG_NAME"
 
-  - id: deploy-csharp
+  - id: build-csharp
     name: "bitnamilegacy/dotnet-sdk"
     entrypoint: "bash"
     args:
       - "-c"
       - |
-        cp vmlapis.csproj gen/csharp
-        cd gen/csharp
-        if [ "$TAG_NAME"  ] ; then
-          export TAG_NAME=${TAG_NAME:1} 
-          dotnet pack -o . -c Release
-          dotnet nuget push vmlapis.$$TAG_NAME.nupkg --source https://api.nuget.org/v3/index.json --api-key $$NUGET_API_KEY
-        else 
+        if ! [ "$TAG_NAME" ] ; then
+          cp vmlapis.csproj gen/csharp
+          cd gen/csharp
           export TAG_NAME=0.0.0
           dotnet pack -o . -c Release
         fi
     env:
       - "TAG_NAME=$TAG_NAME"
     waitFor: ["-"]
-    secretEnv: ["NUGET_API_KEY"]
 
   - id: deploy-java
     name: "maven:3.6.3-jdk-8"
@@ -83,8 +78,3 @@ steps:
           go build
         fi
     waitFor: ["-"]
-
-availableSecrets:
-  secretManager:
-    - versionName: projects/161107618804/secrets/nuget-api-key/versions/latest
-      env: "NUGET_API_KEY"

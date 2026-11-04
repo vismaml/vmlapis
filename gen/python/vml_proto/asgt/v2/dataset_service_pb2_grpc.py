@@ -71,6 +71,11 @@ class DatasetServiceStub(object):
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.GetDatasetModelsRequest.SerializeToString,
                 response_deserializer=asgt_dot_v2_dot_dataset__service__pb2.ModelsResponse.FromString,
                 _registered_method=True)
+        self.GetDatasetInfo = channel.unary_unary(
+                '/asgt.v2.DatasetService/GetDatasetInfo',
+                request_serializer=asgt_dot_v2_dot_dataset__service__pb2.GetDatasetInfoRequest.SerializeToString,
+                response_deserializer=asgt_dot_v2_dot_dataset__service__pb2.GetDatasetInfoResponse.FromString,
+                _registered_method=True)
         self.GetTrainings = channel.unary_unary(
                 '/asgt.v2.DatasetService/GetTrainings',
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.GetTrainingsRequest.SerializeToString,
@@ -168,6 +173,13 @@ class DatasetServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetDatasetInfo(self, request, context):
+        """Get a summary of a dataset: its settings, latest training and the model currently used for suggestions.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def GetTrainings(self, request, context):
         """Get the specified number of the most recent trainings accross all consumer's datasets.
         Number of requested trainings has to be larger than 0 but no larger than 100.
@@ -233,6 +245,11 @@ def add_DatasetServiceServicer_to_server(servicer, server):
                     servicer.GetDatasetModels,
                     request_deserializer=asgt_dot_v2_dot_dataset__service__pb2.GetDatasetModelsRequest.FromString,
                     response_serializer=asgt_dot_v2_dot_dataset__service__pb2.ModelsResponse.SerializeToString,
+            ),
+            'GetDatasetInfo': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetDatasetInfo,
+                    request_deserializer=asgt_dot_v2_dot_dataset__service__pb2.GetDatasetInfoRequest.FromString,
+                    response_serializer=asgt_dot_v2_dot_dataset__service__pb2.GetDatasetInfoResponse.SerializeToString,
             ),
             'GetTrainings': grpc.unary_unary_rpc_method_handler(
                     servicer.GetTrainings,
@@ -537,6 +554,33 @@ class DatasetService(object):
             '/asgt.v2.DatasetService/GetDatasetModels',
             asgt_dot_v2_dot_dataset__service__pb2.GetDatasetModelsRequest.SerializeToString,
             asgt_dot_v2_dot_dataset__service__pb2.ModelsResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def GetDatasetInfo(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.DatasetService/GetDatasetInfo',
+            asgt_dot_v2_dot_dataset__service__pb2.GetDatasetInfoRequest.SerializeToString,
+            asgt_dot_v2_dot_dataset__service__pb2.GetDatasetInfoResponse.FromString,
             options,
             channel_credentials,
             insecure,
