@@ -11,11 +11,19 @@ from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Model(_message.Message):
-    __slots__ = ("created_at", "dataset", "targets")
+    __slots__ = ("created_at", "dataset", "targets", "version", "dataset_size", "training_size", "validation_size")
     CREATED_AT_FIELD_NUMBER: _ClassVar[int]
     DATASET_FIELD_NUMBER: _ClassVar[int]
     TARGETS_FIELD_NUMBER: _ClassVar[int]
+    VERSION_FIELD_NUMBER: _ClassVar[int]
+    DATASET_SIZE_FIELD_NUMBER: _ClassVar[int]
+    TRAINING_SIZE_FIELD_NUMBER: _ClassVar[int]
+    VALIDATION_SIZE_FIELD_NUMBER: _ClassVar[int]
     created_at: _timestamp_pb2.Timestamp
     dataset: _dataset_pb2.Dataset
     targets: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, created_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., dataset: _Optional[_Union[_dataset_pb2.Dataset, _Mapping]] = ..., targets: _Optional[_Iterable[str]] = ...) -> None: ...
+    version: int
+    dataset_size: int
+    training_size: int
+    validation_size: int
+    def __init__(self, created_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., dataset: _Optional[_Union[_dataset_pb2.Dataset, _Mapping]] = ..., targets: _Optional[_Iterable[str]] = ..., version: _Optional[int] = ..., dataset_size: _Optional[int] = ..., training_size: _Optional[int] = ..., validation_size: _Optional[int] = ...) -> None: ...

@@ -103,4 +103,44 @@ public interface ModelOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTargetsBytes(int index);
+
+  /**
+   * <pre>
+   * Model version (creation time in Unix nanoseconds).
+   * </pre>
+   *
+   * <code>int64 version = 4 [json_name = "version"];</code>
+   * @return The version.
+   */
+  long getVersion();
+
+  /**
+   * <pre>
+   * Number of examples available when the model was trained.
+   * </pre>
+   *
+   * <code>int32 dataset_size = 5 [json_name = "datasetSize"];</code>
+   * @return The datasetSize.
+   */
+  int getDatasetSize();
+
+  /**
+   * <pre>
+   * Number of examples used for training.
+   * </pre>
+   *
+   * <code>int32 training_size = 6 [json_name = "trainingSize"];</code>
+   * @return The trainingSize.
+   */
+  int getTrainingSize();
+
+  /**
+   * <pre>
+   * Number of examples used for validation.
+   * </pre>
+   *
+   * <code>int32 validation_size = 7 [json_name = "validationSize"];</code>
+   * @return The validationSize.
+   */
+  int getValidationSize();
 }

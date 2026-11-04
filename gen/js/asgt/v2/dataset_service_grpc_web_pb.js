@@ -767,6 +767,67 @@ proto.asgt.v2.DatasetServicePromiseClient.prototype.getDatasetModels =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.v2.GetDatasetInfoRequest,
+ *   !proto.asgt.v2.GetDatasetInfoResponse>}
+ */
+const methodDescriptor_DatasetService_GetDatasetInfo = new grpc.web.MethodDescriptor(
+  '/asgt.v2.DatasetService/GetDatasetInfo',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.v2.GetDatasetInfoRequest,
+  proto.asgt.v2.GetDatasetInfoResponse,
+  /**
+   * @param {!proto.asgt.v2.GetDatasetInfoRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.asgt.v2.GetDatasetInfoResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.v2.GetDatasetInfoRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.asgt.v2.GetDatasetInfoResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.v2.GetDatasetInfoResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.v2.DatasetServiceClient.prototype.getDatasetInfo =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.v2.DatasetService/GetDatasetInfo',
+      request,
+      metadata || {},
+      methodDescriptor_DatasetService_GetDatasetInfo,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.v2.GetDatasetInfoRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.asgt.v2.GetDatasetInfoResponse>}
+ *     Promise that resolves to the response
+ */
+proto.asgt.v2.DatasetServicePromiseClient.prototype.getDatasetInfo =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.v2.DatasetService/GetDatasetInfo',
+      request,
+      metadata || {},
+      methodDescriptor_DatasetService_GetDatasetInfo);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
  *   !proto.asgt.v2.GetTrainingsRequest,
  *   !proto.asgt.v2.TrainingsResponse>}
  */

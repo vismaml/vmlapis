@@ -124,3 +124,19 @@ class ModelsResponse(_message.Message):
     MODELS_FIELD_NUMBER: _ClassVar[int]
     models: _containers.RepeatedCompositeFieldContainer[_model_pb2.Model]
     def __init__(self, models: _Optional[_Iterable[_Union[_model_pb2.Model, _Mapping]]] = ...) -> None: ...
+
+class GetDatasetInfoRequest(_message.Message):
+    __slots__ = ("dataset_name",)
+    DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
+    dataset_name: str
+    def __init__(self, dataset_name: _Optional[str] = ...) -> None: ...
+
+class GetDatasetInfoResponse(_message.Message):
+    __slots__ = ("dataset", "latest_training", "active_model")
+    DATASET_FIELD_NUMBER: _ClassVar[int]
+    LATEST_TRAINING_FIELD_NUMBER: _ClassVar[int]
+    ACTIVE_MODEL_FIELD_NUMBER: _ClassVar[int]
+    dataset: _dataset_pb2.Dataset
+    latest_training: _training_pb2.Training
+    active_model: _model_pb2.Model
+    def __init__(self, dataset: _Optional[_Union[_dataset_pb2.Dataset, _Mapping]] = ..., latest_training: _Optional[_Union[_training_pb2.Training, _Mapping]] = ..., active_model: _Optional[_Union[_model_pb2.Model, _Mapping]] = ...) -> None: ...

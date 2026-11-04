@@ -174,6 +174,66 @@ private static final long serialVersionUID = 0L;
     return targets_.getByteString(index);
   }
 
+  public static final int VERSION_FIELD_NUMBER = 4;
+  private long version_ = 0L;
+  /**
+   * <pre>
+   * Model version (creation time in Unix nanoseconds).
+   * </pre>
+   *
+   * <code>int64 version = 4 [json_name = "version"];</code>
+   * @return The version.
+   */
+  @java.lang.Override
+  public long getVersion() {
+    return version_;
+  }
+
+  public static final int DATASET_SIZE_FIELD_NUMBER = 5;
+  private int datasetSize_ = 0;
+  /**
+   * <pre>
+   * Number of examples available when the model was trained.
+   * </pre>
+   *
+   * <code>int32 dataset_size = 5 [json_name = "datasetSize"];</code>
+   * @return The datasetSize.
+   */
+  @java.lang.Override
+  public int getDatasetSize() {
+    return datasetSize_;
+  }
+
+  public static final int TRAINING_SIZE_FIELD_NUMBER = 6;
+  private int trainingSize_ = 0;
+  /**
+   * <pre>
+   * Number of examples used for training.
+   * </pre>
+   *
+   * <code>int32 training_size = 6 [json_name = "trainingSize"];</code>
+   * @return The trainingSize.
+   */
+  @java.lang.Override
+  public int getTrainingSize() {
+    return trainingSize_;
+  }
+
+  public static final int VALIDATION_SIZE_FIELD_NUMBER = 7;
+  private int validationSize_ = 0;
+  /**
+   * <pre>
+   * Number of examples used for validation.
+   * </pre>
+   *
+   * <code>int32 validation_size = 7 [json_name = "validationSize"];</code>
+   * @return The validationSize.
+   */
+  @java.lang.Override
+  public int getValidationSize() {
+    return validationSize_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -196,6 +256,18 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < targets_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 3, targets_.getRaw(i));
+    }
+    if (version_ != 0L) {
+      output.writeInt64(4, version_);
+    }
+    if (datasetSize_ != 0) {
+      output.writeInt32(5, datasetSize_);
+    }
+    if (trainingSize_ != 0) {
+      output.writeInt32(6, trainingSize_);
+    }
+    if (validationSize_ != 0) {
+      output.writeInt32(7, validationSize_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -221,6 +293,22 @@ private static final long serialVersionUID = 0L;
       }
       size += dataSize;
       size += 1 * getTargetsList().size();
+    }
+    if (version_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, version_);
+    }
+    if (datasetSize_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(5, datasetSize_);
+    }
+    if (trainingSize_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(6, trainingSize_);
+    }
+    if (validationSize_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(7, validationSize_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -249,6 +337,14 @@ private static final long serialVersionUID = 0L;
     }
     if (!getTargetsList()
         .equals(other.getTargetsList())) return false;
+    if (getVersion()
+        != other.getVersion()) return false;
+    if (getDatasetSize()
+        != other.getDatasetSize()) return false;
+    if (getTrainingSize()
+        != other.getTrainingSize()) return false;
+    if (getValidationSize()
+        != other.getValidationSize()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -272,6 +368,15 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TARGETS_FIELD_NUMBER;
       hash = (53 * hash) + getTargetsList().hashCode();
     }
+    hash = (37 * hash) + VERSION_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getVersion());
+    hash = (37 * hash) + DATASET_SIZE_FIELD_NUMBER;
+    hash = (53 * hash) + getDatasetSize();
+    hash = (37 * hash) + TRAINING_SIZE_FIELD_NUMBER;
+    hash = (53 * hash) + getTrainingSize();
+    hash = (37 * hash) + VALIDATION_SIZE_FIELD_NUMBER;
+    hash = (53 * hash) + getValidationSize();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -422,6 +527,10 @@ private static final long serialVersionUID = 0L;
       }
       targets_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      version_ = 0L;
+      datasetSize_ = 0;
+      trainingSize_ = 0;
+      validationSize_ = 0;
       return this;
     }
 
@@ -472,6 +581,18 @@ private static final long serialVersionUID = 0L;
         targets_.makeImmutable();
         result.targets_ = targets_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.version_ = version_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.datasetSize_ = datasetSize_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.trainingSize_ = trainingSize_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.validationSize_ = validationSize_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -502,6 +623,18 @@ private static final long serialVersionUID = 0L;
           targets_.addAll(other.targets_);
         }
         onChanged();
+      }
+      if (other.getVersion() != 0L) {
+        setVersion(other.getVersion());
+      }
+      if (other.getDatasetSize() != 0) {
+        setDatasetSize(other.getDatasetSize());
+      }
+      if (other.getTrainingSize() != 0) {
+        setTrainingSize(other.getTrainingSize());
+      }
+      if (other.getValidationSize() != 0) {
+        setValidationSize(other.getValidationSize());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -549,6 +682,26 @@ private static final long serialVersionUID = 0L;
               targets_.add(s);
               break;
             } // case 26
+            case 32: {
+              version_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              datasetSize_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              trainingSize_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              validationSize_ = input.readInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1023,6 +1176,182 @@ private static final long serialVersionUID = 0L;
       ensureTargetsIsMutable();
       targets_.add(value);
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private long version_ ;
+    /**
+     * <pre>
+     * Model version (creation time in Unix nanoseconds).
+     * </pre>
+     *
+     * <code>int64 version = 4 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public long getVersion() {
+      return version_;
+    }
+    /**
+     * <pre>
+     * Model version (creation time in Unix nanoseconds).
+     * </pre>
+     *
+     * <code>int64 version = 4 [json_name = "version"];</code>
+     * @param value The version to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVersion(long value) {
+
+      version_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Model version (creation time in Unix nanoseconds).
+     * </pre>
+     *
+     * <code>int64 version = 4 [json_name = "version"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearVersion() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      version_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int datasetSize_ ;
+    /**
+     * <pre>
+     * Number of examples available when the model was trained.
+     * </pre>
+     *
+     * <code>int32 dataset_size = 5 [json_name = "datasetSize"];</code>
+     * @return The datasetSize.
+     */
+    @java.lang.Override
+    public int getDatasetSize() {
+      return datasetSize_;
+    }
+    /**
+     * <pre>
+     * Number of examples available when the model was trained.
+     * </pre>
+     *
+     * <code>int32 dataset_size = 5 [json_name = "datasetSize"];</code>
+     * @param value The datasetSize to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDatasetSize(int value) {
+
+      datasetSize_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of examples available when the model was trained.
+     * </pre>
+     *
+     * <code>int32 dataset_size = 5 [json_name = "datasetSize"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDatasetSize() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      datasetSize_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int trainingSize_ ;
+    /**
+     * <pre>
+     * Number of examples used for training.
+     * </pre>
+     *
+     * <code>int32 training_size = 6 [json_name = "trainingSize"];</code>
+     * @return The trainingSize.
+     */
+    @java.lang.Override
+    public int getTrainingSize() {
+      return trainingSize_;
+    }
+    /**
+     * <pre>
+     * Number of examples used for training.
+     * </pre>
+     *
+     * <code>int32 training_size = 6 [json_name = "trainingSize"];</code>
+     * @param value The trainingSize to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTrainingSize(int value) {
+
+      trainingSize_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of examples used for training.
+     * </pre>
+     *
+     * <code>int32 training_size = 6 [json_name = "trainingSize"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTrainingSize() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      trainingSize_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int validationSize_ ;
+    /**
+     * <pre>
+     * Number of examples used for validation.
+     * </pre>
+     *
+     * <code>int32 validation_size = 7 [json_name = "validationSize"];</code>
+     * @return The validationSize.
+     */
+    @java.lang.Override
+    public int getValidationSize() {
+      return validationSize_;
+    }
+    /**
+     * <pre>
+     * Number of examples used for validation.
+     * </pre>
+     *
+     * <code>int32 validation_size = 7 [json_name = "validationSize"];</code>
+     * @param value The validationSize to set.
+     * @return This builder for chaining.
+     */
+    public Builder setValidationSize(int value) {
+
+      validationSize_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of examples used for validation.
+     * </pre>
+     *
+     * <code>int32 validation_size = 7 [json_name = "validationSize"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearValidationSize() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      validationSize_ = 0;
       onChanged();
       return this;
     }

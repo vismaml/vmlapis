@@ -114,6 +114,14 @@ func (m *Model) validate(all bool) error {
 		}
 	}
 
+	// no validation rules for Version
+
+	// no validation rules for DatasetSize
+
+	// no validation rules for TrainingSize
+
+	// no validation rules for ValidationSize
+
 	if len(errors) > 0 {
 		return ModelMultiError(errors)
 	}

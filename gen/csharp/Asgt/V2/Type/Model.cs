@@ -26,18 +26,21 @@ namespace Asgt.V2.Type {
           string.Concat(
             "Chhhc2d0L3YyL3R5cGUvbW9kZWwucHJvdG8SDGFzZ3QudjIudHlwZRoXYXNn",
             "dC90eXBlL2RhdGFzZXQucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
-            "bXAucHJvdG8iigEKBU1vZGVsEjkKCmNyZWF0ZWRfYXQYASABKAsyGi5nb29n",
+            "bXAucHJvdG8ilQIKBU1vZGVsEjkKCmNyZWF0ZWRfYXQYASABKAsyGi5nb29n",
             "bGUucHJvdG9idWYuVGltZXN0YW1wUgljcmVhdGVkQXQSLAoHZGF0YXNldBgC",
             "IAEoCzISLmFzZ3QudHlwZS5EYXRhc2V0UgdkYXRhc2V0EhgKB3RhcmdldHMY",
-            "AyADKAlSB3RhcmdldHNCsAEKFWFpLnZpc21hLmFzZ3QudjIudHlwZUIKTW9k",
-            "ZWxQcm90b1ABWjlnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9n",
-            "by9hc2d0L3YyL3R5cGU7YXNndHR5cGWiAgNBVlSqAgxBc2d0LlYyLlR5cGXK",
-            "AgxBc2d0XFYyXFR5cGXiAhhBc2d0XFYyXFR5cGVcR1BCTWV0YWRhdGHqAg5B",
-            "c2d0OjpWMjo6VHlwZWIGcHJvdG8z"));
+            "AyADKAlSB3RhcmdldHMSGAoHdmVyc2lvbhgEIAEoA1IHdmVyc2lvbhIhCgxk",
+            "YXRhc2V0X3NpemUYBSABKAVSC2RhdGFzZXRTaXplEiMKDXRyYWluaW5nX3Np",
+            "emUYBiABKAVSDHRyYWluaW5nU2l6ZRInCg92YWxpZGF0aW9uX3NpemUYByAB",
+            "KAVSDnZhbGlkYXRpb25TaXplQrABChVhaS52aXNtYS5hc2d0LnYyLnR5cGVC",
+            "Ck1vZGVsUHJvdG9QAVo5Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9n",
+            "ZW4vZ28vYXNndC92Mi90eXBlO2FzZ3R0eXBlogIDQVZUqgIMQXNndC5WMi5U",
+            "eXBlygIMQXNndFxWMlxUeXBl4gIYQXNndFxWMlxUeXBlXEdQQk1ldGFkYXRh",
+            "6gIOQXNndDo6VjI6OlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Model), global::Asgt.V2.Type.Model.Parser, new[]{ "CreatedAt", "Dataset", "Targets" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Model), global::Asgt.V2.Type.Model.Parser, new[]{ "CreatedAt", "Dataset", "Targets", "Version", "DatasetSize", "TrainingSize", "ValidationSize" }, null, null, null, null)
           }));
     }
     #endregion
@@ -82,6 +85,10 @@ namespace Asgt.V2.Type {
       createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
       dataset_ = other.dataset_ != null ? other.dataset_.Clone() : null;
       targets_ = other.targets_.Clone();
+      version_ = other.version_;
+      datasetSize_ = other.datasetSize_;
+      trainingSize_ = other.trainingSize_;
+      validationSize_ = other.validationSize_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -135,6 +142,66 @@ namespace Asgt.V2.Type {
       get { return targets_; }
     }
 
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 4;
+    private long version_;
+    /// <summary>
+    /// Model version (creation time in Unix nanoseconds).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Version {
+      get { return version_; }
+      set {
+        version_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dataset_size" field.</summary>
+    public const int DatasetSizeFieldNumber = 5;
+    private int datasetSize_;
+    /// <summary>
+    /// Number of examples available when the model was trained.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int DatasetSize {
+      get { return datasetSize_; }
+      set {
+        datasetSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "training_size" field.</summary>
+    public const int TrainingSizeFieldNumber = 6;
+    private int trainingSize_;
+    /// <summary>
+    /// Number of examples used for training.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TrainingSize {
+      get { return trainingSize_; }
+      set {
+        trainingSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validation_size" field.</summary>
+    public const int ValidationSizeFieldNumber = 7;
+    private int validationSize_;
+    /// <summary>
+    /// Number of examples used for validation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ValidationSize {
+      get { return validationSize_; }
+      set {
+        validationSize_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -153,6 +220,10 @@ namespace Asgt.V2.Type {
       if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
       if (!object.Equals(Dataset, other.Dataset)) return false;
       if(!targets_.Equals(other.targets_)) return false;
+      if (Version != other.Version) return false;
+      if (DatasetSize != other.DatasetSize) return false;
+      if (TrainingSize != other.TrainingSize) return false;
+      if (ValidationSize != other.ValidationSize) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -163,6 +234,10 @@ namespace Asgt.V2.Type {
       if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
       if (dataset_ != null) hash ^= Dataset.GetHashCode();
       hash ^= targets_.GetHashCode();
+      if (Version != 0L) hash ^= Version.GetHashCode();
+      if (DatasetSize != 0) hash ^= DatasetSize.GetHashCode();
+      if (TrainingSize != 0) hash ^= TrainingSize.GetHashCode();
+      if (ValidationSize != 0) hash ^= ValidationSize.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -190,6 +265,22 @@ namespace Asgt.V2.Type {
         output.WriteMessage(Dataset);
       }
       targets_.WriteTo(output, _repeated_targets_codec);
+      if (Version != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(Version);
+      }
+      if (DatasetSize != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(DatasetSize);
+      }
+      if (TrainingSize != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(TrainingSize);
+      }
+      if (ValidationSize != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(ValidationSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -209,6 +300,22 @@ namespace Asgt.V2.Type {
         output.WriteMessage(Dataset);
       }
       targets_.WriteTo(ref output, _repeated_targets_codec);
+      if (Version != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(Version);
+      }
+      if (DatasetSize != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(DatasetSize);
+      }
+      if (TrainingSize != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(TrainingSize);
+      }
+      if (ValidationSize != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(ValidationSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -226,6 +333,18 @@ namespace Asgt.V2.Type {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Dataset);
       }
       size += targets_.CalculateSize(_repeated_targets_codec);
+      if (Version != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Version);
+      }
+      if (DatasetSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DatasetSize);
+      }
+      if (TrainingSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TrainingSize);
+      }
+      if (ValidationSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ValidationSize);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -251,6 +370,18 @@ namespace Asgt.V2.Type {
         Dataset.MergeFrom(other.Dataset);
       }
       targets_.Add(other.targets_);
+      if (other.Version != 0L) {
+        Version = other.Version;
+      }
+      if (other.DatasetSize != 0) {
+        DatasetSize = other.DatasetSize;
+      }
+      if (other.TrainingSize != 0) {
+        TrainingSize = other.TrainingSize;
+      }
+      if (other.ValidationSize != 0) {
+        ValidationSize = other.ValidationSize;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -288,6 +419,22 @@ namespace Asgt.V2.Type {
             targets_.AddEntriesFrom(input, _repeated_targets_codec);
             break;
           }
+          case 32: {
+            Version = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            DatasetSize = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            TrainingSize = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            ValidationSize = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -323,6 +470,22 @@ namespace Asgt.V2.Type {
           }
           case 26: {
             targets_.AddEntriesFrom(ref input, _repeated_targets_codec);
+            break;
+          }
+          case 32: {
+            Version = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            DatasetSize = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            TrainingSize = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            ValidationSize = input.ReadInt32();
             break;
           }
         }

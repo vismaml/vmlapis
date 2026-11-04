@@ -20,6 +20,18 @@ export class Model extends jspb.Message {
   clearTargetsList(): Model;
   addTargets(value: string, index?: number): Model;
 
+  getVersion(): number;
+  setVersion(value: number): Model;
+
+  getDatasetSize(): number;
+  setDatasetSize(value: number): Model;
+
+  getTrainingSize(): number;
+  setTrainingSize(value: number): Model;
+
+  getValidationSize(): number;
+  setValidationSize(value: number): Model;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Model.AsObject;
   static toObject(includeInstance: boolean, msg: Model): Model.AsObject;
@@ -33,6 +45,10 @@ export namespace Model {
     createdAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     dataset?: asgt_type_dataset_pb.Dataset.AsObject,
     targetsList: Array<string>,
+    version: number,
+    datasetSize: number,
+    trainingSize: number,
+    validationSize: number,
   }
 }
 
