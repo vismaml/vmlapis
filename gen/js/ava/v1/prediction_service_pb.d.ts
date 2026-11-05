@@ -133,4 +133,5 @@ export enum Model {
   QWEN = 0,
   CLEF = 1,
   BERT = 2,
+  RERANKER = 3,
 }

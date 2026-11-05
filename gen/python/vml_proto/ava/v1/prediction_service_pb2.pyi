@@ -16,9 +16,11 @@ class Model(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     QWEN: _ClassVar[Model]
     CLEF: _ClassVar[Model]
     BERT: _ClassVar[Model]
+    RERANKER: _ClassVar[Model]
 QWEN: Model
 CLEF: Model
 BERT: Model
+RERANKER: Model
 
 class DecideRequest(_message.Message):
     __slots__ = ("dataset_name", "output_name", "fields", "model")

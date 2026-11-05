@@ -1003,7 +1003,8 @@ proto.ava.v1.Confidence.prototype.hasValue = function() {
 proto.ava.v1.Model = {
   QWEN: 0,
   CLEF: 1,
-  BERT: 2
+  BERT: 2,
+  RERANKER: 3
 };
 
 goog.object.extend(exports, proto.ava.v1);

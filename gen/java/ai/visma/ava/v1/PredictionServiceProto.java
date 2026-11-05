@@ -82,18 +82,18 @@ public final class PredictionServiceProto {
       "ence.LevelR\005level\0221\n\005value\030\002 \001(\0132\033.googl" +
       "e.protobuf.FloatValueR\005value\"M\n\005Level\022\013\n" +
       "\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID" +
-      "\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005*%\n\005Model\022\010\n\004" +
-      "QWEN\020\000\022\010\n\004CLEF\020\001\022\010\n\004BERT\020\0022\260\001\n\021Predictio" +
-      "nService\022f\n\006Decide\022\025.ava.v1.DecideReques" +
-      "t\032\026.ava.v1.DecideResponse\"-\202\323\344\223\002\'\"\"/v2/d" +
-      "atasets/{dataset_name}:decide:\001*\0323\222A0\022.D" +
-      "ecide outputs with a dataset\'s AVA proce" +
-      "dure.B\303\001\n\017ai.visma.ava.v1B\026PredictionSer" +
-      "viceProtoP\001Z*github.com/e-conomic/vmlapi" +
-      "s/gen/go/ava/v1\242\002\003AXX\252\002\006Ava.V1\312\002\006Ava\\V1\342" +
-      "\002\022Ava\\V1\\GPBMetadata\352\002\007Ava::V1\222A2\022\t\n\003AVA" +
-      "2\002v1*\001\0022\020application/json:\020application/j" +
-      "sonb\006proto3"
+      "\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005*3\n\005Model\022\010\n\004" +
+      "QWEN\020\000\022\010\n\004CLEF\020\001\022\010\n\004BERT\020\002\022\014\n\010RERANKER\020\003" +
+      "2\260\001\n\021PredictionService\022f\n\006Decide\022\025.ava.v" +
+      "1.DecideRequest\032\026.ava.v1.DecideResponse\"" +
+      "-\202\323\344\223\002\'\"\"/v2/datasets/{dataset_name}:dec" +
+      "ide:\001*\0323\222A0\022.Decide outputs with a datas" +
+      "et\'s AVA procedure.B\303\001\n\017ai.visma.ava.v1B" +
+      "\026PredictionServiceProtoP\001Z*github.com/e-" +
+      "conomic/vmlapis/gen/go/ava/v1\242\002\003AXX\252\002\006Av" +
+      "a.V1\312\002\006Ava\\V1\342\002\022Ava\\V1\\GPBMetadata\352\002\007Ava" +
+      "::V1\222A2\022\t\n\003AVA2\002v1*\001\0022\020application/json:" +
+      "\020application/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
