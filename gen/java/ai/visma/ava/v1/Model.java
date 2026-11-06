@@ -22,6 +22,10 @@ public enum Model
    * <code>BERT = 2;</code>
    */
   BERT(2),
+  /**
+   * <code>RERANKER = 3;</code>
+   */
+  RERANKER(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -46,6 +50,10 @@ public enum Model
    * <code>BERT = 2;</code>
    */
   public static final int BERT_VALUE = 2;
+  /**
+   * <code>RERANKER = 3;</code>
+   */
+  public static final int RERANKER_VALUE = 3;
 
 
   public final int getNumber() {
@@ -75,6 +83,7 @@ public enum Model
       case 0: return QWEN;
       case 1: return CLEF;
       case 2: return BERT;
+      case 3: return RERANKER;
       default: return null;
     }
   }

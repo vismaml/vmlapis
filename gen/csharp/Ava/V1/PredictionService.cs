@@ -45,16 +45,16 @@ namespace Ava.V1 {
             "UgVsZXZlbBIxCgV2YWx1ZRgCIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5GbG9h",
             "dFZhbHVlUgV2YWx1ZSJNCgVMZXZlbBILCgdVTktOT1dOEAASDAoIVkVSWV9M",
             "T1cQARIHCgNMT1cQAhIHCgNNSUQQAxIICgRISUdIEAQSDQoJVkVSWV9ISUdI",
-            "EAUqJQoFTW9kZWwSCAoEUVdFThAAEggKBENMRUYQARIICgRCRVJUEAIysAEK",
-            "EVByZWRpY3Rpb25TZXJ2aWNlEmYKBkRlY2lkZRIVLmF2YS52MS5EZWNpZGVS",
-            "ZXF1ZXN0GhYuYXZhLnYxLkRlY2lkZVJlc3BvbnNlIi2C0+STAiciIi92Mi9k",
-            "YXRhc2V0cy97ZGF0YXNldF9uYW1lfTpkZWNpZGU6ASoaM5JBMBIuRGVjaWRl",
-            "IG91dHB1dHMgd2l0aCBhIGRhdGFzZXQncyBBVkEgcHJvY2VkdXJlLkLDAQoP",
-            "YWkudmlzbWEuYXZhLnYxQhZQcmVkaWN0aW9uU2VydmljZVByb3RvUAFaKmdp",
-            "dGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2F2YS92MaICA0FY",
-            "WKoCBkF2YS5WMcoCBkF2YVxWMeICEkF2YVxWMVxHUEJNZXRhZGF0YeoCB0F2",
-            "YTo6VjGSQTISCQoDQVZBMgJ2MSoBAjIQYXBwbGljYXRpb24vanNvbjoQYXBw",
-            "bGljYXRpb24vanNvbmIGcHJvdG8z"));
+            "EAUqMwoFTW9kZWwSCAoEUVdFThAAEggKBENMRUYQARIICgRCRVJUEAISDAoI",
+            "UkVSQU5LRVIQAzKwAQoRUHJlZGljdGlvblNlcnZpY2USZgoGRGVjaWRlEhUu",
+            "YXZhLnYxLkRlY2lkZVJlcXVlc3QaFi5hdmEudjEuRGVjaWRlUmVzcG9uc2Ui",
+            "LYLT5JMCJyIiL3YyL2RhdGFzZXRzL3tkYXRhc2V0X25hbWV9OmRlY2lkZToB",
+            "KhozkkEwEi5EZWNpZGUgb3V0cHV0cyB3aXRoIGEgZGF0YXNldCdzIEFWQSBw",
+            "cm9jZWR1cmUuQsMBCg9haS52aXNtYS5hdmEudjFCFlByZWRpY3Rpb25TZXJ2",
+            "aWNlUHJvdG9QAVoqZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4v",
+            "Z28vYXZhL3YxogIDQVhYqgIGQXZhLlYxygIGQXZhXFYx4gISQXZhXFYxXEdQ",
+            "Qk1ldGFkYXRh6gIHQXZhOjpWMZJBMhIJCgNBVkEyAnYxKgECMhBhcHBsaWNh",
+            "dGlvbi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ava.V1.Model), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -72,6 +72,7 @@ namespace Ava.V1 {
     [pbr::OriginalName("QWEN")] Qwen = 0,
     [pbr::OriginalName("CLEF")] Clef = 1,
     [pbr::OriginalName("BERT")] Bert = 2,
+    [pbr::OriginalName("RERANKER")] Reranker = 3,
   }
 
   #endregion
