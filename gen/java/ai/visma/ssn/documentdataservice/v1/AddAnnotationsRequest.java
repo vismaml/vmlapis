@@ -212,6 +212,26 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int REPLACE_SOURCES_FIELD_NUMBER = 5;
+  private boolean replaceSources_ = false;
+  /**
+   * <pre>
+   * When true, every (source, source_id) group present in annotations first
+   * loses its entries under features this request does not carry, so the
+   * request becomes the group's complete content across the document (e.g.
+   * a customer's full feedback replacing the previous one). Requires the
+   * document to exist: returns NOT_FOUND otherwise, instead of creating a
+   * document row without blobs or expiry.
+   * </pre>
+   *
+   * <code>bool replace_sources = 5 [json_name = "replaceSources"];</code>
+   * @return The replaceSources.
+   */
+  @java.lang.Override
+  public boolean getReplaceSources() {
+    return replaceSources_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -238,6 +258,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(environment_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 4, environment_);
     }
+    if (replaceSources_ != false) {
+      output.writeBool(5, replaceSources_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -259,6 +282,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(environment_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(4, environment_);
+    }
+    if (replaceSources_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, replaceSources_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -283,6 +310,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAnnotationsList())) return false;
     if (!getEnvironment()
         .equals(other.getEnvironment())) return false;
+    if (getReplaceSources()
+        != other.getReplaceSources()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -304,6 +333,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + ENVIRONMENT_FIELD_NUMBER;
     hash = (53 * hash) + getEnvironment().hashCode();
+    hash = (37 * hash) + REPLACE_SOURCES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getReplaceSources());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -445,6 +477,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000004);
       environment_ = "";
+      replaceSources_ = false;
       return this;
     }
 
@@ -499,6 +532,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.environment_ = environment_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.replaceSources_ = replaceSources_;
       }
     }
 
@@ -555,6 +591,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (other.getReplaceSources() != false) {
+        setReplaceSources(other.getReplaceSources());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -609,6 +648,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 40: {
+              replaceSources_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1098,6 +1142,65 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       environment_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private boolean replaceSources_ ;
+    /**
+     * <pre>
+     * When true, every (source, source_id) group present in annotations first
+     * loses its entries under features this request does not carry, so the
+     * request becomes the group's complete content across the document (e.g.
+     * a customer's full feedback replacing the previous one). Requires the
+     * document to exist: returns NOT_FOUND otherwise, instead of creating a
+     * document row without blobs or expiry.
+     * </pre>
+     *
+     * <code>bool replace_sources = 5 [json_name = "replaceSources"];</code>
+     * @return The replaceSources.
+     */
+    @java.lang.Override
+    public boolean getReplaceSources() {
+      return replaceSources_;
+    }
+    /**
+     * <pre>
+     * When true, every (source, source_id) group present in annotations first
+     * loses its entries under features this request does not carry, so the
+     * request becomes the group's complete content across the document (e.g.
+     * a customer's full feedback replacing the previous one). Requires the
+     * document to exist: returns NOT_FOUND otherwise, instead of creating a
+     * document row without blobs or expiry.
+     * </pre>
+     *
+     * <code>bool replace_sources = 5 [json_name = "replaceSources"];</code>
+     * @param value The replaceSources to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReplaceSources(boolean value) {
+
+      replaceSources_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When true, every (source, source_id) group present in annotations first
+     * loses its entries under features this request does not carry, so the
+     * request becomes the group's complete content across the document (e.g.
+     * a customer's full feedback replacing the previous one). Requires the
+     * document to exist: returns NOT_FOUND otherwise, instead of creating a
+     * document row without blobs or expiry.
+     * </pre>
+     *
+     * <code>bool replace_sources = 5 [json_name = "replaceSources"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReplaceSources() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      replaceSources_ = false;
       onChanged();
       return this;
     }
