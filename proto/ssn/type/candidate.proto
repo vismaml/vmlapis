@@ -3,6 +3,7 @@ syntax = "proto3";
 package ssn.type;
 
 import "asgt/v2/product_service.proto";
+import "google/api/visibility.proto";
 import "google/protobuf/wrappers.proto";
 import "ssn/type/geometry.proto";
 
@@ -211,6 +212,18 @@ message PurchaseLine {
   // Kind classifies what the line charges for, e.g. "item", "freight", "fee",
   // "levy", "service_charge", "gratuity", "discount" or "deposit".
   repeated Candidate kind = 19;
+  // Fields 20-23 are annotation labels only, never predicted. The NOT_SUPPORTED
+  // visibility keeps them out of the generated OpenAPI documentation.
+  //
+  // Goods category is the category of goods the line charges for.
+  repeated Candidate goods_category = 20 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  // Goods category reason is why the goods category was chosen.
+  repeated Candidate goods_category_reason = 21 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  // Passed on at cost is "true" when the line is passed on at cost, absent
+  // otherwise.
+  repeated Candidate passed_on_at_cost = 22 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  // Passed on at cost reason is why the line is passed on at cost.
+  repeated Candidate passed_on_at_cost_reason = 23 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
 }
 
 message VatDistribution {
