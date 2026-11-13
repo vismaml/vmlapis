@@ -1,6 +1,7 @@
 import * as jspb from 'google-protobuf'
 
 import * as asgt_v2_product_service_pb from '../../asgt/v2/product_service_pb'; // proto import: "asgt/v2/product_service.proto"
+import * as google_api_visibility_pb from '../../google/api/visibility_pb'; // proto import: "google/api/visibility.proto"
 import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb'; // proto import: "google/protobuf/wrappers.proto"
 import * as ssn_type_geometry_pb from '../../ssn/type/geometry_pb'; // proto import: "ssn/type/geometry.proto"
 
@@ -449,6 +450,106 @@ export class PurchaseLine extends jspb.Message {
   clearKindList(): PurchaseLine;
   addKind(value?: Candidate, index?: number): Candidate;
 
+  getGoodsCategoryList(): Array<Candidate>;
+  setGoodsCategoryList(value: Array<Candidate>): PurchaseLine;
+  clearGoodsCategoryList(): PurchaseLine;
+  addGoodsCategory(value?: Candidate, index?: number): Candidate;
+
+  getGoodsCategoryReasonList(): Array<Candidate>;
+  setGoodsCategoryReasonList(value: Array<Candidate>): PurchaseLine;
+  clearGoodsCategoryReasonList(): PurchaseLine;
+  addGoodsCategoryReason(value?: Candidate, index?: number): Candidate;
+
+  getPassedOnAtCostList(): Array<Candidate>;
+  setPassedOnAtCostList(value: Array<Candidate>): PurchaseLine;
+  clearPassedOnAtCostList(): PurchaseLine;
+  addPassedOnAtCost(value?: Candidate, index?: number): Candidate;
+
+  getPassedOnAtCostReasonList(): Array<Candidate>;
+  setPassedOnAtCostReasonList(value: Array<Candidate>): PurchaseLine;
+  clearPassedOnAtCostReasonList(): PurchaseLine;
+  addPassedOnAtCostReason(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactItemNumberList(): Array<Candidate>;
+  setInferredFactItemNumberList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactItemNumberList(): PurchaseLine;
+  addInferredFactItemNumber(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactCodeList(): Array<Candidate>;
+  setInferredFactCodeList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactCodeList(): PurchaseLine;
+  addInferredFactCode(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactDescriptionList(): Array<Candidate>;
+  setInferredFactDescriptionList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactDescriptionList(): PurchaseLine;
+  addInferredFactDescription(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactQuantityList(): Array<Candidate>;
+  setInferredFactQuantityList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactQuantityList(): PurchaseLine;
+  addInferredFactQuantity(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactUnitList(): Array<Candidate>;
+  setInferredFactUnitList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactUnitList(): PurchaseLine;
+  addInferredFactUnit(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactUnitPriceExclVatList(): Array<Candidate>;
+  setInferredFactUnitPriceExclVatList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactUnitPriceExclVatList(): PurchaseLine;
+  addInferredFactUnitPriceExclVat(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactUnitPriceInclVatList(): Array<Candidate>;
+  setInferredFactUnitPriceInclVatList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactUnitPriceInclVatList(): PurchaseLine;
+  addInferredFactUnitPriceInclVat(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactTotalDiscountList(): Array<Candidate>;
+  setInferredFactTotalDiscountList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactTotalDiscountList(): PurchaseLine;
+  addInferredFactTotalDiscount(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactPercentageDiscountList(): Array<Candidate>;
+  setInferredFactPercentageDiscountList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactPercentageDiscountList(): PurchaseLine;
+  addInferredFactPercentageDiscount(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactTotalVatList(): Array<Candidate>;
+  setInferredFactTotalVatList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactTotalVatList(): PurchaseLine;
+  addInferredFactTotalVat(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactPercentageVatList(): Array<Candidate>;
+  setInferredFactPercentageVatList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactPercentageVatList(): PurchaseLine;
+  addInferredFactPercentageVat(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactTotalExclVatList(): Array<Candidate>;
+  setInferredFactTotalExclVatList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactTotalExclVatList(): PurchaseLine;
+  addInferredFactTotalExclVat(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactTotalInclVatList(): Array<Candidate>;
+  setInferredFactTotalInclVatList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactTotalInclVatList(): PurchaseLine;
+  addInferredFactTotalInclVat(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactKindList(): Array<Candidate>;
+  setInferredFactKindList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactKindList(): PurchaseLine;
+  addInferredFactKind(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactPassedOnAtCostList(): Array<Candidate>;
+  setInferredFactPassedOnAtCostList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactPassedOnAtCostList(): PurchaseLine;
+  addInferredFactPassedOnAtCost(value?: Candidate, index?: number): Candidate;
+
+  getInferredFactGoodsCategoryList(): Array<Candidate>;
+  setInferredFactGoodsCategoryList(value: Array<Candidate>): PurchaseLine;
+  clearInferredFactGoodsCategoryList(): PurchaseLine;
+  addInferredFactGoodsCategory(value?: Candidate, index?: number): Candidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PurchaseLine.AsObject;
   static toObject(includeInstance: boolean, msg: PurchaseLine): PurchaseLine.AsObject;
@@ -478,6 +579,26 @@ export namespace PurchaseLine {
     modelMetadata?: ModelSpec.AsObject,
     productTypeList: Array<asgt_v2_product_service_pb.ProductTypeCandidate.AsObject>,
     kindList: Array<Candidate.AsObject>,
+    goodsCategoryList: Array<Candidate.AsObject>,
+    goodsCategoryReasonList: Array<Candidate.AsObject>,
+    passedOnAtCostList: Array<Candidate.AsObject>,
+    passedOnAtCostReasonList: Array<Candidate.AsObject>,
+    inferredFactItemNumberList: Array<Candidate.AsObject>,
+    inferredFactCodeList: Array<Candidate.AsObject>,
+    inferredFactDescriptionList: Array<Candidate.AsObject>,
+    inferredFactQuantityList: Array<Candidate.AsObject>,
+    inferredFactUnitList: Array<Candidate.AsObject>,
+    inferredFactUnitPriceExclVatList: Array<Candidate.AsObject>,
+    inferredFactUnitPriceInclVatList: Array<Candidate.AsObject>,
+    inferredFactTotalDiscountList: Array<Candidate.AsObject>,
+    inferredFactPercentageDiscountList: Array<Candidate.AsObject>,
+    inferredFactTotalVatList: Array<Candidate.AsObject>,
+    inferredFactPercentageVatList: Array<Candidate.AsObject>,
+    inferredFactTotalExclVatList: Array<Candidate.AsObject>,
+    inferredFactTotalInclVatList: Array<Candidate.AsObject>,
+    inferredFactKindList: Array<Candidate.AsObject>,
+    inferredFactPassedOnAtCostList: Array<Candidate.AsObject>,
+    inferredFactGoodsCategoryList: Array<Candidate.AsObject>,
   }
 }
 

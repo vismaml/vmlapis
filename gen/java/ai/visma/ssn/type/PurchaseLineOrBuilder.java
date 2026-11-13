@@ -799,4 +799,614 @@ public interface PurchaseLineOrBuilder extends
    */
   ai.visma.ssn.type.CandidateOrBuilder getKindOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+   * visibility keeps them out of the generated OpenAPI documentation.
+   *
+   * Goods category is the category of goods the line charges for.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getGoodsCategoryList();
+  /**
+   * <pre>
+   * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+   * visibility keeps them out of the generated OpenAPI documentation.
+   *
+   * Goods category is the category of goods the line charges for.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getGoodsCategory(int index);
+  /**
+   * <pre>
+   * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+   * visibility keeps them out of the generated OpenAPI documentation.
+   *
+   * Goods category is the category of goods the line charges for.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getGoodsCategoryCount();
+  /**
+   * <pre>
+   * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+   * visibility keeps them out of the generated OpenAPI documentation.
+   *
+   * Goods category is the category of goods the line charges for.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getGoodsCategoryOrBuilderList();
+  /**
+   * <pre>
+   * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+   * visibility keeps them out of the generated OpenAPI documentation.
+   *
+   * Goods category is the category of goods the line charges for.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getGoodsCategoryOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Goods category reason is why the goods category was chosen.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getGoodsCategoryReasonList();
+  /**
+   * <pre>
+   * Goods category reason is why the goods category was chosen.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getGoodsCategoryReason(int index);
+  /**
+   * <pre>
+   * Goods category reason is why the goods category was chosen.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getGoodsCategoryReasonCount();
+  /**
+   * <pre>
+   * Goods category reason is why the goods category was chosen.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getGoodsCategoryReasonOrBuilderList();
+  /**
+   * <pre>
+   * Goods category reason is why the goods category was chosen.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getGoodsCategoryReasonOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Passed on at cost is "true" when the line is passed on at cost, absent
+   * otherwise.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getPassedOnAtCostList();
+  /**
+   * <pre>
+   * Passed on at cost is "true" when the line is passed on at cost, absent
+   * otherwise.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getPassedOnAtCost(int index);
+  /**
+   * <pre>
+   * Passed on at cost is "true" when the line is passed on at cost, absent
+   * otherwise.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getPassedOnAtCostCount();
+  /**
+   * <pre>
+   * Passed on at cost is "true" when the line is passed on at cost, absent
+   * otherwise.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getPassedOnAtCostOrBuilderList();
+  /**
+   * <pre>
+   * Passed on at cost is "true" when the line is passed on at cost, absent
+   * otherwise.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getPassedOnAtCostOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Passed on at cost reason is why the line is passed on at cost.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getPassedOnAtCostReasonList();
+  /**
+   * <pre>
+   * Passed on at cost reason is why the line is passed on at cost.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getPassedOnAtCostReason(int index);
+  /**
+   * <pre>
+   * Passed on at cost reason is why the line is passed on at cost.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getPassedOnAtCostReasonCount();
+  /**
+   * <pre>
+   * Passed on at cost reason is why the line is passed on at cost.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getPassedOnAtCostReasonOrBuilderList();
+  /**
+   * <pre>
+   * Passed on at cost reason is why the line is passed on at cost.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getPassedOnAtCostReasonOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+   * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+   * Reason columns take no facts, so they have no inferred fact field.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactItemNumberList();
+  /**
+   * <pre>
+   * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+   * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+   * Reason columns take no facts, so they have no inferred fact field.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactItemNumber(int index);
+  /**
+   * <pre>
+   * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+   * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+   * Reason columns take no facts, so they have no inferred fact field.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactItemNumberCount();
+  /**
+   * <pre>
+   * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+   * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+   * Reason columns take no facts, so they have no inferred fact field.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactItemNumberOrBuilderList();
+  /**
+   * <pre>
+   * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+   * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+   * Reason columns take no facts, so they have no inferred fact field.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactItemNumberOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactCodeList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactCode(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactCodeCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactCodeOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactCodeOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactDescriptionList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactDescription(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactDescriptionCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactDescriptionOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactDescriptionOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactQuantityList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactQuantity(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactQuantityCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactQuantityOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactQuantityOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactUnitList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactUnit(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactUnitCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactUnitOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactUnitOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactUnitPriceExclVatList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactUnitPriceExclVat(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactUnitPriceExclVatCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactUnitPriceExclVatOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactUnitPriceExclVatOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactUnitPriceInclVatList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactUnitPriceInclVat(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactUnitPriceInclVatCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactUnitPriceInclVatOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactUnitPriceInclVatOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactTotalDiscountList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactTotalDiscount(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactTotalDiscountCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactTotalDiscountOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactTotalDiscountOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactPercentageDiscountList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactPercentageDiscount(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactPercentageDiscountCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactPercentageDiscountOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactPercentageDiscountOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactTotalVatList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactTotalVat(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactTotalVatCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactTotalVatOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactTotalVatOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactPercentageVatList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactPercentageVat(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactPercentageVatCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactPercentageVatOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactPercentageVatOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactTotalExclVatList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactTotalExclVat(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactTotalExclVatCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactTotalExclVatOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactTotalExclVatOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactTotalInclVatList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactTotalInclVat(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactTotalInclVatCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactTotalInclVatOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactTotalInclVatOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactKindList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactKind(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactKindCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactKindOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactKindOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactPassedOnAtCostList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactPassedOnAtCost(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactPassedOnAtCostCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactPassedOnAtCostOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactPassedOnAtCostOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getInferredFactGoodsCategoryList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.Candidate getInferredFactGoodsCategory(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  int getInferredFactGoodsCategoryCount();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactGoodsCategoryOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getInferredFactGoodsCategoryOrBuilder(
+      int index);
 }

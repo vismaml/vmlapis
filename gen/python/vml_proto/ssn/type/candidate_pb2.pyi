@@ -1,4 +1,5 @@
 from asgt.v2 import product_service_pb2 as _product_service_pb2
+from google.api import visibility_pb2 as _visibility_pb2
 from google.protobuf import wrappers_pb2 as _wrappers_pb2
 from ssn.type import geometry_pb2 as _geometry_pb2
 from google.protobuf.internal import containers as _containers
@@ -165,7 +166,7 @@ class DocumentMetadata(_message.Message):
     def __init__(self, page_count: _Optional[int] = ...) -> None: ...
 
 class PurchaseLine(_message.Message):
-    __slots__ = ("page_ref", "code", "description", "quantity", "item_number", "unit", "total_discount", "percentage_discount", "total_incl_vat", "total_excl_vat", "total_vat", "percentage_vat", "unit_price_incl_vat", "unit_price_excl_vat", "total", "unit_price", "model_metadata", "product_type", "kind")
+    __slots__ = ("page_ref", "code", "description", "quantity", "item_number", "unit", "total_discount", "percentage_discount", "total_incl_vat", "total_excl_vat", "total_vat", "percentage_vat", "unit_price_incl_vat", "unit_price_excl_vat", "total", "unit_price", "model_metadata", "product_type", "kind", "goods_category", "goods_category_reason", "passed_on_at_cost", "passed_on_at_cost_reason", "inferred_fact_item_number", "inferred_fact_code", "inferred_fact_description", "inferred_fact_quantity", "inferred_fact_unit", "inferred_fact_unit_price_excl_vat", "inferred_fact_unit_price_incl_vat", "inferred_fact_total_discount", "inferred_fact_percentage_discount", "inferred_fact_total_vat", "inferred_fact_percentage_vat", "inferred_fact_total_excl_vat", "inferred_fact_total_incl_vat", "inferred_fact_kind", "inferred_fact_passed_on_at_cost", "inferred_fact_goods_category")
     PAGE_REF_FIELD_NUMBER: _ClassVar[int]
     CODE_FIELD_NUMBER: _ClassVar[int]
     DESCRIPTION_FIELD_NUMBER: _ClassVar[int]
@@ -185,6 +186,26 @@ class PurchaseLine(_message.Message):
     MODEL_METADATA_FIELD_NUMBER: _ClassVar[int]
     PRODUCT_TYPE_FIELD_NUMBER: _ClassVar[int]
     KIND_FIELD_NUMBER: _ClassVar[int]
+    GOODS_CATEGORY_FIELD_NUMBER: _ClassVar[int]
+    GOODS_CATEGORY_REASON_FIELD_NUMBER: _ClassVar[int]
+    PASSED_ON_AT_COST_FIELD_NUMBER: _ClassVar[int]
+    PASSED_ON_AT_COST_REASON_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_ITEM_NUMBER_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_CODE_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_DESCRIPTION_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_QUANTITY_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_UNIT_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_UNIT_PRICE_EXCL_VAT_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_UNIT_PRICE_INCL_VAT_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_TOTAL_DISCOUNT_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_PERCENTAGE_DISCOUNT_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_TOTAL_VAT_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_PERCENTAGE_VAT_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_TOTAL_EXCL_VAT_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_TOTAL_INCL_VAT_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_KIND_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_PASSED_ON_AT_COST_FIELD_NUMBER: _ClassVar[int]
+    INFERRED_FACT_GOODS_CATEGORY_FIELD_NUMBER: _ClassVar[int]
     page_ref: int
     code: _containers.RepeatedCompositeFieldContainer[Candidate]
     description: _containers.RepeatedCompositeFieldContainer[Candidate]
@@ -204,7 +225,27 @@ class PurchaseLine(_message.Message):
     model_metadata: ModelSpec
     product_type: _containers.RepeatedCompositeFieldContainer[_product_service_pb2.ProductTypeCandidate]
     kind: _containers.RepeatedCompositeFieldContainer[Candidate]
-    def __init__(self, page_ref: _Optional[int] = ..., code: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., description: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., quantity: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., item_number: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_discount: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., percentage_discount: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_incl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_excl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., percentage_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price_incl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price_excl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., product_type: _Optional[_Iterable[_Union[_product_service_pb2.ProductTypeCandidate, _Mapping]]] = ..., kind: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ...) -> None: ...
+    goods_category: _containers.RepeatedCompositeFieldContainer[Candidate]
+    goods_category_reason: _containers.RepeatedCompositeFieldContainer[Candidate]
+    passed_on_at_cost: _containers.RepeatedCompositeFieldContainer[Candidate]
+    passed_on_at_cost_reason: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_item_number: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_code: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_description: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_quantity: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_unit: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_unit_price_excl_vat: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_unit_price_incl_vat: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_total_discount: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_percentage_discount: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_total_vat: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_percentage_vat: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_total_excl_vat: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_total_incl_vat: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_kind: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_passed_on_at_cost: _containers.RepeatedCompositeFieldContainer[Candidate]
+    inferred_fact_goods_category: _containers.RepeatedCompositeFieldContainer[Candidate]
+    def __init__(self, page_ref: _Optional[int] = ..., code: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., description: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., quantity: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., item_number: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_discount: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., percentage_discount: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_incl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_excl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., percentage_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price_incl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price_excl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., product_type: _Optional[_Iterable[_Union[_product_service_pb2.ProductTypeCandidate, _Mapping]]] = ..., kind: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., goods_category: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., goods_category_reason: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., passed_on_at_cost: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., passed_on_at_cost_reason: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_item_number: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_code: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_description: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_quantity: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_unit: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_unit_price_excl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_unit_price_incl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_total_discount: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_percentage_discount: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_total_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_percentage_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_total_excl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_total_incl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_kind: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_passed_on_at_cost: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., inferred_fact_goods_category: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ...) -> None: ...
 
 class VatDistribution(_message.Message):
     __slots__ = ("page_ref", "percentage", "total_incl_vat", "total_excl_vat", "total_vat", "model_metadata")
