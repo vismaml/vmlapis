@@ -25,89 +25,136 @@ namespace Ssn.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chhzc24vdHlwZS9jYW5kaWRhdGUucHJvdG8SCHNzbi50eXBlGh1hc2d0L3Yy",
-            "L3Byb2R1Y3Rfc2VydmljZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBw",
-            "ZXJzLnByb3RvGhdzc24vdHlwZS9nZW9tZXRyeS5wcm90byLOAQoKQ29uZmlk",
-            "ZW5jZRIwCgVsZXZlbBgBIAEoDjIaLnNzbi50eXBlLkNvbmZpZGVuY2UuTGV2",
-            "ZWxSBWxldmVsEjEKBXZhbHVlGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZs",
-            "b2F0VmFsdWVSBXZhbHVlIlsKBUxldmVsEgsKB1VOS05PV04QABIMCghWRVJZ",
-            "X0xPVxABEgcKA0xPVxACEgcKA01JRBADEggKBEhJR0gQBBINCglWRVJZX0hJ",
-            "R0gQBRIMCghWRVJJRklFRBAGIpMDCglDYW5kaWRhdGUSFAoFdmFsdWUYASAB",
-            "KAlSBXZhbHVlEhIKBHRleHQYAiABKAlSBHRleHQSNAoKY29uZmlkZW5jZRgD",
-            "IAEoCzIULnNzbi50eXBlLkNvbmZpZGVuY2VSCmNvbmZpZGVuY2USOQoMYm91",
-            "bmRpbmdfYm94GAQgASgLMhYuc3NuLnR5cGUuQm91bmRpbmdQb2x5Ugtib3Vu",
-            "ZGluZ0JveBIsCgR0eXBlGAUgASgOMhguc3NuLnR5cGUuQ2FuZGlkYXRlLlR5",
-            "cGVSBHR5cGUSGQoIcGFnZV9yZWYYBiABKA1SB3BhZ2VSZWYSOgoObW9kZWxf",
-            "bWV0YWRhdGEYByABKAsyEy5zc24udHlwZS5Nb2RlbFNwZWNSDW1vZGVsTWV0",
-            "YWRhdGESOAoJY29ycmVjdGVkGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLkJv",
-            "b2xWYWx1ZVIJY29ycmVjdGVkIiwKBFR5cGUSCwoHVU5LTk9XThAAEgkKBUZJ",
-            "RUxEEAESDAoIRE9DVU1FTlQQAiJkCglNb2RlbFNwZWMSHQoKbW9kZWxfbmFt",
-            "ZRgBIAEoCVIJbW9kZWxOYW1lEjgKCW1vZGVsX3ZlchgCIAEoCzIbLmdvb2ds",
-            "ZS5wcm90b2J1Zi5JbnQ2NFZhbHVlUghtb2RlbFZlciJWCg1MaW5lQ2FuZGlk",
-            "YXRlEhIKBHRleHQYASABKAlSBHRleHQSFgoGYW1vdW50GAIgASgBUgZhbW91",
-            "bnQSGQoIcGFnZV9yZWYYBiABKA1SB3BhZ2VSZWYinwUKFVB1cmNoYXNlTGlu",
-            "ZUNhbmRpZGF0ZRIZCghwYWdlX3JlZhgBIAEoDVIHcGFnZVJlZhISCgRjb2Rl",
-            "GAIgASgJUgRjb2RlEiAKC2Rlc2NyaXB0aW9uGAMgASgJUgtkZXNjcmlwdGlv",
-            "bhIaCghxdWFudGl0eRgEIAEoCVIIcXVhbnRpdHkSHwoLaXRlbV9udW1iZXIY",
-            "BSABKAlSCml0ZW1OdW1iZXISEgoEdW5pdBgGIAEoCVIEdW5pdBIlCg50b3Rh",
-            "bF9kaXNjb3VudBgHIAEoCVINdG90YWxEaXNjb3VudBIvChNwZXJjZW50YWdl",
-            "X2Rpc2NvdW50GAggASgJUhJwZXJjZW50YWdlRGlzY291bnQSJAoOdG90YWxf",
-            "aW5jbF92YXQYCSABKAlSDHRvdGFsSW5jbFZhdBIkCg50b3RhbF9leGNsX3Zh",
-            "dBgKIAEoCVIMdG90YWxFeGNsVmF0EhsKCXRvdGFsX3ZhdBgLIAEoCVIIdG90",
-            "YWxWYXQSJQoOcGVyY2VudGFnZV92YXQYDCABKAlSDXBlcmNlbnRhZ2VWYXQS",
-            "LQoTdW5pdF9wcmljZV9pbmNsX3ZhdBgNIAEoCVIQdW5pdFByaWNlSW5jbFZh",
-            "dBItChN1bml0X3ByaWNlX2V4Y2xfdmF0GA4gASgJUhB1bml0UHJpY2VFeGNs",
-            "VmF0EhQKBXRvdGFsGBEgASgJUgV0b3RhbBIdCgp1bml0X3ByaWNlGBIgASgJ",
-            "Ugl1bml0UHJpY2USOgoObW9kZWxfbWV0YWRhdGEYEyABKAsyEy5zc24udHlw",
-            "ZS5Nb2RlbFNwZWNSDW1vZGVsTWV0YWRhdGESIQoMcHJvZHVjdF90eXBlGBQg",
-            "ASgJUgtwcm9kdWN0VHlwZUoECA8QEEoECBAQESLSAQoPQW5zd2VyQ2FuZGlk",
-            "YXRlEhoKCHF1ZXN0aW9uGAEgASgJUghxdWVzdGlvbhIWCgZhbnN3ZXIYAiAB",
-            "KAlSBmFuc3dlchI0Cgpjb25maWRlbmNlGAMgASgLMhQuc3NuLnR5cGUuQ29u",
-            "ZmlkZW5jZVIKY29uZmlkZW5jZRI6Cg5tb2RlbF9tZXRhZGF0YRgHIAEoCzIT",
-            "LnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdlX3Jl",
-            "ZhgIIAEoDVIHcGFnZVJlZiI5CghQYWdlVGV4dBIZCghwYWdlX3JlZhgBIAEo",
-            "DVIHcGFnZVJlZhISCgR0ZXh0GAIgASgJUgR0ZXh0It8BChhWYXREaXN0cmli",
-            "dXRpb25DYW5kaWRhdGUSHgoKcGVyY2VudGFnZRgBIAEoCVIKcGVyY2VudGFn",
-            "ZRIWCgZhbW91bnQYAiABKAlSBmFtb3VudBI6Cg5tb2RlbF9tZXRhZGF0YRgD",
-            "IAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRIZCghw",
-            "YWdlX3JlZhgEIAEoDVIHcGFnZVJlZhIZCghleGNsX3ZhdBgFIAEoCVIHZXhj",
-            "bFZhdBIZCghpbmNsX3ZhdBgGIAEoCVIHaW5jbFZhdCIxChBEb2N1bWVudE1l",
-            "dGFkYXRhEh0KCnBhZ2VfY291bnQYASABKA1SCXBhZ2VDb3VudCKNCAoMUHVy",
-            "Y2hhc2VMaW5lEhkKCHBhZ2VfcmVmGAEgASgNUgdwYWdlUmVmEicKBGNvZGUY",
-            "AiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSBGNvZGUSNQoLZGVzY3JpcHRp",
-            "b24YAyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSC2Rlc2NyaXB0aW9uEi8K",
-            "CHF1YW50aXR5GAQgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUghxdWFudGl0",
-            "eRI0CgtpdGVtX251bWJlchgFIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIK",
-            "aXRlbU51bWJlchInCgR1bml0GAYgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRl",
-            "UgR1bml0EjoKDnRvdGFsX2Rpc2NvdW50GAcgAygLMhMuc3NuLnR5cGUuQ2Fu",
-            "ZGlkYXRlUg10b3RhbERpc2NvdW50EkQKE3BlcmNlbnRhZ2VfZGlzY291bnQY",
-            "CCADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEnBlcmNlbnRhZ2VEaXNjb3Vu",
-            "dBI5Cg50b3RhbF9pbmNsX3ZhdBgJIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0",
-            "ZVIMdG90YWxJbmNsVmF0EjkKDnRvdGFsX2V4Y2xfdmF0GAogAygLMhMuc3Nu",
-            "LnR5cGUuQ2FuZGlkYXRlUgx0b3RhbEV4Y2xWYXQSMAoJdG90YWxfdmF0GAsg",
-            "AygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgh0b3RhbFZhdBI6Cg5wZXJjZW50",
-            "YWdlX3ZhdBgMIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVINcGVyY2VudGFn",
-            "ZVZhdBJCChN1bml0X3ByaWNlX2luY2xfdmF0GA0gAygLMhMuc3NuLnR5cGUu",
-            "Q2FuZGlkYXRlUhB1bml0UHJpY2VJbmNsVmF0EkIKE3VuaXRfcHJpY2VfZXhj",
-            "bF92YXQYDiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEHVuaXRQcmljZUV4",
-            "Y2xWYXQSKQoFdG90YWwYDyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSBXRv",
-            "dGFsEjIKCnVuaXRfcHJpY2UYECADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVS",
-            "CXVuaXRQcmljZRI6Cg5tb2RlbF9tZXRhZGF0YRgRIAEoCzITLnNzbi50eXBl",
-            "Lk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRJACgxwcm9kdWN0X3R5cGUYEiAD",
-            "KAsyHS5hc2d0LnYyLlByb2R1Y3RUeXBlQ2FuZGlkYXRlUgtwcm9kdWN0VHlw",
-            "ZRInCgRraW5kGBMgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgRraW5kIsUC",
-            "Cg9WYXREaXN0cmlidXRpb24SGQoIcGFnZV9yZWYYASABKA1SB3BhZ2VSZWYS",
-            "MwoKcGVyY2VudGFnZRgCIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIKcGVy",
-            "Y2VudGFnZRI5Cg50b3RhbF9pbmNsX3ZhdBgDIAMoCzITLnNzbi50eXBlLkNh",
-            "bmRpZGF0ZVIMdG90YWxJbmNsVmF0EjkKDnRvdGFsX2V4Y2xfdmF0GAQgAygL",
-            "MhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgx0b3RhbEV4Y2xWYXQSMAoJdG90YWxf",
-            "dmF0GAUgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgh0b3RhbFZhdBI6Cg5t",
-            "b2RlbF9tZXRhZGF0YRgGIAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9k",
-            "ZWxNZXRhZGF0YUKaAQoRYWkudmlzbWEuc3NuLnR5cGVCDkNhbmRpZGF0ZVBy",
-            "b3RvUAFaNGdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nz",
-            "bi90eXBlO3NzbnR5cGWiAgNTVFiqAghTc24uVHlwZcoCCFNzblxUeXBl4gIU",
-            "U3NuXFR5cGVcR1BCTWV0YWRhdGHqAglTc246OlR5cGViBnByb3RvMw=="));
+            "L3Byb2R1Y3Rfc2VydmljZS5wcm90bxobZ29vZ2xlL2FwaS92aXNpYmlsaXR5",
+            "LnByb3RvGh5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8aF3Nzbi90",
+            "eXBlL2dlb21ldHJ5LnByb3RvIs4BCgpDb25maWRlbmNlEjAKBWxldmVsGAEg",
+            "ASgOMhouc3NuLnR5cGUuQ29uZmlkZW5jZS5MZXZlbFIFbGV2ZWwSMQoFdmFs",
+            "dWUYAiABKAsyGy5nb29nbGUucHJvdG9idWYuRmxvYXRWYWx1ZVIFdmFsdWUi",
+            "WwoFTGV2ZWwSCwoHVU5LTk9XThAAEgwKCFZFUllfTE9XEAESBwoDTE9XEAIS",
+            "BwoDTUlEEAMSCAoESElHSBAEEg0KCVZFUllfSElHSBAFEgwKCFZFUklGSUVE",
+            "EAYikwMKCUNhbmRpZGF0ZRIUCgV2YWx1ZRgBIAEoCVIFdmFsdWUSEgoEdGV4",
+            "dBgCIAEoCVIEdGV4dBI0Cgpjb25maWRlbmNlGAMgASgLMhQuc3NuLnR5cGUu",
+            "Q29uZmlkZW5jZVIKY29uZmlkZW5jZRI5Cgxib3VuZGluZ19ib3gYBCABKAsy",
+            "Fi5zc24udHlwZS5Cb3VuZGluZ1BvbHlSC2JvdW5kaW5nQm94EiwKBHR5cGUY",
+            "BSABKA4yGC5zc24udHlwZS5DYW5kaWRhdGUuVHlwZVIEdHlwZRIZCghwYWdl",
+            "X3JlZhgGIAEoDVIHcGFnZVJlZhI6Cg5tb2RlbF9tZXRhZGF0YRgHIAEoCzIT",
+            "LnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRI4Cgljb3JyZWN0",
+            "ZWQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlUgljb3JyZWN0",
+            "ZWQiLAoEVHlwZRILCgdVTktOT1dOEAASCQoFRklFTEQQARIMCghET0NVTUVO",
+            "VBACImQKCU1vZGVsU3BlYxIdCgptb2RlbF9uYW1lGAEgASgJUgltb2RlbE5h",
+            "bWUSOAoJbW9kZWxfdmVyGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0",
+            "VmFsdWVSCG1vZGVsVmVyIlYKDUxpbmVDYW5kaWRhdGUSEgoEdGV4dBgBIAEo",
+            "CVIEdGV4dBIWCgZhbW91bnQYAiABKAFSBmFtb3VudBIZCghwYWdlX3JlZhgG",
+            "IAEoDVIHcGFnZVJlZiKfBQoVUHVyY2hhc2VMaW5lQ2FuZGlkYXRlEhkKCHBh",
+            "Z2VfcmVmGAEgASgNUgdwYWdlUmVmEhIKBGNvZGUYAiABKAlSBGNvZGUSIAoL",
+            "ZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEhoKCHF1YW50aXR5GAQg",
+            "ASgJUghxdWFudGl0eRIfCgtpdGVtX251bWJlchgFIAEoCVIKaXRlbU51bWJl",
+            "chISCgR1bml0GAYgASgJUgR1bml0EiUKDnRvdGFsX2Rpc2NvdW50GAcgASgJ",
+            "Ug10b3RhbERpc2NvdW50Ei8KE3BlcmNlbnRhZ2VfZGlzY291bnQYCCABKAlS",
+            "EnBlcmNlbnRhZ2VEaXNjb3VudBIkCg50b3RhbF9pbmNsX3ZhdBgJIAEoCVIM",
+            "dG90YWxJbmNsVmF0EiQKDnRvdGFsX2V4Y2xfdmF0GAogASgJUgx0b3RhbEV4",
+            "Y2xWYXQSGwoJdG90YWxfdmF0GAsgASgJUgh0b3RhbFZhdBIlCg5wZXJjZW50",
+            "YWdlX3ZhdBgMIAEoCVINcGVyY2VudGFnZVZhdBItChN1bml0X3ByaWNlX2lu",
+            "Y2xfdmF0GA0gASgJUhB1bml0UHJpY2VJbmNsVmF0Ei0KE3VuaXRfcHJpY2Vf",
+            "ZXhjbF92YXQYDiABKAlSEHVuaXRQcmljZUV4Y2xWYXQSFAoFdG90YWwYESAB",
+            "KAlSBXRvdGFsEh0KCnVuaXRfcHJpY2UYEiABKAlSCXVuaXRQcmljZRI6Cg5t",
+            "b2RlbF9tZXRhZGF0YRgTIAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9k",
+            "ZWxNZXRhZGF0YRIhCgxwcm9kdWN0X3R5cGUYFCABKAlSC3Byb2R1Y3RUeXBl",
+            "SgQIDxAQSgQIEBARItIBCg9BbnN3ZXJDYW5kaWRhdGUSGgoIcXVlc3Rpb24Y",
+            "ASABKAlSCHF1ZXN0aW9uEhYKBmFuc3dlchgCIAEoCVIGYW5zd2VyEjQKCmNv",
+            "bmZpZGVuY2UYAyABKAsyFC5zc24udHlwZS5Db25maWRlbmNlUgpjb25maWRl",
+            "bmNlEjoKDm1vZGVsX21ldGFkYXRhGAcgASgLMhMuc3NuLnR5cGUuTW9kZWxT",
+            "cGVjUg1tb2RlbE1ldGFkYXRhEhkKCHBhZ2VfcmVmGAggASgNUgdwYWdlUmVm",
+            "IjkKCFBhZ2VUZXh0EhkKCHBhZ2VfcmVmGAEgASgNUgdwYWdlUmVmEhIKBHRl",
+            "eHQYAiABKAlSBHRleHQi3wEKGFZhdERpc3RyaWJ1dGlvbkNhbmRpZGF0ZRIe",
+            "CgpwZXJjZW50YWdlGAEgASgJUgpwZXJjZW50YWdlEhYKBmFtb3VudBgCIAEo",
+            "CVIGYW1vdW50EjoKDm1vZGVsX21ldGFkYXRhGAMgASgLMhMuc3NuLnR5cGUu",
+            "TW9kZWxTcGVjUg1tb2RlbE1ldGFkYXRhEhkKCHBhZ2VfcmVmGAQgASgNUgdw",
+            "YWdlUmVmEhkKCGV4Y2xfdmF0GAUgASgJUgdleGNsVmF0EhkKCGluY2xfdmF0",
+            "GAYgASgJUgdpbmNsVmF0IjEKEERvY3VtZW50TWV0YWRhdGESHQoKcGFnZV9j",
+            "b3VudBgBIAEoDVIJcGFnZUNvdW50Io4YCgxQdXJjaGFzZUxpbmUSGQoIcGFn",
+            "ZV9yZWYYASABKA1SB3BhZ2VSZWYSJwoEY29kZRgCIAMoCzITLnNzbi50eXBl",
+            "LkNhbmRpZGF0ZVIEY29kZRI1CgtkZXNjcmlwdGlvbhgDIAMoCzITLnNzbi50",
+            "eXBlLkNhbmRpZGF0ZVILZGVzY3JpcHRpb24SLwoIcXVhbnRpdHkYBCADKAsy",
+            "Ey5zc24udHlwZS5DYW5kaWRhdGVSCHF1YW50aXR5EjQKC2l0ZW1fbnVtYmVy",
+            "GAUgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgppdGVtTnVtYmVyEicKBHVu",
+            "aXQYBiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSBHVuaXQSOgoOdG90YWxf",
+            "ZGlzY291bnQYByADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDXRvdGFsRGlz",
+            "Y291bnQSRAoTcGVyY2VudGFnZV9kaXNjb3VudBgIIAMoCzITLnNzbi50eXBl",
+            "LkNhbmRpZGF0ZVIScGVyY2VudGFnZURpc2NvdW50EjkKDnRvdGFsX2luY2xf",
+            "dmF0GAkgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgx0b3RhbEluY2xWYXQS",
+            "OQoOdG90YWxfZXhjbF92YXQYCiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVS",
+            "DHRvdGFsRXhjbFZhdBIwCgl0b3RhbF92YXQYCyADKAsyEy5zc24udHlwZS5D",
+            "YW5kaWRhdGVSCHRvdGFsVmF0EjoKDnBlcmNlbnRhZ2VfdmF0GAwgAygLMhMu",
+            "c3NuLnR5cGUuQ2FuZGlkYXRlUg1wZXJjZW50YWdlVmF0EkIKE3VuaXRfcHJp",
+            "Y2VfaW5jbF92YXQYDSADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEHVuaXRQ",
+            "cmljZUluY2xWYXQSQgoTdW5pdF9wcmljZV9leGNsX3ZhdBgOIAMoCzITLnNz",
+            "bi50eXBlLkNhbmRpZGF0ZVIQdW5pdFByaWNlRXhjbFZhdBIpCgV0b3RhbBgP",
+            "IAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIFdG90YWwSMgoKdW5pdF9wcmlj",
+            "ZRgQIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIJdW5pdFByaWNlEjoKDm1v",
+            "ZGVsX21ldGFkYXRhGBEgASgLMhMuc3NuLnR5cGUuTW9kZWxTcGVjUg1tb2Rl",
+            "bE1ldGFkYXRhEkAKDHByb2R1Y3RfdHlwZRgSIAMoCzIdLmFzZ3QudjIuUHJv",
+            "ZHVjdFR5cGVDYW5kaWRhdGVSC3Byb2R1Y3RUeXBlEicKBGtpbmQYEyADKAsy",
+            "Ey5zc24udHlwZS5DYW5kaWRhdGVSBGtpbmQSUQoOZ29vZHNfY2F0ZWdvcnkY",
+            "FCADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVCFfrS5JMCDxINTk9UX1NVUFBP",
+            "UlRFRFINZ29vZHNDYXRlZ29yeRJeChVnb29kc19jYXRlZ29yeV9yZWFzb24Y",
+            "FSADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVCFfrS5JMCDxINTk9UX1NVUFBP",
+            "UlRFRFITZ29vZHNDYXRlZ29yeVJlYXNvbhJVChFwYXNzZWRfb25fYXRfY29z",
+            "dBgWIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZUIV+tLkkwIPEg1OT1RfU1VQ",
+            "UE9SVEVEUg5wYXNzZWRPbkF0Q29zdBJiChhwYXNzZWRfb25fYXRfY29zdF9y",
+            "ZWFzb24YFyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVCFfrS5JMCDxINTk9U",
+            "X1NVUFBPUlRFRFIUcGFzc2VkT25BdENvc3RSZWFzb24SZQoZaW5mZXJyZWRf",
+            "ZmFjdF9pdGVtX251bWJlchgYIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZUIV",
+            "+tLkkwIPEg1OT1RfU1VQUE9SVEVEUhZpbmZlcnJlZEZhY3RJdGVtTnVtYmVy",
+            "ElgKEmluZmVycmVkX2ZhY3RfY29kZRgZIAMoCzITLnNzbi50eXBlLkNhbmRp",
+            "ZGF0ZUIV+tLkkwIPEg1OT1RfU1VQUE9SVEVEUhBpbmZlcnJlZEZhY3RDb2Rl",
+            "EmYKGWluZmVycmVkX2ZhY3RfZGVzY3JpcHRpb24YGiADKAsyEy5zc24udHlw",
+            "ZS5DYW5kaWRhdGVCFfrS5JMCDxINTk9UX1NVUFBPUlRFRFIXaW5mZXJyZWRG",
+            "YWN0RGVzY3JpcHRpb24SYAoWaW5mZXJyZWRfZmFjdF9xdWFudGl0eRgbIAMo",
+            "CzITLnNzbi50eXBlLkNhbmRpZGF0ZUIV+tLkkwIPEg1OT1RfU1VQUE9SVEVE",
+            "UhRpbmZlcnJlZEZhY3RRdWFudGl0eRJYChJpbmZlcnJlZF9mYWN0X3VuaXQY",
+            "HCADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVCFfrS5JMCDxINTk9UX1NVUFBP",
+            "UlRFRFIQaW5mZXJyZWRGYWN0VW5pdBJzCiFpbmZlcnJlZF9mYWN0X3VuaXRf",
+            "cHJpY2VfZXhjbF92YXQYHSADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVCFfrS",
+            "5JMCDxINTk9UX1NVUFBPUlRFRFIcaW5mZXJyZWRGYWN0VW5pdFByaWNlRXhj",
+            "bFZhdBJzCiFpbmZlcnJlZF9mYWN0X3VuaXRfcHJpY2VfaW5jbF92YXQYHiAD",
+            "KAsyEy5zc24udHlwZS5DYW5kaWRhdGVCFfrS5JMCDxINTk9UX1NVUFBPUlRF",
+            "RFIcaW5mZXJyZWRGYWN0VW5pdFByaWNlSW5jbFZhdBJrChxpbmZlcnJlZF9m",
+            "YWN0X3RvdGFsX2Rpc2NvdW50GB8gAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRl",
+            "QhX60uSTAg8SDU5PVF9TVVBQT1JURURSGWluZmVycmVkRmFjdFRvdGFsRGlz",
+            "Y291bnQSdQohaW5mZXJyZWRfZmFjdF9wZXJjZW50YWdlX2Rpc2NvdW50GCAg",
+            "AygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlQhX60uSTAg8SDU5PVF9TVVBQT1JU",
+            "RURSHmluZmVycmVkRmFjdFBlcmNlbnRhZ2VEaXNjb3VudBJhChdpbmZlcnJl",
+            "ZF9mYWN0X3RvdGFsX3ZhdBghIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZUIV",
+            "+tLkkwIPEg1OT1RfU1VQUE9SVEVEUhRpbmZlcnJlZEZhY3RUb3RhbFZhdBJr",
+            "ChxpbmZlcnJlZF9mYWN0X3BlcmNlbnRhZ2VfdmF0GCIgAygLMhMuc3NuLnR5",
+            "cGUuQ2FuZGlkYXRlQhX60uSTAg8SDU5PVF9TVVBQT1JURURSGWluZmVycmVk",
+            "RmFjdFBlcmNlbnRhZ2VWYXQSagocaW5mZXJyZWRfZmFjdF90b3RhbF9leGNs",
+            "X3ZhdBgjIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZUIV+tLkkwIPEg1OT1Rf",
+            "U1VQUE9SVEVEUhhpbmZlcnJlZEZhY3RUb3RhbEV4Y2xWYXQSagocaW5mZXJy",
+            "ZWRfZmFjdF90b3RhbF9pbmNsX3ZhdBgkIAMoCzITLnNzbi50eXBlLkNhbmRp",
+            "ZGF0ZUIV+tLkkwIPEg1OT1RfU1VQUE9SVEVEUhhpbmZlcnJlZEZhY3RUb3Rh",
+            "bEluY2xWYXQSWAoSaW5mZXJyZWRfZmFjdF9raW5kGCUgAygLMhMuc3NuLnR5",
+            "cGUuQ2FuZGlkYXRlQhX60uSTAg8SDU5PVF9TVVBQT1JURURSEGluZmVycmVk",
+            "RmFjdEtpbmQSbwofaW5mZXJyZWRfZmFjdF9wYXNzZWRfb25fYXRfY29zdBgm",
+            "IAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZUIV+tLkkwIPEg1OT1RfU1VQUE9S",
+            "VEVEUhppbmZlcnJlZEZhY3RQYXNzZWRPbkF0Q29zdBJrChxpbmZlcnJlZF9m",
+            "YWN0X2dvb2RzX2NhdGVnb3J5GCcgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRl",
+            "QhX60uSTAg8SDU5PVF9TVVBQT1JURURSGWluZmVycmVkRmFjdEdvb2RzQ2F0",
+            "ZWdvcnkixQIKD1ZhdERpc3RyaWJ1dGlvbhIZCghwYWdlX3JlZhgBIAEoDVIH",
+            "cGFnZVJlZhIzCgpwZXJjZW50YWdlGAIgAygLMhMuc3NuLnR5cGUuQ2FuZGlk",
+            "YXRlUgpwZXJjZW50YWdlEjkKDnRvdGFsX2luY2xfdmF0GAMgAygLMhMuc3Nu",
+            "LnR5cGUuQ2FuZGlkYXRlUgx0b3RhbEluY2xWYXQSOQoOdG90YWxfZXhjbF92",
+            "YXQYBCADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDHRvdGFsRXhjbFZhdBIw",
+            "Cgl0b3RhbF92YXQYBSADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSCHRvdGFs",
+            "VmF0EjoKDm1vZGVsX21ldGFkYXRhGAYgASgLMhMuc3NuLnR5cGUuTW9kZWxT",
+            "cGVjUg1tb2RlbE1ldGFkYXRhQpoBChFhaS52aXNtYS5zc24udHlwZUIOQ2Fu",
+            "ZGlkYXRlUHJvdG9QAVo0Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9n",
+            "ZW4vZ28vc3NuL3R5cGU7c3NudHlwZaICA1NUWKoCCFNzbi5UeXBlygIIU3Nu",
+            "XFR5cGXiAhRTc25cVHlwZVxHUEJNZXRhZGF0YeoCCVNzbjo6VHlwZWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.V2.ProductServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.V2.ProductServiceReflection.Descriptor, global::Google.Api.VisibilityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Confidence), global::Ssn.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Ssn.Type.Confidence.Types.Level) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelMetadata", "Corrected" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null, null),
@@ -118,7 +165,7 @@ namespace Ssn.Type {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PageText), global::Ssn.Type.PageText.Parser, new[]{ "PageRef", "Text" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistributionCandidate), global::Ssn.Type.VatDistributionCandidate.Parser, new[]{ "Percentage", "Amount", "ModelMetadata", "PageRef", "ExclVat", "InclVat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.DocumentMetadata), global::Ssn.Type.DocumentMetadata.Parser, new[]{ "PageCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLine), global::Ssn.Type.PurchaseLine.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", "ProductType", "Kind" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLine), global::Ssn.Type.PurchaseLine.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", "ProductType", "Kind", "GoodsCategory", "GoodsCategoryReason", "PassedOnAtCost", "PassedOnAtCostReason", "InferredFactItemNumber", "InferredFactCode", "InferredFactDescription", "InferredFactQuantity", "InferredFactUnit", "InferredFactUnitPriceExclVat", "InferredFactUnitPriceInclVat", "InferredFactTotalDiscount", "InferredFactPercentageDiscount", "InferredFactTotalVat", "InferredFactPercentageVat", "InferredFactTotalExclVat", "InferredFactTotalInclVat", "InferredFactKind", "InferredFactPassedOnAtCost", "InferredFactGoodsCategory" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistribution), global::Ssn.Type.VatDistribution.Parser, new[]{ "PageRef", "Percentage", "TotalInclVat", "TotalExclVat", "TotalVat", "ModelMetadata" }, null, null, null, null)
           }));
     }
@@ -3654,6 +3701,26 @@ namespace Ssn.Type {
       modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
       productType_ = other.productType_.Clone();
       kind_ = other.kind_.Clone();
+      goodsCategory_ = other.goodsCategory_.Clone();
+      goodsCategoryReason_ = other.goodsCategoryReason_.Clone();
+      passedOnAtCost_ = other.passedOnAtCost_.Clone();
+      passedOnAtCostReason_ = other.passedOnAtCostReason_.Clone();
+      inferredFactItemNumber_ = other.inferredFactItemNumber_.Clone();
+      inferredFactCode_ = other.inferredFactCode_.Clone();
+      inferredFactDescription_ = other.inferredFactDescription_.Clone();
+      inferredFactQuantity_ = other.inferredFactQuantity_.Clone();
+      inferredFactUnit_ = other.inferredFactUnit_.Clone();
+      inferredFactUnitPriceExclVat_ = other.inferredFactUnitPriceExclVat_.Clone();
+      inferredFactUnitPriceInclVat_ = other.inferredFactUnitPriceInclVat_.Clone();
+      inferredFactTotalDiscount_ = other.inferredFactTotalDiscount_.Clone();
+      inferredFactPercentageDiscount_ = other.inferredFactPercentageDiscount_.Clone();
+      inferredFactTotalVat_ = other.inferredFactTotalVat_.Clone();
+      inferredFactPercentageVat_ = other.inferredFactPercentageVat_.Clone();
+      inferredFactTotalExclVat_ = other.inferredFactTotalExclVat_.Clone();
+      inferredFactTotalInclVat_ = other.inferredFactTotalInclVat_.Clone();
+      inferredFactKind_ = other.inferredFactKind_.Clone();
+      inferredFactPassedOnAtCost_ = other.inferredFactPassedOnAtCost_.Clone();
+      inferredFactGoodsCategory_ = other.inferredFactGoodsCategory_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3933,6 +4000,247 @@ namespace Ssn.Type {
       get { return kind_; }
     }
 
+    /// <summary>Field number for the "goods_category" field.</summary>
+    public const int GoodsCategoryFieldNumber = 20;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_goodsCategory_codec
+        = pb::FieldCodec.ForMessage(162, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> goodsCategory_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+    /// visibility keeps them out of the generated OpenAPI documentation.
+    ///
+    /// Goods category is the category of goods the line charges for.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> GoodsCategory {
+      get { return goodsCategory_; }
+    }
+
+    /// <summary>Field number for the "goods_category_reason" field.</summary>
+    public const int GoodsCategoryReasonFieldNumber = 21;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_goodsCategoryReason_codec
+        = pb::FieldCodec.ForMessage(170, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> goodsCategoryReason_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Goods category reason is why the goods category was chosen.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> GoodsCategoryReason {
+      get { return goodsCategoryReason_; }
+    }
+
+    /// <summary>Field number for the "passed_on_at_cost" field.</summary>
+    public const int PassedOnAtCostFieldNumber = 22;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_passedOnAtCost_codec
+        = pb::FieldCodec.ForMessage(178, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> passedOnAtCost_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Passed on at cost is "true" when the line is passed on at cost, absent
+    /// otherwise.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> PassedOnAtCost {
+      get { return passedOnAtCost_; }
+    }
+
+    /// <summary>Field number for the "passed_on_at_cost_reason" field.</summary>
+    public const int PassedOnAtCostReasonFieldNumber = 23;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_passedOnAtCostReason_codec
+        = pb::FieldCodec.ForMessage(186, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> passedOnAtCostReason_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Passed on at cost reason is why the line is passed on at cost.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> PassedOnAtCostReason {
+      get { return passedOnAtCostReason_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_item_number" field.</summary>
+    public const int InferredFactItemNumberFieldNumber = 24;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactItemNumber_codec
+        = pb::FieldCodec.ForMessage(194, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactItemNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Inferred fact &lt;column> is the annotator's fact on that column's cell: its
+    /// evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+    /// Reason columns take no facts, so they have no inferred fact field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactItemNumber {
+      get { return inferredFactItemNumber_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_code" field.</summary>
+    public const int InferredFactCodeFieldNumber = 25;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactCode_codec
+        = pb::FieldCodec.ForMessage(202, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactCode_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactCode {
+      get { return inferredFactCode_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_description" field.</summary>
+    public const int InferredFactDescriptionFieldNumber = 26;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactDescription_codec
+        = pb::FieldCodec.ForMessage(210, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactDescription_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactDescription {
+      get { return inferredFactDescription_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_quantity" field.</summary>
+    public const int InferredFactQuantityFieldNumber = 27;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactQuantity_codec
+        = pb::FieldCodec.ForMessage(218, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactQuantity_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactQuantity {
+      get { return inferredFactQuantity_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_unit" field.</summary>
+    public const int InferredFactUnitFieldNumber = 28;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactUnit_codec
+        = pb::FieldCodec.ForMessage(226, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactUnit_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactUnit {
+      get { return inferredFactUnit_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_unit_price_excl_vat" field.</summary>
+    public const int InferredFactUnitPriceExclVatFieldNumber = 29;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactUnitPriceExclVat_codec
+        = pb::FieldCodec.ForMessage(234, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactUnitPriceExclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactUnitPriceExclVat {
+      get { return inferredFactUnitPriceExclVat_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_unit_price_incl_vat" field.</summary>
+    public const int InferredFactUnitPriceInclVatFieldNumber = 30;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactUnitPriceInclVat_codec
+        = pb::FieldCodec.ForMessage(242, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactUnitPriceInclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactUnitPriceInclVat {
+      get { return inferredFactUnitPriceInclVat_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_total_discount" field.</summary>
+    public const int InferredFactTotalDiscountFieldNumber = 31;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactTotalDiscount_codec
+        = pb::FieldCodec.ForMessage(250, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactTotalDiscount_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactTotalDiscount {
+      get { return inferredFactTotalDiscount_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_percentage_discount" field.</summary>
+    public const int InferredFactPercentageDiscountFieldNumber = 32;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactPercentageDiscount_codec
+        = pb::FieldCodec.ForMessage(258, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactPercentageDiscount_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactPercentageDiscount {
+      get { return inferredFactPercentageDiscount_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_total_vat" field.</summary>
+    public const int InferredFactTotalVatFieldNumber = 33;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactTotalVat_codec
+        = pb::FieldCodec.ForMessage(266, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactTotalVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactTotalVat {
+      get { return inferredFactTotalVat_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_percentage_vat" field.</summary>
+    public const int InferredFactPercentageVatFieldNumber = 34;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactPercentageVat_codec
+        = pb::FieldCodec.ForMessage(274, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactPercentageVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactPercentageVat {
+      get { return inferredFactPercentageVat_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_total_excl_vat" field.</summary>
+    public const int InferredFactTotalExclVatFieldNumber = 35;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactTotalExclVat_codec
+        = pb::FieldCodec.ForMessage(282, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactTotalExclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactTotalExclVat {
+      get { return inferredFactTotalExclVat_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_total_incl_vat" field.</summary>
+    public const int InferredFactTotalInclVatFieldNumber = 36;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactTotalInclVat_codec
+        = pb::FieldCodec.ForMessage(290, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactTotalInclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactTotalInclVat {
+      get { return inferredFactTotalInclVat_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_kind" field.</summary>
+    public const int InferredFactKindFieldNumber = 37;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactKind_codec
+        = pb::FieldCodec.ForMessage(298, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactKind_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactKind {
+      get { return inferredFactKind_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_passed_on_at_cost" field.</summary>
+    public const int InferredFactPassedOnAtCostFieldNumber = 38;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactPassedOnAtCost_codec
+        = pb::FieldCodec.ForMessage(306, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactPassedOnAtCost_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactPassedOnAtCost {
+      get { return inferredFactPassedOnAtCost_; }
+    }
+
+    /// <summary>Field number for the "inferred_fact_goods_category" field.</summary>
+    public const int InferredFactGoodsCategoryFieldNumber = 39;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inferredFactGoodsCategory_codec
+        = pb::FieldCodec.ForMessage(314, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inferredFactGoodsCategory_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InferredFactGoodsCategory {
+      get { return inferredFactGoodsCategory_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3967,6 +4275,26 @@ namespace Ssn.Type {
       if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
       if(!productType_.Equals(other.productType_)) return false;
       if(!kind_.Equals(other.kind_)) return false;
+      if(!goodsCategory_.Equals(other.goodsCategory_)) return false;
+      if(!goodsCategoryReason_.Equals(other.goodsCategoryReason_)) return false;
+      if(!passedOnAtCost_.Equals(other.passedOnAtCost_)) return false;
+      if(!passedOnAtCostReason_.Equals(other.passedOnAtCostReason_)) return false;
+      if(!inferredFactItemNumber_.Equals(other.inferredFactItemNumber_)) return false;
+      if(!inferredFactCode_.Equals(other.inferredFactCode_)) return false;
+      if(!inferredFactDescription_.Equals(other.inferredFactDescription_)) return false;
+      if(!inferredFactQuantity_.Equals(other.inferredFactQuantity_)) return false;
+      if(!inferredFactUnit_.Equals(other.inferredFactUnit_)) return false;
+      if(!inferredFactUnitPriceExclVat_.Equals(other.inferredFactUnitPriceExclVat_)) return false;
+      if(!inferredFactUnitPriceInclVat_.Equals(other.inferredFactUnitPriceInclVat_)) return false;
+      if(!inferredFactTotalDiscount_.Equals(other.inferredFactTotalDiscount_)) return false;
+      if(!inferredFactPercentageDiscount_.Equals(other.inferredFactPercentageDiscount_)) return false;
+      if(!inferredFactTotalVat_.Equals(other.inferredFactTotalVat_)) return false;
+      if(!inferredFactPercentageVat_.Equals(other.inferredFactPercentageVat_)) return false;
+      if(!inferredFactTotalExclVat_.Equals(other.inferredFactTotalExclVat_)) return false;
+      if(!inferredFactTotalInclVat_.Equals(other.inferredFactTotalInclVat_)) return false;
+      if(!inferredFactKind_.Equals(other.inferredFactKind_)) return false;
+      if(!inferredFactPassedOnAtCost_.Equals(other.inferredFactPassedOnAtCost_)) return false;
+      if(!inferredFactGoodsCategory_.Equals(other.inferredFactGoodsCategory_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3993,6 +4321,26 @@ namespace Ssn.Type {
       if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
       hash ^= productType_.GetHashCode();
       hash ^= kind_.GetHashCode();
+      hash ^= goodsCategory_.GetHashCode();
+      hash ^= goodsCategoryReason_.GetHashCode();
+      hash ^= passedOnAtCost_.GetHashCode();
+      hash ^= passedOnAtCostReason_.GetHashCode();
+      hash ^= inferredFactItemNumber_.GetHashCode();
+      hash ^= inferredFactCode_.GetHashCode();
+      hash ^= inferredFactDescription_.GetHashCode();
+      hash ^= inferredFactQuantity_.GetHashCode();
+      hash ^= inferredFactUnit_.GetHashCode();
+      hash ^= inferredFactUnitPriceExclVat_.GetHashCode();
+      hash ^= inferredFactUnitPriceInclVat_.GetHashCode();
+      hash ^= inferredFactTotalDiscount_.GetHashCode();
+      hash ^= inferredFactPercentageDiscount_.GetHashCode();
+      hash ^= inferredFactTotalVat_.GetHashCode();
+      hash ^= inferredFactPercentageVat_.GetHashCode();
+      hash ^= inferredFactTotalExclVat_.GetHashCode();
+      hash ^= inferredFactTotalInclVat_.GetHashCode();
+      hash ^= inferredFactKind_.GetHashCode();
+      hash ^= inferredFactPassedOnAtCost_.GetHashCode();
+      hash ^= inferredFactGoodsCategory_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4036,6 +4384,26 @@ namespace Ssn.Type {
       }
       productType_.WriteTo(output, _repeated_productType_codec);
       kind_.WriteTo(output, _repeated_kind_codec);
+      goodsCategory_.WriteTo(output, _repeated_goodsCategory_codec);
+      goodsCategoryReason_.WriteTo(output, _repeated_goodsCategoryReason_codec);
+      passedOnAtCost_.WriteTo(output, _repeated_passedOnAtCost_codec);
+      passedOnAtCostReason_.WriteTo(output, _repeated_passedOnAtCostReason_codec);
+      inferredFactItemNumber_.WriteTo(output, _repeated_inferredFactItemNumber_codec);
+      inferredFactCode_.WriteTo(output, _repeated_inferredFactCode_codec);
+      inferredFactDescription_.WriteTo(output, _repeated_inferredFactDescription_codec);
+      inferredFactQuantity_.WriteTo(output, _repeated_inferredFactQuantity_codec);
+      inferredFactUnit_.WriteTo(output, _repeated_inferredFactUnit_codec);
+      inferredFactUnitPriceExclVat_.WriteTo(output, _repeated_inferredFactUnitPriceExclVat_codec);
+      inferredFactUnitPriceInclVat_.WriteTo(output, _repeated_inferredFactUnitPriceInclVat_codec);
+      inferredFactTotalDiscount_.WriteTo(output, _repeated_inferredFactTotalDiscount_codec);
+      inferredFactPercentageDiscount_.WriteTo(output, _repeated_inferredFactPercentageDiscount_codec);
+      inferredFactTotalVat_.WriteTo(output, _repeated_inferredFactTotalVat_codec);
+      inferredFactPercentageVat_.WriteTo(output, _repeated_inferredFactPercentageVat_codec);
+      inferredFactTotalExclVat_.WriteTo(output, _repeated_inferredFactTotalExclVat_codec);
+      inferredFactTotalInclVat_.WriteTo(output, _repeated_inferredFactTotalInclVat_codec);
+      inferredFactKind_.WriteTo(output, _repeated_inferredFactKind_codec);
+      inferredFactPassedOnAtCost_.WriteTo(output, _repeated_inferredFactPassedOnAtCost_codec);
+      inferredFactGoodsCategory_.WriteTo(output, _repeated_inferredFactGoodsCategory_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4071,6 +4439,26 @@ namespace Ssn.Type {
       }
       productType_.WriteTo(ref output, _repeated_productType_codec);
       kind_.WriteTo(ref output, _repeated_kind_codec);
+      goodsCategory_.WriteTo(ref output, _repeated_goodsCategory_codec);
+      goodsCategoryReason_.WriteTo(ref output, _repeated_goodsCategoryReason_codec);
+      passedOnAtCost_.WriteTo(ref output, _repeated_passedOnAtCost_codec);
+      passedOnAtCostReason_.WriteTo(ref output, _repeated_passedOnAtCostReason_codec);
+      inferredFactItemNumber_.WriteTo(ref output, _repeated_inferredFactItemNumber_codec);
+      inferredFactCode_.WriteTo(ref output, _repeated_inferredFactCode_codec);
+      inferredFactDescription_.WriteTo(ref output, _repeated_inferredFactDescription_codec);
+      inferredFactQuantity_.WriteTo(ref output, _repeated_inferredFactQuantity_codec);
+      inferredFactUnit_.WriteTo(ref output, _repeated_inferredFactUnit_codec);
+      inferredFactUnitPriceExclVat_.WriteTo(ref output, _repeated_inferredFactUnitPriceExclVat_codec);
+      inferredFactUnitPriceInclVat_.WriteTo(ref output, _repeated_inferredFactUnitPriceInclVat_codec);
+      inferredFactTotalDiscount_.WriteTo(ref output, _repeated_inferredFactTotalDiscount_codec);
+      inferredFactPercentageDiscount_.WriteTo(ref output, _repeated_inferredFactPercentageDiscount_codec);
+      inferredFactTotalVat_.WriteTo(ref output, _repeated_inferredFactTotalVat_codec);
+      inferredFactPercentageVat_.WriteTo(ref output, _repeated_inferredFactPercentageVat_codec);
+      inferredFactTotalExclVat_.WriteTo(ref output, _repeated_inferredFactTotalExclVat_codec);
+      inferredFactTotalInclVat_.WriteTo(ref output, _repeated_inferredFactTotalInclVat_codec);
+      inferredFactKind_.WriteTo(ref output, _repeated_inferredFactKind_codec);
+      inferredFactPassedOnAtCost_.WriteTo(ref output, _repeated_inferredFactPassedOnAtCost_codec);
+      inferredFactGoodsCategory_.WriteTo(ref output, _repeated_inferredFactGoodsCategory_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4104,6 +4492,26 @@ namespace Ssn.Type {
       }
       size += productType_.CalculateSize(_repeated_productType_codec);
       size += kind_.CalculateSize(_repeated_kind_codec);
+      size += goodsCategory_.CalculateSize(_repeated_goodsCategory_codec);
+      size += goodsCategoryReason_.CalculateSize(_repeated_goodsCategoryReason_codec);
+      size += passedOnAtCost_.CalculateSize(_repeated_passedOnAtCost_codec);
+      size += passedOnAtCostReason_.CalculateSize(_repeated_passedOnAtCostReason_codec);
+      size += inferredFactItemNumber_.CalculateSize(_repeated_inferredFactItemNumber_codec);
+      size += inferredFactCode_.CalculateSize(_repeated_inferredFactCode_codec);
+      size += inferredFactDescription_.CalculateSize(_repeated_inferredFactDescription_codec);
+      size += inferredFactQuantity_.CalculateSize(_repeated_inferredFactQuantity_codec);
+      size += inferredFactUnit_.CalculateSize(_repeated_inferredFactUnit_codec);
+      size += inferredFactUnitPriceExclVat_.CalculateSize(_repeated_inferredFactUnitPriceExclVat_codec);
+      size += inferredFactUnitPriceInclVat_.CalculateSize(_repeated_inferredFactUnitPriceInclVat_codec);
+      size += inferredFactTotalDiscount_.CalculateSize(_repeated_inferredFactTotalDiscount_codec);
+      size += inferredFactPercentageDiscount_.CalculateSize(_repeated_inferredFactPercentageDiscount_codec);
+      size += inferredFactTotalVat_.CalculateSize(_repeated_inferredFactTotalVat_codec);
+      size += inferredFactPercentageVat_.CalculateSize(_repeated_inferredFactPercentageVat_codec);
+      size += inferredFactTotalExclVat_.CalculateSize(_repeated_inferredFactTotalExclVat_codec);
+      size += inferredFactTotalInclVat_.CalculateSize(_repeated_inferredFactTotalInclVat_codec);
+      size += inferredFactKind_.CalculateSize(_repeated_inferredFactKind_codec);
+      size += inferredFactPassedOnAtCost_.CalculateSize(_repeated_inferredFactPassedOnAtCost_codec);
+      size += inferredFactGoodsCategory_.CalculateSize(_repeated_inferredFactGoodsCategory_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4142,6 +4550,26 @@ namespace Ssn.Type {
       }
       productType_.Add(other.productType_);
       kind_.Add(other.kind_);
+      goodsCategory_.Add(other.goodsCategory_);
+      goodsCategoryReason_.Add(other.goodsCategoryReason_);
+      passedOnAtCost_.Add(other.passedOnAtCost_);
+      passedOnAtCostReason_.Add(other.passedOnAtCostReason_);
+      inferredFactItemNumber_.Add(other.inferredFactItemNumber_);
+      inferredFactCode_.Add(other.inferredFactCode_);
+      inferredFactDescription_.Add(other.inferredFactDescription_);
+      inferredFactQuantity_.Add(other.inferredFactQuantity_);
+      inferredFactUnit_.Add(other.inferredFactUnit_);
+      inferredFactUnitPriceExclVat_.Add(other.inferredFactUnitPriceExclVat_);
+      inferredFactUnitPriceInclVat_.Add(other.inferredFactUnitPriceInclVat_);
+      inferredFactTotalDiscount_.Add(other.inferredFactTotalDiscount_);
+      inferredFactPercentageDiscount_.Add(other.inferredFactPercentageDiscount_);
+      inferredFactTotalVat_.Add(other.inferredFactTotalVat_);
+      inferredFactPercentageVat_.Add(other.inferredFactPercentageVat_);
+      inferredFactTotalExclVat_.Add(other.inferredFactTotalExclVat_);
+      inferredFactTotalInclVat_.Add(other.inferredFactTotalInclVat_);
+      inferredFactKind_.Add(other.inferredFactKind_);
+      inferredFactPassedOnAtCost_.Add(other.inferredFactPassedOnAtCost_);
+      inferredFactGoodsCategory_.Add(other.inferredFactGoodsCategory_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4240,6 +4668,86 @@ namespace Ssn.Type {
             kind_.AddEntriesFrom(input, _repeated_kind_codec);
             break;
           }
+          case 162: {
+            goodsCategory_.AddEntriesFrom(input, _repeated_goodsCategory_codec);
+            break;
+          }
+          case 170: {
+            goodsCategoryReason_.AddEntriesFrom(input, _repeated_goodsCategoryReason_codec);
+            break;
+          }
+          case 178: {
+            passedOnAtCost_.AddEntriesFrom(input, _repeated_passedOnAtCost_codec);
+            break;
+          }
+          case 186: {
+            passedOnAtCostReason_.AddEntriesFrom(input, _repeated_passedOnAtCostReason_codec);
+            break;
+          }
+          case 194: {
+            inferredFactItemNumber_.AddEntriesFrom(input, _repeated_inferredFactItemNumber_codec);
+            break;
+          }
+          case 202: {
+            inferredFactCode_.AddEntriesFrom(input, _repeated_inferredFactCode_codec);
+            break;
+          }
+          case 210: {
+            inferredFactDescription_.AddEntriesFrom(input, _repeated_inferredFactDescription_codec);
+            break;
+          }
+          case 218: {
+            inferredFactQuantity_.AddEntriesFrom(input, _repeated_inferredFactQuantity_codec);
+            break;
+          }
+          case 226: {
+            inferredFactUnit_.AddEntriesFrom(input, _repeated_inferredFactUnit_codec);
+            break;
+          }
+          case 234: {
+            inferredFactUnitPriceExclVat_.AddEntriesFrom(input, _repeated_inferredFactUnitPriceExclVat_codec);
+            break;
+          }
+          case 242: {
+            inferredFactUnitPriceInclVat_.AddEntriesFrom(input, _repeated_inferredFactUnitPriceInclVat_codec);
+            break;
+          }
+          case 250: {
+            inferredFactTotalDiscount_.AddEntriesFrom(input, _repeated_inferredFactTotalDiscount_codec);
+            break;
+          }
+          case 258: {
+            inferredFactPercentageDiscount_.AddEntriesFrom(input, _repeated_inferredFactPercentageDiscount_codec);
+            break;
+          }
+          case 266: {
+            inferredFactTotalVat_.AddEntriesFrom(input, _repeated_inferredFactTotalVat_codec);
+            break;
+          }
+          case 274: {
+            inferredFactPercentageVat_.AddEntriesFrom(input, _repeated_inferredFactPercentageVat_codec);
+            break;
+          }
+          case 282: {
+            inferredFactTotalExclVat_.AddEntriesFrom(input, _repeated_inferredFactTotalExclVat_codec);
+            break;
+          }
+          case 290: {
+            inferredFactTotalInclVat_.AddEntriesFrom(input, _repeated_inferredFactTotalInclVat_codec);
+            break;
+          }
+          case 298: {
+            inferredFactKind_.AddEntriesFrom(input, _repeated_inferredFactKind_codec);
+            break;
+          }
+          case 306: {
+            inferredFactPassedOnAtCost_.AddEntriesFrom(input, _repeated_inferredFactPassedOnAtCost_codec);
+            break;
+          }
+          case 314: {
+            inferredFactGoodsCategory_.AddEntriesFrom(input, _repeated_inferredFactGoodsCategory_codec);
+            break;
+          }
         }
       }
     #endif
@@ -4336,6 +4844,86 @@ namespace Ssn.Type {
           }
           case 154: {
             kind_.AddEntriesFrom(ref input, _repeated_kind_codec);
+            break;
+          }
+          case 162: {
+            goodsCategory_.AddEntriesFrom(ref input, _repeated_goodsCategory_codec);
+            break;
+          }
+          case 170: {
+            goodsCategoryReason_.AddEntriesFrom(ref input, _repeated_goodsCategoryReason_codec);
+            break;
+          }
+          case 178: {
+            passedOnAtCost_.AddEntriesFrom(ref input, _repeated_passedOnAtCost_codec);
+            break;
+          }
+          case 186: {
+            passedOnAtCostReason_.AddEntriesFrom(ref input, _repeated_passedOnAtCostReason_codec);
+            break;
+          }
+          case 194: {
+            inferredFactItemNumber_.AddEntriesFrom(ref input, _repeated_inferredFactItemNumber_codec);
+            break;
+          }
+          case 202: {
+            inferredFactCode_.AddEntriesFrom(ref input, _repeated_inferredFactCode_codec);
+            break;
+          }
+          case 210: {
+            inferredFactDescription_.AddEntriesFrom(ref input, _repeated_inferredFactDescription_codec);
+            break;
+          }
+          case 218: {
+            inferredFactQuantity_.AddEntriesFrom(ref input, _repeated_inferredFactQuantity_codec);
+            break;
+          }
+          case 226: {
+            inferredFactUnit_.AddEntriesFrom(ref input, _repeated_inferredFactUnit_codec);
+            break;
+          }
+          case 234: {
+            inferredFactUnitPriceExclVat_.AddEntriesFrom(ref input, _repeated_inferredFactUnitPriceExclVat_codec);
+            break;
+          }
+          case 242: {
+            inferredFactUnitPriceInclVat_.AddEntriesFrom(ref input, _repeated_inferredFactUnitPriceInclVat_codec);
+            break;
+          }
+          case 250: {
+            inferredFactTotalDiscount_.AddEntriesFrom(ref input, _repeated_inferredFactTotalDiscount_codec);
+            break;
+          }
+          case 258: {
+            inferredFactPercentageDiscount_.AddEntriesFrom(ref input, _repeated_inferredFactPercentageDiscount_codec);
+            break;
+          }
+          case 266: {
+            inferredFactTotalVat_.AddEntriesFrom(ref input, _repeated_inferredFactTotalVat_codec);
+            break;
+          }
+          case 274: {
+            inferredFactPercentageVat_.AddEntriesFrom(ref input, _repeated_inferredFactPercentageVat_codec);
+            break;
+          }
+          case 282: {
+            inferredFactTotalExclVat_.AddEntriesFrom(ref input, _repeated_inferredFactTotalExclVat_codec);
+            break;
+          }
+          case 290: {
+            inferredFactTotalInclVat_.AddEntriesFrom(ref input, _repeated_inferredFactTotalInclVat_codec);
+            break;
+          }
+          case 298: {
+            inferredFactKind_.AddEntriesFrom(ref input, _repeated_inferredFactKind_codec);
+            break;
+          }
+          case 306: {
+            inferredFactPassedOnAtCost_.AddEntriesFrom(ref input, _repeated_inferredFactPassedOnAtCost_codec);
+            break;
+          }
+          case 314: {
+            inferredFactGoodsCategory_.AddEntriesFrom(ref input, _repeated_inferredFactGoodsCategory_codec);
             break;
           }
         }

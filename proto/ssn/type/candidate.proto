@@ -3,6 +3,7 @@ syntax = "proto3";
 package ssn.type;
 
 import "asgt/v2/product_service.proto";
+import "google/api/visibility.proto";
 import "google/protobuf/wrappers.proto";
 import "ssn/type/geometry.proto";
 
@@ -211,6 +212,37 @@ message PurchaseLine {
   // Kind classifies what the line charges for, e.g. "item", "freight", "fee",
   // "levy", "service_charge", "gratuity", "discount" or "deposit".
   repeated Candidate kind = 19;
+  // Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+  // visibility keeps them out of the generated OpenAPI documentation.
+  //
+  // Goods category is the category of goods the line charges for.
+  repeated Candidate goods_category = 20 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  // Goods category reason is why the goods category was chosen.
+  repeated Candidate goods_category_reason = 21 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  // Passed on at cost is "true" when the line is passed on at cost, absent
+  // otherwise.
+  repeated Candidate passed_on_at_cost = 22 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  // Passed on at cost reason is why the line is passed on at cost.
+  repeated Candidate passed_on_at_cost_reason = 23 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  // Inferred fact <column> is the annotator's fact on that column's cell: its
+  // evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+  // Reason columns take no facts, so they have no inferred fact field.
+  repeated Candidate inferred_fact_item_number = 24 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_code = 25 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_description = 26 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_quantity = 27 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_unit = 28 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_unit_price_excl_vat = 29 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_unit_price_incl_vat = 30 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_total_discount = 31 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_percentage_discount = 32 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_total_vat = 33 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_percentage_vat = 34 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_total_excl_vat = 35 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_total_incl_vat = 36 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_kind = 37 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_passed_on_at_cost = 38 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_goods_category = 39 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
 }
 
 message VatDistribution {
