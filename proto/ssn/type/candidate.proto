@@ -212,7 +212,7 @@ message PurchaseLine {
   // Kind classifies what the line charges for, e.g. "item", "freight", "fee",
   // "levy", "service_charge", "gratuity", "discount" or "deposit".
   repeated Candidate kind = 19;
-  // Fields 20-41 are annotation labels only, never predicted. The NOT_SUPPORTED
+  // Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
   // visibility keeps them out of the generated OpenAPI documentation.
   //
   // Goods category is the category of goods the line charges for.
@@ -226,6 +226,7 @@ message PurchaseLine {
   repeated Candidate passed_on_at_cost_reason = 23 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
   // Inferred fact <column> is the annotator's fact on that column's cell: its
   // evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+  // Reason columns take no facts, so they have no inferred fact field.
   repeated Candidate inferred_fact_item_number = 24 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
   repeated Candidate inferred_fact_code = 25 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
   repeated Candidate inferred_fact_description = 26 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
@@ -241,9 +242,7 @@ message PurchaseLine {
   repeated Candidate inferred_fact_total_incl_vat = 36 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
   repeated Candidate inferred_fact_kind = 37 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
   repeated Candidate inferred_fact_passed_on_at_cost = 38 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
-  repeated Candidate inferred_fact_passed_on_at_cost_reason = 39 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
-  repeated Candidate inferred_fact_goods_category = 40 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
-  repeated Candidate inferred_fact_goods_category_reason = 41 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
+  repeated Candidate inferred_fact_goods_category = 39 [(google.api.field_visibility).restriction = "NOT_SUPPORTED"];
 }
 
 message VatDistribution {
