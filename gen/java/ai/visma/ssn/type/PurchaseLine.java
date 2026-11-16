@@ -44,6 +44,26 @@ private static final long serialVersionUID = 0L;
     unitPrice_ = java.util.Collections.emptyList();
     productType_ = java.util.Collections.emptyList();
     kind_ = java.util.Collections.emptyList();
+    goodsCategory_ = java.util.Collections.emptyList();
+    goodsCategoryReason_ = java.util.Collections.emptyList();
+    passedOnAtCost_ = java.util.Collections.emptyList();
+    passedOnAtCostReason_ = java.util.Collections.emptyList();
+    inferredFactItemNumber_ = java.util.Collections.emptyList();
+    inferredFactCode_ = java.util.Collections.emptyList();
+    inferredFactDescription_ = java.util.Collections.emptyList();
+    inferredFactQuantity_ = java.util.Collections.emptyList();
+    inferredFactUnit_ = java.util.Collections.emptyList();
+    inferredFactUnitPriceExclVat_ = java.util.Collections.emptyList();
+    inferredFactUnitPriceInclVat_ = java.util.Collections.emptyList();
+    inferredFactTotalDiscount_ = java.util.Collections.emptyList();
+    inferredFactPercentageDiscount_ = java.util.Collections.emptyList();
+    inferredFactTotalVat_ = java.util.Collections.emptyList();
+    inferredFactPercentageVat_ = java.util.Collections.emptyList();
+    inferredFactTotalExclVat_ = java.util.Collections.emptyList();
+    inferredFactTotalInclVat_ = java.util.Collections.emptyList();
+    inferredFactKind_ = java.util.Collections.emptyList();
+    inferredFactPassedOnAtCost_ = java.util.Collections.emptyList();
+    inferredFactGoodsCategory_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -1156,6 +1176,956 @@ private static final long serialVersionUID = 0L;
     return kind_.get(index);
   }
 
+  public static final int GOODS_CATEGORY_FIELD_NUMBER = 20;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> goodsCategory_;
+  /**
+   * <pre>
+   * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+   * visibility keeps them out of the generated OpenAPI documentation.
+   *
+   * Goods category is the category of goods the line charges for.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getGoodsCategoryList() {
+    return goodsCategory_;
+  }
+  /**
+   * <pre>
+   * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+   * visibility keeps them out of the generated OpenAPI documentation.
+   *
+   * Goods category is the category of goods the line charges for.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getGoodsCategoryOrBuilderList() {
+    return goodsCategory_;
+  }
+  /**
+   * <pre>
+   * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+   * visibility keeps them out of the generated OpenAPI documentation.
+   *
+   * Goods category is the category of goods the line charges for.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getGoodsCategoryCount() {
+    return goodsCategory_.size();
+  }
+  /**
+   * <pre>
+   * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+   * visibility keeps them out of the generated OpenAPI documentation.
+   *
+   * Goods category is the category of goods the line charges for.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getGoodsCategory(int index) {
+    return goodsCategory_.get(index);
+  }
+  /**
+   * <pre>
+   * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+   * visibility keeps them out of the generated OpenAPI documentation.
+   *
+   * Goods category is the category of goods the line charges for.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getGoodsCategoryOrBuilder(
+      int index) {
+    return goodsCategory_.get(index);
+  }
+
+  public static final int GOODS_CATEGORY_REASON_FIELD_NUMBER = 21;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> goodsCategoryReason_;
+  /**
+   * <pre>
+   * Goods category reason is why the goods category was chosen.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getGoodsCategoryReasonList() {
+    return goodsCategoryReason_;
+  }
+  /**
+   * <pre>
+   * Goods category reason is why the goods category was chosen.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getGoodsCategoryReasonOrBuilderList() {
+    return goodsCategoryReason_;
+  }
+  /**
+   * <pre>
+   * Goods category reason is why the goods category was chosen.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getGoodsCategoryReasonCount() {
+    return goodsCategoryReason_.size();
+  }
+  /**
+   * <pre>
+   * Goods category reason is why the goods category was chosen.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getGoodsCategoryReason(int index) {
+    return goodsCategoryReason_.get(index);
+  }
+  /**
+   * <pre>
+   * Goods category reason is why the goods category was chosen.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getGoodsCategoryReasonOrBuilder(
+      int index) {
+    return goodsCategoryReason_.get(index);
+  }
+
+  public static final int PASSED_ON_AT_COST_FIELD_NUMBER = 22;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> passedOnAtCost_;
+  /**
+   * <pre>
+   * Passed on at cost is "true" when the line is passed on at cost, absent
+   * otherwise.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getPassedOnAtCostList() {
+    return passedOnAtCost_;
+  }
+  /**
+   * <pre>
+   * Passed on at cost is "true" when the line is passed on at cost, absent
+   * otherwise.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getPassedOnAtCostOrBuilderList() {
+    return passedOnAtCost_;
+  }
+  /**
+   * <pre>
+   * Passed on at cost is "true" when the line is passed on at cost, absent
+   * otherwise.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getPassedOnAtCostCount() {
+    return passedOnAtCost_.size();
+  }
+  /**
+   * <pre>
+   * Passed on at cost is "true" when the line is passed on at cost, absent
+   * otherwise.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getPassedOnAtCost(int index) {
+    return passedOnAtCost_.get(index);
+  }
+  /**
+   * <pre>
+   * Passed on at cost is "true" when the line is passed on at cost, absent
+   * otherwise.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getPassedOnAtCostOrBuilder(
+      int index) {
+    return passedOnAtCost_.get(index);
+  }
+
+  public static final int PASSED_ON_AT_COST_REASON_FIELD_NUMBER = 23;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> passedOnAtCostReason_;
+  /**
+   * <pre>
+   * Passed on at cost reason is why the line is passed on at cost.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getPassedOnAtCostReasonList() {
+    return passedOnAtCostReason_;
+  }
+  /**
+   * <pre>
+   * Passed on at cost reason is why the line is passed on at cost.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getPassedOnAtCostReasonOrBuilderList() {
+    return passedOnAtCostReason_;
+  }
+  /**
+   * <pre>
+   * Passed on at cost reason is why the line is passed on at cost.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getPassedOnAtCostReasonCount() {
+    return passedOnAtCostReason_.size();
+  }
+  /**
+   * <pre>
+   * Passed on at cost reason is why the line is passed on at cost.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getPassedOnAtCostReason(int index) {
+    return passedOnAtCostReason_.get(index);
+  }
+  /**
+   * <pre>
+   * Passed on at cost reason is why the line is passed on at cost.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getPassedOnAtCostReasonOrBuilder(
+      int index) {
+    return passedOnAtCostReason_.get(index);
+  }
+
+  public static final int INFERRED_FACT_ITEM_NUMBER_FIELD_NUMBER = 24;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactItemNumber_;
+  /**
+   * <pre>
+   * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+   * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+   * Reason columns take no facts, so they have no inferred fact field.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactItemNumberList() {
+    return inferredFactItemNumber_;
+  }
+  /**
+   * <pre>
+   * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+   * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+   * Reason columns take no facts, so they have no inferred fact field.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactItemNumberOrBuilderList() {
+    return inferredFactItemNumber_;
+  }
+  /**
+   * <pre>
+   * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+   * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+   * Reason columns take no facts, so they have no inferred fact field.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactItemNumberCount() {
+    return inferredFactItemNumber_.size();
+  }
+  /**
+   * <pre>
+   * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+   * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+   * Reason columns take no facts, so they have no inferred fact field.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactItemNumber(int index) {
+    return inferredFactItemNumber_.get(index);
+  }
+  /**
+   * <pre>
+   * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+   * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+   * Reason columns take no facts, so they have no inferred fact field.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactItemNumberOrBuilder(
+      int index) {
+    return inferredFactItemNumber_.get(index);
+  }
+
+  public static final int INFERRED_FACT_CODE_FIELD_NUMBER = 25;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactCode_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactCodeList() {
+    return inferredFactCode_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactCodeOrBuilderList() {
+    return inferredFactCode_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactCodeCount() {
+    return inferredFactCode_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactCode(int index) {
+    return inferredFactCode_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactCodeOrBuilder(
+      int index) {
+    return inferredFactCode_.get(index);
+  }
+
+  public static final int INFERRED_FACT_DESCRIPTION_FIELD_NUMBER = 26;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactDescription_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactDescriptionList() {
+    return inferredFactDescription_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactDescriptionOrBuilderList() {
+    return inferredFactDescription_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactDescriptionCount() {
+    return inferredFactDescription_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactDescription(int index) {
+    return inferredFactDescription_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactDescriptionOrBuilder(
+      int index) {
+    return inferredFactDescription_.get(index);
+  }
+
+  public static final int INFERRED_FACT_QUANTITY_FIELD_NUMBER = 27;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactQuantity_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactQuantityList() {
+    return inferredFactQuantity_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactQuantityOrBuilderList() {
+    return inferredFactQuantity_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactQuantityCount() {
+    return inferredFactQuantity_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactQuantity(int index) {
+    return inferredFactQuantity_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactQuantityOrBuilder(
+      int index) {
+    return inferredFactQuantity_.get(index);
+  }
+
+  public static final int INFERRED_FACT_UNIT_FIELD_NUMBER = 28;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactUnit_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactUnitList() {
+    return inferredFactUnit_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactUnitOrBuilderList() {
+    return inferredFactUnit_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactUnitCount() {
+    return inferredFactUnit_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactUnit(int index) {
+    return inferredFactUnit_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactUnitOrBuilder(
+      int index) {
+    return inferredFactUnit_.get(index);
+  }
+
+  public static final int INFERRED_FACT_UNIT_PRICE_EXCL_VAT_FIELD_NUMBER = 29;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactUnitPriceExclVat_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactUnitPriceExclVatList() {
+    return inferredFactUnitPriceExclVat_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactUnitPriceExclVatOrBuilderList() {
+    return inferredFactUnitPriceExclVat_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactUnitPriceExclVatCount() {
+    return inferredFactUnitPriceExclVat_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactUnitPriceExclVat(int index) {
+    return inferredFactUnitPriceExclVat_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactUnitPriceExclVatOrBuilder(
+      int index) {
+    return inferredFactUnitPriceExclVat_.get(index);
+  }
+
+  public static final int INFERRED_FACT_UNIT_PRICE_INCL_VAT_FIELD_NUMBER = 30;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactUnitPriceInclVat_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactUnitPriceInclVatList() {
+    return inferredFactUnitPriceInclVat_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactUnitPriceInclVatOrBuilderList() {
+    return inferredFactUnitPriceInclVat_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactUnitPriceInclVatCount() {
+    return inferredFactUnitPriceInclVat_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactUnitPriceInclVat(int index) {
+    return inferredFactUnitPriceInclVat_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactUnitPriceInclVatOrBuilder(
+      int index) {
+    return inferredFactUnitPriceInclVat_.get(index);
+  }
+
+  public static final int INFERRED_FACT_TOTAL_DISCOUNT_FIELD_NUMBER = 31;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactTotalDiscount_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactTotalDiscountList() {
+    return inferredFactTotalDiscount_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactTotalDiscountOrBuilderList() {
+    return inferredFactTotalDiscount_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactTotalDiscountCount() {
+    return inferredFactTotalDiscount_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactTotalDiscount(int index) {
+    return inferredFactTotalDiscount_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactTotalDiscountOrBuilder(
+      int index) {
+    return inferredFactTotalDiscount_.get(index);
+  }
+
+  public static final int INFERRED_FACT_PERCENTAGE_DISCOUNT_FIELD_NUMBER = 32;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactPercentageDiscount_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactPercentageDiscountList() {
+    return inferredFactPercentageDiscount_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactPercentageDiscountOrBuilderList() {
+    return inferredFactPercentageDiscount_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactPercentageDiscountCount() {
+    return inferredFactPercentageDiscount_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactPercentageDiscount(int index) {
+    return inferredFactPercentageDiscount_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactPercentageDiscountOrBuilder(
+      int index) {
+    return inferredFactPercentageDiscount_.get(index);
+  }
+
+  public static final int INFERRED_FACT_TOTAL_VAT_FIELD_NUMBER = 33;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactTotalVat_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactTotalVatList() {
+    return inferredFactTotalVat_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactTotalVatOrBuilderList() {
+    return inferredFactTotalVat_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactTotalVatCount() {
+    return inferredFactTotalVat_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactTotalVat(int index) {
+    return inferredFactTotalVat_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactTotalVatOrBuilder(
+      int index) {
+    return inferredFactTotalVat_.get(index);
+  }
+
+  public static final int INFERRED_FACT_PERCENTAGE_VAT_FIELD_NUMBER = 34;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactPercentageVat_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactPercentageVatList() {
+    return inferredFactPercentageVat_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactPercentageVatOrBuilderList() {
+    return inferredFactPercentageVat_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactPercentageVatCount() {
+    return inferredFactPercentageVat_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactPercentageVat(int index) {
+    return inferredFactPercentageVat_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactPercentageVatOrBuilder(
+      int index) {
+    return inferredFactPercentageVat_.get(index);
+  }
+
+  public static final int INFERRED_FACT_TOTAL_EXCL_VAT_FIELD_NUMBER = 35;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactTotalExclVat_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactTotalExclVatList() {
+    return inferredFactTotalExclVat_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactTotalExclVatOrBuilderList() {
+    return inferredFactTotalExclVat_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactTotalExclVatCount() {
+    return inferredFactTotalExclVat_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactTotalExclVat(int index) {
+    return inferredFactTotalExclVat_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactTotalExclVatOrBuilder(
+      int index) {
+    return inferredFactTotalExclVat_.get(index);
+  }
+
+  public static final int INFERRED_FACT_TOTAL_INCL_VAT_FIELD_NUMBER = 36;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactTotalInclVat_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactTotalInclVatList() {
+    return inferredFactTotalInclVat_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactTotalInclVatOrBuilderList() {
+    return inferredFactTotalInclVat_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactTotalInclVatCount() {
+    return inferredFactTotalInclVat_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactTotalInclVat(int index) {
+    return inferredFactTotalInclVat_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactTotalInclVatOrBuilder(
+      int index) {
+    return inferredFactTotalInclVat_.get(index);
+  }
+
+  public static final int INFERRED_FACT_KIND_FIELD_NUMBER = 37;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactKind_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactKindList() {
+    return inferredFactKind_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactKindOrBuilderList() {
+    return inferredFactKind_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactKindCount() {
+    return inferredFactKind_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactKind(int index) {
+    return inferredFactKind_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactKindOrBuilder(
+      int index) {
+    return inferredFactKind_.get(index);
+  }
+
+  public static final int INFERRED_FACT_PASSED_ON_AT_COST_FIELD_NUMBER = 38;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactPassedOnAtCost_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactPassedOnAtCostList() {
+    return inferredFactPassedOnAtCost_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactPassedOnAtCostOrBuilderList() {
+    return inferredFactPassedOnAtCost_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactPassedOnAtCostCount() {
+    return inferredFactPassedOnAtCost_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactPassedOnAtCost(int index) {
+    return inferredFactPassedOnAtCost_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactPassedOnAtCostOrBuilder(
+      int index) {
+    return inferredFactPassedOnAtCost_.get(index);
+  }
+
+  public static final int INFERRED_FACT_GOODS_CATEGORY_FIELD_NUMBER = 39;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> inferredFactGoodsCategory_;
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactGoodsCategoryList() {
+    return inferredFactGoodsCategory_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getInferredFactGoodsCategoryOrBuilderList() {
+    return inferredFactGoodsCategory_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getInferredFactGoodsCategoryCount() {
+    return inferredFactGoodsCategory_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getInferredFactGoodsCategory(int index) {
+    return inferredFactGoodsCategory_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getInferredFactGoodsCategoryOrBuilder(
+      int index) {
+    return inferredFactGoodsCategory_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1226,6 +2196,66 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < kind_.size(); i++) {
       output.writeMessage(19, kind_.get(i));
+    }
+    for (int i = 0; i < goodsCategory_.size(); i++) {
+      output.writeMessage(20, goodsCategory_.get(i));
+    }
+    for (int i = 0; i < goodsCategoryReason_.size(); i++) {
+      output.writeMessage(21, goodsCategoryReason_.get(i));
+    }
+    for (int i = 0; i < passedOnAtCost_.size(); i++) {
+      output.writeMessage(22, passedOnAtCost_.get(i));
+    }
+    for (int i = 0; i < passedOnAtCostReason_.size(); i++) {
+      output.writeMessage(23, passedOnAtCostReason_.get(i));
+    }
+    for (int i = 0; i < inferredFactItemNumber_.size(); i++) {
+      output.writeMessage(24, inferredFactItemNumber_.get(i));
+    }
+    for (int i = 0; i < inferredFactCode_.size(); i++) {
+      output.writeMessage(25, inferredFactCode_.get(i));
+    }
+    for (int i = 0; i < inferredFactDescription_.size(); i++) {
+      output.writeMessage(26, inferredFactDescription_.get(i));
+    }
+    for (int i = 0; i < inferredFactQuantity_.size(); i++) {
+      output.writeMessage(27, inferredFactQuantity_.get(i));
+    }
+    for (int i = 0; i < inferredFactUnit_.size(); i++) {
+      output.writeMessage(28, inferredFactUnit_.get(i));
+    }
+    for (int i = 0; i < inferredFactUnitPriceExclVat_.size(); i++) {
+      output.writeMessage(29, inferredFactUnitPriceExclVat_.get(i));
+    }
+    for (int i = 0; i < inferredFactUnitPriceInclVat_.size(); i++) {
+      output.writeMessage(30, inferredFactUnitPriceInclVat_.get(i));
+    }
+    for (int i = 0; i < inferredFactTotalDiscount_.size(); i++) {
+      output.writeMessage(31, inferredFactTotalDiscount_.get(i));
+    }
+    for (int i = 0; i < inferredFactPercentageDiscount_.size(); i++) {
+      output.writeMessage(32, inferredFactPercentageDiscount_.get(i));
+    }
+    for (int i = 0; i < inferredFactTotalVat_.size(); i++) {
+      output.writeMessage(33, inferredFactTotalVat_.get(i));
+    }
+    for (int i = 0; i < inferredFactPercentageVat_.size(); i++) {
+      output.writeMessage(34, inferredFactPercentageVat_.get(i));
+    }
+    for (int i = 0; i < inferredFactTotalExclVat_.size(); i++) {
+      output.writeMessage(35, inferredFactTotalExclVat_.get(i));
+    }
+    for (int i = 0; i < inferredFactTotalInclVat_.size(); i++) {
+      output.writeMessage(36, inferredFactTotalInclVat_.get(i));
+    }
+    for (int i = 0; i < inferredFactKind_.size(); i++) {
+      output.writeMessage(37, inferredFactKind_.get(i));
+    }
+    for (int i = 0; i < inferredFactPassedOnAtCost_.size(); i++) {
+      output.writeMessage(38, inferredFactPassedOnAtCost_.get(i));
+    }
+    for (int i = 0; i < inferredFactGoodsCategory_.size(); i++) {
+      output.writeMessage(39, inferredFactGoodsCategory_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -1312,6 +2342,86 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(19, kind_.get(i));
     }
+    for (int i = 0; i < goodsCategory_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, goodsCategory_.get(i));
+    }
+    for (int i = 0; i < goodsCategoryReason_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, goodsCategoryReason_.get(i));
+    }
+    for (int i = 0; i < passedOnAtCost_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(22, passedOnAtCost_.get(i));
+    }
+    for (int i = 0; i < passedOnAtCostReason_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(23, passedOnAtCostReason_.get(i));
+    }
+    for (int i = 0; i < inferredFactItemNumber_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(24, inferredFactItemNumber_.get(i));
+    }
+    for (int i = 0; i < inferredFactCode_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(25, inferredFactCode_.get(i));
+    }
+    for (int i = 0; i < inferredFactDescription_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(26, inferredFactDescription_.get(i));
+    }
+    for (int i = 0; i < inferredFactQuantity_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(27, inferredFactQuantity_.get(i));
+    }
+    for (int i = 0; i < inferredFactUnit_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(28, inferredFactUnit_.get(i));
+    }
+    for (int i = 0; i < inferredFactUnitPriceExclVat_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(29, inferredFactUnitPriceExclVat_.get(i));
+    }
+    for (int i = 0; i < inferredFactUnitPriceInclVat_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(30, inferredFactUnitPriceInclVat_.get(i));
+    }
+    for (int i = 0; i < inferredFactTotalDiscount_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(31, inferredFactTotalDiscount_.get(i));
+    }
+    for (int i = 0; i < inferredFactPercentageDiscount_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(32, inferredFactPercentageDiscount_.get(i));
+    }
+    for (int i = 0; i < inferredFactTotalVat_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(33, inferredFactTotalVat_.get(i));
+    }
+    for (int i = 0; i < inferredFactPercentageVat_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(34, inferredFactPercentageVat_.get(i));
+    }
+    for (int i = 0; i < inferredFactTotalExclVat_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(35, inferredFactTotalExclVat_.get(i));
+    }
+    for (int i = 0; i < inferredFactTotalInclVat_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(36, inferredFactTotalInclVat_.get(i));
+    }
+    for (int i = 0; i < inferredFactKind_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(37, inferredFactKind_.get(i));
+    }
+    for (int i = 0; i < inferredFactPassedOnAtCost_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(38, inferredFactPassedOnAtCost_.get(i));
+    }
+    for (int i = 0; i < inferredFactGoodsCategory_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(39, inferredFactGoodsCategory_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1368,6 +2478,46 @@ private static final long serialVersionUID = 0L;
         .equals(other.getProductTypeList())) return false;
     if (!getKindList()
         .equals(other.getKindList())) return false;
+    if (!getGoodsCategoryList()
+        .equals(other.getGoodsCategoryList())) return false;
+    if (!getGoodsCategoryReasonList()
+        .equals(other.getGoodsCategoryReasonList())) return false;
+    if (!getPassedOnAtCostList()
+        .equals(other.getPassedOnAtCostList())) return false;
+    if (!getPassedOnAtCostReasonList()
+        .equals(other.getPassedOnAtCostReasonList())) return false;
+    if (!getInferredFactItemNumberList()
+        .equals(other.getInferredFactItemNumberList())) return false;
+    if (!getInferredFactCodeList()
+        .equals(other.getInferredFactCodeList())) return false;
+    if (!getInferredFactDescriptionList()
+        .equals(other.getInferredFactDescriptionList())) return false;
+    if (!getInferredFactQuantityList()
+        .equals(other.getInferredFactQuantityList())) return false;
+    if (!getInferredFactUnitList()
+        .equals(other.getInferredFactUnitList())) return false;
+    if (!getInferredFactUnitPriceExclVatList()
+        .equals(other.getInferredFactUnitPriceExclVatList())) return false;
+    if (!getInferredFactUnitPriceInclVatList()
+        .equals(other.getInferredFactUnitPriceInclVatList())) return false;
+    if (!getInferredFactTotalDiscountList()
+        .equals(other.getInferredFactTotalDiscountList())) return false;
+    if (!getInferredFactPercentageDiscountList()
+        .equals(other.getInferredFactPercentageDiscountList())) return false;
+    if (!getInferredFactTotalVatList()
+        .equals(other.getInferredFactTotalVatList())) return false;
+    if (!getInferredFactPercentageVatList()
+        .equals(other.getInferredFactPercentageVatList())) return false;
+    if (!getInferredFactTotalExclVatList()
+        .equals(other.getInferredFactTotalExclVatList())) return false;
+    if (!getInferredFactTotalInclVatList()
+        .equals(other.getInferredFactTotalInclVatList())) return false;
+    if (!getInferredFactKindList()
+        .equals(other.getInferredFactKindList())) return false;
+    if (!getInferredFactPassedOnAtCostList()
+        .equals(other.getInferredFactPassedOnAtCostList())) return false;
+    if (!getInferredFactGoodsCategoryList()
+        .equals(other.getInferredFactGoodsCategoryList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1452,6 +2602,86 @@ private static final long serialVersionUID = 0L;
     if (getKindCount() > 0) {
       hash = (37 * hash) + KIND_FIELD_NUMBER;
       hash = (53 * hash) + getKindList().hashCode();
+    }
+    if (getGoodsCategoryCount() > 0) {
+      hash = (37 * hash) + GOODS_CATEGORY_FIELD_NUMBER;
+      hash = (53 * hash) + getGoodsCategoryList().hashCode();
+    }
+    if (getGoodsCategoryReasonCount() > 0) {
+      hash = (37 * hash) + GOODS_CATEGORY_REASON_FIELD_NUMBER;
+      hash = (53 * hash) + getGoodsCategoryReasonList().hashCode();
+    }
+    if (getPassedOnAtCostCount() > 0) {
+      hash = (37 * hash) + PASSED_ON_AT_COST_FIELD_NUMBER;
+      hash = (53 * hash) + getPassedOnAtCostList().hashCode();
+    }
+    if (getPassedOnAtCostReasonCount() > 0) {
+      hash = (37 * hash) + PASSED_ON_AT_COST_REASON_FIELD_NUMBER;
+      hash = (53 * hash) + getPassedOnAtCostReasonList().hashCode();
+    }
+    if (getInferredFactItemNumberCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_ITEM_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactItemNumberList().hashCode();
+    }
+    if (getInferredFactCodeCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactCodeList().hashCode();
+    }
+    if (getInferredFactDescriptionCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactDescriptionList().hashCode();
+    }
+    if (getInferredFactQuantityCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_QUANTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactQuantityList().hashCode();
+    }
+    if (getInferredFactUnitCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_UNIT_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactUnitList().hashCode();
+    }
+    if (getInferredFactUnitPriceExclVatCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_UNIT_PRICE_EXCL_VAT_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactUnitPriceExclVatList().hashCode();
+    }
+    if (getInferredFactUnitPriceInclVatCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_UNIT_PRICE_INCL_VAT_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactUnitPriceInclVatList().hashCode();
+    }
+    if (getInferredFactTotalDiscountCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_TOTAL_DISCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactTotalDiscountList().hashCode();
+    }
+    if (getInferredFactPercentageDiscountCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_PERCENTAGE_DISCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactPercentageDiscountList().hashCode();
+    }
+    if (getInferredFactTotalVatCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_TOTAL_VAT_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactTotalVatList().hashCode();
+    }
+    if (getInferredFactPercentageVatCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_PERCENTAGE_VAT_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactPercentageVatList().hashCode();
+    }
+    if (getInferredFactTotalExclVatCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_TOTAL_EXCL_VAT_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactTotalExclVatList().hashCode();
+    }
+    if (getInferredFactTotalInclVatCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_TOTAL_INCL_VAT_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactTotalInclVatList().hashCode();
+    }
+    if (getInferredFactKindCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_KIND_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactKindList().hashCode();
+    }
+    if (getInferredFactPassedOnAtCostCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_PASSED_ON_AT_COST_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactPassedOnAtCostList().hashCode();
+    }
+    if (getInferredFactGoodsCategoryCount() > 0) {
+      hash = (37 * hash) + INFERRED_FACT_GOODS_CATEGORY_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredFactGoodsCategoryList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1601,12 +2831,33 @@ private static final long serialVersionUID = 0L;
         getModelMetadataFieldBuilder();
         getProductTypeFieldBuilder();
         getKindFieldBuilder();
+        getGoodsCategoryFieldBuilder();
+        getGoodsCategoryReasonFieldBuilder();
+        getPassedOnAtCostFieldBuilder();
+        getPassedOnAtCostReasonFieldBuilder();
+        getInferredFactItemNumberFieldBuilder();
+        getInferredFactCodeFieldBuilder();
+        getInferredFactDescriptionFieldBuilder();
+        getInferredFactQuantityFieldBuilder();
+        getInferredFactUnitFieldBuilder();
+        getInferredFactUnitPriceExclVatFieldBuilder();
+        getInferredFactUnitPriceInclVatFieldBuilder();
+        getInferredFactTotalDiscountFieldBuilder();
+        getInferredFactPercentageDiscountFieldBuilder();
+        getInferredFactTotalVatFieldBuilder();
+        getInferredFactPercentageVatFieldBuilder();
+        getInferredFactTotalExclVatFieldBuilder();
+        getInferredFactTotalInclVatFieldBuilder();
+        getInferredFactKindFieldBuilder();
+        getInferredFactPassedOnAtCostFieldBuilder();
+        getInferredFactGoodsCategoryFieldBuilder();
       }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      bitField1_ = 0;
       pageRef_ = 0;
       if (codeBuilder_ == null) {
         code_ = java.util.Collections.emptyList();
@@ -1732,6 +2983,146 @@ private static final long serialVersionUID = 0L;
         kindBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00040000);
+      if (goodsCategoryBuilder_ == null) {
+        goodsCategory_ = java.util.Collections.emptyList();
+      } else {
+        goodsCategory_ = null;
+        goodsCategoryBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00080000);
+      if (goodsCategoryReasonBuilder_ == null) {
+        goodsCategoryReason_ = java.util.Collections.emptyList();
+      } else {
+        goodsCategoryReason_ = null;
+        goodsCategoryReasonBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00100000);
+      if (passedOnAtCostBuilder_ == null) {
+        passedOnAtCost_ = java.util.Collections.emptyList();
+      } else {
+        passedOnAtCost_ = null;
+        passedOnAtCostBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00200000);
+      if (passedOnAtCostReasonBuilder_ == null) {
+        passedOnAtCostReason_ = java.util.Collections.emptyList();
+      } else {
+        passedOnAtCostReason_ = null;
+        passedOnAtCostReasonBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00400000);
+      if (inferredFactItemNumberBuilder_ == null) {
+        inferredFactItemNumber_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactItemNumber_ = null;
+        inferredFactItemNumberBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00800000);
+      if (inferredFactCodeBuilder_ == null) {
+        inferredFactCode_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactCode_ = null;
+        inferredFactCodeBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x01000000);
+      if (inferredFactDescriptionBuilder_ == null) {
+        inferredFactDescription_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactDescription_ = null;
+        inferredFactDescriptionBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x02000000);
+      if (inferredFactQuantityBuilder_ == null) {
+        inferredFactQuantity_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactQuantity_ = null;
+        inferredFactQuantityBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x04000000);
+      if (inferredFactUnitBuilder_ == null) {
+        inferredFactUnit_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactUnit_ = null;
+        inferredFactUnitBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x08000000);
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        inferredFactUnitPriceExclVat_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactUnitPriceExclVat_ = null;
+        inferredFactUnitPriceExclVatBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x10000000);
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        inferredFactUnitPriceInclVat_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactUnitPriceInclVat_ = null;
+        inferredFactUnitPriceInclVatBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x20000000);
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        inferredFactTotalDiscount_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactTotalDiscount_ = null;
+        inferredFactTotalDiscountBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x40000000);
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        inferredFactPercentageDiscount_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactPercentageDiscount_ = null;
+        inferredFactPercentageDiscountBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x80000000);
+      if (inferredFactTotalVatBuilder_ == null) {
+        inferredFactTotalVat_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactTotalVat_ = null;
+        inferredFactTotalVatBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000001);
+      if (inferredFactPercentageVatBuilder_ == null) {
+        inferredFactPercentageVat_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactPercentageVat_ = null;
+        inferredFactPercentageVatBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000002);
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        inferredFactTotalExclVat_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactTotalExclVat_ = null;
+        inferredFactTotalExclVatBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000004);
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        inferredFactTotalInclVat_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactTotalInclVat_ = null;
+        inferredFactTotalInclVatBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000008);
+      if (inferredFactKindBuilder_ == null) {
+        inferredFactKind_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactKind_ = null;
+        inferredFactKindBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000010);
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        inferredFactPassedOnAtCost_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactPassedOnAtCost_ = null;
+        inferredFactPassedOnAtCostBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000020);
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        inferredFactGoodsCategory_ = java.util.Collections.emptyList();
+      } else {
+        inferredFactGoodsCategory_ = null;
+        inferredFactGoodsCategoryBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000040);
       return this;
     }
 
@@ -1760,6 +3151,7 @@ private static final long serialVersionUID = 0L;
       ai.visma.ssn.type.PurchaseLine result = new ai.visma.ssn.type.PurchaseLine(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
       onBuilt();
       return result;
     }
@@ -1918,6 +3310,186 @@ private static final long serialVersionUID = 0L;
       } else {
         result.kind_ = kindBuilder_.build();
       }
+      if (goodsCategoryBuilder_ == null) {
+        if (((bitField0_ & 0x00080000) != 0)) {
+          goodsCategory_ = java.util.Collections.unmodifiableList(goodsCategory_);
+          bitField0_ = (bitField0_ & ~0x00080000);
+        }
+        result.goodsCategory_ = goodsCategory_;
+      } else {
+        result.goodsCategory_ = goodsCategoryBuilder_.build();
+      }
+      if (goodsCategoryReasonBuilder_ == null) {
+        if (((bitField0_ & 0x00100000) != 0)) {
+          goodsCategoryReason_ = java.util.Collections.unmodifiableList(goodsCategoryReason_);
+          bitField0_ = (bitField0_ & ~0x00100000);
+        }
+        result.goodsCategoryReason_ = goodsCategoryReason_;
+      } else {
+        result.goodsCategoryReason_ = goodsCategoryReasonBuilder_.build();
+      }
+      if (passedOnAtCostBuilder_ == null) {
+        if (((bitField0_ & 0x00200000) != 0)) {
+          passedOnAtCost_ = java.util.Collections.unmodifiableList(passedOnAtCost_);
+          bitField0_ = (bitField0_ & ~0x00200000);
+        }
+        result.passedOnAtCost_ = passedOnAtCost_;
+      } else {
+        result.passedOnAtCost_ = passedOnAtCostBuilder_.build();
+      }
+      if (passedOnAtCostReasonBuilder_ == null) {
+        if (((bitField0_ & 0x00400000) != 0)) {
+          passedOnAtCostReason_ = java.util.Collections.unmodifiableList(passedOnAtCostReason_);
+          bitField0_ = (bitField0_ & ~0x00400000);
+        }
+        result.passedOnAtCostReason_ = passedOnAtCostReason_;
+      } else {
+        result.passedOnAtCostReason_ = passedOnAtCostReasonBuilder_.build();
+      }
+      if (inferredFactItemNumberBuilder_ == null) {
+        if (((bitField0_ & 0x00800000) != 0)) {
+          inferredFactItemNumber_ = java.util.Collections.unmodifiableList(inferredFactItemNumber_);
+          bitField0_ = (bitField0_ & ~0x00800000);
+        }
+        result.inferredFactItemNumber_ = inferredFactItemNumber_;
+      } else {
+        result.inferredFactItemNumber_ = inferredFactItemNumberBuilder_.build();
+      }
+      if (inferredFactCodeBuilder_ == null) {
+        if (((bitField0_ & 0x01000000) != 0)) {
+          inferredFactCode_ = java.util.Collections.unmodifiableList(inferredFactCode_);
+          bitField0_ = (bitField0_ & ~0x01000000);
+        }
+        result.inferredFactCode_ = inferredFactCode_;
+      } else {
+        result.inferredFactCode_ = inferredFactCodeBuilder_.build();
+      }
+      if (inferredFactDescriptionBuilder_ == null) {
+        if (((bitField0_ & 0x02000000) != 0)) {
+          inferredFactDescription_ = java.util.Collections.unmodifiableList(inferredFactDescription_);
+          bitField0_ = (bitField0_ & ~0x02000000);
+        }
+        result.inferredFactDescription_ = inferredFactDescription_;
+      } else {
+        result.inferredFactDescription_ = inferredFactDescriptionBuilder_.build();
+      }
+      if (inferredFactQuantityBuilder_ == null) {
+        if (((bitField0_ & 0x04000000) != 0)) {
+          inferredFactQuantity_ = java.util.Collections.unmodifiableList(inferredFactQuantity_);
+          bitField0_ = (bitField0_ & ~0x04000000);
+        }
+        result.inferredFactQuantity_ = inferredFactQuantity_;
+      } else {
+        result.inferredFactQuantity_ = inferredFactQuantityBuilder_.build();
+      }
+      if (inferredFactUnitBuilder_ == null) {
+        if (((bitField0_ & 0x08000000) != 0)) {
+          inferredFactUnit_ = java.util.Collections.unmodifiableList(inferredFactUnit_);
+          bitField0_ = (bitField0_ & ~0x08000000);
+        }
+        result.inferredFactUnit_ = inferredFactUnit_;
+      } else {
+        result.inferredFactUnit_ = inferredFactUnitBuilder_.build();
+      }
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        if (((bitField0_ & 0x10000000) != 0)) {
+          inferredFactUnitPriceExclVat_ = java.util.Collections.unmodifiableList(inferredFactUnitPriceExclVat_);
+          bitField0_ = (bitField0_ & ~0x10000000);
+        }
+        result.inferredFactUnitPriceExclVat_ = inferredFactUnitPriceExclVat_;
+      } else {
+        result.inferredFactUnitPriceExclVat_ = inferredFactUnitPriceExclVatBuilder_.build();
+      }
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        if (((bitField0_ & 0x20000000) != 0)) {
+          inferredFactUnitPriceInclVat_ = java.util.Collections.unmodifiableList(inferredFactUnitPriceInclVat_);
+          bitField0_ = (bitField0_ & ~0x20000000);
+        }
+        result.inferredFactUnitPriceInclVat_ = inferredFactUnitPriceInclVat_;
+      } else {
+        result.inferredFactUnitPriceInclVat_ = inferredFactUnitPriceInclVatBuilder_.build();
+      }
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        if (((bitField0_ & 0x40000000) != 0)) {
+          inferredFactTotalDiscount_ = java.util.Collections.unmodifiableList(inferredFactTotalDiscount_);
+          bitField0_ = (bitField0_ & ~0x40000000);
+        }
+        result.inferredFactTotalDiscount_ = inferredFactTotalDiscount_;
+      } else {
+        result.inferredFactTotalDiscount_ = inferredFactTotalDiscountBuilder_.build();
+      }
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        if (((bitField0_ & 0x80000000) != 0)) {
+          inferredFactPercentageDiscount_ = java.util.Collections.unmodifiableList(inferredFactPercentageDiscount_);
+          bitField0_ = (bitField0_ & ~0x80000000);
+        }
+        result.inferredFactPercentageDiscount_ = inferredFactPercentageDiscount_;
+      } else {
+        result.inferredFactPercentageDiscount_ = inferredFactPercentageDiscountBuilder_.build();
+      }
+      if (inferredFactTotalVatBuilder_ == null) {
+        if (((bitField1_ & 0x00000001) != 0)) {
+          inferredFactTotalVat_ = java.util.Collections.unmodifiableList(inferredFactTotalVat_);
+          bitField1_ = (bitField1_ & ~0x00000001);
+        }
+        result.inferredFactTotalVat_ = inferredFactTotalVat_;
+      } else {
+        result.inferredFactTotalVat_ = inferredFactTotalVatBuilder_.build();
+      }
+      if (inferredFactPercentageVatBuilder_ == null) {
+        if (((bitField1_ & 0x00000002) != 0)) {
+          inferredFactPercentageVat_ = java.util.Collections.unmodifiableList(inferredFactPercentageVat_);
+          bitField1_ = (bitField1_ & ~0x00000002);
+        }
+        result.inferredFactPercentageVat_ = inferredFactPercentageVat_;
+      } else {
+        result.inferredFactPercentageVat_ = inferredFactPercentageVatBuilder_.build();
+      }
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        if (((bitField1_ & 0x00000004) != 0)) {
+          inferredFactTotalExclVat_ = java.util.Collections.unmodifiableList(inferredFactTotalExclVat_);
+          bitField1_ = (bitField1_ & ~0x00000004);
+        }
+        result.inferredFactTotalExclVat_ = inferredFactTotalExclVat_;
+      } else {
+        result.inferredFactTotalExclVat_ = inferredFactTotalExclVatBuilder_.build();
+      }
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        if (((bitField1_ & 0x00000008) != 0)) {
+          inferredFactTotalInclVat_ = java.util.Collections.unmodifiableList(inferredFactTotalInclVat_);
+          bitField1_ = (bitField1_ & ~0x00000008);
+        }
+        result.inferredFactTotalInclVat_ = inferredFactTotalInclVat_;
+      } else {
+        result.inferredFactTotalInclVat_ = inferredFactTotalInclVatBuilder_.build();
+      }
+      if (inferredFactKindBuilder_ == null) {
+        if (((bitField1_ & 0x00000010) != 0)) {
+          inferredFactKind_ = java.util.Collections.unmodifiableList(inferredFactKind_);
+          bitField1_ = (bitField1_ & ~0x00000010);
+        }
+        result.inferredFactKind_ = inferredFactKind_;
+      } else {
+        result.inferredFactKind_ = inferredFactKindBuilder_.build();
+      }
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        if (((bitField1_ & 0x00000020) != 0)) {
+          inferredFactPassedOnAtCost_ = java.util.Collections.unmodifiableList(inferredFactPassedOnAtCost_);
+          bitField1_ = (bitField1_ & ~0x00000020);
+        }
+        result.inferredFactPassedOnAtCost_ = inferredFactPassedOnAtCost_;
+      } else {
+        result.inferredFactPassedOnAtCost_ = inferredFactPassedOnAtCostBuilder_.build();
+      }
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        if (((bitField1_ & 0x00000040) != 0)) {
+          inferredFactGoodsCategory_ = java.util.Collections.unmodifiableList(inferredFactGoodsCategory_);
+          bitField1_ = (bitField1_ & ~0x00000040);
+        }
+        result.inferredFactGoodsCategory_ = inferredFactGoodsCategory_;
+      } else {
+        result.inferredFactGoodsCategory_ = inferredFactGoodsCategoryBuilder_.build();
+      }
     }
 
     private void buildPartial0(ai.visma.ssn.type.PurchaseLine result) {
@@ -1933,6 +3505,10 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000001;
       }
       result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartial1(ai.visma.ssn.type.PurchaseLine result) {
+      int from_bitField1_ = bitField1_;
     }
 
     @java.lang.Override
@@ -2395,6 +3971,526 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (goodsCategoryBuilder_ == null) {
+        if (!other.goodsCategory_.isEmpty()) {
+          if (goodsCategory_.isEmpty()) {
+            goodsCategory_ = other.goodsCategory_;
+            bitField0_ = (bitField0_ & ~0x00080000);
+          } else {
+            ensureGoodsCategoryIsMutable();
+            goodsCategory_.addAll(other.goodsCategory_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.goodsCategory_.isEmpty()) {
+          if (goodsCategoryBuilder_.isEmpty()) {
+            goodsCategoryBuilder_.dispose();
+            goodsCategoryBuilder_ = null;
+            goodsCategory_ = other.goodsCategory_;
+            bitField0_ = (bitField0_ & ~0x00080000);
+            goodsCategoryBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getGoodsCategoryFieldBuilder() : null;
+          } else {
+            goodsCategoryBuilder_.addAllMessages(other.goodsCategory_);
+          }
+        }
+      }
+      if (goodsCategoryReasonBuilder_ == null) {
+        if (!other.goodsCategoryReason_.isEmpty()) {
+          if (goodsCategoryReason_.isEmpty()) {
+            goodsCategoryReason_ = other.goodsCategoryReason_;
+            bitField0_ = (bitField0_ & ~0x00100000);
+          } else {
+            ensureGoodsCategoryReasonIsMutable();
+            goodsCategoryReason_.addAll(other.goodsCategoryReason_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.goodsCategoryReason_.isEmpty()) {
+          if (goodsCategoryReasonBuilder_.isEmpty()) {
+            goodsCategoryReasonBuilder_.dispose();
+            goodsCategoryReasonBuilder_ = null;
+            goodsCategoryReason_ = other.goodsCategoryReason_;
+            bitField0_ = (bitField0_ & ~0x00100000);
+            goodsCategoryReasonBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getGoodsCategoryReasonFieldBuilder() : null;
+          } else {
+            goodsCategoryReasonBuilder_.addAllMessages(other.goodsCategoryReason_);
+          }
+        }
+      }
+      if (passedOnAtCostBuilder_ == null) {
+        if (!other.passedOnAtCost_.isEmpty()) {
+          if (passedOnAtCost_.isEmpty()) {
+            passedOnAtCost_ = other.passedOnAtCost_;
+            bitField0_ = (bitField0_ & ~0x00200000);
+          } else {
+            ensurePassedOnAtCostIsMutable();
+            passedOnAtCost_.addAll(other.passedOnAtCost_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.passedOnAtCost_.isEmpty()) {
+          if (passedOnAtCostBuilder_.isEmpty()) {
+            passedOnAtCostBuilder_.dispose();
+            passedOnAtCostBuilder_ = null;
+            passedOnAtCost_ = other.passedOnAtCost_;
+            bitField0_ = (bitField0_ & ~0x00200000);
+            passedOnAtCostBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getPassedOnAtCostFieldBuilder() : null;
+          } else {
+            passedOnAtCostBuilder_.addAllMessages(other.passedOnAtCost_);
+          }
+        }
+      }
+      if (passedOnAtCostReasonBuilder_ == null) {
+        if (!other.passedOnAtCostReason_.isEmpty()) {
+          if (passedOnAtCostReason_.isEmpty()) {
+            passedOnAtCostReason_ = other.passedOnAtCostReason_;
+            bitField0_ = (bitField0_ & ~0x00400000);
+          } else {
+            ensurePassedOnAtCostReasonIsMutable();
+            passedOnAtCostReason_.addAll(other.passedOnAtCostReason_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.passedOnAtCostReason_.isEmpty()) {
+          if (passedOnAtCostReasonBuilder_.isEmpty()) {
+            passedOnAtCostReasonBuilder_.dispose();
+            passedOnAtCostReasonBuilder_ = null;
+            passedOnAtCostReason_ = other.passedOnAtCostReason_;
+            bitField0_ = (bitField0_ & ~0x00400000);
+            passedOnAtCostReasonBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getPassedOnAtCostReasonFieldBuilder() : null;
+          } else {
+            passedOnAtCostReasonBuilder_.addAllMessages(other.passedOnAtCostReason_);
+          }
+        }
+      }
+      if (inferredFactItemNumberBuilder_ == null) {
+        if (!other.inferredFactItemNumber_.isEmpty()) {
+          if (inferredFactItemNumber_.isEmpty()) {
+            inferredFactItemNumber_ = other.inferredFactItemNumber_;
+            bitField0_ = (bitField0_ & ~0x00800000);
+          } else {
+            ensureInferredFactItemNumberIsMutable();
+            inferredFactItemNumber_.addAll(other.inferredFactItemNumber_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactItemNumber_.isEmpty()) {
+          if (inferredFactItemNumberBuilder_.isEmpty()) {
+            inferredFactItemNumberBuilder_.dispose();
+            inferredFactItemNumberBuilder_ = null;
+            inferredFactItemNumber_ = other.inferredFactItemNumber_;
+            bitField0_ = (bitField0_ & ~0x00800000);
+            inferredFactItemNumberBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactItemNumberFieldBuilder() : null;
+          } else {
+            inferredFactItemNumberBuilder_.addAllMessages(other.inferredFactItemNumber_);
+          }
+        }
+      }
+      if (inferredFactCodeBuilder_ == null) {
+        if (!other.inferredFactCode_.isEmpty()) {
+          if (inferredFactCode_.isEmpty()) {
+            inferredFactCode_ = other.inferredFactCode_;
+            bitField0_ = (bitField0_ & ~0x01000000);
+          } else {
+            ensureInferredFactCodeIsMutable();
+            inferredFactCode_.addAll(other.inferredFactCode_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactCode_.isEmpty()) {
+          if (inferredFactCodeBuilder_.isEmpty()) {
+            inferredFactCodeBuilder_.dispose();
+            inferredFactCodeBuilder_ = null;
+            inferredFactCode_ = other.inferredFactCode_;
+            bitField0_ = (bitField0_ & ~0x01000000);
+            inferredFactCodeBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactCodeFieldBuilder() : null;
+          } else {
+            inferredFactCodeBuilder_.addAllMessages(other.inferredFactCode_);
+          }
+        }
+      }
+      if (inferredFactDescriptionBuilder_ == null) {
+        if (!other.inferredFactDescription_.isEmpty()) {
+          if (inferredFactDescription_.isEmpty()) {
+            inferredFactDescription_ = other.inferredFactDescription_;
+            bitField0_ = (bitField0_ & ~0x02000000);
+          } else {
+            ensureInferredFactDescriptionIsMutable();
+            inferredFactDescription_.addAll(other.inferredFactDescription_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactDescription_.isEmpty()) {
+          if (inferredFactDescriptionBuilder_.isEmpty()) {
+            inferredFactDescriptionBuilder_.dispose();
+            inferredFactDescriptionBuilder_ = null;
+            inferredFactDescription_ = other.inferredFactDescription_;
+            bitField0_ = (bitField0_ & ~0x02000000);
+            inferredFactDescriptionBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactDescriptionFieldBuilder() : null;
+          } else {
+            inferredFactDescriptionBuilder_.addAllMessages(other.inferredFactDescription_);
+          }
+        }
+      }
+      if (inferredFactQuantityBuilder_ == null) {
+        if (!other.inferredFactQuantity_.isEmpty()) {
+          if (inferredFactQuantity_.isEmpty()) {
+            inferredFactQuantity_ = other.inferredFactQuantity_;
+            bitField0_ = (bitField0_ & ~0x04000000);
+          } else {
+            ensureInferredFactQuantityIsMutable();
+            inferredFactQuantity_.addAll(other.inferredFactQuantity_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactQuantity_.isEmpty()) {
+          if (inferredFactQuantityBuilder_.isEmpty()) {
+            inferredFactQuantityBuilder_.dispose();
+            inferredFactQuantityBuilder_ = null;
+            inferredFactQuantity_ = other.inferredFactQuantity_;
+            bitField0_ = (bitField0_ & ~0x04000000);
+            inferredFactQuantityBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactQuantityFieldBuilder() : null;
+          } else {
+            inferredFactQuantityBuilder_.addAllMessages(other.inferredFactQuantity_);
+          }
+        }
+      }
+      if (inferredFactUnitBuilder_ == null) {
+        if (!other.inferredFactUnit_.isEmpty()) {
+          if (inferredFactUnit_.isEmpty()) {
+            inferredFactUnit_ = other.inferredFactUnit_;
+            bitField0_ = (bitField0_ & ~0x08000000);
+          } else {
+            ensureInferredFactUnitIsMutable();
+            inferredFactUnit_.addAll(other.inferredFactUnit_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactUnit_.isEmpty()) {
+          if (inferredFactUnitBuilder_.isEmpty()) {
+            inferredFactUnitBuilder_.dispose();
+            inferredFactUnitBuilder_ = null;
+            inferredFactUnit_ = other.inferredFactUnit_;
+            bitField0_ = (bitField0_ & ~0x08000000);
+            inferredFactUnitBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactUnitFieldBuilder() : null;
+          } else {
+            inferredFactUnitBuilder_.addAllMessages(other.inferredFactUnit_);
+          }
+        }
+      }
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        if (!other.inferredFactUnitPriceExclVat_.isEmpty()) {
+          if (inferredFactUnitPriceExclVat_.isEmpty()) {
+            inferredFactUnitPriceExclVat_ = other.inferredFactUnitPriceExclVat_;
+            bitField0_ = (bitField0_ & ~0x10000000);
+          } else {
+            ensureInferredFactUnitPriceExclVatIsMutable();
+            inferredFactUnitPriceExclVat_.addAll(other.inferredFactUnitPriceExclVat_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactUnitPriceExclVat_.isEmpty()) {
+          if (inferredFactUnitPriceExclVatBuilder_.isEmpty()) {
+            inferredFactUnitPriceExclVatBuilder_.dispose();
+            inferredFactUnitPriceExclVatBuilder_ = null;
+            inferredFactUnitPriceExclVat_ = other.inferredFactUnitPriceExclVat_;
+            bitField0_ = (bitField0_ & ~0x10000000);
+            inferredFactUnitPriceExclVatBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactUnitPriceExclVatFieldBuilder() : null;
+          } else {
+            inferredFactUnitPriceExclVatBuilder_.addAllMessages(other.inferredFactUnitPriceExclVat_);
+          }
+        }
+      }
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        if (!other.inferredFactUnitPriceInclVat_.isEmpty()) {
+          if (inferredFactUnitPriceInclVat_.isEmpty()) {
+            inferredFactUnitPriceInclVat_ = other.inferredFactUnitPriceInclVat_;
+            bitField0_ = (bitField0_ & ~0x20000000);
+          } else {
+            ensureInferredFactUnitPriceInclVatIsMutable();
+            inferredFactUnitPriceInclVat_.addAll(other.inferredFactUnitPriceInclVat_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactUnitPriceInclVat_.isEmpty()) {
+          if (inferredFactUnitPriceInclVatBuilder_.isEmpty()) {
+            inferredFactUnitPriceInclVatBuilder_.dispose();
+            inferredFactUnitPriceInclVatBuilder_ = null;
+            inferredFactUnitPriceInclVat_ = other.inferredFactUnitPriceInclVat_;
+            bitField0_ = (bitField0_ & ~0x20000000);
+            inferredFactUnitPriceInclVatBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactUnitPriceInclVatFieldBuilder() : null;
+          } else {
+            inferredFactUnitPriceInclVatBuilder_.addAllMessages(other.inferredFactUnitPriceInclVat_);
+          }
+        }
+      }
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        if (!other.inferredFactTotalDiscount_.isEmpty()) {
+          if (inferredFactTotalDiscount_.isEmpty()) {
+            inferredFactTotalDiscount_ = other.inferredFactTotalDiscount_;
+            bitField0_ = (bitField0_ & ~0x40000000);
+          } else {
+            ensureInferredFactTotalDiscountIsMutable();
+            inferredFactTotalDiscount_.addAll(other.inferredFactTotalDiscount_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactTotalDiscount_.isEmpty()) {
+          if (inferredFactTotalDiscountBuilder_.isEmpty()) {
+            inferredFactTotalDiscountBuilder_.dispose();
+            inferredFactTotalDiscountBuilder_ = null;
+            inferredFactTotalDiscount_ = other.inferredFactTotalDiscount_;
+            bitField0_ = (bitField0_ & ~0x40000000);
+            inferredFactTotalDiscountBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactTotalDiscountFieldBuilder() : null;
+          } else {
+            inferredFactTotalDiscountBuilder_.addAllMessages(other.inferredFactTotalDiscount_);
+          }
+        }
+      }
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        if (!other.inferredFactPercentageDiscount_.isEmpty()) {
+          if (inferredFactPercentageDiscount_.isEmpty()) {
+            inferredFactPercentageDiscount_ = other.inferredFactPercentageDiscount_;
+            bitField0_ = (bitField0_ & ~0x80000000);
+          } else {
+            ensureInferredFactPercentageDiscountIsMutable();
+            inferredFactPercentageDiscount_.addAll(other.inferredFactPercentageDiscount_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactPercentageDiscount_.isEmpty()) {
+          if (inferredFactPercentageDiscountBuilder_.isEmpty()) {
+            inferredFactPercentageDiscountBuilder_.dispose();
+            inferredFactPercentageDiscountBuilder_ = null;
+            inferredFactPercentageDiscount_ = other.inferredFactPercentageDiscount_;
+            bitField0_ = (bitField0_ & ~0x80000000);
+            inferredFactPercentageDiscountBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactPercentageDiscountFieldBuilder() : null;
+          } else {
+            inferredFactPercentageDiscountBuilder_.addAllMessages(other.inferredFactPercentageDiscount_);
+          }
+        }
+      }
+      if (inferredFactTotalVatBuilder_ == null) {
+        if (!other.inferredFactTotalVat_.isEmpty()) {
+          if (inferredFactTotalVat_.isEmpty()) {
+            inferredFactTotalVat_ = other.inferredFactTotalVat_;
+            bitField1_ = (bitField1_ & ~0x00000001);
+          } else {
+            ensureInferredFactTotalVatIsMutable();
+            inferredFactTotalVat_.addAll(other.inferredFactTotalVat_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactTotalVat_.isEmpty()) {
+          if (inferredFactTotalVatBuilder_.isEmpty()) {
+            inferredFactTotalVatBuilder_.dispose();
+            inferredFactTotalVatBuilder_ = null;
+            inferredFactTotalVat_ = other.inferredFactTotalVat_;
+            bitField1_ = (bitField1_ & ~0x00000001);
+            inferredFactTotalVatBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactTotalVatFieldBuilder() : null;
+          } else {
+            inferredFactTotalVatBuilder_.addAllMessages(other.inferredFactTotalVat_);
+          }
+        }
+      }
+      if (inferredFactPercentageVatBuilder_ == null) {
+        if (!other.inferredFactPercentageVat_.isEmpty()) {
+          if (inferredFactPercentageVat_.isEmpty()) {
+            inferredFactPercentageVat_ = other.inferredFactPercentageVat_;
+            bitField1_ = (bitField1_ & ~0x00000002);
+          } else {
+            ensureInferredFactPercentageVatIsMutable();
+            inferredFactPercentageVat_.addAll(other.inferredFactPercentageVat_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactPercentageVat_.isEmpty()) {
+          if (inferredFactPercentageVatBuilder_.isEmpty()) {
+            inferredFactPercentageVatBuilder_.dispose();
+            inferredFactPercentageVatBuilder_ = null;
+            inferredFactPercentageVat_ = other.inferredFactPercentageVat_;
+            bitField1_ = (bitField1_ & ~0x00000002);
+            inferredFactPercentageVatBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactPercentageVatFieldBuilder() : null;
+          } else {
+            inferredFactPercentageVatBuilder_.addAllMessages(other.inferredFactPercentageVat_);
+          }
+        }
+      }
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        if (!other.inferredFactTotalExclVat_.isEmpty()) {
+          if (inferredFactTotalExclVat_.isEmpty()) {
+            inferredFactTotalExclVat_ = other.inferredFactTotalExclVat_;
+            bitField1_ = (bitField1_ & ~0x00000004);
+          } else {
+            ensureInferredFactTotalExclVatIsMutable();
+            inferredFactTotalExclVat_.addAll(other.inferredFactTotalExclVat_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactTotalExclVat_.isEmpty()) {
+          if (inferredFactTotalExclVatBuilder_.isEmpty()) {
+            inferredFactTotalExclVatBuilder_.dispose();
+            inferredFactTotalExclVatBuilder_ = null;
+            inferredFactTotalExclVat_ = other.inferredFactTotalExclVat_;
+            bitField1_ = (bitField1_ & ~0x00000004);
+            inferredFactTotalExclVatBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactTotalExclVatFieldBuilder() : null;
+          } else {
+            inferredFactTotalExclVatBuilder_.addAllMessages(other.inferredFactTotalExclVat_);
+          }
+        }
+      }
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        if (!other.inferredFactTotalInclVat_.isEmpty()) {
+          if (inferredFactTotalInclVat_.isEmpty()) {
+            inferredFactTotalInclVat_ = other.inferredFactTotalInclVat_;
+            bitField1_ = (bitField1_ & ~0x00000008);
+          } else {
+            ensureInferredFactTotalInclVatIsMutable();
+            inferredFactTotalInclVat_.addAll(other.inferredFactTotalInclVat_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactTotalInclVat_.isEmpty()) {
+          if (inferredFactTotalInclVatBuilder_.isEmpty()) {
+            inferredFactTotalInclVatBuilder_.dispose();
+            inferredFactTotalInclVatBuilder_ = null;
+            inferredFactTotalInclVat_ = other.inferredFactTotalInclVat_;
+            bitField1_ = (bitField1_ & ~0x00000008);
+            inferredFactTotalInclVatBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactTotalInclVatFieldBuilder() : null;
+          } else {
+            inferredFactTotalInclVatBuilder_.addAllMessages(other.inferredFactTotalInclVat_);
+          }
+        }
+      }
+      if (inferredFactKindBuilder_ == null) {
+        if (!other.inferredFactKind_.isEmpty()) {
+          if (inferredFactKind_.isEmpty()) {
+            inferredFactKind_ = other.inferredFactKind_;
+            bitField1_ = (bitField1_ & ~0x00000010);
+          } else {
+            ensureInferredFactKindIsMutable();
+            inferredFactKind_.addAll(other.inferredFactKind_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactKind_.isEmpty()) {
+          if (inferredFactKindBuilder_.isEmpty()) {
+            inferredFactKindBuilder_.dispose();
+            inferredFactKindBuilder_ = null;
+            inferredFactKind_ = other.inferredFactKind_;
+            bitField1_ = (bitField1_ & ~0x00000010);
+            inferredFactKindBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactKindFieldBuilder() : null;
+          } else {
+            inferredFactKindBuilder_.addAllMessages(other.inferredFactKind_);
+          }
+        }
+      }
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        if (!other.inferredFactPassedOnAtCost_.isEmpty()) {
+          if (inferredFactPassedOnAtCost_.isEmpty()) {
+            inferredFactPassedOnAtCost_ = other.inferredFactPassedOnAtCost_;
+            bitField1_ = (bitField1_ & ~0x00000020);
+          } else {
+            ensureInferredFactPassedOnAtCostIsMutable();
+            inferredFactPassedOnAtCost_.addAll(other.inferredFactPassedOnAtCost_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactPassedOnAtCost_.isEmpty()) {
+          if (inferredFactPassedOnAtCostBuilder_.isEmpty()) {
+            inferredFactPassedOnAtCostBuilder_.dispose();
+            inferredFactPassedOnAtCostBuilder_ = null;
+            inferredFactPassedOnAtCost_ = other.inferredFactPassedOnAtCost_;
+            bitField1_ = (bitField1_ & ~0x00000020);
+            inferredFactPassedOnAtCostBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactPassedOnAtCostFieldBuilder() : null;
+          } else {
+            inferredFactPassedOnAtCostBuilder_.addAllMessages(other.inferredFactPassedOnAtCost_);
+          }
+        }
+      }
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        if (!other.inferredFactGoodsCategory_.isEmpty()) {
+          if (inferredFactGoodsCategory_.isEmpty()) {
+            inferredFactGoodsCategory_ = other.inferredFactGoodsCategory_;
+            bitField1_ = (bitField1_ & ~0x00000040);
+          } else {
+            ensureInferredFactGoodsCategoryIsMutable();
+            inferredFactGoodsCategory_.addAll(other.inferredFactGoodsCategory_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.inferredFactGoodsCategory_.isEmpty()) {
+          if (inferredFactGoodsCategoryBuilder_.isEmpty()) {
+            inferredFactGoodsCategoryBuilder_.dispose();
+            inferredFactGoodsCategoryBuilder_ = null;
+            inferredFactGoodsCategory_ = other.inferredFactGoodsCategory_;
+            bitField1_ = (bitField1_ & ~0x00000040);
+            inferredFactGoodsCategoryBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getInferredFactGoodsCategoryFieldBuilder() : null;
+          } else {
+            inferredFactGoodsCategoryBuilder_.addAllMessages(other.inferredFactGoodsCategory_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2654,6 +4750,266 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 154
+            case 162: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (goodsCategoryBuilder_ == null) {
+                ensureGoodsCategoryIsMutable();
+                goodsCategory_.add(m);
+              } else {
+                goodsCategoryBuilder_.addMessage(m);
+              }
+              break;
+            } // case 162
+            case 170: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (goodsCategoryReasonBuilder_ == null) {
+                ensureGoodsCategoryReasonIsMutable();
+                goodsCategoryReason_.add(m);
+              } else {
+                goodsCategoryReasonBuilder_.addMessage(m);
+              }
+              break;
+            } // case 170
+            case 178: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (passedOnAtCostBuilder_ == null) {
+                ensurePassedOnAtCostIsMutable();
+                passedOnAtCost_.add(m);
+              } else {
+                passedOnAtCostBuilder_.addMessage(m);
+              }
+              break;
+            } // case 178
+            case 186: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (passedOnAtCostReasonBuilder_ == null) {
+                ensurePassedOnAtCostReasonIsMutable();
+                passedOnAtCostReason_.add(m);
+              } else {
+                passedOnAtCostReasonBuilder_.addMessage(m);
+              }
+              break;
+            } // case 186
+            case 194: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactItemNumberBuilder_ == null) {
+                ensureInferredFactItemNumberIsMutable();
+                inferredFactItemNumber_.add(m);
+              } else {
+                inferredFactItemNumberBuilder_.addMessage(m);
+              }
+              break;
+            } // case 194
+            case 202: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactCodeBuilder_ == null) {
+                ensureInferredFactCodeIsMutable();
+                inferredFactCode_.add(m);
+              } else {
+                inferredFactCodeBuilder_.addMessage(m);
+              }
+              break;
+            } // case 202
+            case 210: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactDescriptionBuilder_ == null) {
+                ensureInferredFactDescriptionIsMutable();
+                inferredFactDescription_.add(m);
+              } else {
+                inferredFactDescriptionBuilder_.addMessage(m);
+              }
+              break;
+            } // case 210
+            case 218: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactQuantityBuilder_ == null) {
+                ensureInferredFactQuantityIsMutable();
+                inferredFactQuantity_.add(m);
+              } else {
+                inferredFactQuantityBuilder_.addMessage(m);
+              }
+              break;
+            } // case 218
+            case 226: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactUnitBuilder_ == null) {
+                ensureInferredFactUnitIsMutable();
+                inferredFactUnit_.add(m);
+              } else {
+                inferredFactUnitBuilder_.addMessage(m);
+              }
+              break;
+            } // case 226
+            case 234: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactUnitPriceExclVatBuilder_ == null) {
+                ensureInferredFactUnitPriceExclVatIsMutable();
+                inferredFactUnitPriceExclVat_.add(m);
+              } else {
+                inferredFactUnitPriceExclVatBuilder_.addMessage(m);
+              }
+              break;
+            } // case 234
+            case 242: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactUnitPriceInclVatBuilder_ == null) {
+                ensureInferredFactUnitPriceInclVatIsMutable();
+                inferredFactUnitPriceInclVat_.add(m);
+              } else {
+                inferredFactUnitPriceInclVatBuilder_.addMessage(m);
+              }
+              break;
+            } // case 242
+            case 250: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactTotalDiscountBuilder_ == null) {
+                ensureInferredFactTotalDiscountIsMutable();
+                inferredFactTotalDiscount_.add(m);
+              } else {
+                inferredFactTotalDiscountBuilder_.addMessage(m);
+              }
+              break;
+            } // case 250
+            case 258: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactPercentageDiscountBuilder_ == null) {
+                ensureInferredFactPercentageDiscountIsMutable();
+                inferredFactPercentageDiscount_.add(m);
+              } else {
+                inferredFactPercentageDiscountBuilder_.addMessage(m);
+              }
+              break;
+            } // case 258
+            case 266: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactTotalVatBuilder_ == null) {
+                ensureInferredFactTotalVatIsMutable();
+                inferredFactTotalVat_.add(m);
+              } else {
+                inferredFactTotalVatBuilder_.addMessage(m);
+              }
+              break;
+            } // case 266
+            case 274: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactPercentageVatBuilder_ == null) {
+                ensureInferredFactPercentageVatIsMutable();
+                inferredFactPercentageVat_.add(m);
+              } else {
+                inferredFactPercentageVatBuilder_.addMessage(m);
+              }
+              break;
+            } // case 274
+            case 282: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactTotalExclVatBuilder_ == null) {
+                ensureInferredFactTotalExclVatIsMutable();
+                inferredFactTotalExclVat_.add(m);
+              } else {
+                inferredFactTotalExclVatBuilder_.addMessage(m);
+              }
+              break;
+            } // case 282
+            case 290: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactTotalInclVatBuilder_ == null) {
+                ensureInferredFactTotalInclVatIsMutable();
+                inferredFactTotalInclVat_.add(m);
+              } else {
+                inferredFactTotalInclVatBuilder_.addMessage(m);
+              }
+              break;
+            } // case 290
+            case 298: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactKindBuilder_ == null) {
+                ensureInferredFactKindIsMutable();
+                inferredFactKind_.add(m);
+              } else {
+                inferredFactKindBuilder_.addMessage(m);
+              }
+              break;
+            } // case 298
+            case 306: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactPassedOnAtCostBuilder_ == null) {
+                ensureInferredFactPassedOnAtCostIsMutable();
+                inferredFactPassedOnAtCost_.add(m);
+              } else {
+                inferredFactPassedOnAtCostBuilder_.addMessage(m);
+              }
+              break;
+            } // case 306
+            case 314: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (inferredFactGoodsCategoryBuilder_ == null) {
+                ensureInferredFactGoodsCategoryIsMutable();
+                inferredFactGoodsCategory_.add(m);
+              } else {
+                inferredFactGoodsCategoryBuilder_.addMessage(m);
+              }
+              break;
+            } // case 314
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2670,6 +5026,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     private int bitField0_;
+    private int bitField1_;
 
     private int pageRef_ ;
     /**
@@ -8195,6 +10552,5274 @@ private static final long serialVersionUID = 0L;
         kind_ = null;
       }
       return kindBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> goodsCategory_ =
+      java.util.Collections.emptyList();
+    private void ensureGoodsCategoryIsMutable() {
+      if (!((bitField0_ & 0x00080000) != 0)) {
+        goodsCategory_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(goodsCategory_);
+        bitField0_ |= 0x00080000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> goodsCategoryBuilder_;
+
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getGoodsCategoryList() {
+      if (goodsCategoryBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(goodsCategory_);
+      } else {
+        return goodsCategoryBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getGoodsCategoryCount() {
+      if (goodsCategoryBuilder_ == null) {
+        return goodsCategory_.size();
+      } else {
+        return goodsCategoryBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getGoodsCategory(int index) {
+      if (goodsCategoryBuilder_ == null) {
+        return goodsCategory_.get(index);
+      } else {
+        return goodsCategoryBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setGoodsCategory(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (goodsCategoryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGoodsCategoryIsMutable();
+        goodsCategory_.set(index, value);
+        onChanged();
+      } else {
+        goodsCategoryBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setGoodsCategory(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (goodsCategoryBuilder_ == null) {
+        ensureGoodsCategoryIsMutable();
+        goodsCategory_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        goodsCategoryBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addGoodsCategory(ai.visma.ssn.type.Candidate value) {
+      if (goodsCategoryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGoodsCategoryIsMutable();
+        goodsCategory_.add(value);
+        onChanged();
+      } else {
+        goodsCategoryBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addGoodsCategory(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (goodsCategoryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGoodsCategoryIsMutable();
+        goodsCategory_.add(index, value);
+        onChanged();
+      } else {
+        goodsCategoryBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addGoodsCategory(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (goodsCategoryBuilder_ == null) {
+        ensureGoodsCategoryIsMutable();
+        goodsCategory_.add(builderForValue.build());
+        onChanged();
+      } else {
+        goodsCategoryBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addGoodsCategory(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (goodsCategoryBuilder_ == null) {
+        ensureGoodsCategoryIsMutable();
+        goodsCategory_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        goodsCategoryBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllGoodsCategory(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (goodsCategoryBuilder_ == null) {
+        ensureGoodsCategoryIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, goodsCategory_);
+        onChanged();
+      } else {
+        goodsCategoryBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearGoodsCategory() {
+      if (goodsCategoryBuilder_ == null) {
+        goodsCategory_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00080000);
+        onChanged();
+      } else {
+        goodsCategoryBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeGoodsCategory(int index) {
+      if (goodsCategoryBuilder_ == null) {
+        ensureGoodsCategoryIsMutable();
+        goodsCategory_.remove(index);
+        onChanged();
+      } else {
+        goodsCategoryBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getGoodsCategoryBuilder(
+        int index) {
+      return getGoodsCategoryFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getGoodsCategoryOrBuilder(
+        int index) {
+      if (goodsCategoryBuilder_ == null) {
+        return goodsCategory_.get(index);  } else {
+        return goodsCategoryBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getGoodsCategoryOrBuilderList() {
+      if (goodsCategoryBuilder_ != null) {
+        return goodsCategoryBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(goodsCategory_);
+      }
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addGoodsCategoryBuilder() {
+      return getGoodsCategoryFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addGoodsCategoryBuilder(
+        int index) {
+      return getGoodsCategoryFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Fields 20-39 are annotation labels only, never predicted. The NOT_SUPPORTED
+     * visibility keeps them out of the generated OpenAPI documentation.
+     *
+     * Goods category is the category of goods the line charges for.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category = 20 [json_name = "goodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getGoodsCategoryBuilderList() {
+      return getGoodsCategoryFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getGoodsCategoryFieldBuilder() {
+      if (goodsCategoryBuilder_ == null) {
+        goodsCategoryBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                goodsCategory_,
+                ((bitField0_ & 0x00080000) != 0),
+                getParentForChildren(),
+                isClean());
+        goodsCategory_ = null;
+      }
+      return goodsCategoryBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> goodsCategoryReason_ =
+      java.util.Collections.emptyList();
+    private void ensureGoodsCategoryReasonIsMutable() {
+      if (!((bitField0_ & 0x00100000) != 0)) {
+        goodsCategoryReason_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(goodsCategoryReason_);
+        bitField0_ |= 0x00100000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> goodsCategoryReasonBuilder_;
+
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getGoodsCategoryReasonList() {
+      if (goodsCategoryReasonBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(goodsCategoryReason_);
+      } else {
+        return goodsCategoryReasonBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getGoodsCategoryReasonCount() {
+      if (goodsCategoryReasonBuilder_ == null) {
+        return goodsCategoryReason_.size();
+      } else {
+        return goodsCategoryReasonBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getGoodsCategoryReason(int index) {
+      if (goodsCategoryReasonBuilder_ == null) {
+        return goodsCategoryReason_.get(index);
+      } else {
+        return goodsCategoryReasonBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setGoodsCategoryReason(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (goodsCategoryReasonBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGoodsCategoryReasonIsMutable();
+        goodsCategoryReason_.set(index, value);
+        onChanged();
+      } else {
+        goodsCategoryReasonBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setGoodsCategoryReason(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (goodsCategoryReasonBuilder_ == null) {
+        ensureGoodsCategoryReasonIsMutable();
+        goodsCategoryReason_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        goodsCategoryReasonBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addGoodsCategoryReason(ai.visma.ssn.type.Candidate value) {
+      if (goodsCategoryReasonBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGoodsCategoryReasonIsMutable();
+        goodsCategoryReason_.add(value);
+        onChanged();
+      } else {
+        goodsCategoryReasonBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addGoodsCategoryReason(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (goodsCategoryReasonBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGoodsCategoryReasonIsMutable();
+        goodsCategoryReason_.add(index, value);
+        onChanged();
+      } else {
+        goodsCategoryReasonBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addGoodsCategoryReason(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (goodsCategoryReasonBuilder_ == null) {
+        ensureGoodsCategoryReasonIsMutable();
+        goodsCategoryReason_.add(builderForValue.build());
+        onChanged();
+      } else {
+        goodsCategoryReasonBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addGoodsCategoryReason(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (goodsCategoryReasonBuilder_ == null) {
+        ensureGoodsCategoryReasonIsMutable();
+        goodsCategoryReason_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        goodsCategoryReasonBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllGoodsCategoryReason(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (goodsCategoryReasonBuilder_ == null) {
+        ensureGoodsCategoryReasonIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, goodsCategoryReason_);
+        onChanged();
+      } else {
+        goodsCategoryReasonBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearGoodsCategoryReason() {
+      if (goodsCategoryReasonBuilder_ == null) {
+        goodsCategoryReason_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00100000);
+        onChanged();
+      } else {
+        goodsCategoryReasonBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeGoodsCategoryReason(int index) {
+      if (goodsCategoryReasonBuilder_ == null) {
+        ensureGoodsCategoryReasonIsMutable();
+        goodsCategoryReason_.remove(index);
+        onChanged();
+      } else {
+        goodsCategoryReasonBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getGoodsCategoryReasonBuilder(
+        int index) {
+      return getGoodsCategoryReasonFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getGoodsCategoryReasonOrBuilder(
+        int index) {
+      if (goodsCategoryReasonBuilder_ == null) {
+        return goodsCategoryReason_.get(index);  } else {
+        return goodsCategoryReasonBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getGoodsCategoryReasonOrBuilderList() {
+      if (goodsCategoryReasonBuilder_ != null) {
+        return goodsCategoryReasonBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(goodsCategoryReason_);
+      }
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addGoodsCategoryReasonBuilder() {
+      return getGoodsCategoryReasonFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addGoodsCategoryReasonBuilder(
+        int index) {
+      return getGoodsCategoryReasonFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Goods category reason is why the goods category was chosen.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate goods_category_reason = 21 [json_name = "goodsCategoryReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getGoodsCategoryReasonBuilderList() {
+      return getGoodsCategoryReasonFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getGoodsCategoryReasonFieldBuilder() {
+      if (goodsCategoryReasonBuilder_ == null) {
+        goodsCategoryReasonBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                goodsCategoryReason_,
+                ((bitField0_ & 0x00100000) != 0),
+                getParentForChildren(),
+                isClean());
+        goodsCategoryReason_ = null;
+      }
+      return goodsCategoryReasonBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> passedOnAtCost_ =
+      java.util.Collections.emptyList();
+    private void ensurePassedOnAtCostIsMutable() {
+      if (!((bitField0_ & 0x00200000) != 0)) {
+        passedOnAtCost_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(passedOnAtCost_);
+        bitField0_ |= 0x00200000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> passedOnAtCostBuilder_;
+
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getPassedOnAtCostList() {
+      if (passedOnAtCostBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(passedOnAtCost_);
+      } else {
+        return passedOnAtCostBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getPassedOnAtCostCount() {
+      if (passedOnAtCostBuilder_ == null) {
+        return passedOnAtCost_.size();
+      } else {
+        return passedOnAtCostBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getPassedOnAtCost(int index) {
+      if (passedOnAtCostBuilder_ == null) {
+        return passedOnAtCost_.get(index);
+      } else {
+        return passedOnAtCostBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setPassedOnAtCost(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (passedOnAtCostBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePassedOnAtCostIsMutable();
+        passedOnAtCost_.set(index, value);
+        onChanged();
+      } else {
+        passedOnAtCostBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setPassedOnAtCost(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (passedOnAtCostBuilder_ == null) {
+        ensurePassedOnAtCostIsMutable();
+        passedOnAtCost_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        passedOnAtCostBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addPassedOnAtCost(ai.visma.ssn.type.Candidate value) {
+      if (passedOnAtCostBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePassedOnAtCostIsMutable();
+        passedOnAtCost_.add(value);
+        onChanged();
+      } else {
+        passedOnAtCostBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addPassedOnAtCost(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (passedOnAtCostBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePassedOnAtCostIsMutable();
+        passedOnAtCost_.add(index, value);
+        onChanged();
+      } else {
+        passedOnAtCostBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addPassedOnAtCost(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (passedOnAtCostBuilder_ == null) {
+        ensurePassedOnAtCostIsMutable();
+        passedOnAtCost_.add(builderForValue.build());
+        onChanged();
+      } else {
+        passedOnAtCostBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addPassedOnAtCost(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (passedOnAtCostBuilder_ == null) {
+        ensurePassedOnAtCostIsMutable();
+        passedOnAtCost_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        passedOnAtCostBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllPassedOnAtCost(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (passedOnAtCostBuilder_ == null) {
+        ensurePassedOnAtCostIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, passedOnAtCost_);
+        onChanged();
+      } else {
+        passedOnAtCostBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearPassedOnAtCost() {
+      if (passedOnAtCostBuilder_ == null) {
+        passedOnAtCost_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00200000);
+        onChanged();
+      } else {
+        passedOnAtCostBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removePassedOnAtCost(int index) {
+      if (passedOnAtCostBuilder_ == null) {
+        ensurePassedOnAtCostIsMutable();
+        passedOnAtCost_.remove(index);
+        onChanged();
+      } else {
+        passedOnAtCostBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getPassedOnAtCostBuilder(
+        int index) {
+      return getPassedOnAtCostFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getPassedOnAtCostOrBuilder(
+        int index) {
+      if (passedOnAtCostBuilder_ == null) {
+        return passedOnAtCost_.get(index);  } else {
+        return passedOnAtCostBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getPassedOnAtCostOrBuilderList() {
+      if (passedOnAtCostBuilder_ != null) {
+        return passedOnAtCostBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(passedOnAtCost_);
+      }
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addPassedOnAtCostBuilder() {
+      return getPassedOnAtCostFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addPassedOnAtCostBuilder(
+        int index) {
+      return getPassedOnAtCostFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Passed on at cost is "true" when the line is passed on at cost, absent
+     * otherwise.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost = 22 [json_name = "passedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getPassedOnAtCostBuilderList() {
+      return getPassedOnAtCostFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getPassedOnAtCostFieldBuilder() {
+      if (passedOnAtCostBuilder_ == null) {
+        passedOnAtCostBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                passedOnAtCost_,
+                ((bitField0_ & 0x00200000) != 0),
+                getParentForChildren(),
+                isClean());
+        passedOnAtCost_ = null;
+      }
+      return passedOnAtCostBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> passedOnAtCostReason_ =
+      java.util.Collections.emptyList();
+    private void ensurePassedOnAtCostReasonIsMutable() {
+      if (!((bitField0_ & 0x00400000) != 0)) {
+        passedOnAtCostReason_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(passedOnAtCostReason_);
+        bitField0_ |= 0x00400000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> passedOnAtCostReasonBuilder_;
+
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getPassedOnAtCostReasonList() {
+      if (passedOnAtCostReasonBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(passedOnAtCostReason_);
+      } else {
+        return passedOnAtCostReasonBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getPassedOnAtCostReasonCount() {
+      if (passedOnAtCostReasonBuilder_ == null) {
+        return passedOnAtCostReason_.size();
+      } else {
+        return passedOnAtCostReasonBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getPassedOnAtCostReason(int index) {
+      if (passedOnAtCostReasonBuilder_ == null) {
+        return passedOnAtCostReason_.get(index);
+      } else {
+        return passedOnAtCostReasonBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setPassedOnAtCostReason(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (passedOnAtCostReasonBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePassedOnAtCostReasonIsMutable();
+        passedOnAtCostReason_.set(index, value);
+        onChanged();
+      } else {
+        passedOnAtCostReasonBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setPassedOnAtCostReason(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (passedOnAtCostReasonBuilder_ == null) {
+        ensurePassedOnAtCostReasonIsMutable();
+        passedOnAtCostReason_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        passedOnAtCostReasonBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addPassedOnAtCostReason(ai.visma.ssn.type.Candidate value) {
+      if (passedOnAtCostReasonBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePassedOnAtCostReasonIsMutable();
+        passedOnAtCostReason_.add(value);
+        onChanged();
+      } else {
+        passedOnAtCostReasonBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addPassedOnAtCostReason(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (passedOnAtCostReasonBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePassedOnAtCostReasonIsMutable();
+        passedOnAtCostReason_.add(index, value);
+        onChanged();
+      } else {
+        passedOnAtCostReasonBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addPassedOnAtCostReason(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (passedOnAtCostReasonBuilder_ == null) {
+        ensurePassedOnAtCostReasonIsMutable();
+        passedOnAtCostReason_.add(builderForValue.build());
+        onChanged();
+      } else {
+        passedOnAtCostReasonBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addPassedOnAtCostReason(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (passedOnAtCostReasonBuilder_ == null) {
+        ensurePassedOnAtCostReasonIsMutable();
+        passedOnAtCostReason_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        passedOnAtCostReasonBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllPassedOnAtCostReason(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (passedOnAtCostReasonBuilder_ == null) {
+        ensurePassedOnAtCostReasonIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, passedOnAtCostReason_);
+        onChanged();
+      } else {
+        passedOnAtCostReasonBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearPassedOnAtCostReason() {
+      if (passedOnAtCostReasonBuilder_ == null) {
+        passedOnAtCostReason_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00400000);
+        onChanged();
+      } else {
+        passedOnAtCostReasonBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removePassedOnAtCostReason(int index) {
+      if (passedOnAtCostReasonBuilder_ == null) {
+        ensurePassedOnAtCostReasonIsMutable();
+        passedOnAtCostReason_.remove(index);
+        onChanged();
+      } else {
+        passedOnAtCostReasonBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getPassedOnAtCostReasonBuilder(
+        int index) {
+      return getPassedOnAtCostReasonFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getPassedOnAtCostReasonOrBuilder(
+        int index) {
+      if (passedOnAtCostReasonBuilder_ == null) {
+        return passedOnAtCostReason_.get(index);  } else {
+        return passedOnAtCostReasonBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getPassedOnAtCostReasonOrBuilderList() {
+      if (passedOnAtCostReasonBuilder_ != null) {
+        return passedOnAtCostReasonBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(passedOnAtCostReason_);
+      }
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addPassedOnAtCostReasonBuilder() {
+      return getPassedOnAtCostReasonFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addPassedOnAtCostReasonBuilder(
+        int index) {
+      return getPassedOnAtCostReasonFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Passed on at cost reason is why the line is passed on at cost.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate passed_on_at_cost_reason = 23 [json_name = "passedOnAtCostReason", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getPassedOnAtCostReasonBuilderList() {
+      return getPassedOnAtCostReasonFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getPassedOnAtCostReasonFieldBuilder() {
+      if (passedOnAtCostReasonBuilder_ == null) {
+        passedOnAtCostReasonBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                passedOnAtCostReason_,
+                ((bitField0_ & 0x00400000) != 0),
+                getParentForChildren(),
+                isClean());
+        passedOnAtCostReason_ = null;
+      }
+      return passedOnAtCostReasonBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactItemNumber_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactItemNumberIsMutable() {
+      if (!((bitField0_ & 0x00800000) != 0)) {
+        inferredFactItemNumber_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactItemNumber_);
+        bitField0_ |= 0x00800000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactItemNumberBuilder_;
+
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactItemNumberList() {
+      if (inferredFactItemNumberBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactItemNumber_);
+      } else {
+        return inferredFactItemNumberBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactItemNumberCount() {
+      if (inferredFactItemNumberBuilder_ == null) {
+        return inferredFactItemNumber_.size();
+      } else {
+        return inferredFactItemNumberBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactItemNumber(int index) {
+      if (inferredFactItemNumberBuilder_ == null) {
+        return inferredFactItemNumber_.get(index);
+      } else {
+        return inferredFactItemNumberBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactItemNumber(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactItemNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactItemNumberIsMutable();
+        inferredFactItemNumber_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactItemNumberBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactItemNumber(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactItemNumberBuilder_ == null) {
+        ensureInferredFactItemNumberIsMutable();
+        inferredFactItemNumber_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactItemNumberBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactItemNumber(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactItemNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactItemNumberIsMutable();
+        inferredFactItemNumber_.add(value);
+        onChanged();
+      } else {
+        inferredFactItemNumberBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactItemNumber(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactItemNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactItemNumberIsMutable();
+        inferredFactItemNumber_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactItemNumberBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactItemNumber(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactItemNumberBuilder_ == null) {
+        ensureInferredFactItemNumberIsMutable();
+        inferredFactItemNumber_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactItemNumberBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactItemNumber(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactItemNumberBuilder_ == null) {
+        ensureInferredFactItemNumberIsMutable();
+        inferredFactItemNumber_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactItemNumberBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactItemNumber(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactItemNumberBuilder_ == null) {
+        ensureInferredFactItemNumberIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactItemNumber_);
+        onChanged();
+      } else {
+        inferredFactItemNumberBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactItemNumber() {
+      if (inferredFactItemNumberBuilder_ == null) {
+        inferredFactItemNumber_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00800000);
+        onChanged();
+      } else {
+        inferredFactItemNumberBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactItemNumber(int index) {
+      if (inferredFactItemNumberBuilder_ == null) {
+        ensureInferredFactItemNumberIsMutable();
+        inferredFactItemNumber_.remove(index);
+        onChanged();
+      } else {
+        inferredFactItemNumberBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactItemNumberBuilder(
+        int index) {
+      return getInferredFactItemNumberFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactItemNumberOrBuilder(
+        int index) {
+      if (inferredFactItemNumberBuilder_ == null) {
+        return inferredFactItemNumber_.get(index);  } else {
+        return inferredFactItemNumberBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactItemNumberOrBuilderList() {
+      if (inferredFactItemNumberBuilder_ != null) {
+        return inferredFactItemNumberBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactItemNumber_);
+      }
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactItemNumberBuilder() {
+      return getInferredFactItemNumberFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactItemNumberBuilder(
+        int index) {
+      return getInferredFactItemNumberFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Inferred fact &lt;column&gt; is the annotator's fact on that column's cell: its
+     * evidence, or "" for a mark without evidence. Empty when the cell has no fact.
+     * Reason columns take no facts, so they have no inferred fact field.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate inferred_fact_item_number = 24 [json_name = "inferredFactItemNumber", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactItemNumberBuilderList() {
+      return getInferredFactItemNumberFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactItemNumberFieldBuilder() {
+      if (inferredFactItemNumberBuilder_ == null) {
+        inferredFactItemNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactItemNumber_,
+                ((bitField0_ & 0x00800000) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactItemNumber_ = null;
+      }
+      return inferredFactItemNumberBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactCode_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactCodeIsMutable() {
+      if (!((bitField0_ & 0x01000000) != 0)) {
+        inferredFactCode_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactCode_);
+        bitField0_ |= 0x01000000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactCodeBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactCodeList() {
+      if (inferredFactCodeBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactCode_);
+      } else {
+        return inferredFactCodeBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactCodeCount() {
+      if (inferredFactCodeBuilder_ == null) {
+        return inferredFactCode_.size();
+      } else {
+        return inferredFactCodeBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactCode(int index) {
+      if (inferredFactCodeBuilder_ == null) {
+        return inferredFactCode_.get(index);
+      } else {
+        return inferredFactCodeBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactCode(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactCodeIsMutable();
+        inferredFactCode_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactCodeBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactCode(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactCodeBuilder_ == null) {
+        ensureInferredFactCodeIsMutable();
+        inferredFactCode_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactCodeBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactCode(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactCodeIsMutable();
+        inferredFactCode_.add(value);
+        onChanged();
+      } else {
+        inferredFactCodeBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactCode(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactCodeIsMutable();
+        inferredFactCode_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactCodeBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactCode(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactCodeBuilder_ == null) {
+        ensureInferredFactCodeIsMutable();
+        inferredFactCode_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactCodeBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactCode(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactCodeBuilder_ == null) {
+        ensureInferredFactCodeIsMutable();
+        inferredFactCode_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactCodeBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactCode(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactCodeBuilder_ == null) {
+        ensureInferredFactCodeIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactCode_);
+        onChanged();
+      } else {
+        inferredFactCodeBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactCode() {
+      if (inferredFactCodeBuilder_ == null) {
+        inferredFactCode_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x01000000);
+        onChanged();
+      } else {
+        inferredFactCodeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactCode(int index) {
+      if (inferredFactCodeBuilder_ == null) {
+        ensureInferredFactCodeIsMutable();
+        inferredFactCode_.remove(index);
+        onChanged();
+      } else {
+        inferredFactCodeBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactCodeBuilder(
+        int index) {
+      return getInferredFactCodeFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactCodeOrBuilder(
+        int index) {
+      if (inferredFactCodeBuilder_ == null) {
+        return inferredFactCode_.get(index);  } else {
+        return inferredFactCodeBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactCodeOrBuilderList() {
+      if (inferredFactCodeBuilder_ != null) {
+        return inferredFactCodeBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactCode_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactCodeBuilder() {
+      return getInferredFactCodeFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactCodeBuilder(
+        int index) {
+      return getInferredFactCodeFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_code = 25 [json_name = "inferredFactCode", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactCodeBuilderList() {
+      return getInferredFactCodeFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactCodeFieldBuilder() {
+      if (inferredFactCodeBuilder_ == null) {
+        inferredFactCodeBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactCode_,
+                ((bitField0_ & 0x01000000) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactCode_ = null;
+      }
+      return inferredFactCodeBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactDescription_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactDescriptionIsMutable() {
+      if (!((bitField0_ & 0x02000000) != 0)) {
+        inferredFactDescription_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactDescription_);
+        bitField0_ |= 0x02000000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactDescriptionBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactDescriptionList() {
+      if (inferredFactDescriptionBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactDescription_);
+      } else {
+        return inferredFactDescriptionBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactDescriptionCount() {
+      if (inferredFactDescriptionBuilder_ == null) {
+        return inferredFactDescription_.size();
+      } else {
+        return inferredFactDescriptionBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactDescription(int index) {
+      if (inferredFactDescriptionBuilder_ == null) {
+        return inferredFactDescription_.get(index);
+      } else {
+        return inferredFactDescriptionBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactDescription(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactDescriptionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactDescriptionIsMutable();
+        inferredFactDescription_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactDescriptionBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactDescription(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactDescriptionBuilder_ == null) {
+        ensureInferredFactDescriptionIsMutable();
+        inferredFactDescription_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactDescriptionBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactDescription(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactDescriptionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactDescriptionIsMutable();
+        inferredFactDescription_.add(value);
+        onChanged();
+      } else {
+        inferredFactDescriptionBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactDescription(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactDescriptionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactDescriptionIsMutable();
+        inferredFactDescription_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactDescriptionBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactDescription(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactDescriptionBuilder_ == null) {
+        ensureInferredFactDescriptionIsMutable();
+        inferredFactDescription_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactDescriptionBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactDescription(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactDescriptionBuilder_ == null) {
+        ensureInferredFactDescriptionIsMutable();
+        inferredFactDescription_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactDescriptionBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactDescription(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactDescriptionBuilder_ == null) {
+        ensureInferredFactDescriptionIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactDescription_);
+        onChanged();
+      } else {
+        inferredFactDescriptionBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactDescription() {
+      if (inferredFactDescriptionBuilder_ == null) {
+        inferredFactDescription_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x02000000);
+        onChanged();
+      } else {
+        inferredFactDescriptionBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactDescription(int index) {
+      if (inferredFactDescriptionBuilder_ == null) {
+        ensureInferredFactDescriptionIsMutable();
+        inferredFactDescription_.remove(index);
+        onChanged();
+      } else {
+        inferredFactDescriptionBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactDescriptionBuilder(
+        int index) {
+      return getInferredFactDescriptionFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactDescriptionOrBuilder(
+        int index) {
+      if (inferredFactDescriptionBuilder_ == null) {
+        return inferredFactDescription_.get(index);  } else {
+        return inferredFactDescriptionBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactDescriptionOrBuilderList() {
+      if (inferredFactDescriptionBuilder_ != null) {
+        return inferredFactDescriptionBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactDescription_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactDescriptionBuilder() {
+      return getInferredFactDescriptionFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactDescriptionBuilder(
+        int index) {
+      return getInferredFactDescriptionFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_description = 26 [json_name = "inferredFactDescription", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactDescriptionBuilderList() {
+      return getInferredFactDescriptionFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactDescriptionFieldBuilder() {
+      if (inferredFactDescriptionBuilder_ == null) {
+        inferredFactDescriptionBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactDescription_,
+                ((bitField0_ & 0x02000000) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactDescription_ = null;
+      }
+      return inferredFactDescriptionBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactQuantity_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactQuantityIsMutable() {
+      if (!((bitField0_ & 0x04000000) != 0)) {
+        inferredFactQuantity_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactQuantity_);
+        bitField0_ |= 0x04000000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactQuantityBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactQuantityList() {
+      if (inferredFactQuantityBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactQuantity_);
+      } else {
+        return inferredFactQuantityBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactQuantityCount() {
+      if (inferredFactQuantityBuilder_ == null) {
+        return inferredFactQuantity_.size();
+      } else {
+        return inferredFactQuantityBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactQuantity(int index) {
+      if (inferredFactQuantityBuilder_ == null) {
+        return inferredFactQuantity_.get(index);
+      } else {
+        return inferredFactQuantityBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactQuantity(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactQuantityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactQuantityIsMutable();
+        inferredFactQuantity_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactQuantityBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactQuantity(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactQuantityBuilder_ == null) {
+        ensureInferredFactQuantityIsMutable();
+        inferredFactQuantity_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactQuantityBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactQuantity(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactQuantityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactQuantityIsMutable();
+        inferredFactQuantity_.add(value);
+        onChanged();
+      } else {
+        inferredFactQuantityBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactQuantity(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactQuantityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactQuantityIsMutable();
+        inferredFactQuantity_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactQuantityBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactQuantity(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactQuantityBuilder_ == null) {
+        ensureInferredFactQuantityIsMutable();
+        inferredFactQuantity_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactQuantityBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactQuantity(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactQuantityBuilder_ == null) {
+        ensureInferredFactQuantityIsMutable();
+        inferredFactQuantity_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactQuantityBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactQuantity(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactQuantityBuilder_ == null) {
+        ensureInferredFactQuantityIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactQuantity_);
+        onChanged();
+      } else {
+        inferredFactQuantityBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactQuantity() {
+      if (inferredFactQuantityBuilder_ == null) {
+        inferredFactQuantity_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x04000000);
+        onChanged();
+      } else {
+        inferredFactQuantityBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactQuantity(int index) {
+      if (inferredFactQuantityBuilder_ == null) {
+        ensureInferredFactQuantityIsMutable();
+        inferredFactQuantity_.remove(index);
+        onChanged();
+      } else {
+        inferredFactQuantityBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactQuantityBuilder(
+        int index) {
+      return getInferredFactQuantityFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactQuantityOrBuilder(
+        int index) {
+      if (inferredFactQuantityBuilder_ == null) {
+        return inferredFactQuantity_.get(index);  } else {
+        return inferredFactQuantityBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactQuantityOrBuilderList() {
+      if (inferredFactQuantityBuilder_ != null) {
+        return inferredFactQuantityBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactQuantity_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactQuantityBuilder() {
+      return getInferredFactQuantityFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactQuantityBuilder(
+        int index) {
+      return getInferredFactQuantityFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_quantity = 27 [json_name = "inferredFactQuantity", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactQuantityBuilderList() {
+      return getInferredFactQuantityFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactQuantityFieldBuilder() {
+      if (inferredFactQuantityBuilder_ == null) {
+        inferredFactQuantityBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactQuantity_,
+                ((bitField0_ & 0x04000000) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactQuantity_ = null;
+      }
+      return inferredFactQuantityBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactUnit_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactUnitIsMutable() {
+      if (!((bitField0_ & 0x08000000) != 0)) {
+        inferredFactUnit_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactUnit_);
+        bitField0_ |= 0x08000000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactUnitBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactUnitList() {
+      if (inferredFactUnitBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactUnit_);
+      } else {
+        return inferredFactUnitBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactUnitCount() {
+      if (inferredFactUnitBuilder_ == null) {
+        return inferredFactUnit_.size();
+      } else {
+        return inferredFactUnitBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactUnit(int index) {
+      if (inferredFactUnitBuilder_ == null) {
+        return inferredFactUnit_.get(index);
+      } else {
+        return inferredFactUnitBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactUnit(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactUnitBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactUnitIsMutable();
+        inferredFactUnit_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactUnitBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactUnit(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactUnitBuilder_ == null) {
+        ensureInferredFactUnitIsMutable();
+        inferredFactUnit_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactUnitBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactUnit(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactUnitBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactUnitIsMutable();
+        inferredFactUnit_.add(value);
+        onChanged();
+      } else {
+        inferredFactUnitBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactUnit(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactUnitBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactUnitIsMutable();
+        inferredFactUnit_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactUnitBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactUnit(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactUnitBuilder_ == null) {
+        ensureInferredFactUnitIsMutable();
+        inferredFactUnit_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactUnitBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactUnit(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactUnitBuilder_ == null) {
+        ensureInferredFactUnitIsMutable();
+        inferredFactUnit_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactUnitBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactUnit(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactUnitBuilder_ == null) {
+        ensureInferredFactUnitIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactUnit_);
+        onChanged();
+      } else {
+        inferredFactUnitBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactUnit() {
+      if (inferredFactUnitBuilder_ == null) {
+        inferredFactUnit_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x08000000);
+        onChanged();
+      } else {
+        inferredFactUnitBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactUnit(int index) {
+      if (inferredFactUnitBuilder_ == null) {
+        ensureInferredFactUnitIsMutable();
+        inferredFactUnit_.remove(index);
+        onChanged();
+      } else {
+        inferredFactUnitBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactUnitBuilder(
+        int index) {
+      return getInferredFactUnitFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactUnitOrBuilder(
+        int index) {
+      if (inferredFactUnitBuilder_ == null) {
+        return inferredFactUnit_.get(index);  } else {
+        return inferredFactUnitBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactUnitOrBuilderList() {
+      if (inferredFactUnitBuilder_ != null) {
+        return inferredFactUnitBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactUnit_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactUnitBuilder() {
+      return getInferredFactUnitFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactUnitBuilder(
+        int index) {
+      return getInferredFactUnitFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit = 28 [json_name = "inferredFactUnit", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactUnitBuilderList() {
+      return getInferredFactUnitFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactUnitFieldBuilder() {
+      if (inferredFactUnitBuilder_ == null) {
+        inferredFactUnitBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactUnit_,
+                ((bitField0_ & 0x08000000) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactUnit_ = null;
+      }
+      return inferredFactUnitBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactUnitPriceExclVat_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactUnitPriceExclVatIsMutable() {
+      if (!((bitField0_ & 0x10000000) != 0)) {
+        inferredFactUnitPriceExclVat_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactUnitPriceExclVat_);
+        bitField0_ |= 0x10000000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactUnitPriceExclVatBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactUnitPriceExclVatList() {
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactUnitPriceExclVat_);
+      } else {
+        return inferredFactUnitPriceExclVatBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactUnitPriceExclVatCount() {
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        return inferredFactUnitPriceExclVat_.size();
+      } else {
+        return inferredFactUnitPriceExclVatBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactUnitPriceExclVat(int index) {
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        return inferredFactUnitPriceExclVat_.get(index);
+      } else {
+        return inferredFactUnitPriceExclVatBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactUnitPriceExclVat(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactUnitPriceExclVatIsMutable();
+        inferredFactUnitPriceExclVat_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactUnitPriceExclVatBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactUnitPriceExclVat(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        ensureInferredFactUnitPriceExclVatIsMutable();
+        inferredFactUnitPriceExclVat_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactUnitPriceExclVatBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactUnitPriceExclVat(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactUnitPriceExclVatIsMutable();
+        inferredFactUnitPriceExclVat_.add(value);
+        onChanged();
+      } else {
+        inferredFactUnitPriceExclVatBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactUnitPriceExclVat(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactUnitPriceExclVatIsMutable();
+        inferredFactUnitPriceExclVat_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactUnitPriceExclVatBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactUnitPriceExclVat(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        ensureInferredFactUnitPriceExclVatIsMutable();
+        inferredFactUnitPriceExclVat_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactUnitPriceExclVatBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactUnitPriceExclVat(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        ensureInferredFactUnitPriceExclVatIsMutable();
+        inferredFactUnitPriceExclVat_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactUnitPriceExclVatBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactUnitPriceExclVat(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        ensureInferredFactUnitPriceExclVatIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactUnitPriceExclVat_);
+        onChanged();
+      } else {
+        inferredFactUnitPriceExclVatBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactUnitPriceExclVat() {
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        inferredFactUnitPriceExclVat_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x10000000);
+        onChanged();
+      } else {
+        inferredFactUnitPriceExclVatBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactUnitPriceExclVat(int index) {
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        ensureInferredFactUnitPriceExclVatIsMutable();
+        inferredFactUnitPriceExclVat_.remove(index);
+        onChanged();
+      } else {
+        inferredFactUnitPriceExclVatBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactUnitPriceExclVatBuilder(
+        int index) {
+      return getInferredFactUnitPriceExclVatFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactUnitPriceExclVatOrBuilder(
+        int index) {
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        return inferredFactUnitPriceExclVat_.get(index);  } else {
+        return inferredFactUnitPriceExclVatBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactUnitPriceExclVatOrBuilderList() {
+      if (inferredFactUnitPriceExclVatBuilder_ != null) {
+        return inferredFactUnitPriceExclVatBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactUnitPriceExclVat_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactUnitPriceExclVatBuilder() {
+      return getInferredFactUnitPriceExclVatFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactUnitPriceExclVatBuilder(
+        int index) {
+      return getInferredFactUnitPriceExclVatFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_excl_vat = 29 [json_name = "inferredFactUnitPriceExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactUnitPriceExclVatBuilderList() {
+      return getInferredFactUnitPriceExclVatFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactUnitPriceExclVatFieldBuilder() {
+      if (inferredFactUnitPriceExclVatBuilder_ == null) {
+        inferredFactUnitPriceExclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactUnitPriceExclVat_,
+                ((bitField0_ & 0x10000000) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactUnitPriceExclVat_ = null;
+      }
+      return inferredFactUnitPriceExclVatBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactUnitPriceInclVat_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactUnitPriceInclVatIsMutable() {
+      if (!((bitField0_ & 0x20000000) != 0)) {
+        inferredFactUnitPriceInclVat_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactUnitPriceInclVat_);
+        bitField0_ |= 0x20000000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactUnitPriceInclVatBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactUnitPriceInclVatList() {
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactUnitPriceInclVat_);
+      } else {
+        return inferredFactUnitPriceInclVatBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactUnitPriceInclVatCount() {
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        return inferredFactUnitPriceInclVat_.size();
+      } else {
+        return inferredFactUnitPriceInclVatBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactUnitPriceInclVat(int index) {
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        return inferredFactUnitPriceInclVat_.get(index);
+      } else {
+        return inferredFactUnitPriceInclVatBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactUnitPriceInclVat(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactUnitPriceInclVatIsMutable();
+        inferredFactUnitPriceInclVat_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactUnitPriceInclVatBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactUnitPriceInclVat(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        ensureInferredFactUnitPriceInclVatIsMutable();
+        inferredFactUnitPriceInclVat_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactUnitPriceInclVatBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactUnitPriceInclVat(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactUnitPriceInclVatIsMutable();
+        inferredFactUnitPriceInclVat_.add(value);
+        onChanged();
+      } else {
+        inferredFactUnitPriceInclVatBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactUnitPriceInclVat(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactUnitPriceInclVatIsMutable();
+        inferredFactUnitPriceInclVat_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactUnitPriceInclVatBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactUnitPriceInclVat(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        ensureInferredFactUnitPriceInclVatIsMutable();
+        inferredFactUnitPriceInclVat_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactUnitPriceInclVatBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactUnitPriceInclVat(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        ensureInferredFactUnitPriceInclVatIsMutable();
+        inferredFactUnitPriceInclVat_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactUnitPriceInclVatBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactUnitPriceInclVat(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        ensureInferredFactUnitPriceInclVatIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactUnitPriceInclVat_);
+        onChanged();
+      } else {
+        inferredFactUnitPriceInclVatBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactUnitPriceInclVat() {
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        inferredFactUnitPriceInclVat_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x20000000);
+        onChanged();
+      } else {
+        inferredFactUnitPriceInclVatBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactUnitPriceInclVat(int index) {
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        ensureInferredFactUnitPriceInclVatIsMutable();
+        inferredFactUnitPriceInclVat_.remove(index);
+        onChanged();
+      } else {
+        inferredFactUnitPriceInclVatBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactUnitPriceInclVatBuilder(
+        int index) {
+      return getInferredFactUnitPriceInclVatFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactUnitPriceInclVatOrBuilder(
+        int index) {
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        return inferredFactUnitPriceInclVat_.get(index);  } else {
+        return inferredFactUnitPriceInclVatBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactUnitPriceInclVatOrBuilderList() {
+      if (inferredFactUnitPriceInclVatBuilder_ != null) {
+        return inferredFactUnitPriceInclVatBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactUnitPriceInclVat_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactUnitPriceInclVatBuilder() {
+      return getInferredFactUnitPriceInclVatFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactUnitPriceInclVatBuilder(
+        int index) {
+      return getInferredFactUnitPriceInclVatFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_unit_price_incl_vat = 30 [json_name = "inferredFactUnitPriceInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactUnitPriceInclVatBuilderList() {
+      return getInferredFactUnitPriceInclVatFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactUnitPriceInclVatFieldBuilder() {
+      if (inferredFactUnitPriceInclVatBuilder_ == null) {
+        inferredFactUnitPriceInclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactUnitPriceInclVat_,
+                ((bitField0_ & 0x20000000) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactUnitPriceInclVat_ = null;
+      }
+      return inferredFactUnitPriceInclVatBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactTotalDiscount_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactTotalDiscountIsMutable() {
+      if (!((bitField0_ & 0x40000000) != 0)) {
+        inferredFactTotalDiscount_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactTotalDiscount_);
+        bitField0_ |= 0x40000000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactTotalDiscountBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactTotalDiscountList() {
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactTotalDiscount_);
+      } else {
+        return inferredFactTotalDiscountBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactTotalDiscountCount() {
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        return inferredFactTotalDiscount_.size();
+      } else {
+        return inferredFactTotalDiscountBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactTotalDiscount(int index) {
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        return inferredFactTotalDiscount_.get(index);
+      } else {
+        return inferredFactTotalDiscountBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactTotalDiscount(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactTotalDiscountIsMutable();
+        inferredFactTotalDiscount_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactTotalDiscountBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactTotalDiscount(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        ensureInferredFactTotalDiscountIsMutable();
+        inferredFactTotalDiscount_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactTotalDiscountBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalDiscount(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactTotalDiscountIsMutable();
+        inferredFactTotalDiscount_.add(value);
+        onChanged();
+      } else {
+        inferredFactTotalDiscountBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalDiscount(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactTotalDiscountIsMutable();
+        inferredFactTotalDiscount_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactTotalDiscountBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalDiscount(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        ensureInferredFactTotalDiscountIsMutable();
+        inferredFactTotalDiscount_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactTotalDiscountBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalDiscount(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        ensureInferredFactTotalDiscountIsMutable();
+        inferredFactTotalDiscount_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactTotalDiscountBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactTotalDiscount(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        ensureInferredFactTotalDiscountIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactTotalDiscount_);
+        onChanged();
+      } else {
+        inferredFactTotalDiscountBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactTotalDiscount() {
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        inferredFactTotalDiscount_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x40000000);
+        onChanged();
+      } else {
+        inferredFactTotalDiscountBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactTotalDiscount(int index) {
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        ensureInferredFactTotalDiscountIsMutable();
+        inferredFactTotalDiscount_.remove(index);
+        onChanged();
+      } else {
+        inferredFactTotalDiscountBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactTotalDiscountBuilder(
+        int index) {
+      return getInferredFactTotalDiscountFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactTotalDiscountOrBuilder(
+        int index) {
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        return inferredFactTotalDiscount_.get(index);  } else {
+        return inferredFactTotalDiscountBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactTotalDiscountOrBuilderList() {
+      if (inferredFactTotalDiscountBuilder_ != null) {
+        return inferredFactTotalDiscountBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactTotalDiscount_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactTotalDiscountBuilder() {
+      return getInferredFactTotalDiscountFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactTotalDiscountBuilder(
+        int index) {
+      return getInferredFactTotalDiscountFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_discount = 31 [json_name = "inferredFactTotalDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactTotalDiscountBuilderList() {
+      return getInferredFactTotalDiscountFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactTotalDiscountFieldBuilder() {
+      if (inferredFactTotalDiscountBuilder_ == null) {
+        inferredFactTotalDiscountBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactTotalDiscount_,
+                ((bitField0_ & 0x40000000) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactTotalDiscount_ = null;
+      }
+      return inferredFactTotalDiscountBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactPercentageDiscount_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactPercentageDiscountIsMutable() {
+      if (!((bitField0_ & 0x80000000) != 0)) {
+        inferredFactPercentageDiscount_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactPercentageDiscount_);
+        bitField0_ |= 0x80000000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactPercentageDiscountBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactPercentageDiscountList() {
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactPercentageDiscount_);
+      } else {
+        return inferredFactPercentageDiscountBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactPercentageDiscountCount() {
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        return inferredFactPercentageDiscount_.size();
+      } else {
+        return inferredFactPercentageDiscountBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactPercentageDiscount(int index) {
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        return inferredFactPercentageDiscount_.get(index);
+      } else {
+        return inferredFactPercentageDiscountBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactPercentageDiscount(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactPercentageDiscountIsMutable();
+        inferredFactPercentageDiscount_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactPercentageDiscountBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactPercentageDiscount(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        ensureInferredFactPercentageDiscountIsMutable();
+        inferredFactPercentageDiscount_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactPercentageDiscountBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactPercentageDiscount(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactPercentageDiscountIsMutable();
+        inferredFactPercentageDiscount_.add(value);
+        onChanged();
+      } else {
+        inferredFactPercentageDiscountBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactPercentageDiscount(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactPercentageDiscountIsMutable();
+        inferredFactPercentageDiscount_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactPercentageDiscountBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactPercentageDiscount(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        ensureInferredFactPercentageDiscountIsMutable();
+        inferredFactPercentageDiscount_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactPercentageDiscountBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactPercentageDiscount(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        ensureInferredFactPercentageDiscountIsMutable();
+        inferredFactPercentageDiscount_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactPercentageDiscountBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactPercentageDiscount(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        ensureInferredFactPercentageDiscountIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactPercentageDiscount_);
+        onChanged();
+      } else {
+        inferredFactPercentageDiscountBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactPercentageDiscount() {
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        inferredFactPercentageDiscount_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x80000000);
+        onChanged();
+      } else {
+        inferredFactPercentageDiscountBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactPercentageDiscount(int index) {
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        ensureInferredFactPercentageDiscountIsMutable();
+        inferredFactPercentageDiscount_.remove(index);
+        onChanged();
+      } else {
+        inferredFactPercentageDiscountBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactPercentageDiscountBuilder(
+        int index) {
+      return getInferredFactPercentageDiscountFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactPercentageDiscountOrBuilder(
+        int index) {
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        return inferredFactPercentageDiscount_.get(index);  } else {
+        return inferredFactPercentageDiscountBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactPercentageDiscountOrBuilderList() {
+      if (inferredFactPercentageDiscountBuilder_ != null) {
+        return inferredFactPercentageDiscountBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactPercentageDiscount_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactPercentageDiscountBuilder() {
+      return getInferredFactPercentageDiscountFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactPercentageDiscountBuilder(
+        int index) {
+      return getInferredFactPercentageDiscountFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_discount = 32 [json_name = "inferredFactPercentageDiscount", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactPercentageDiscountBuilderList() {
+      return getInferredFactPercentageDiscountFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactPercentageDiscountFieldBuilder() {
+      if (inferredFactPercentageDiscountBuilder_ == null) {
+        inferredFactPercentageDiscountBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactPercentageDiscount_,
+                ((bitField0_ & 0x80000000) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactPercentageDiscount_ = null;
+      }
+      return inferredFactPercentageDiscountBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactTotalVat_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactTotalVatIsMutable() {
+      if (!((bitField1_ & 0x00000001) != 0)) {
+        inferredFactTotalVat_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactTotalVat_);
+        bitField1_ |= 0x00000001;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactTotalVatBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactTotalVatList() {
+      if (inferredFactTotalVatBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactTotalVat_);
+      } else {
+        return inferredFactTotalVatBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactTotalVatCount() {
+      if (inferredFactTotalVatBuilder_ == null) {
+        return inferredFactTotalVat_.size();
+      } else {
+        return inferredFactTotalVatBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactTotalVat(int index) {
+      if (inferredFactTotalVatBuilder_ == null) {
+        return inferredFactTotalVat_.get(index);
+      } else {
+        return inferredFactTotalVatBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactTotalVat(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactTotalVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactTotalVatIsMutable();
+        inferredFactTotalVat_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactTotalVatBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactTotalVat(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactTotalVatBuilder_ == null) {
+        ensureInferredFactTotalVatIsMutable();
+        inferredFactTotalVat_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactTotalVatBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalVat(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactTotalVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactTotalVatIsMutable();
+        inferredFactTotalVat_.add(value);
+        onChanged();
+      } else {
+        inferredFactTotalVatBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalVat(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactTotalVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactTotalVatIsMutable();
+        inferredFactTotalVat_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactTotalVatBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalVat(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactTotalVatBuilder_ == null) {
+        ensureInferredFactTotalVatIsMutable();
+        inferredFactTotalVat_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactTotalVatBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalVat(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactTotalVatBuilder_ == null) {
+        ensureInferredFactTotalVatIsMutable();
+        inferredFactTotalVat_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactTotalVatBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactTotalVat(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactTotalVatBuilder_ == null) {
+        ensureInferredFactTotalVatIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactTotalVat_);
+        onChanged();
+      } else {
+        inferredFactTotalVatBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactTotalVat() {
+      if (inferredFactTotalVatBuilder_ == null) {
+        inferredFactTotalVat_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000001);
+        onChanged();
+      } else {
+        inferredFactTotalVatBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactTotalVat(int index) {
+      if (inferredFactTotalVatBuilder_ == null) {
+        ensureInferredFactTotalVatIsMutable();
+        inferredFactTotalVat_.remove(index);
+        onChanged();
+      } else {
+        inferredFactTotalVatBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactTotalVatBuilder(
+        int index) {
+      return getInferredFactTotalVatFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactTotalVatOrBuilder(
+        int index) {
+      if (inferredFactTotalVatBuilder_ == null) {
+        return inferredFactTotalVat_.get(index);  } else {
+        return inferredFactTotalVatBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactTotalVatOrBuilderList() {
+      if (inferredFactTotalVatBuilder_ != null) {
+        return inferredFactTotalVatBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactTotalVat_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactTotalVatBuilder() {
+      return getInferredFactTotalVatFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactTotalVatBuilder(
+        int index) {
+      return getInferredFactTotalVatFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_vat = 33 [json_name = "inferredFactTotalVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactTotalVatBuilderList() {
+      return getInferredFactTotalVatFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactTotalVatFieldBuilder() {
+      if (inferredFactTotalVatBuilder_ == null) {
+        inferredFactTotalVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactTotalVat_,
+                ((bitField1_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactTotalVat_ = null;
+      }
+      return inferredFactTotalVatBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactPercentageVat_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactPercentageVatIsMutable() {
+      if (!((bitField1_ & 0x00000002) != 0)) {
+        inferredFactPercentageVat_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactPercentageVat_);
+        bitField1_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactPercentageVatBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactPercentageVatList() {
+      if (inferredFactPercentageVatBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactPercentageVat_);
+      } else {
+        return inferredFactPercentageVatBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactPercentageVatCount() {
+      if (inferredFactPercentageVatBuilder_ == null) {
+        return inferredFactPercentageVat_.size();
+      } else {
+        return inferredFactPercentageVatBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactPercentageVat(int index) {
+      if (inferredFactPercentageVatBuilder_ == null) {
+        return inferredFactPercentageVat_.get(index);
+      } else {
+        return inferredFactPercentageVatBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactPercentageVat(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactPercentageVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactPercentageVatIsMutable();
+        inferredFactPercentageVat_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactPercentageVatBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactPercentageVat(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactPercentageVatBuilder_ == null) {
+        ensureInferredFactPercentageVatIsMutable();
+        inferredFactPercentageVat_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactPercentageVatBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactPercentageVat(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactPercentageVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactPercentageVatIsMutable();
+        inferredFactPercentageVat_.add(value);
+        onChanged();
+      } else {
+        inferredFactPercentageVatBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactPercentageVat(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactPercentageVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactPercentageVatIsMutable();
+        inferredFactPercentageVat_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactPercentageVatBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactPercentageVat(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactPercentageVatBuilder_ == null) {
+        ensureInferredFactPercentageVatIsMutable();
+        inferredFactPercentageVat_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactPercentageVatBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactPercentageVat(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactPercentageVatBuilder_ == null) {
+        ensureInferredFactPercentageVatIsMutable();
+        inferredFactPercentageVat_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactPercentageVatBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactPercentageVat(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactPercentageVatBuilder_ == null) {
+        ensureInferredFactPercentageVatIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactPercentageVat_);
+        onChanged();
+      } else {
+        inferredFactPercentageVatBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactPercentageVat() {
+      if (inferredFactPercentageVatBuilder_ == null) {
+        inferredFactPercentageVat_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000002);
+        onChanged();
+      } else {
+        inferredFactPercentageVatBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactPercentageVat(int index) {
+      if (inferredFactPercentageVatBuilder_ == null) {
+        ensureInferredFactPercentageVatIsMutable();
+        inferredFactPercentageVat_.remove(index);
+        onChanged();
+      } else {
+        inferredFactPercentageVatBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactPercentageVatBuilder(
+        int index) {
+      return getInferredFactPercentageVatFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactPercentageVatOrBuilder(
+        int index) {
+      if (inferredFactPercentageVatBuilder_ == null) {
+        return inferredFactPercentageVat_.get(index);  } else {
+        return inferredFactPercentageVatBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactPercentageVatOrBuilderList() {
+      if (inferredFactPercentageVatBuilder_ != null) {
+        return inferredFactPercentageVatBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactPercentageVat_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactPercentageVatBuilder() {
+      return getInferredFactPercentageVatFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactPercentageVatBuilder(
+        int index) {
+      return getInferredFactPercentageVatFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_percentage_vat = 34 [json_name = "inferredFactPercentageVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactPercentageVatBuilderList() {
+      return getInferredFactPercentageVatFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactPercentageVatFieldBuilder() {
+      if (inferredFactPercentageVatBuilder_ == null) {
+        inferredFactPercentageVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactPercentageVat_,
+                ((bitField1_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactPercentageVat_ = null;
+      }
+      return inferredFactPercentageVatBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactTotalExclVat_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactTotalExclVatIsMutable() {
+      if (!((bitField1_ & 0x00000004) != 0)) {
+        inferredFactTotalExclVat_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactTotalExclVat_);
+        bitField1_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactTotalExclVatBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactTotalExclVatList() {
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactTotalExclVat_);
+      } else {
+        return inferredFactTotalExclVatBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactTotalExclVatCount() {
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        return inferredFactTotalExclVat_.size();
+      } else {
+        return inferredFactTotalExclVatBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactTotalExclVat(int index) {
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        return inferredFactTotalExclVat_.get(index);
+      } else {
+        return inferredFactTotalExclVatBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactTotalExclVat(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactTotalExclVatIsMutable();
+        inferredFactTotalExclVat_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactTotalExclVatBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactTotalExclVat(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        ensureInferredFactTotalExclVatIsMutable();
+        inferredFactTotalExclVat_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactTotalExclVatBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalExclVat(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactTotalExclVatIsMutable();
+        inferredFactTotalExclVat_.add(value);
+        onChanged();
+      } else {
+        inferredFactTotalExclVatBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalExclVat(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactTotalExclVatIsMutable();
+        inferredFactTotalExclVat_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactTotalExclVatBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalExclVat(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        ensureInferredFactTotalExclVatIsMutable();
+        inferredFactTotalExclVat_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactTotalExclVatBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalExclVat(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        ensureInferredFactTotalExclVatIsMutable();
+        inferredFactTotalExclVat_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactTotalExclVatBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactTotalExclVat(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        ensureInferredFactTotalExclVatIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactTotalExclVat_);
+        onChanged();
+      } else {
+        inferredFactTotalExclVatBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactTotalExclVat() {
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        inferredFactTotalExclVat_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000004);
+        onChanged();
+      } else {
+        inferredFactTotalExclVatBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactTotalExclVat(int index) {
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        ensureInferredFactTotalExclVatIsMutable();
+        inferredFactTotalExclVat_.remove(index);
+        onChanged();
+      } else {
+        inferredFactTotalExclVatBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactTotalExclVatBuilder(
+        int index) {
+      return getInferredFactTotalExclVatFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactTotalExclVatOrBuilder(
+        int index) {
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        return inferredFactTotalExclVat_.get(index);  } else {
+        return inferredFactTotalExclVatBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactTotalExclVatOrBuilderList() {
+      if (inferredFactTotalExclVatBuilder_ != null) {
+        return inferredFactTotalExclVatBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactTotalExclVat_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactTotalExclVatBuilder() {
+      return getInferredFactTotalExclVatFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactTotalExclVatBuilder(
+        int index) {
+      return getInferredFactTotalExclVatFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_excl_vat = 35 [json_name = "inferredFactTotalExclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactTotalExclVatBuilderList() {
+      return getInferredFactTotalExclVatFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactTotalExclVatFieldBuilder() {
+      if (inferredFactTotalExclVatBuilder_ == null) {
+        inferredFactTotalExclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactTotalExclVat_,
+                ((bitField1_ & 0x00000004) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactTotalExclVat_ = null;
+      }
+      return inferredFactTotalExclVatBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactTotalInclVat_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactTotalInclVatIsMutable() {
+      if (!((bitField1_ & 0x00000008) != 0)) {
+        inferredFactTotalInclVat_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactTotalInclVat_);
+        bitField1_ |= 0x00000008;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactTotalInclVatBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactTotalInclVatList() {
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactTotalInclVat_);
+      } else {
+        return inferredFactTotalInclVatBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactTotalInclVatCount() {
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        return inferredFactTotalInclVat_.size();
+      } else {
+        return inferredFactTotalInclVatBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactTotalInclVat(int index) {
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        return inferredFactTotalInclVat_.get(index);
+      } else {
+        return inferredFactTotalInclVatBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactTotalInclVat(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactTotalInclVatIsMutable();
+        inferredFactTotalInclVat_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactTotalInclVatBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactTotalInclVat(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        ensureInferredFactTotalInclVatIsMutable();
+        inferredFactTotalInclVat_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactTotalInclVatBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalInclVat(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactTotalInclVatIsMutable();
+        inferredFactTotalInclVat_.add(value);
+        onChanged();
+      } else {
+        inferredFactTotalInclVatBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalInclVat(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactTotalInclVatIsMutable();
+        inferredFactTotalInclVat_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactTotalInclVatBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalInclVat(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        ensureInferredFactTotalInclVatIsMutable();
+        inferredFactTotalInclVat_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactTotalInclVatBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactTotalInclVat(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        ensureInferredFactTotalInclVatIsMutable();
+        inferredFactTotalInclVat_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactTotalInclVatBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactTotalInclVat(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        ensureInferredFactTotalInclVatIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactTotalInclVat_);
+        onChanged();
+      } else {
+        inferredFactTotalInclVatBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactTotalInclVat() {
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        inferredFactTotalInclVat_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000008);
+        onChanged();
+      } else {
+        inferredFactTotalInclVatBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactTotalInclVat(int index) {
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        ensureInferredFactTotalInclVatIsMutable();
+        inferredFactTotalInclVat_.remove(index);
+        onChanged();
+      } else {
+        inferredFactTotalInclVatBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactTotalInclVatBuilder(
+        int index) {
+      return getInferredFactTotalInclVatFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactTotalInclVatOrBuilder(
+        int index) {
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        return inferredFactTotalInclVat_.get(index);  } else {
+        return inferredFactTotalInclVatBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactTotalInclVatOrBuilderList() {
+      if (inferredFactTotalInclVatBuilder_ != null) {
+        return inferredFactTotalInclVatBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactTotalInclVat_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactTotalInclVatBuilder() {
+      return getInferredFactTotalInclVatFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactTotalInclVatBuilder(
+        int index) {
+      return getInferredFactTotalInclVatFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_total_incl_vat = 36 [json_name = "inferredFactTotalInclVat", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactTotalInclVatBuilderList() {
+      return getInferredFactTotalInclVatFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactTotalInclVatFieldBuilder() {
+      if (inferredFactTotalInclVatBuilder_ == null) {
+        inferredFactTotalInclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactTotalInclVat_,
+                ((bitField1_ & 0x00000008) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactTotalInclVat_ = null;
+      }
+      return inferredFactTotalInclVatBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactKind_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactKindIsMutable() {
+      if (!((bitField1_ & 0x00000010) != 0)) {
+        inferredFactKind_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactKind_);
+        bitField1_ |= 0x00000010;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactKindBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactKindList() {
+      if (inferredFactKindBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactKind_);
+      } else {
+        return inferredFactKindBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactKindCount() {
+      if (inferredFactKindBuilder_ == null) {
+        return inferredFactKind_.size();
+      } else {
+        return inferredFactKindBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactKind(int index) {
+      if (inferredFactKindBuilder_ == null) {
+        return inferredFactKind_.get(index);
+      } else {
+        return inferredFactKindBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactKind(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactKindBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactKindIsMutable();
+        inferredFactKind_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactKindBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactKind(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactKindBuilder_ == null) {
+        ensureInferredFactKindIsMutable();
+        inferredFactKind_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactKindBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactKind(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactKindBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactKindIsMutable();
+        inferredFactKind_.add(value);
+        onChanged();
+      } else {
+        inferredFactKindBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactKind(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactKindBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactKindIsMutable();
+        inferredFactKind_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactKindBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactKind(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactKindBuilder_ == null) {
+        ensureInferredFactKindIsMutable();
+        inferredFactKind_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactKindBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactKind(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactKindBuilder_ == null) {
+        ensureInferredFactKindIsMutable();
+        inferredFactKind_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactKindBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactKind(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactKindBuilder_ == null) {
+        ensureInferredFactKindIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactKind_);
+        onChanged();
+      } else {
+        inferredFactKindBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactKind() {
+      if (inferredFactKindBuilder_ == null) {
+        inferredFactKind_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000010);
+        onChanged();
+      } else {
+        inferredFactKindBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactKind(int index) {
+      if (inferredFactKindBuilder_ == null) {
+        ensureInferredFactKindIsMutable();
+        inferredFactKind_.remove(index);
+        onChanged();
+      } else {
+        inferredFactKindBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactKindBuilder(
+        int index) {
+      return getInferredFactKindFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactKindOrBuilder(
+        int index) {
+      if (inferredFactKindBuilder_ == null) {
+        return inferredFactKind_.get(index);  } else {
+        return inferredFactKindBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactKindOrBuilderList() {
+      if (inferredFactKindBuilder_ != null) {
+        return inferredFactKindBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactKind_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactKindBuilder() {
+      return getInferredFactKindFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactKindBuilder(
+        int index) {
+      return getInferredFactKindFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_kind = 37 [json_name = "inferredFactKind", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactKindBuilderList() {
+      return getInferredFactKindFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactKindFieldBuilder() {
+      if (inferredFactKindBuilder_ == null) {
+        inferredFactKindBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactKind_,
+                ((bitField1_ & 0x00000010) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactKind_ = null;
+      }
+      return inferredFactKindBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactPassedOnAtCost_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactPassedOnAtCostIsMutable() {
+      if (!((bitField1_ & 0x00000020) != 0)) {
+        inferredFactPassedOnAtCost_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactPassedOnAtCost_);
+        bitField1_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactPassedOnAtCostBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactPassedOnAtCostList() {
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactPassedOnAtCost_);
+      } else {
+        return inferredFactPassedOnAtCostBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactPassedOnAtCostCount() {
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        return inferredFactPassedOnAtCost_.size();
+      } else {
+        return inferredFactPassedOnAtCostBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactPassedOnAtCost(int index) {
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        return inferredFactPassedOnAtCost_.get(index);
+      } else {
+        return inferredFactPassedOnAtCostBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactPassedOnAtCost(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactPassedOnAtCostIsMutable();
+        inferredFactPassedOnAtCost_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactPassedOnAtCostBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactPassedOnAtCost(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        ensureInferredFactPassedOnAtCostIsMutable();
+        inferredFactPassedOnAtCost_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactPassedOnAtCostBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactPassedOnAtCost(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactPassedOnAtCostIsMutable();
+        inferredFactPassedOnAtCost_.add(value);
+        onChanged();
+      } else {
+        inferredFactPassedOnAtCostBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactPassedOnAtCost(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactPassedOnAtCostIsMutable();
+        inferredFactPassedOnAtCost_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactPassedOnAtCostBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactPassedOnAtCost(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        ensureInferredFactPassedOnAtCostIsMutable();
+        inferredFactPassedOnAtCost_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactPassedOnAtCostBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactPassedOnAtCost(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        ensureInferredFactPassedOnAtCostIsMutable();
+        inferredFactPassedOnAtCost_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactPassedOnAtCostBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactPassedOnAtCost(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        ensureInferredFactPassedOnAtCostIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactPassedOnAtCost_);
+        onChanged();
+      } else {
+        inferredFactPassedOnAtCostBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactPassedOnAtCost() {
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        inferredFactPassedOnAtCost_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000020);
+        onChanged();
+      } else {
+        inferredFactPassedOnAtCostBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactPassedOnAtCost(int index) {
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        ensureInferredFactPassedOnAtCostIsMutable();
+        inferredFactPassedOnAtCost_.remove(index);
+        onChanged();
+      } else {
+        inferredFactPassedOnAtCostBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactPassedOnAtCostBuilder(
+        int index) {
+      return getInferredFactPassedOnAtCostFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactPassedOnAtCostOrBuilder(
+        int index) {
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        return inferredFactPassedOnAtCost_.get(index);  } else {
+        return inferredFactPassedOnAtCostBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactPassedOnAtCostOrBuilderList() {
+      if (inferredFactPassedOnAtCostBuilder_ != null) {
+        return inferredFactPassedOnAtCostBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactPassedOnAtCost_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactPassedOnAtCostBuilder() {
+      return getInferredFactPassedOnAtCostFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactPassedOnAtCostBuilder(
+        int index) {
+      return getInferredFactPassedOnAtCostFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_passed_on_at_cost = 38 [json_name = "inferredFactPassedOnAtCost", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactPassedOnAtCostBuilderList() {
+      return getInferredFactPassedOnAtCostFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactPassedOnAtCostFieldBuilder() {
+      if (inferredFactPassedOnAtCostBuilder_ == null) {
+        inferredFactPassedOnAtCostBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactPassedOnAtCost_,
+                ((bitField1_ & 0x00000020) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactPassedOnAtCost_ = null;
+      }
+      return inferredFactPassedOnAtCostBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> inferredFactGoodsCategory_ =
+      java.util.Collections.emptyList();
+    private void ensureInferredFactGoodsCategoryIsMutable() {
+      if (!((bitField1_ & 0x00000040) != 0)) {
+        inferredFactGoodsCategory_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inferredFactGoodsCategory_);
+        bitField1_ |= 0x00000040;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inferredFactGoodsCategoryBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getInferredFactGoodsCategoryList() {
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inferredFactGoodsCategory_);
+      } else {
+        return inferredFactGoodsCategoryBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public int getInferredFactGoodsCategoryCount() {
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        return inferredFactGoodsCategory_.size();
+      } else {
+        return inferredFactGoodsCategoryBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate getInferredFactGoodsCategory(int index) {
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        return inferredFactGoodsCategory_.get(index);
+      } else {
+        return inferredFactGoodsCategoryBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactGoodsCategory(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactGoodsCategoryIsMutable();
+        inferredFactGoodsCategory_.set(index, value);
+        onChanged();
+      } else {
+        inferredFactGoodsCategoryBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder setInferredFactGoodsCategory(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        ensureInferredFactGoodsCategoryIsMutable();
+        inferredFactGoodsCategory_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactGoodsCategoryBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactGoodsCategory(ai.visma.ssn.type.Candidate value) {
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactGoodsCategoryIsMutable();
+        inferredFactGoodsCategory_.add(value);
+        onChanged();
+      } else {
+        inferredFactGoodsCategoryBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactGoodsCategory(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInferredFactGoodsCategoryIsMutable();
+        inferredFactGoodsCategory_.add(index, value);
+        onChanged();
+      } else {
+        inferredFactGoodsCategoryBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactGoodsCategory(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        ensureInferredFactGoodsCategoryIsMutable();
+        inferredFactGoodsCategory_.add(builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactGoodsCategoryBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addInferredFactGoodsCategory(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        ensureInferredFactGoodsCategoryIsMutable();
+        inferredFactGoodsCategory_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        inferredFactGoodsCategoryBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder addAllInferredFactGoodsCategory(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        ensureInferredFactGoodsCategoryIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, inferredFactGoodsCategory_);
+        onChanged();
+      } else {
+        inferredFactGoodsCategoryBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder clearInferredFactGoodsCategory() {
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        inferredFactGoodsCategory_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000040);
+        onChanged();
+      } else {
+        inferredFactGoodsCategoryBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public Builder removeInferredFactGoodsCategory(int index) {
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        ensureInferredFactGoodsCategoryIsMutable();
+        inferredFactGoodsCategory_.remove(index);
+        onChanged();
+      } else {
+        inferredFactGoodsCategoryBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getInferredFactGoodsCategoryBuilder(
+        int index) {
+      return getInferredFactGoodsCategoryFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getInferredFactGoodsCategoryOrBuilder(
+        int index) {
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        return inferredFactGoodsCategory_.get(index);  } else {
+        return inferredFactGoodsCategoryBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getInferredFactGoodsCategoryOrBuilderList() {
+      if (inferredFactGoodsCategoryBuilder_ != null) {
+        return inferredFactGoodsCategoryBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(inferredFactGoodsCategory_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactGoodsCategoryBuilder() {
+      return getInferredFactGoodsCategoryFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addInferredFactGoodsCategoryBuilder(
+        int index) {
+      return getInferredFactGoodsCategoryFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate inferred_fact_goods_category = 39 [json_name = "inferredFactGoodsCategory", (.google.api.field_visibility) = { ... }</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getInferredFactGoodsCategoryBuilderList() {
+      return getInferredFactGoodsCategoryFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getInferredFactGoodsCategoryFieldBuilder() {
+      if (inferredFactGoodsCategoryBuilder_ == null) {
+        inferredFactGoodsCategoryBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                inferredFactGoodsCategory_,
+                ((bitField1_ & 0x00000040) != 0),
+                getParentForChildren(),
+                isClean());
+        inferredFactGoodsCategory_ = null;
+      }
+      return inferredFactGoodsCategoryBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.type.PurchaseLine)

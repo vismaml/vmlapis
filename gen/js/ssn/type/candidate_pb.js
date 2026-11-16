@@ -23,6 +23,8 @@ var global =
 
 var asgt_v2_product_service_pb = require('../../asgt/v2/product_service_pb.js');
 goog.object.extend(proto, asgt_v2_product_service_pb);
+var google_api_visibility_pb = require('../../google/api/visibility_pb.js');
+goog.object.extend(proto, google_api_visibility_pb);
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 goog.object.extend(proto, google_protobuf_wrappers_pb);
 var ssn_type_geometry_pb = require('../../ssn/type/geometry_pb.js');
@@ -2819,7 +2821,7 @@ proto.ssn.type.DocumentMetadata.prototype.setPageCount = function(value) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.type.PurchaseLine.repeatedFields_ = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19];
+proto.ssn.type.PurchaseLine.repeatedFields_ = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39];
 
 
 
@@ -2887,6 +2889,46 @@ proto.ssn.type.PurchaseLine.toObject = function(includeInstance, msg) {
     productTypeList: jspb.Message.toObjectList(msg.getProductTypeList(),
     asgt_v2_product_service_pb.ProductTypeCandidate.toObject, includeInstance),
     kindList: jspb.Message.toObjectList(msg.getKindList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    goodsCategoryList: jspb.Message.toObjectList(msg.getGoodsCategoryList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    goodsCategoryReasonList: jspb.Message.toObjectList(msg.getGoodsCategoryReasonList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    passedOnAtCostList: jspb.Message.toObjectList(msg.getPassedOnAtCostList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    passedOnAtCostReasonList: jspb.Message.toObjectList(msg.getPassedOnAtCostReasonList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactItemNumberList: jspb.Message.toObjectList(msg.getInferredFactItemNumberList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactCodeList: jspb.Message.toObjectList(msg.getInferredFactCodeList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactDescriptionList: jspb.Message.toObjectList(msg.getInferredFactDescriptionList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactQuantityList: jspb.Message.toObjectList(msg.getInferredFactQuantityList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactUnitList: jspb.Message.toObjectList(msg.getInferredFactUnitList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactUnitPriceExclVatList: jspb.Message.toObjectList(msg.getInferredFactUnitPriceExclVatList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactUnitPriceInclVatList: jspb.Message.toObjectList(msg.getInferredFactUnitPriceInclVatList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactTotalDiscountList: jspb.Message.toObjectList(msg.getInferredFactTotalDiscountList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactPercentageDiscountList: jspb.Message.toObjectList(msg.getInferredFactPercentageDiscountList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactTotalVatList: jspb.Message.toObjectList(msg.getInferredFactTotalVatList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactPercentageVatList: jspb.Message.toObjectList(msg.getInferredFactPercentageVatList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactTotalExclVatList: jspb.Message.toObjectList(msg.getInferredFactTotalExclVatList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactTotalInclVatList: jspb.Message.toObjectList(msg.getInferredFactTotalInclVatList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactKindList: jspb.Message.toObjectList(msg.getInferredFactKindList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactPassedOnAtCostList: jspb.Message.toObjectList(msg.getInferredFactPassedOnAtCostList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    inferredFactGoodsCategoryList: jspb.Message.toObjectList(msg.getInferredFactGoodsCategoryList(),
     proto.ssn.type.Candidate.toObject, includeInstance)
   };
 
@@ -3017,6 +3059,106 @@ proto.ssn.type.PurchaseLine.deserializeBinaryFromReader = function(msg, reader) 
       var value = new proto.ssn.type.Candidate;
       reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
       msg.addKind(value);
+      break;
+    case 20:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addGoodsCategory(value);
+      break;
+    case 21:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addGoodsCategoryReason(value);
+      break;
+    case 22:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addPassedOnAtCost(value);
+      break;
+    case 23:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addPassedOnAtCostReason(value);
+      break;
+    case 24:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactItemNumber(value);
+      break;
+    case 25:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactCode(value);
+      break;
+    case 26:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactDescription(value);
+      break;
+    case 27:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactQuantity(value);
+      break;
+    case 28:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactUnit(value);
+      break;
+    case 29:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactUnitPriceExclVat(value);
+      break;
+    case 30:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactUnitPriceInclVat(value);
+      break;
+    case 31:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactTotalDiscount(value);
+      break;
+    case 32:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactPercentageDiscount(value);
+      break;
+    case 33:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactTotalVat(value);
+      break;
+    case 34:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactPercentageVat(value);
+      break;
+    case 35:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactTotalExclVat(value);
+      break;
+    case 36:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactTotalInclVat(value);
+      break;
+    case 37:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactKind(value);
+      break;
+    case 38:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactPassedOnAtCost(value);
+      break;
+    case 39:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addInferredFactGoodsCategory(value);
       break;
     default:
       reader.skipField();
@@ -3194,6 +3336,166 @@ proto.ssn.type.PurchaseLine.serializeBinaryToWriter = function(message, writer) 
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       19,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getGoodsCategoryList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      20,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getGoodsCategoryReasonList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      21,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getPassedOnAtCostList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      22,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getPassedOnAtCostReasonList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      23,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactItemNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      24,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactCodeList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      25,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactDescriptionList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      26,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactQuantityList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      27,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactUnitList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      28,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactUnitPriceExclVatList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      29,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactUnitPriceInclVatList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      30,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactTotalDiscountList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      31,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactPercentageDiscountList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      32,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactTotalVatList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      33,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactPercentageVatList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      34,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactTotalExclVatList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      35,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactTotalInclVatList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      36,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactKindList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      37,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactPassedOnAtCostList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      38,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getInferredFactGoodsCategoryList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      39,
       f,
       proto.ssn.type.Candidate.serializeBinaryToWriter
     );
@@ -3899,6 +4201,766 @@ proto.ssn.type.PurchaseLine.prototype.addKind = function(opt_value, opt_index) {
  */
 proto.ssn.type.PurchaseLine.prototype.clearKindList = function() {
   return this.setKindList([]);
+};
+
+
+/**
+ * repeated Candidate goods_category = 20;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getGoodsCategoryList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 20));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setGoodsCategoryList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 20, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addGoodsCategory = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 20, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearGoodsCategoryList = function() {
+  return this.setGoodsCategoryList([]);
+};
+
+
+/**
+ * repeated Candidate goods_category_reason = 21;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getGoodsCategoryReasonList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 21));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setGoodsCategoryReasonList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 21, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addGoodsCategoryReason = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 21, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearGoodsCategoryReasonList = function() {
+  return this.setGoodsCategoryReasonList([]);
+};
+
+
+/**
+ * repeated Candidate passed_on_at_cost = 22;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getPassedOnAtCostList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 22));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setPassedOnAtCostList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 22, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addPassedOnAtCost = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 22, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearPassedOnAtCostList = function() {
+  return this.setPassedOnAtCostList([]);
+};
+
+
+/**
+ * repeated Candidate passed_on_at_cost_reason = 23;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getPassedOnAtCostReasonList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 23));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setPassedOnAtCostReasonList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 23, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addPassedOnAtCostReason = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 23, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearPassedOnAtCostReasonList = function() {
+  return this.setPassedOnAtCostReasonList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_item_number = 24;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactItemNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 24));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactItemNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 24, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactItemNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 24, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactItemNumberList = function() {
+  return this.setInferredFactItemNumberList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_code = 25;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactCodeList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 25));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactCodeList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 25, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactCode = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 25, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactCodeList = function() {
+  return this.setInferredFactCodeList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_description = 26;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactDescriptionList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 26));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactDescriptionList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 26, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactDescription = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 26, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactDescriptionList = function() {
+  return this.setInferredFactDescriptionList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_quantity = 27;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactQuantityList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 27));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactQuantityList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 27, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactQuantity = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 27, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactQuantityList = function() {
+  return this.setInferredFactQuantityList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_unit = 28;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactUnitList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 28));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactUnitList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 28, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactUnit = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 28, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactUnitList = function() {
+  return this.setInferredFactUnitList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_unit_price_excl_vat = 29;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactUnitPriceExclVatList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 29));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactUnitPriceExclVatList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 29, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactUnitPriceExclVat = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 29, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactUnitPriceExclVatList = function() {
+  return this.setInferredFactUnitPriceExclVatList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_unit_price_incl_vat = 30;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactUnitPriceInclVatList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 30));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactUnitPriceInclVatList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 30, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactUnitPriceInclVat = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 30, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactUnitPriceInclVatList = function() {
+  return this.setInferredFactUnitPriceInclVatList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_total_discount = 31;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactTotalDiscountList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 31));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactTotalDiscountList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 31, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactTotalDiscount = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 31, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactTotalDiscountList = function() {
+  return this.setInferredFactTotalDiscountList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_percentage_discount = 32;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactPercentageDiscountList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 32));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactPercentageDiscountList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 32, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactPercentageDiscount = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 32, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactPercentageDiscountList = function() {
+  return this.setInferredFactPercentageDiscountList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_total_vat = 33;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactTotalVatList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 33));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactTotalVatList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 33, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactTotalVat = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 33, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactTotalVatList = function() {
+  return this.setInferredFactTotalVatList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_percentage_vat = 34;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactPercentageVatList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 34));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactPercentageVatList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 34, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactPercentageVat = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 34, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactPercentageVatList = function() {
+  return this.setInferredFactPercentageVatList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_total_excl_vat = 35;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactTotalExclVatList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 35));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactTotalExclVatList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 35, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactTotalExclVat = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 35, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactTotalExclVatList = function() {
+  return this.setInferredFactTotalExclVatList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_total_incl_vat = 36;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactTotalInclVatList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 36));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactTotalInclVatList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 36, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactTotalInclVat = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 36, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactTotalInclVatList = function() {
+  return this.setInferredFactTotalInclVatList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_kind = 37;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactKindList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 37));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactKindList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 37, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactKind = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 37, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactKindList = function() {
+  return this.setInferredFactKindList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_passed_on_at_cost = 38;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactPassedOnAtCostList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 38));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactPassedOnAtCostList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 38, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactPassedOnAtCost = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 38, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactPassedOnAtCostList = function() {
+  return this.setInferredFactPassedOnAtCostList([]);
+};
+
+
+/**
+ * repeated Candidate inferred_fact_goods_category = 39;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getInferredFactGoodsCategoryList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 39));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setInferredFactGoodsCategoryList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 39, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addInferredFactGoodsCategory = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 39, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearInferredFactGoodsCategoryList = function() {
+  return this.setInferredFactGoodsCategoryList([]);
 };
 
 
