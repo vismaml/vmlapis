@@ -19,7 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	PredictionService_Decide_FullMethodName = "/ava.v1.PredictionService/Decide"
+	PredictionService_Decide_FullMethodName      = "/ava.v1.PredictionService/Decide"
+	PredictionService_GetDecision_FullMethodName = "/ava.v1.PredictionService/GetDecision"
 )
 
 // PredictionServiceClient is the client API for PredictionService service.
@@ -28,6 +29,8 @@ const (
 type PredictionServiceClient interface {
 	// Decide one output for one document with the dataset's promoted procedure.
 	Decide(ctx context.Context, in *DecideRequest, opts ...grpc.CallOption) (*DecideResponse, error)
+	// Return a stored decision by the reference Decide returned.
+	GetDecision(ctx context.Context, in *GetDecisionRequest, opts ...grpc.CallOption) (*DecideResponse, error)
 }
 
 type predictionServiceClient struct {
@@ -47,12 +50,23 @@ func (c *predictionServiceClient) Decide(ctx context.Context, in *DecideRequest,
 	return out, nil
 }
 
+func (c *predictionServiceClient) GetDecision(ctx context.Context, in *GetDecisionRequest, opts ...grpc.CallOption) (*DecideResponse, error) {
+	out := new(DecideResponse)
+	err := c.cc.Invoke(ctx, PredictionService_GetDecision_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // PredictionServiceServer is the server API for PredictionService service.
 // All implementations should embed UnimplementedPredictionServiceServer
 // for forward compatibility
 type PredictionServiceServer interface {
 	// Decide one output for one document with the dataset's promoted procedure.
 	Decide(context.Context, *DecideRequest) (*DecideResponse, error)
+	// Return a stored decision by the reference Decide returned.
+	GetDecision(context.Context, *GetDecisionRequest) (*DecideResponse, error)
 }
 
 // UnimplementedPredictionServiceServer should be embedded to have forward compatible implementations.
@@ -61,6 +75,9 @@ type UnimplementedPredictionServiceServer struct {
 
 func (UnimplementedPredictionServiceServer) Decide(context.Context, *DecideRequest) (*DecideResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Decide not implemented")
+}
+func (UnimplementedPredictionServiceServer) GetDecision(context.Context, *GetDecisionRequest) (*DecideResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDecision not implemented")
 }
 
 // UnsafePredictionServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -92,6 +109,24 @@ func _PredictionService_Decide_Handler(srv interface{}, ctx context.Context, dec
 	return interceptor(ctx, in, info, handler)
 }
 
+func _PredictionService_GetDecision_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetDecisionRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(PredictionServiceServer).GetDecision(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: PredictionService_GetDecision_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(PredictionServiceServer).GetDecision(ctx, req.(*GetDecisionRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // PredictionService_ServiceDesc is the grpc.ServiceDesc for PredictionService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -102,6 +137,10 @@ var PredictionService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Decide",
 			Handler:    _PredictionService_Decide_Handler,
+		},
+		{
+			MethodName: "GetDecision",
+			Handler:    _PredictionService_GetDecision_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

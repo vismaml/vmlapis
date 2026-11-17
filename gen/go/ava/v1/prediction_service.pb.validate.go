@@ -245,6 +245,66 @@ func (m *DecideResponse) validate(all bool) error {
 
 	// no validation rules for ProcedureVersion
 
+	// no validation rules for DecisionRef
+
+	if all {
+		switch v := interface{}(m.GetEscalation()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, DecideResponseValidationError{
+					field:  "Escalation",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, DecideResponseValidationError{
+					field:  "Escalation",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetEscalation()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return DecideResponseValidationError{
+				field:  "Escalation",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if all {
+		switch v := interface{}(m.GetDecidedAt()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, DecideResponseValidationError{
+					field:  "DecidedAt",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, DecideResponseValidationError{
+					field:  "DecidedAt",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetDecidedAt()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return DecideResponseValidationError{
+				field:  "DecidedAt",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
 	if len(errors) > 0 {
 		return DecideResponseMultiError(errors)
 	}
@@ -378,6 +438,37 @@ func (m *WalkedStep) validate(all bool) error {
 		}
 	}
 
+	// no validation rules for StepId
+
+	if all {
+		switch v := interface{}(m.GetBranch()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, WalkedStepValidationError{
+					field:  "Branch",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, WalkedStepValidationError{
+					field:  "Branch",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetBranch()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return WalkedStepValidationError{
+				field:  "Branch",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
 	if len(errors) > 0 {
 		return WalkedStepMultiError(errors)
 	}
@@ -454,6 +545,412 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = WalkedStepValidationError{}
+
+// Validate checks the field values on TakenBranch with the rules defined in
+// the proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
+func (m *TakenBranch) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on TakenBranch with the rules defined in
+// the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in TakenBranchMultiError, or
+// nil if none found.
+func (m *TakenBranch) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *TakenBranch) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	// no validation rules for BranchId
+
+	// no validation rules for Label
+
+	switch v := m.Outcome.(type) {
+	case *TakenBranch_NextStepId:
+		if v == nil {
+			err := TakenBranchValidationError{
+				field:  "Outcome",
+				reason: "oneof value cannot be a typed-nil",
+			}
+			if !all {
+				return err
+			}
+			errors = append(errors, err)
+		}
+		// no validation rules for NextStepId
+	case *TakenBranch_OutputValue:
+		if v == nil {
+			err := TakenBranchValidationError{
+				field:  "Outcome",
+				reason: "oneof value cannot be a typed-nil",
+			}
+			if !all {
+				return err
+			}
+			errors = append(errors, err)
+		}
+		// no validation rules for OutputValue
+	case *TakenBranch_Escalates:
+		if v == nil {
+			err := TakenBranchValidationError{
+				field:  "Outcome",
+				reason: "oneof value cannot be a typed-nil",
+			}
+			if !all {
+				return err
+			}
+			errors = append(errors, err)
+		}
+		// no validation rules for Escalates
+	default:
+		_ = v // ensures v is used
+	}
+
+	if len(errors) > 0 {
+		return TakenBranchMultiError(errors)
+	}
+
+	return nil
+}
+
+// TakenBranchMultiError is an error wrapping multiple validation errors
+// returned by TakenBranch.ValidateAll() if the designated constraints aren't met.
+type TakenBranchMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m TakenBranchMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m TakenBranchMultiError) AllErrors() []error { return m }
+
+// TakenBranchValidationError is the validation error returned by
+// TakenBranch.Validate if the designated constraints aren't met.
+type TakenBranchValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e TakenBranchValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e TakenBranchValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e TakenBranchValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e TakenBranchValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e TakenBranchValidationError) ErrorName() string { return "TakenBranchValidationError" }
+
+// Error satisfies the builtin error interface
+func (e TakenBranchValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sTakenBranch.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = TakenBranchValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = TakenBranchValidationError{}
+
+// Validate checks the field values on Escalation with the rules defined in the
+// proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
+func (m *Escalation) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on Escalation with the rules defined in
+// the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in EscalationMultiError, or
+// nil if none found.
+func (m *Escalation) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *Escalation) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	// no validation rules for Kind
+
+	// no validation rules for StepId
+
+	if len(errors) > 0 {
+		return EscalationMultiError(errors)
+	}
+
+	return nil
+}
+
+// EscalationMultiError is an error wrapping multiple validation errors
+// returned by Escalation.ValidateAll() if the designated constraints aren't met.
+type EscalationMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m EscalationMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m EscalationMultiError) AllErrors() []error { return m }
+
+// EscalationValidationError is the validation error returned by
+// Escalation.Validate if the designated constraints aren't met.
+type EscalationValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e EscalationValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e EscalationValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e EscalationValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e EscalationValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e EscalationValidationError) ErrorName() string { return "EscalationValidationError" }
+
+// Error satisfies the builtin error interface
+func (e EscalationValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sEscalation.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = EscalationValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = EscalationValidationError{}
+
+// Validate checks the field values on GetDecisionRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the first error encountered is returned, or nil if there are no violations.
+func (m *GetDecisionRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on GetDecisionRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// GetDecisionRequestMultiError, or nil if none found.
+func (m *GetDecisionRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *GetDecisionRequest) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	if len(m.GetDatasetName()) > 256 {
+		err := GetDecisionRequestValidationError{
+			field:  "DatasetName",
+			reason: "value length must be at most 256 bytes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if !_GetDecisionRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
+		err := GetDecisionRequestValidationError{
+			field:  "DatasetName",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if utf8.RuneCountInString(m.GetDecisionRef()) < 1 {
+		err := GetDecisionRequestValidationError{
+			field:  "DecisionRef",
+			reason: "value length must be at least 1 runes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(m.GetDecisionRef()) > 36 {
+		err := GetDecisionRequestValidationError{
+			field:  "DecisionRef",
+			reason: "value length must be at most 36 bytes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if utf8.RuneCountInString(m.GetOutputName()) < 1 {
+		err := GetDecisionRequestValidationError{
+			field:  "OutputName",
+			reason: "value length must be at least 1 runes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return GetDecisionRequestMultiError(errors)
+	}
+
+	return nil
+}
+
+// GetDecisionRequestMultiError is an error wrapping multiple validation errors
+// returned by GetDecisionRequest.ValidateAll() if the designated constraints
+// aren't met.
+type GetDecisionRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m GetDecisionRequestMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m GetDecisionRequestMultiError) AllErrors() []error { return m }
+
+// GetDecisionRequestValidationError is the validation error returned by
+// GetDecisionRequest.Validate if the designated constraints aren't met.
+type GetDecisionRequestValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e GetDecisionRequestValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e GetDecisionRequestValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e GetDecisionRequestValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e GetDecisionRequestValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e GetDecisionRequestValidationError) ErrorName() string {
+	return "GetDecisionRequestValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e GetDecisionRequestValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sGetDecisionRequest.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = GetDecisionRequestValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = GetDecisionRequestValidationError{}
+
+var _GetDecisionRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
 // Validate checks the field values on Confidence with the rules defined in the
 // proto definition for this message. If any rules are violated, the first

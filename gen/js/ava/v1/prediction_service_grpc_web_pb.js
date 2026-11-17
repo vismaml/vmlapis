@@ -22,6 +22,8 @@ grpc.web = require('grpc-web');
 
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js')
 
+var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js')
+
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js')
 
 var protoc$gen$openapiv2_options_annotations_pb = require('../../protoc-gen-openapiv2/options/annotations_pb.js')
@@ -141,6 +143,67 @@ proto.ava.v1.PredictionServicePromiseClient.prototype.decide =
       request,
       metadata || {},
       methodDescriptor_PredictionService_Decide);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ava.v1.GetDecisionRequest,
+ *   !proto.ava.v1.DecideResponse>}
+ */
+const methodDescriptor_PredictionService_GetDecision = new grpc.web.MethodDescriptor(
+  '/ava.v1.PredictionService/GetDecision',
+  grpc.web.MethodType.UNARY,
+  proto.ava.v1.GetDecisionRequest,
+  proto.ava.v1.DecideResponse,
+  /**
+   * @param {!proto.ava.v1.GetDecisionRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ava.v1.DecideResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ava.v1.GetDecisionRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ava.v1.DecideResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ava.v1.DecideResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ava.v1.PredictionServiceClient.prototype.getDecision =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ava.v1.PredictionService/GetDecision',
+      request,
+      metadata || {},
+      methodDescriptor_PredictionService_GetDecision,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ava.v1.GetDecisionRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ava.v1.DecideResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ava.v1.PredictionServicePromiseClient.prototype.getDecision =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ava.v1.PredictionService/GetDecision',
+      request,
+      metadata || {},
+      methodDescriptor_PredictionService_GetDecision);
 };
 
 

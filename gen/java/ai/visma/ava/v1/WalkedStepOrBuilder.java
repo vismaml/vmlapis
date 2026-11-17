@@ -75,4 +75,92 @@ public interface WalkedStepOrBuilder extends
    * <code>.ava.v1.Confidence confidence = 3 [json_name = "confidence"];</code>
    */
   ai.visma.ava.v1.ConfidenceOrBuilder getConfidenceOrBuilder();
+
+  /**
+   * <pre>
+   * Identifier of the step within the procedure
+   * </pre>
+   *
+   * <code>string step_id = 4 [json_name = "stepId"];</code>
+   * @return The stepId.
+   */
+  java.lang.String getStepId();
+  /**
+   * <pre>
+   * Identifier of the step within the procedure
+   * </pre>
+   *
+   * <code>string step_id = 4 [json_name = "stepId"];</code>
+   * @return The bytes for stepId.
+   */
+  com.google.protobuf.ByteString
+      getStepIdBytes();
+
+  /**
+   * <pre>
+   * Names of the facts the step read, sorted
+   * </pre>
+   *
+   * <code>repeated string facts = 5 [json_name = "facts"];</code>
+   * @return A list containing the facts.
+   */
+  java.util.List<java.lang.String>
+      getFactsList();
+  /**
+   * <pre>
+   * Names of the facts the step read, sorted
+   * </pre>
+   *
+   * <code>repeated string facts = 5 [json_name = "facts"];</code>
+   * @return The count of facts.
+   */
+  int getFactsCount();
+  /**
+   * <pre>
+   * Names of the facts the step read, sorted
+   * </pre>
+   *
+   * <code>repeated string facts = 5 [json_name = "facts"];</code>
+   * @param index The index of the element to return.
+   * @return The facts at the given index.
+   */
+  java.lang.String getFacts(int index);
+  /**
+   * <pre>
+   * Names of the facts the step read, sorted
+   * </pre>
+   *
+   * <code>repeated string facts = 5 [json_name = "facts"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the facts at the given index.
+   */
+  com.google.protobuf.ByteString
+      getFactsBytes(int index);
+
+  /**
+   * <pre>
+   * The branch the step took; absent when it took none
+   * </pre>
+   *
+   * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+   * @return Whether the branch field is set.
+   */
+  boolean hasBranch();
+  /**
+   * <pre>
+   * The branch the step took; absent when it took none
+   * </pre>
+   *
+   * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+   * @return The branch.
+   */
+  ai.visma.ava.v1.TakenBranch getBranch();
+  /**
+   * <pre>
+   * The branch the step took; absent when it took none
+   * </pre>
+   *
+   * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+   */
+  ai.visma.ava.v1.TakenBranchOrBuilder getBranchOrBuilder();
 }

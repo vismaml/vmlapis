@@ -3,6 +3,7 @@ syntax = "proto3";
 package ava.v1;
 
 import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "validate/validate.proto";
@@ -28,6 +29,11 @@ service PredictionService {
       post: "/v2/datasets/{dataset_name}:decide"
       body: "*"
     };
+  }
+
+  // Return a stored decision by the reference Decide returned.
+  rpc GetDecision(GetDecisionRequest) returns (DecideResponse) {
+    option (google.api.http) = {get: "/v2/datasets/{dataset_name}/decisions/{decision_ref}"};
   }
 }
 
@@ -61,6 +67,12 @@ message DecideResponse {
   repeated WalkedStep steps = 3;
   // Version of the procedure that decided
   int32 procedure_version = 4;
+  // Reference to look the decision up again with GetDecision
+  string decision_ref = 5;
+  // Why the procedure did not decide; set only when escalated
+  Escalation escalation = 6;
+  // When the decision was made; set only by GetDecision
+  google.protobuf.Timestamp decided_at = 7;
 }
 
 message WalkedStep {
@@ -70,6 +82,61 @@ message WalkedStep {
   string answer = 2;
   // Confidence in the answer
   Confidence confidence = 3;
+  // Identifier of the step within the procedure
+  string step_id = 4;
+  // Names of the facts the step read, sorted
+  repeated string facts = 5;
+  // The branch the step took; absent when it took none
+  TakenBranch branch = 6;
+}
+
+message TakenBranch {
+  // Identifier of the branch within its step
+  string branch_id = 1;
+  // The answer the branch stands for
+  string label = 2;
+  // What taking the branch led to
+  oneof outcome {
+    // The step walked next
+    string next_step_id = 3;
+    // The value decided
+    string output_value = 4;
+    // True when the branch escalates
+    bool escalates = 5;
+  }
+}
+
+message Escalation {
+  enum Kind {
+    KIND_UNSPECIFIED = 0;
+    // A fact the step needed could not be answered
+    MISSING_INFORMATION = 1;
+    // The answers are known but the step has no branch for them
+    NO_MATCHING_BRANCH = 2;
+    // The procedure routes this case to a human on purpose
+    PROCEDURE_ESCALATION = 3;
+    // A branch could not be evaluated
+    EVALUATION_ERROR = 4;
+  }
+  // Why the procedure escalated
+  Kind kind = 1;
+  // The step where the walk stopped
+  string step_id = 2;
+}
+
+message GetDecisionRequest {
+  // Name of the dataset the decision was made for
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
+    max_bytes: 256
+  }]; // text-no-spaces
+  // The decision_ref Decide returned
+  string decision_ref = 2 [(validate.rules).string = {
+    min_len: 1
+    max_bytes: 36
+  }];
+  // Name of the decided output, e.g. Account
+  string output_name = 3 [(validate.rules).string.min_len = 1];
 }
 
 message Confidence {

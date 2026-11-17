@@ -15,6 +15,13 @@ export class PredictionServiceClient {
                response: ava_v1_prediction_service_pb.DecideResponse) => void
   ): grpcWeb.ClientReadableStream<ava_v1_prediction_service_pb.DecideResponse>;
 
+  getDecision(
+    request: ava_v1_prediction_service_pb.GetDecisionRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: ava_v1_prediction_service_pb.DecideResponse) => void
+  ): grpcWeb.ClientReadableStream<ava_v1_prediction_service_pb.DecideResponse>;
+
 }
 
 export class PredictionServicePromiseClient {
@@ -24,6 +31,11 @@ export class PredictionServicePromiseClient {
 
   decide(
     request: ava_v1_prediction_service_pb.DecideRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<ava_v1_prediction_service_pb.DecideResponse>;
+
+  getDecision(
+    request: ava_v1_prediction_service_pb.GetDecisionRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<ava_v1_prediction_service_pb.DecideResponse>;
 

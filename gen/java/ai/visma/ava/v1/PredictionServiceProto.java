@@ -46,6 +46,21 @@ public final class PredictionServiceProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ava_v1_WalkedStep_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ava_v1_TakenBranch_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ava_v1_TakenBranch_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ava_v1_Escalation_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ava_v1_Escalation_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ava_v1_GetDecisionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ava_v1_GetDecisionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ava_v1_Confidence_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -60,45 +75,71 @@ public final class PredictionServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\037ava/v1/prediction_service.proto\022\006ava.v" +
-      "1\032\034google/api/annotations.proto\032\036google/" +
-      "protobuf/wrappers.proto\032.protoc-gen-open" +
-      "apiv2/options/annotations.proto\032\027validat" +
-      "e/validate.proto\"\253\002\n\rDecideRequest\022K\n\014da" +
-      "taset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9." +
-      "][A-Za-z0-9_.>-]*$R\013datasetName\022(\n\013outpu" +
-      "t_name\030\002 \001(\tB\007\372B\004r\002\020\001R\noutputName\0229\n\006fie" +
-      "lds\030\003 \003(\0132!.ava.v1.DecideRequest.FieldsE" +
-      "ntryR\006fields\022-\n\005model\030\004 \001(\0162\r.ava.v1.Mod" +
-      "elB\010\372B\005\202\001\002\020\001R\005model\0329\n\013FieldsEntry\022\020\n\003ke" +
-      "y\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\233" +
-      "\001\n\016DecideResponse\022\024\n\005value\030\001 \001(\tR\005value\022" +
-      "\034\n\tescalated\030\002 \001(\010R\tescalated\022(\n\005steps\030\003" +
-      " \003(\0132\022.ava.v1.WalkedStepR\005steps\022+\n\021proce" +
-      "dure_version\030\004 \001(\005R\020procedureVersion\"t\n\n" +
-      "WalkedStep\022\032\n\010question\030\001 \001(\tR\010question\022\026" +
-      "\n\006answer\030\002 \001(\tR\006answer\0222\n\nconfidence\030\003 \001" +
-      "(\0132\022.ava.v1.ConfidenceR\nconfidence\"\276\001\n\nC" +
-      "onfidence\022.\n\005level\030\001 \001(\0162\030.ava.v1.Confid" +
-      "ence.LevelR\005level\0221\n\005value\030\002 \001(\0132\033.googl" +
-      "e.protobuf.FloatValueR\005value\"M\n\005Level\022\013\n" +
-      "\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID" +
-      "\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005*3\n\005Model\022\010\n\004" +
-      "QWEN\020\000\022\010\n\004CLEF\020\001\022\010\n\004BERT\020\002\022\014\n\010RERANKER\020\003" +
-      "2\260\001\n\021PredictionService\022f\n\006Decide\022\025.ava.v" +
-      "1.DecideRequest\032\026.ava.v1.DecideResponse\"" +
-      "-\202\323\344\223\002\'\"\"/v2/datasets/{dataset_name}:dec" +
-      "ide:\001*\0323\222A0\022.Decide outputs with a datas" +
-      "et\'s AVA procedure.B\303\001\n\017ai.visma.ava.v1B" +
-      "\026PredictionServiceProtoP\001Z*github.com/e-" +
-      "conomic/vmlapis/gen/go/ava/v1\242\002\003AXX\252\002\006Av" +
-      "a.V1\312\002\006Ava\\V1\342\002\022Ava\\V1\\GPBMetadata\352\002\007Ava" +
-      "::V1\222A2\022\t\n\003AVA2\002v1*\001\0022\020application/json:" +
-      "\020application/jsonb\006proto3"
+      "1\032\034google/api/annotations.proto\032\037google/" +
+      "protobuf/timestamp.proto\032\036google/protobu" +
+      "f/wrappers.proto\032.protoc-gen-openapiv2/o" +
+      "ptions/annotations.proto\032\027validate/valid" +
+      "ate.proto\"\253\002\n\rDecideRequest\022K\n\014dataset_n" +
+      "ame\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-" +
+      "z0-9_.>-]*$R\013datasetName\022(\n\013output_name\030" +
+      "\002 \001(\tB\007\372B\004r\002\020\001R\noutputName\0229\n\006fields\030\003 \003" +
+      "(\0132!.ava.v1.DecideRequest.FieldsEntryR\006f" +
+      "ields\022-\n\005model\030\004 \001(\0162\r.ava.v1.ModelB\010\372B\005" +
+      "\202\001\002\020\001R\005model\0329\n\013FieldsEntry\022\020\n\003key\030\001 \001(\t" +
+      "R\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\255\002\n\016Deci" +
+      "deResponse\022\024\n\005value\030\001 \001(\tR\005value\022\034\n\tesca" +
+      "lated\030\002 \001(\010R\tescalated\022(\n\005steps\030\003 \003(\0132\022." +
+      "ava.v1.WalkedStepR\005steps\022+\n\021procedure_ve" +
+      "rsion\030\004 \001(\005R\020procedureVersion\022!\n\014decisio" +
+      "n_ref\030\005 \001(\tR\013decisionRef\0222\n\nescalation\030\006" +
+      " \001(\0132\022.ava.v1.EscalationR\nescalation\0229\n\n" +
+      "decided_at\030\007 \001(\0132\032.google.protobuf.Times" +
+      "tampR\tdecidedAt\"\320\001\n\nWalkedStep\022\032\n\010questi" +
+      "on\030\001 \001(\tR\010question\022\026\n\006answer\030\002 \001(\tR\006answ" +
+      "er\0222\n\nconfidence\030\003 \001(\0132\022.ava.v1.Confiden" +
+      "ceR\nconfidence\022\027\n\007step_id\030\004 \001(\tR\006stepId\022" +
+      "\024\n\005facts\030\005 \003(\tR\005facts\022+\n\006branch\030\006 \001(\0132\023." +
+      "ava.v1.TakenBranchR\006branch\"\264\001\n\013TakenBran" +
+      "ch\022\033\n\tbranch_id\030\001 \001(\tR\010branchId\022\024\n\005label" +
+      "\030\002 \001(\tR\005label\022\"\n\014next_step_id\030\003 \001(\tH\000R\nn" +
+      "extStepId\022#\n\014output_value\030\004 \001(\tH\000R\013outpu" +
+      "tValue\022\036\n\tescalates\030\005 \001(\010H\000R\tescalatesB\t" +
+      "\n\007outcome\"\321\001\n\nEscalation\022+\n\004kind\030\001 \001(\0162\027" +
+      ".ava.v1.Escalation.KindR\004kind\022\027\n\007step_id" +
+      "\030\002 \001(\tR\006stepId\"}\n\004Kind\022\024\n\020KIND_UNSPECIFI" +
+      "ED\020\000\022\027\n\023MISSING_INFORMATION\020\001\022\026\n\022NO_MATC" +
+      "HING_BRANCH\020\002\022\030\n\024PROCEDURE_ESCALATION\020\003\022" +
+      "\024\n\020EVALUATION_ERROR\020\004\"\271\001\n\022GetDecisionReq" +
+      "uest\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[" +
+      "A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013datasetNam" +
+      "e\022,\n\014decision_ref\030\002 \001(\tB\t\372B\006r\004\020\001($R\013deci" +
+      "sionRef\022(\n\013output_name\030\003 \001(\tB\007\372B\004r\002\020\001R\no" +
+      "utputName\"\276\001\n\nConfidence\022.\n\005level\030\001 \001(\0162" +
+      "\030.ava.v1.Confidence.LevelR\005level\0221\n\005valu" +
+      "e\030\002 \001(\0132\033.google.protobuf.FloatValueR\005va" +
+      "lue\"M\n\005Level\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022" +
+      "\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH" +
+      "\020\005*3\n\005Model\022\010\n\004QWEN\020\000\022\010\n\004CLEF\020\001\022\010\n\004BERT\020" +
+      "\002\022\014\n\010RERANKER\020\0032\261\002\n\021PredictionService\022f\n" +
+      "\006Decide\022\025.ava.v1.DecideRequest\032\026.ava.v1." +
+      "DecideResponse\"-\202\323\344\223\002\'\"\"/v2/datasets/{da" +
+      "taset_name}:decide:\001*\022\177\n\013GetDecision\022\032.a" +
+      "va.v1.GetDecisionRequest\032\026.ava.v1.Decide" +
+      "Response\"<\202\323\344\223\0026\0224/v2/datasets/{dataset_" +
+      "name}/decisions/{decision_ref}\0323\222A0\022.Dec" +
+      "ide outputs with a dataset\'s AVA procedu" +
+      "re.B\303\001\n\017ai.visma.ava.v1B\026PredictionServi" +
+      "ceProtoP\001Z*github.com/e-conomic/vmlapis/" +
+      "gen/go/ava/v1\242\002\003AXX\252\002\006Ava.V1\312\002\006Ava\\V1\342\002\022" +
+      "Ava\\V1\\GPBMetadata\352\002\007Ava::V1\222A2\022\t\n\003AVA2\002" +
+      "v1*\001\0022\020application/json:\020application/jso" +
+      "nb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
           ai.visma.validate.ValidateProto.getDescriptor(),
@@ -120,21 +161,40 @@ public final class PredictionServiceProto {
     internal_static_ava_v1_DecideResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ava_v1_DecideResponse_descriptor,
-        new java.lang.String[] { "Value", "Escalated", "Steps", "ProcedureVersion", });
+        new java.lang.String[] { "Value", "Escalated", "Steps", "ProcedureVersion", "DecisionRef", "Escalation", "DecidedAt", });
     internal_static_ava_v1_WalkedStep_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ava_v1_WalkedStep_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ava_v1_WalkedStep_descriptor,
-        new java.lang.String[] { "Question", "Answer", "Confidence", });
-    internal_static_ava_v1_Confidence_descriptor =
+        new java.lang.String[] { "Question", "Answer", "Confidence", "StepId", "Facts", "Branch", });
+    internal_static_ava_v1_TakenBranch_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_ava_v1_TakenBranch_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ava_v1_TakenBranch_descriptor,
+        new java.lang.String[] { "BranchId", "Label", "NextStepId", "OutputValue", "Escalates", "Outcome", });
+    internal_static_ava_v1_Escalation_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_ava_v1_Escalation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ava_v1_Escalation_descriptor,
+        new java.lang.String[] { "Kind", "StepId", });
+    internal_static_ava_v1_GetDecisionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_ava_v1_GetDecisionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ava_v1_GetDecisionRequest_descriptor,
+        new java.lang.String[] { "DatasetName", "DecisionRef", "OutputName", });
+    internal_static_ava_v1_Confidence_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_ava_v1_Confidence_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ava_v1_Confidence_descriptor,
         new java.lang.String[] { "Level", "Value", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
     ai.visma.validate.ValidateProto.getDescriptor();

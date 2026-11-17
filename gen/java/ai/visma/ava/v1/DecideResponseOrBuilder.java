@@ -92,4 +92,78 @@ public interface DecideResponseOrBuilder extends
    * @return The procedureVersion.
    */
   int getProcedureVersion();
+
+  /**
+   * <pre>
+   * Reference to look the decision up again with GetDecision
+   * </pre>
+   *
+   * <code>string decision_ref = 5 [json_name = "decisionRef"];</code>
+   * @return The decisionRef.
+   */
+  java.lang.String getDecisionRef();
+  /**
+   * <pre>
+   * Reference to look the decision up again with GetDecision
+   * </pre>
+   *
+   * <code>string decision_ref = 5 [json_name = "decisionRef"];</code>
+   * @return The bytes for decisionRef.
+   */
+  com.google.protobuf.ByteString
+      getDecisionRefBytes();
+
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+   * @return Whether the escalation field is set.
+   */
+  boolean hasEscalation();
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+   * @return The escalation.
+   */
+  ai.visma.ava.v1.Escalation getEscalation();
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+   */
+  ai.visma.ava.v1.EscalationOrBuilder getEscalationOrBuilder();
+
+  /**
+   * <pre>
+   * When the decision was made; set only by GetDecision
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+   * @return Whether the decidedAt field is set.
+   */
+  boolean hasDecidedAt();
+  /**
+   * <pre>
+   * When the decision was made; set only by GetDecision
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+   * @return The decidedAt.
+   */
+  com.google.protobuf.Timestamp getDecidedAt();
+  /**
+   * <pre>
+   * When the decision was made; set only by GetDecision
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDecidedAtOrBuilder();
 }
