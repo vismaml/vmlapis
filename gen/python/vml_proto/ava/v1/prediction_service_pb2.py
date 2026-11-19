@@ -23,12 +23,13 @@ _sym_db = _symbol_database.Default()
 
 
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 from google.protobuf import wrappers_pb2 as google_dot_protobuf_dot_wrappers__pb2
 from vml_proto.protoc_gen_openapiv2.options import annotations_pb2 as protoc__gen__openapiv2_dot_options_dot_annotations__pb2
 from vml_proto.validate import validate_pb2 as validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x61va/v1/prediction_service.proto\x12\x06\x61va.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x1egoogle/protobuf/wrappers.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\xab\x02\n\rDecideRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12(\n\x0boutput_name\x18\x02 \x01(\tB\x07\xfa\x42\x04r\x02\x10\x01R\noutputName\x12\x39\n\x06\x66ields\x18\x03 \x03(\x0b\x32!.ava.v1.DecideRequest.FieldsEntryR\x06\x66ields\x12-\n\x05model\x18\x04 \x01(\x0e\x32\r.ava.v1.ModelB\x08\xfa\x42\x05\x82\x01\x02\x10\x01R\x05model\x1a\x39\n\x0b\x46ieldsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01\"\x9b\x01\n\x0e\x44\x65\x63ideResponse\x12\x14\n\x05value\x18\x01 \x01(\tR\x05value\x12\x1c\n\tescalated\x18\x02 \x01(\x08R\tescalated\x12(\n\x05steps\x18\x03 \x03(\x0b\x32\x12.ava.v1.WalkedStepR\x05steps\x12+\n\x11procedure_version\x18\x04 \x01(\x05R\x10procedureVersion\"t\n\nWalkedStep\x12\x1a\n\x08question\x18\x01 \x01(\tR\x08question\x12\x16\n\x06\x61nswer\x18\x02 \x01(\tR\x06\x61nswer\x12\x32\n\nconfidence\x18\x03 \x01(\x0b\x32\x12.ava.v1.ConfidenceR\nconfidence\"\xbe\x01\n\nConfidence\x12.\n\x05level\x18\x01 \x01(\x0e\x32\x18.ava.v1.Confidence.LevelR\x05level\x12\x31\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValueR\x05value\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05*3\n\x05Model\x12\x08\n\x04QWEN\x10\x00\x12\x08\n\x04\x43LEF\x10\x01\x12\x08\n\x04\x42\x45RT\x10\x02\x12\x0c\n\x08RERANKER\x10\x03\x32\xb0\x01\n\x11PredictionService\x12\x66\n\x06\x44\x65\x63ide\x12\x15.ava.v1.DecideRequest\x1a\x16.ava.v1.DecideResponse\"-\x82\xd3\xe4\x93\x02\'\"\"/v2/datasets/{dataset_name}:decide:\x01*\x1a\x33\x92\x41\x30\x12.Decide outputs with a dataset\'s AVA procedure.BaZ*github.com/e-conomic/vmlapis/gen/go/ava/v1\x92\x41\x32\x12\t\n\x03\x41VA2\x02v1*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x61va/v1/prediction_service.proto\x12\x06\x61va.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/wrappers.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\xab\x02\n\rDecideRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12(\n\x0boutput_name\x18\x02 \x01(\tB\x07\xfa\x42\x04r\x02\x10\x01R\noutputName\x12\x39\n\x06\x66ields\x18\x03 \x03(\x0b\x32!.ava.v1.DecideRequest.FieldsEntryR\x06\x66ields\x12-\n\x05model\x18\x04 \x01(\x0e\x32\r.ava.v1.ModelB\x08\xfa\x42\x05\x82\x01\x02\x10\x01R\x05model\x1a\x39\n\x0b\x46ieldsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01\"\xad\x02\n\x0e\x44\x65\x63ideResponse\x12\x14\n\x05value\x18\x01 \x01(\tR\x05value\x12\x1c\n\tescalated\x18\x02 \x01(\x08R\tescalated\x12(\n\x05steps\x18\x03 \x03(\x0b\x32\x12.ava.v1.WalkedStepR\x05steps\x12+\n\x11procedure_version\x18\x04 \x01(\x05R\x10procedureVersion\x12!\n\x0c\x64\x65\x63ision_ref\x18\x05 \x01(\tR\x0b\x64\x65\x63isionRef\x12\x32\n\nescalation\x18\x06 \x01(\x0b\x32\x12.ava.v1.EscalationR\nescalation\x12\x39\n\ndecided_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tdecidedAt\"\xd0\x01\n\nWalkedStep\x12\x1a\n\x08question\x18\x01 \x01(\tR\x08question\x12\x16\n\x06\x61nswer\x18\x02 \x01(\tR\x06\x61nswer\x12\x32\n\nconfidence\x18\x03 \x01(\x0b\x32\x12.ava.v1.ConfidenceR\nconfidence\x12\x17\n\x07step_id\x18\x04 \x01(\tR\x06stepId\x12\x14\n\x05\x66\x61\x63ts\x18\x05 \x03(\tR\x05\x66\x61\x63ts\x12+\n\x06\x62ranch\x18\x06 \x01(\x0b\x32\x13.ava.v1.TakenBranchR\x06\x62ranch\"\xb4\x01\n\x0bTakenBranch\x12\x1b\n\tbranch_id\x18\x01 \x01(\tR\x08\x62ranchId\x12\x14\n\x05label\x18\x02 \x01(\tR\x05label\x12\"\n\x0cnext_step_id\x18\x03 \x01(\tH\x00R\nnextStepId\x12#\n\x0coutput_value\x18\x04 \x01(\tH\x00R\x0boutputValue\x12\x1e\n\tescalates\x18\x05 \x01(\x08H\x00R\tescalatesB\t\n\x07outcome\"\xd1\x01\n\nEscalation\x12+\n\x04kind\x18\x01 \x01(\x0e\x32\x17.ava.v1.Escalation.KindR\x04kind\x12\x17\n\x07step_id\x18\x02 \x01(\tR\x06stepId\"}\n\x04Kind\x12\x14\n\x10KIND_UNSPECIFIED\x10\x00\x12\x17\n\x13MISSING_INFORMATION\x10\x01\x12\x16\n\x12NO_MATCHING_BRANCH\x10\x02\x12\x18\n\x14PROCEDURE_ESCALATION\x10\x03\x12\x14\n\x10\x45VALUATION_ERROR\x10\x04\"\xb9\x01\n\x12GetDecisionRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12,\n\x0c\x64\x65\x63ision_ref\x18\x02 \x01(\tB\t\xfa\x42\x06r\x04\x10\x01($R\x0b\x64\x65\x63isionRef\x12(\n\x0boutput_name\x18\x03 \x01(\tB\x07\xfa\x42\x04r\x02\x10\x01R\noutputName\"\xaf\x01\n\x13GetProcedureRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12(\n\x0boutput_name\x18\x02 \x01(\tB\x07\xfa\x42\x04r\x02\x10\x01R\noutputName\x12!\n\x07version\x18\x03 \x01(\x05\x42\x07\xfa\x42\x04\x1a\x02(\x00R\x07version\"n\n\x14GetProcedureResponse\x12+\n\x11procedure_version\x18\x01 \x01(\x05R\x10procedureVersion\x12)\n\x04tree\x18\x02 \x01(\x0b\x32\x15.ava.v1.ProcedureNodeR\x04tree\"\x82\x02\n\rProcedureNode\x12\x1c\n\tpredicate\x18\x01 \x01(\tR\tpredicate\x12<\n\x07\x61nswers\x18\x02 \x03(\x0b\x32\".ava.v1.ProcedureNode.AnswersEntryR\x07\x61nswers\x12\x1f\n\x0btarget_name\x18\x03 \x01(\tR\ntargetName\x12!\n\x0ctarget_value\x18\x04 \x01(\tR\x0btargetValue\x1aQ\n\x0c\x41nswersEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12+\n\x05value\x18\x02 \x01(\x0b\x32\x15.ava.v1.ProcedureNodeR\x05value:\x02\x38\x01\"\xce\x01\n\x17GetDecisionPathResponse\x12+\n\x11procedure_version\x18\x01 \x01(\x05R\x10procedureVersion\x12!\n\x0c\x64\x65\x63ision_ref\x18\x02 \x01(\tR\x0b\x64\x65\x63isionRef\x12\x39\n\ndecided_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tdecidedAt\x12(\n\x04path\x18\x04 \x01(\x0b\x32\x14.ava.v1.DecisionNodeR\x04path\"\x9b\x03\n\x0c\x44\x65\x63isionNode\x12\x1c\n\tpredicate\x18\x01 \x01(\tR\tpredicate\x12\x1a\n\x08question\x18\x02 \x01(\tR\x08question\x12\x16\n\x06\x61nswer\x18\x03 \x01(\tR\x06\x61nswer\x12\x32\n\nconfidence\x18\x04 \x01(\x0b\x32\x12.ava.v1.ConfidenceR\nconfidence\x12;\n\x07\x61nswers\x18\x05 \x03(\x0b\x32!.ava.v1.DecisionNode.AnswersEntryR\x07\x61nswers\x12\x1f\n\x0btarget_name\x18\x06 \x01(\tR\ntargetName\x12!\n\x0ctarget_value\x18\x07 \x01(\tR\x0btargetValue\x12\x32\n\nescalation\x18\x08 \x01(\x0b\x32\x12.ava.v1.EscalationR\nescalation\x1aP\n\x0c\x41nswersEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x14.ava.v1.DecisionNodeR\x05value:\x02\x38\x01\"\xbe\x01\n\nConfidence\x12.\n\x05level\x18\x01 \x01(\x0e\x32\x18.ava.v1.Confidence.LevelR\x05level\x12\x31\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValueR\x05value\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05*3\n\x05Model\x12\x08\n\x04QWEN\x10\x00\x12\x08\n\x04\x43LEF\x10\x01\x12\x08\n\x04\x42\x45RT\x10\x02\x12\x0c\n\x08RERANKER\x10\x03\x32\xd6\x04\n\x11PredictionService\x12\x66\n\x06\x44\x65\x63ide\x12\x15.ava.v1.DecideRequest\x1a\x16.ava.v1.DecideResponse\"-\x82\xd3\xe4\x93\x02\'\"\"/v2/datasets/{dataset_name}:decide:\x01*\x12\x7f\n\x0bGetDecision\x12\x1a.ava.v1.GetDecisionRequest\x1a\x16.ava.v1.DecideResponse\"<\x82\xd3\xe4\x93\x02\x36\x12\x34/v2/datasets/{dataset_name}/decisions/{decision_ref}\x12\x8e\x01\n\x0cGetProcedure\x12\x1b.ava.v1.GetProcedureRequest\x1a\x1c.ava.v1.GetProcedureResponse\"C\x82\xd3\xe4\x93\x02=\x12;/v2/datasets/{dataset_name}/outputs/{output_name}/procedure\x12\x91\x01\n\x0fGetDecisionPath\x12\x1a.ava.v1.GetDecisionRequest\x1a\x1f.ava.v1.GetDecisionPathResponse\"A\x82\xd3\xe4\x93\x02;\x12\x39/v2/datasets/{dataset_name}/decisions/{decision_ref}/path\x1a\x33\x92\x41\x30\x12.Decide outputs with a dataset\'s AVA procedure.BaZ*github.com/e-conomic/vmlapis/gen/go/ava/v1\x92\x41\x32\x12\t\n\x03\x41VA2\x02v1*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -44,24 +45,68 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_DECIDEREQUEST'].fields_by_name['output_name']._serialized_options = b'\372B\004r\002\020\001'
   _globals['_DECIDEREQUEST'].fields_by_name['model']._loaded_options = None
   _globals['_DECIDEREQUEST'].fields_by_name['model']._serialized_options = b'\372B\005\202\001\002\020\001'
+  _globals['_GETDECISIONREQUEST'].fields_by_name['dataset_name']._loaded_options = None
+  _globals['_GETDECISIONREQUEST'].fields_by_name['dataset_name']._serialized_options = b'\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$'
+  _globals['_GETDECISIONREQUEST'].fields_by_name['decision_ref']._loaded_options = None
+  _globals['_GETDECISIONREQUEST'].fields_by_name['decision_ref']._serialized_options = b'\372B\006r\004\020\001($'
+  _globals['_GETDECISIONREQUEST'].fields_by_name['output_name']._loaded_options = None
+  _globals['_GETDECISIONREQUEST'].fields_by_name['output_name']._serialized_options = b'\372B\004r\002\020\001'
+  _globals['_GETPROCEDUREREQUEST'].fields_by_name['dataset_name']._loaded_options = None
+  _globals['_GETPROCEDUREREQUEST'].fields_by_name['dataset_name']._serialized_options = b'\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$'
+  _globals['_GETPROCEDUREREQUEST'].fields_by_name['output_name']._loaded_options = None
+  _globals['_GETPROCEDUREREQUEST'].fields_by_name['output_name']._serialized_options = b'\372B\004r\002\020\001'
+  _globals['_GETPROCEDUREREQUEST'].fields_by_name['version']._loaded_options = None
+  _globals['_GETPROCEDUREREQUEST'].fields_by_name['version']._serialized_options = b'\372B\004\032\002(\000'
+  _globals['_PROCEDURENODE_ANSWERSENTRY']._loaded_options = None
+  _globals['_PROCEDURENODE_ANSWERSENTRY']._serialized_options = b'8\001'
+  _globals['_DECISIONNODE_ANSWERSENTRY']._loaded_options = None
+  _globals['_DECISIONNODE_ANSWERSENTRY']._serialized_options = b'8\001'
   _globals['_PREDICTIONSERVICE']._loaded_options = None
   _globals['_PREDICTIONSERVICE']._serialized_options = b'\222A0\022.Decide outputs with a dataset\'s AVA procedure.'
   _globals['_PREDICTIONSERVICE'].methods_by_name['Decide']._loaded_options = None
   _globals['_PREDICTIONSERVICE'].methods_by_name['Decide']._serialized_options = b'\202\323\344\223\002\'\"\"/v2/datasets/{dataset_name}:decide:\001*'
-  _globals['_MODEL']._serialized_start=949
-  _globals['_MODEL']._serialized_end=1000
-  _globals['_DECIDEREQUEST']._serialized_start=179
-  _globals['_DECIDEREQUEST']._serialized_end=478
-  _globals['_DECIDEREQUEST_FIELDSENTRY']._serialized_start=421
-  _globals['_DECIDEREQUEST_FIELDSENTRY']._serialized_end=478
-  _globals['_DECIDERESPONSE']._serialized_start=481
-  _globals['_DECIDERESPONSE']._serialized_end=636
-  _globals['_WALKEDSTEP']._serialized_start=638
-  _globals['_WALKEDSTEP']._serialized_end=754
-  _globals['_CONFIDENCE']._serialized_start=757
-  _globals['_CONFIDENCE']._serialized_end=947
-  _globals['_CONFIDENCE_LEVEL']._serialized_start=870
-  _globals['_CONFIDENCE_LEVEL']._serialized_end=947
-  _globals['_PREDICTIONSERVICE']._serialized_start=1003
-  _globals['_PREDICTIONSERVICE']._serialized_end=1179
+  _globals['_PREDICTIONSERVICE'].methods_by_name['GetDecision']._loaded_options = None
+  _globals['_PREDICTIONSERVICE'].methods_by_name['GetDecision']._serialized_options = b'\202\323\344\223\0026\0224/v2/datasets/{dataset_name}/decisions/{decision_ref}'
+  _globals['_PREDICTIONSERVICE'].methods_by_name['GetProcedure']._loaded_options = None
+  _globals['_PREDICTIONSERVICE'].methods_by_name['GetProcedure']._serialized_options = b'\202\323\344\223\002=\022;/v2/datasets/{dataset_name}/outputs/{output_name}/procedure'
+  _globals['_PREDICTIONSERVICE'].methods_by_name['GetDecisionPath']._loaded_options = None
+  _globals['_PREDICTIONSERVICE'].methods_by_name['GetDecisionPath']._serialized_options = b'\202\323\344\223\002;\0229/v2/datasets/{dataset_name}/decisions/{decision_ref}/path'
+  _globals['_MODEL']._serialized_start=2978
+  _globals['_MODEL']._serialized_end=3029
+  _globals['_DECIDEREQUEST']._serialized_start=212
+  _globals['_DECIDEREQUEST']._serialized_end=511
+  _globals['_DECIDEREQUEST_FIELDSENTRY']._serialized_start=454
+  _globals['_DECIDEREQUEST_FIELDSENTRY']._serialized_end=511
+  _globals['_DECIDERESPONSE']._serialized_start=514
+  _globals['_DECIDERESPONSE']._serialized_end=815
+  _globals['_WALKEDSTEP']._serialized_start=818
+  _globals['_WALKEDSTEP']._serialized_end=1026
+  _globals['_TAKENBRANCH']._serialized_start=1029
+  _globals['_TAKENBRANCH']._serialized_end=1209
+  _globals['_ESCALATION']._serialized_start=1212
+  _globals['_ESCALATION']._serialized_end=1421
+  _globals['_ESCALATION_KIND']._serialized_start=1296
+  _globals['_ESCALATION_KIND']._serialized_end=1421
+  _globals['_GETDECISIONREQUEST']._serialized_start=1424
+  _globals['_GETDECISIONREQUEST']._serialized_end=1609
+  _globals['_GETPROCEDUREREQUEST']._serialized_start=1612
+  _globals['_GETPROCEDUREREQUEST']._serialized_end=1787
+  _globals['_GETPROCEDURERESPONSE']._serialized_start=1789
+  _globals['_GETPROCEDURERESPONSE']._serialized_end=1899
+  _globals['_PROCEDURENODE']._serialized_start=1902
+  _globals['_PROCEDURENODE']._serialized_end=2160
+  _globals['_PROCEDURENODE_ANSWERSENTRY']._serialized_start=2079
+  _globals['_PROCEDURENODE_ANSWERSENTRY']._serialized_end=2160
+  _globals['_GETDECISIONPATHRESPONSE']._serialized_start=2163
+  _globals['_GETDECISIONPATHRESPONSE']._serialized_end=2369
+  _globals['_DECISIONNODE']._serialized_start=2372
+  _globals['_DECISIONNODE']._serialized_end=2783
+  _globals['_DECISIONNODE_ANSWERSENTRY']._serialized_start=2703
+  _globals['_DECISIONNODE_ANSWERSENTRY']._serialized_end=2783
+  _globals['_CONFIDENCE']._serialized_start=2786
+  _globals['_CONFIDENCE']._serialized_end=2976
+  _globals['_CONFIDENCE_LEVEL']._serialized_start=2899
+  _globals['_CONFIDENCE_LEVEL']._serialized_end=2976
+  _globals['_PREDICTIONSERVICE']._serialized_start=3032
+  _globals['_PREDICTIONSERVICE']._serialized_end=3630
 # @@protoc_insertion_point(module_scope)

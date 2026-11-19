@@ -29,6 +29,9 @@ private static final long serialVersionUID = 0L;
   private WalkedStep() {
     question_ = "";
     answer_ = "";
+    stepId_ = "";
+    facts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -177,6 +180,144 @@ private static final long serialVersionUID = 0L;
     return confidence_ == null ? ai.visma.ava.v1.Confidence.getDefaultInstance() : confidence_;
   }
 
+  public static final int STEP_ID_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object stepId_ = "";
+  /**
+   * <pre>
+   * Identifier of the step within the procedure
+   * </pre>
+   *
+   * <code>string step_id = 4 [json_name = "stepId"];</code>
+   * @return The stepId.
+   */
+  @java.lang.Override
+  public java.lang.String getStepId() {
+    java.lang.Object ref = stepId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      stepId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Identifier of the step within the procedure
+   * </pre>
+   *
+   * <code>string step_id = 4 [json_name = "stepId"];</code>
+   * @return The bytes for stepId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getStepIdBytes() {
+    java.lang.Object ref = stepId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      stepId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int FACTS_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList facts_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * Names of the facts the step read, sorted
+   * </pre>
+   *
+   * <code>repeated string facts = 5 [json_name = "facts"];</code>
+   * @return A list containing the facts.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getFactsList() {
+    return facts_;
+  }
+  /**
+   * <pre>
+   * Names of the facts the step read, sorted
+   * </pre>
+   *
+   * <code>repeated string facts = 5 [json_name = "facts"];</code>
+   * @return The count of facts.
+   */
+  public int getFactsCount() {
+    return facts_.size();
+  }
+  /**
+   * <pre>
+   * Names of the facts the step read, sorted
+   * </pre>
+   *
+   * <code>repeated string facts = 5 [json_name = "facts"];</code>
+   * @param index The index of the element to return.
+   * @return The facts at the given index.
+   */
+  public java.lang.String getFacts(int index) {
+    return facts_.get(index);
+  }
+  /**
+   * <pre>
+   * Names of the facts the step read, sorted
+   * </pre>
+   *
+   * <code>repeated string facts = 5 [json_name = "facts"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the facts at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getFactsBytes(int index) {
+    return facts_.getByteString(index);
+  }
+
+  public static final int BRANCH_FIELD_NUMBER = 6;
+  private ai.visma.ava.v1.TakenBranch branch_;
+  /**
+   * <pre>
+   * The branch the step took; absent when it took none
+   * </pre>
+   *
+   * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+   * @return Whether the branch field is set.
+   */
+  @java.lang.Override
+  public boolean hasBranch() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * The branch the step took; absent when it took none
+   * </pre>
+   *
+   * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+   * @return The branch.
+   */
+  @java.lang.Override
+  public ai.visma.ava.v1.TakenBranch getBranch() {
+    return branch_ == null ? ai.visma.ava.v1.TakenBranch.getDefaultInstance() : branch_;
+  }
+  /**
+   * <pre>
+   * The branch the step took; absent when it took none
+   * </pre>
+   *
+   * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ava.v1.TakenBranchOrBuilder getBranchOrBuilder() {
+    return branch_ == null ? ai.visma.ava.v1.TakenBranch.getDefaultInstance() : branch_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -200,6 +341,15 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getConfidence());
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(stepId_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 4, stepId_);
+    }
+    for (int i = 0; i < facts_.size(); i++) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 5, facts_.getRaw(i));
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(6, getBranch());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -218,6 +368,21 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getConfidence());
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(stepId_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, stepId_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < facts_.size(); i++) {
+        dataSize += computeStringSizeNoTag(facts_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getFactsList().size();
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getBranch());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -243,6 +408,15 @@ private static final long serialVersionUID = 0L;
       if (!getConfidence()
           .equals(other.getConfidence())) return false;
     }
+    if (!getStepId()
+        .equals(other.getStepId())) return false;
+    if (!getFactsList()
+        .equals(other.getFactsList())) return false;
+    if (hasBranch() != other.hasBranch()) return false;
+    if (hasBranch()) {
+      if (!getBranch()
+          .equals(other.getBranch())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -261,6 +435,16 @@ private static final long serialVersionUID = 0L;
     if (hasConfidence()) {
       hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
       hash = (53 * hash) + getConfidence().hashCode();
+    }
+    hash = (37 * hash) + STEP_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getStepId().hashCode();
+    if (getFactsCount() > 0) {
+      hash = (37 * hash) + FACTS_FIELD_NUMBER;
+      hash = (53 * hash) + getFactsList().hashCode();
+    }
+    if (hasBranch()) {
+      hash = (37 * hash) + BRANCH_FIELD_NUMBER;
+      hash = (53 * hash) + getBranch().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -393,6 +577,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
         getConfidenceFieldBuilder();
+        getBranchFieldBuilder();
       }
     }
     @java.lang.Override
@@ -405,6 +590,14 @@ private static final long serialVersionUID = 0L;
       if (confidenceBuilder_ != null) {
         confidenceBuilder_.dispose();
         confidenceBuilder_ = null;
+      }
+      stepId_ = "";
+      facts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      branch_ = null;
+      if (branchBuilder_ != null) {
+        branchBuilder_.dispose();
+        branchBuilder_ = null;
       }
       return this;
     }
@@ -452,6 +645,19 @@ private static final long serialVersionUID = 0L;
             : confidenceBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.stepId_ = stepId_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        facts_.makeImmutable();
+        result.facts_ = facts_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.branch_ = branchBuilder_ == null
+            ? branch_
+            : branchBuilder_.build();
+        to_bitField0_ |= 0x00000002;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -479,6 +685,24 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasConfidence()) {
         mergeConfidence(other.getConfidence());
+      }
+      if (!other.getStepId().isEmpty()) {
+        stepId_ = other.stepId_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      if (!other.facts_.isEmpty()) {
+        if (facts_.isEmpty()) {
+          facts_ = other.facts_;
+          bitField0_ |= 0x00000010;
+        } else {
+          ensureFactsIsMutable();
+          facts_.addAll(other.facts_);
+        }
+        onChanged();
+      }
+      if (other.hasBranch()) {
+        mergeBranch(other.getBranch());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -523,6 +747,24 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 34: {
+              stepId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureFactsIsMutable();
+              facts_.add(s);
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getBranchFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -879,6 +1121,402 @@ private static final long serialVersionUID = 0L;
         confidence_ = null;
       }
       return confidenceBuilder_;
+    }
+
+    private java.lang.Object stepId_ = "";
+    /**
+     * <pre>
+     * Identifier of the step within the procedure
+     * </pre>
+     *
+     * <code>string step_id = 4 [json_name = "stepId"];</code>
+     * @return The stepId.
+     */
+    public java.lang.String getStepId() {
+      java.lang.Object ref = stepId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stepId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Identifier of the step within the procedure
+     * </pre>
+     *
+     * <code>string step_id = 4 [json_name = "stepId"];</code>
+     * @return The bytes for stepId.
+     */
+    public com.google.protobuf.ByteString
+        getStepIdBytes() {
+      java.lang.Object ref = stepId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stepId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Identifier of the step within the procedure
+     * </pre>
+     *
+     * <code>string step_id = 4 [json_name = "stepId"];</code>
+     * @param value The stepId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStepId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      stepId_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Identifier of the step within the procedure
+     * </pre>
+     *
+     * <code>string step_id = 4 [json_name = "stepId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStepId() {
+      stepId_ = getDefaultInstance().getStepId();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Identifier of the step within the procedure
+     * </pre>
+     *
+     * <code>string step_id = 4 [json_name = "stepId"];</code>
+     * @param value The bytes for stepId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStepIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      stepId_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList facts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureFactsIsMutable() {
+      if (!facts_.isModifiable()) {
+        facts_ = new com.google.protobuf.LazyStringArrayList(facts_);
+      }
+      bitField0_ |= 0x00000010;
+    }
+    /**
+     * <pre>
+     * Names of the facts the step read, sorted
+     * </pre>
+     *
+     * <code>repeated string facts = 5 [json_name = "facts"];</code>
+     * @return A list containing the facts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFactsList() {
+      facts_.makeImmutable();
+      return facts_;
+    }
+    /**
+     * <pre>
+     * Names of the facts the step read, sorted
+     * </pre>
+     *
+     * <code>repeated string facts = 5 [json_name = "facts"];</code>
+     * @return The count of facts.
+     */
+    public int getFactsCount() {
+      return facts_.size();
+    }
+    /**
+     * <pre>
+     * Names of the facts the step read, sorted
+     * </pre>
+     *
+     * <code>repeated string facts = 5 [json_name = "facts"];</code>
+     * @param index The index of the element to return.
+     * @return The facts at the given index.
+     */
+    public java.lang.String getFacts(int index) {
+      return facts_.get(index);
+    }
+    /**
+     * <pre>
+     * Names of the facts the step read, sorted
+     * </pre>
+     *
+     * <code>repeated string facts = 5 [json_name = "facts"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the facts at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFactsBytes(int index) {
+      return facts_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * Names of the facts the step read, sorted
+     * </pre>
+     *
+     * <code>repeated string facts = 5 [json_name = "facts"];</code>
+     * @param index The index to set the value at.
+     * @param value The facts to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFacts(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureFactsIsMutable();
+      facts_.set(index, value);
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Names of the facts the step read, sorted
+     * </pre>
+     *
+     * <code>repeated string facts = 5 [json_name = "facts"];</code>
+     * @param value The facts to add.
+     * @return This builder for chaining.
+     */
+    public Builder addFacts(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureFactsIsMutable();
+      facts_.add(value);
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Names of the facts the step read, sorted
+     * </pre>
+     *
+     * <code>repeated string facts = 5 [json_name = "facts"];</code>
+     * @param values The facts to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllFacts(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureFactsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, facts_);
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Names of the facts the step read, sorted
+     * </pre>
+     *
+     * <code>repeated string facts = 5 [json_name = "facts"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFacts() {
+      facts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000010);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Names of the facts the step read, sorted
+     * </pre>
+     *
+     * <code>repeated string facts = 5 [json_name = "facts"];</code>
+     * @param value The bytes of the facts to add.
+     * @return This builder for chaining.
+     */
+    public Builder addFactsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureFactsIsMutable();
+      facts_.add(value);
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private ai.visma.ava.v1.TakenBranch branch_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ava.v1.TakenBranch, ai.visma.ava.v1.TakenBranch.Builder, ai.visma.ava.v1.TakenBranchOrBuilder> branchBuilder_;
+    /**
+     * <pre>
+     * The branch the step took; absent when it took none
+     * </pre>
+     *
+     * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+     * @return Whether the branch field is set.
+     */
+    public boolean hasBranch() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * The branch the step took; absent when it took none
+     * </pre>
+     *
+     * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+     * @return The branch.
+     */
+    public ai.visma.ava.v1.TakenBranch getBranch() {
+      if (branchBuilder_ == null) {
+        return branch_ == null ? ai.visma.ava.v1.TakenBranch.getDefaultInstance() : branch_;
+      } else {
+        return branchBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The branch the step took; absent when it took none
+     * </pre>
+     *
+     * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+     */
+    public Builder setBranch(ai.visma.ava.v1.TakenBranch value) {
+      if (branchBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        branch_ = value;
+      } else {
+        branchBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The branch the step took; absent when it took none
+     * </pre>
+     *
+     * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+     */
+    public Builder setBranch(
+        ai.visma.ava.v1.TakenBranch.Builder builderForValue) {
+      if (branchBuilder_ == null) {
+        branch_ = builderForValue.build();
+      } else {
+        branchBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The branch the step took; absent when it took none
+     * </pre>
+     *
+     * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+     */
+    public Builder mergeBranch(ai.visma.ava.v1.TakenBranch value) {
+      if (branchBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          branch_ != null &&
+          branch_ != ai.visma.ava.v1.TakenBranch.getDefaultInstance()) {
+          getBranchBuilder().mergeFrom(value);
+        } else {
+          branch_ = value;
+        }
+      } else {
+        branchBuilder_.mergeFrom(value);
+      }
+      if (branch_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The branch the step took; absent when it took none
+     * </pre>
+     *
+     * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+     */
+    public Builder clearBranch() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      branch_ = null;
+      if (branchBuilder_ != null) {
+        branchBuilder_.dispose();
+        branchBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The branch the step took; absent when it took none
+     * </pre>
+     *
+     * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+     */
+    public ai.visma.ava.v1.TakenBranch.Builder getBranchBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getBranchFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The branch the step took; absent when it took none
+     * </pre>
+     *
+     * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+     */
+    public ai.visma.ava.v1.TakenBranchOrBuilder getBranchOrBuilder() {
+      if (branchBuilder_ != null) {
+        return branchBuilder_.getMessageOrBuilder();
+      } else {
+        return branch_ == null ?
+            ai.visma.ava.v1.TakenBranch.getDefaultInstance() : branch_;
+      }
+    }
+    /**
+     * <pre>
+     * The branch the step took; absent when it took none
+     * </pre>
+     *
+     * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ava.v1.TakenBranch, ai.visma.ava.v1.TakenBranch.Builder, ai.visma.ava.v1.TakenBranchOrBuilder> 
+        getBranchFieldBuilder() {
+      if (branchBuilder_ == null) {
+        branchBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ava.v1.TakenBranch, ai.visma.ava.v1.TakenBranch.Builder, ai.visma.ava.v1.TakenBranchOrBuilder>(
+                getBranch(),
+                getParentForChildren(),
+                isClean());
+        branch_ = null;
+      }
+      return branchBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ava.v1.WalkedStep)
