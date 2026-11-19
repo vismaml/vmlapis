@@ -1385,6 +1385,383 @@ var _ interface {
 	ErrorName() string
 } = ProcedureNodeValidationError{}
 
+// Validate checks the field values on GetDecisionPathResponse with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the first error encountered is returned, or nil if there are no violations.
+func (m *GetDecisionPathResponse) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on GetDecisionPathResponse with the
+// rules defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// GetDecisionPathResponseMultiError, or nil if none found.
+func (m *GetDecisionPathResponse) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *GetDecisionPathResponse) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	// no validation rules for ProcedureVersion
+
+	// no validation rules for DecisionRef
+
+	if all {
+		switch v := interface{}(m.GetDecidedAt()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, GetDecisionPathResponseValidationError{
+					field:  "DecidedAt",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, GetDecisionPathResponseValidationError{
+					field:  "DecidedAt",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetDecidedAt()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return GetDecisionPathResponseValidationError{
+				field:  "DecidedAt",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if all {
+		switch v := interface{}(m.GetPath()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, GetDecisionPathResponseValidationError{
+					field:  "Path",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, GetDecisionPathResponseValidationError{
+					field:  "Path",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetPath()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return GetDecisionPathResponseValidationError{
+				field:  "Path",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if len(errors) > 0 {
+		return GetDecisionPathResponseMultiError(errors)
+	}
+
+	return nil
+}
+
+// GetDecisionPathResponseMultiError is an error wrapping multiple validation
+// errors returned by GetDecisionPathResponse.ValidateAll() if the designated
+// constraints aren't met.
+type GetDecisionPathResponseMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m GetDecisionPathResponseMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m GetDecisionPathResponseMultiError) AllErrors() []error { return m }
+
+// GetDecisionPathResponseValidationError is the validation error returned by
+// GetDecisionPathResponse.Validate if the designated constraints aren't met.
+type GetDecisionPathResponseValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e GetDecisionPathResponseValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e GetDecisionPathResponseValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e GetDecisionPathResponseValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e GetDecisionPathResponseValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e GetDecisionPathResponseValidationError) ErrorName() string {
+	return "GetDecisionPathResponseValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e GetDecisionPathResponseValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sGetDecisionPathResponse.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = GetDecisionPathResponseValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = GetDecisionPathResponseValidationError{}
+
+// Validate checks the field values on DecisionNode with the rules defined in
+// the proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
+func (m *DecisionNode) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on DecisionNode with the rules defined
+// in the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in DecisionNodeMultiError, or
+// nil if none found.
+func (m *DecisionNode) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *DecisionNode) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	// no validation rules for Predicate
+
+	// no validation rules for Question
+
+	// no validation rules for Answer
+
+	if all {
+		switch v := interface{}(m.GetConfidence()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, DecisionNodeValidationError{
+					field:  "Confidence",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, DecisionNodeValidationError{
+					field:  "Confidence",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetConfidence()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return DecisionNodeValidationError{
+				field:  "Confidence",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	{
+		sorted_keys := make([]string, len(m.GetAnswers()))
+		i := 0
+		for key := range m.GetAnswers() {
+			sorted_keys[i] = key
+			i++
+		}
+		sort.Slice(sorted_keys, func(i, j int) bool { return sorted_keys[i] < sorted_keys[j] })
+		for _, key := range sorted_keys {
+			val := m.GetAnswers()[key]
+			_ = val
+
+			// no validation rules for Answers[key]
+
+			if all {
+				switch v := interface{}(val).(type) {
+				case interface{ ValidateAll() error }:
+					if err := v.ValidateAll(); err != nil {
+						errors = append(errors, DecisionNodeValidationError{
+							field:  fmt.Sprintf("Answers[%v]", key),
+							reason: "embedded message failed validation",
+							cause:  err,
+						})
+					}
+				case interface{ Validate() error }:
+					if err := v.Validate(); err != nil {
+						errors = append(errors, DecisionNodeValidationError{
+							field:  fmt.Sprintf("Answers[%v]", key),
+							reason: "embedded message failed validation",
+							cause:  err,
+						})
+					}
+				}
+			} else if v, ok := interface{}(val).(interface{ Validate() error }); ok {
+				if err := v.Validate(); err != nil {
+					return DecisionNodeValidationError{
+						field:  fmt.Sprintf("Answers[%v]", key),
+						reason: "embedded message failed validation",
+						cause:  err,
+					}
+				}
+			}
+
+		}
+	}
+
+	// no validation rules for TargetName
+
+	// no validation rules for TargetValue
+
+	if all {
+		switch v := interface{}(m.GetEscalation()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, DecisionNodeValidationError{
+					field:  "Escalation",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, DecisionNodeValidationError{
+					field:  "Escalation",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetEscalation()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return DecisionNodeValidationError{
+				field:  "Escalation",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if len(errors) > 0 {
+		return DecisionNodeMultiError(errors)
+	}
+
+	return nil
+}
+
+// DecisionNodeMultiError is an error wrapping multiple validation errors
+// returned by DecisionNode.ValidateAll() if the designated constraints aren't met.
+type DecisionNodeMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m DecisionNodeMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m DecisionNodeMultiError) AllErrors() []error { return m }
+
+// DecisionNodeValidationError is the validation error returned by
+// DecisionNode.Validate if the designated constraints aren't met.
+type DecisionNodeValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e DecisionNodeValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e DecisionNodeValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e DecisionNodeValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e DecisionNodeValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e DecisionNodeValidationError) ErrorName() string { return "DecisionNodeValidationError" }
+
+// Error satisfies the builtin error interface
+func (e DecisionNodeValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sDecisionNode.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = DecisionNodeValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = DecisionNodeValidationError{}
+
 // Validate checks the field values on Confidence with the rules defined in the
 // proto definition for this message. If any rules are violated, the first
 // error encountered is returned, or nil if there are no violations.

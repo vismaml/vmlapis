@@ -108,6 +108,37 @@ public final class PredictionServiceGrpc {
     return getGetProcedureMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ava.v1.GetDecisionRequest,
+      ai.visma.ava.v1.GetDecisionPathResponse> getGetDecisionPathMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDecisionPath",
+      requestType = ai.visma.ava.v1.GetDecisionRequest.class,
+      responseType = ai.visma.ava.v1.GetDecisionPathResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.ava.v1.GetDecisionRequest,
+      ai.visma.ava.v1.GetDecisionPathResponse> getGetDecisionPathMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ava.v1.GetDecisionRequest, ai.visma.ava.v1.GetDecisionPathResponse> getGetDecisionPathMethod;
+    if ((getGetDecisionPathMethod = PredictionServiceGrpc.getGetDecisionPathMethod) == null) {
+      synchronized (PredictionServiceGrpc.class) {
+        if ((getGetDecisionPathMethod = PredictionServiceGrpc.getGetDecisionPathMethod) == null) {
+          PredictionServiceGrpc.getGetDecisionPathMethod = getGetDecisionPathMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ava.v1.GetDecisionRequest, ai.visma.ava.v1.GetDecisionPathResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDecisionPath"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ava.v1.GetDecisionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ava.v1.GetDecisionPathResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new PredictionServiceMethodDescriptorSupplier("GetDecisionPath"))
+              .build();
+        }
+      }
+    }
+    return getGetDecisionPathMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -200,6 +231,16 @@ public final class PredictionServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.ava.v1.GetProcedureResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProcedureMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Return a stored decision as the path it walked through the procedure tree.
+     * </pre>
+     */
+    default void getDecisionPath(ai.visma.ava.v1.GetDecisionRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ava.v1.GetDecisionPathResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDecisionPathMethod(), responseObserver);
+    }
   }
 
   /**
@@ -261,6 +302,17 @@ public final class PredictionServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetProcedureMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Return a stored decision as the path it walked through the procedure tree.
+     * </pre>
+     */
+    public void getDecisionPath(ai.visma.ava.v1.GetDecisionRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ava.v1.GetDecisionPathResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDecisionPathMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -308,6 +360,16 @@ public final class PredictionServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProcedureMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Return a stored decision as the path it walked through the procedure tree.
+     * </pre>
+     */
+    public ai.visma.ava.v1.GetDecisionPathResponse getDecisionPath(ai.visma.ava.v1.GetDecisionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDecisionPathMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -354,6 +416,16 @@ public final class PredictionServiceGrpc {
     public ai.visma.ava.v1.GetProcedureResponse getProcedure(ai.visma.ava.v1.GetProcedureRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProcedureMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Return a stored decision as the path it walked through the procedure tree.
+     * </pre>
+     */
+    public ai.visma.ava.v1.GetDecisionPathResponse getDecisionPath(ai.visma.ava.v1.GetDecisionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDecisionPathMethod(), getCallOptions(), request);
     }
   }
 
@@ -405,11 +477,23 @@ public final class PredictionServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetProcedureMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Return a stored decision as the path it walked through the procedure tree.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ava.v1.GetDecisionPathResponse> getDecisionPath(
+        ai.visma.ava.v1.GetDecisionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDecisionPathMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_DECIDE = 0;
   private static final int METHODID_GET_DECISION = 1;
   private static final int METHODID_GET_PROCEDURE = 2;
+  private static final int METHODID_GET_DECISION_PATH = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -439,6 +523,10 @@ public final class PredictionServiceGrpc {
         case METHODID_GET_PROCEDURE:
           serviceImpl.getProcedure((ai.visma.ava.v1.GetProcedureRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.ava.v1.GetProcedureResponse>) responseObserver);
+          break;
+        case METHODID_GET_DECISION_PATH:
+          serviceImpl.getDecisionPath((ai.visma.ava.v1.GetDecisionRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ava.v1.GetDecisionPathResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -479,6 +567,13 @@ public final class PredictionServiceGrpc {
               ai.visma.ava.v1.GetProcedureRequest,
               ai.visma.ava.v1.GetProcedureResponse>(
                 service, METHODID_GET_PROCEDURE)))
+        .addMethod(
+          getGetDecisionPathMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ava.v1.GetDecisionRequest,
+              ai.visma.ava.v1.GetDecisionPathResponse>(
+                service, METHODID_GET_DECISION_PATH)))
         .build();
   }
 
@@ -530,6 +625,7 @@ public final class PredictionServiceGrpc {
               .addMethod(getDecideMethod())
               .addMethod(getGetDecisionMethod())
               .addMethod(getGetProcedureMethod())
+              .addMethod(getGetDecisionPathMethod())
               .build();
         }
       }

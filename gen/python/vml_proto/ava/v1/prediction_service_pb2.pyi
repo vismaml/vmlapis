@@ -159,6 +159,45 @@ class ProcedureNode(_message.Message):
     target_value: str
     def __init__(self, predicate: _Optional[str] = ..., answers: _Optional[_Mapping[str, ProcedureNode]] = ..., target_name: _Optional[str] = ..., target_value: _Optional[str] = ...) -> None: ...
 
+class GetDecisionPathResponse(_message.Message):
+    __slots__ = ("procedure_version", "decision_ref", "decided_at", "path")
+    PROCEDURE_VERSION_FIELD_NUMBER: _ClassVar[int]
+    DECISION_REF_FIELD_NUMBER: _ClassVar[int]
+    DECIDED_AT_FIELD_NUMBER: _ClassVar[int]
+    PATH_FIELD_NUMBER: _ClassVar[int]
+    procedure_version: int
+    decision_ref: str
+    decided_at: _timestamp_pb2.Timestamp
+    path: DecisionNode
+    def __init__(self, procedure_version: _Optional[int] = ..., decision_ref: _Optional[str] = ..., decided_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., path: _Optional[_Union[DecisionNode, _Mapping]] = ...) -> None: ...
+
+class DecisionNode(_message.Message):
+    __slots__ = ("predicate", "question", "answer", "confidence", "answers", "target_name", "target_value", "escalation")
+    class AnswersEntry(_message.Message):
+        __slots__ = ("key", "value")
+        KEY_FIELD_NUMBER: _ClassVar[int]
+        VALUE_FIELD_NUMBER: _ClassVar[int]
+        key: str
+        value: DecisionNode
+        def __init__(self, key: _Optional[str] = ..., value: _Optional[_Union[DecisionNode, _Mapping]] = ...) -> None: ...
+    PREDICATE_FIELD_NUMBER: _ClassVar[int]
+    QUESTION_FIELD_NUMBER: _ClassVar[int]
+    ANSWER_FIELD_NUMBER: _ClassVar[int]
+    CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
+    ANSWERS_FIELD_NUMBER: _ClassVar[int]
+    TARGET_NAME_FIELD_NUMBER: _ClassVar[int]
+    TARGET_VALUE_FIELD_NUMBER: _ClassVar[int]
+    ESCALATION_FIELD_NUMBER: _ClassVar[int]
+    predicate: str
+    question: str
+    answer: str
+    confidence: Confidence
+    answers: _containers.MessageMap[str, DecisionNode]
+    target_name: str
+    target_value: str
+    escalation: Escalation
+    def __init__(self, predicate: _Optional[str] = ..., question: _Optional[str] = ..., answer: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ..., answers: _Optional[_Mapping[str, DecisionNode]] = ..., target_name: _Optional[str] = ..., target_value: _Optional[str] = ..., escalation: _Optional[_Union[Escalation, _Mapping]] = ...) -> None: ...
+
 class Confidence(_message.Message):
     __slots__ = ("level", "value")
     class Level(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):

@@ -55,6 +55,8 @@ namespace Ava.V1 {
     static readonly grpc::Marshaller<global::Ava.V1.GetProcedureRequest> __Marshaller_ava_v1_GetProcedureRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ava.V1.GetProcedureRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ava.V1.GetProcedureResponse> __Marshaller_ava_v1_GetProcedureResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ava.V1.GetProcedureResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ava.V1.GetDecisionPathResponse> __Marshaller_ava_v1_GetDecisionPathResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ava.V1.GetDecisionPathResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ava.V1.DecideRequest, global::Ava.V1.DecideResponse> __Method_Decide = new grpc::Method<global::Ava.V1.DecideRequest, global::Ava.V1.DecideResponse>(
@@ -79,6 +81,14 @@ namespace Ava.V1 {
         "GetProcedure",
         __Marshaller_ava_v1_GetProcedureRequest,
         __Marshaller_ava_v1_GetProcedureResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ava.V1.GetDecisionRequest, global::Ava.V1.GetDecisionPathResponse> __Method_GetDecisionPath = new grpc::Method<global::Ava.V1.GetDecisionRequest, global::Ava.V1.GetDecisionPathResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDecisionPath",
+        __Marshaller_ava_v1_GetDecisionRequest,
+        __Marshaller_ava_v1_GetDecisionPathResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -122,6 +132,18 @@ namespace Ava.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ava.V1.GetProcedureResponse> GetProcedure(global::Ava.V1.GetProcedureRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Return a stored decision as the path it walked through the procedure tree.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ava.V1.GetDecisionPathResponse> GetDecisionPath(global::Ava.V1.GetDecisionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -299,6 +321,54 @@ namespace Ava.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetProcedure, null, options, request);
       }
+      /// <summary>
+      /// Return a stored decision as the path it walked through the procedure tree.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ava.V1.GetDecisionPathResponse GetDecisionPath(global::Ava.V1.GetDecisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDecisionPath(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Return a stored decision as the path it walked through the procedure tree.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ava.V1.GetDecisionPathResponse GetDecisionPath(global::Ava.V1.GetDecisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDecisionPath, null, options, request);
+      }
+      /// <summary>
+      /// Return a stored decision as the path it walked through the procedure tree.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ava.V1.GetDecisionPathResponse> GetDecisionPathAsync(global::Ava.V1.GetDecisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDecisionPathAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Return a stored decision as the path it walked through the procedure tree.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ava.V1.GetDecisionPathResponse> GetDecisionPathAsync(global::Ava.V1.GetDecisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDecisionPath, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override PredictionServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -315,7 +385,8 @@ namespace Ava.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_Decide, serviceImpl.Decide)
           .AddMethod(__Method_GetDecision, serviceImpl.GetDecision)
-          .AddMethod(__Method_GetProcedure, serviceImpl.GetProcedure).Build();
+          .AddMethod(__Method_GetProcedure, serviceImpl.GetProcedure)
+          .AddMethod(__Method_GetDecisionPath, serviceImpl.GetDecisionPath).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -328,6 +399,7 @@ namespace Ava.V1 {
       serviceBinder.AddMethod(__Method_Decide, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ava.V1.DecideRequest, global::Ava.V1.DecideResponse>(serviceImpl.Decide));
       serviceBinder.AddMethod(__Method_GetDecision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ava.V1.GetDecisionRequest, global::Ava.V1.DecideResponse>(serviceImpl.GetDecision));
       serviceBinder.AddMethod(__Method_GetProcedure, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ava.V1.GetProcedureRequest, global::Ava.V1.GetProcedureResponse>(serviceImpl.GetProcedure));
+      serviceBinder.AddMethod(__Method_GetDecisionPath, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ava.V1.GetDecisionRequest, global::Ava.V1.GetDecisionPathResponse>(serviceImpl.GetDecisionPath));
     }
 
   }

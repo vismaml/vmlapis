@@ -268,5 +268,66 @@ proto.ava.v1.PredictionServicePromiseClient.prototype.getProcedure =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ava.v1.GetDecisionRequest,
+ *   !proto.ava.v1.GetDecisionPathResponse>}
+ */
+const methodDescriptor_PredictionService_GetDecisionPath = new grpc.web.MethodDescriptor(
+  '/ava.v1.PredictionService/GetDecisionPath',
+  grpc.web.MethodType.UNARY,
+  proto.ava.v1.GetDecisionRequest,
+  proto.ava.v1.GetDecisionPathResponse,
+  /**
+   * @param {!proto.ava.v1.GetDecisionRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ava.v1.GetDecisionPathResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ava.v1.GetDecisionRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ava.v1.GetDecisionPathResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ava.v1.GetDecisionPathResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ava.v1.PredictionServiceClient.prototype.getDecisionPath =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ava.v1.PredictionService/GetDecisionPath',
+      request,
+      metadata || {},
+      methodDescriptor_PredictionService_GetDecisionPath,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ava.v1.GetDecisionRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ava.v1.GetDecisionPathResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ava.v1.PredictionServicePromiseClient.prototype.getDecisionPath =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ava.v1.PredictionService/GetDecisionPath',
+      request,
+      metadata || {},
+      methodDescriptor_PredictionService_GetDecisionPath);
+};
+
+
 module.exports = proto.ava.v1;
 

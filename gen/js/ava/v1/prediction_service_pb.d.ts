@@ -308,6 +308,90 @@ export namespace ProcedureNode {
   }
 }
 
+export class GetDecisionPathResponse extends jspb.Message {
+  getProcedureVersion(): number;
+  setProcedureVersion(value: number): GetDecisionPathResponse;
+
+  getDecisionRef(): string;
+  setDecisionRef(value: string): GetDecisionPathResponse;
+
+  getDecidedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setDecidedAt(value?: google_protobuf_timestamp_pb.Timestamp): GetDecisionPathResponse;
+  hasDecidedAt(): boolean;
+  clearDecidedAt(): GetDecisionPathResponse;
+
+  getPath(): DecisionNode | undefined;
+  setPath(value?: DecisionNode): GetDecisionPathResponse;
+  hasPath(): boolean;
+  clearPath(): GetDecisionPathResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetDecisionPathResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: GetDecisionPathResponse): GetDecisionPathResponse.AsObject;
+  static serializeBinaryToWriter(message: GetDecisionPathResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetDecisionPathResponse;
+  static deserializeBinaryFromReader(message: GetDecisionPathResponse, reader: jspb.BinaryReader): GetDecisionPathResponse;
+}
+
+export namespace GetDecisionPathResponse {
+  export type AsObject = {
+    procedureVersion: number,
+    decisionRef: string,
+    decidedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    path?: DecisionNode.AsObject,
+  }
+}
+
+export class DecisionNode extends jspb.Message {
+  getPredicate(): string;
+  setPredicate(value: string): DecisionNode;
+
+  getQuestion(): string;
+  setQuestion(value: string): DecisionNode;
+
+  getAnswer(): string;
+  setAnswer(value: string): DecisionNode;
+
+  getConfidence(): Confidence | undefined;
+  setConfidence(value?: Confidence): DecisionNode;
+  hasConfidence(): boolean;
+  clearConfidence(): DecisionNode;
+
+  getAnswersMap(): jspb.Map<string, DecisionNode>;
+  clearAnswersMap(): DecisionNode;
+
+  getTargetName(): string;
+  setTargetName(value: string): DecisionNode;
+
+  getTargetValue(): string;
+  setTargetValue(value: string): DecisionNode;
+
+  getEscalation(): Escalation | undefined;
+  setEscalation(value?: Escalation): DecisionNode;
+  hasEscalation(): boolean;
+  clearEscalation(): DecisionNode;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DecisionNode.AsObject;
+  static toObject(includeInstance: boolean, msg: DecisionNode): DecisionNode.AsObject;
+  static serializeBinaryToWriter(message: DecisionNode, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DecisionNode;
+  static deserializeBinaryFromReader(message: DecisionNode, reader: jspb.BinaryReader): DecisionNode;
+}
+
+export namespace DecisionNode {
+  export type AsObject = {
+    predicate: string,
+    question: string,
+    answer: string,
+    confidence?: Confidence.AsObject,
+    answersMap: Array<[string, DecisionNode.AsObject]>,
+    targetName: string,
+    targetValue: string,
+    escalation?: Escalation.AsObject,
+  }
+}
+
 export class Confidence extends jspb.Message {
   getLevel(): Confidence.Level;
   setLevel(value: Confidence.Level): Confidence;
