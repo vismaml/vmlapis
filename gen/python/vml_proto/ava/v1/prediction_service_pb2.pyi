@@ -122,6 +122,43 @@ class GetDecisionRequest(_message.Message):
     output_name: str
     def __init__(self, dataset_name: _Optional[str] = ..., decision_ref: _Optional[str] = ..., output_name: _Optional[str] = ...) -> None: ...
 
+class GetProcedureRequest(_message.Message):
+    __slots__ = ("dataset_name", "output_name", "version")
+    DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
+    OUTPUT_NAME_FIELD_NUMBER: _ClassVar[int]
+    VERSION_FIELD_NUMBER: _ClassVar[int]
+    dataset_name: str
+    output_name: str
+    version: int
+    def __init__(self, dataset_name: _Optional[str] = ..., output_name: _Optional[str] = ..., version: _Optional[int] = ...) -> None: ...
+
+class GetProcedureResponse(_message.Message):
+    __slots__ = ("procedure_version", "tree")
+    PROCEDURE_VERSION_FIELD_NUMBER: _ClassVar[int]
+    TREE_FIELD_NUMBER: _ClassVar[int]
+    procedure_version: int
+    tree: ProcedureNode
+    def __init__(self, procedure_version: _Optional[int] = ..., tree: _Optional[_Union[ProcedureNode, _Mapping]] = ...) -> None: ...
+
+class ProcedureNode(_message.Message):
+    __slots__ = ("predicate", "answers", "target_name", "target_value")
+    class AnswersEntry(_message.Message):
+        __slots__ = ("key", "value")
+        KEY_FIELD_NUMBER: _ClassVar[int]
+        VALUE_FIELD_NUMBER: _ClassVar[int]
+        key: str
+        value: ProcedureNode
+        def __init__(self, key: _Optional[str] = ..., value: _Optional[_Union[ProcedureNode, _Mapping]] = ...) -> None: ...
+    PREDICATE_FIELD_NUMBER: _ClassVar[int]
+    ANSWERS_FIELD_NUMBER: _ClassVar[int]
+    TARGET_NAME_FIELD_NUMBER: _ClassVar[int]
+    TARGET_VALUE_FIELD_NUMBER: _ClassVar[int]
+    predicate: str
+    answers: _containers.MessageMap[str, ProcedureNode]
+    target_name: str
+    target_value: str
+    def __init__(self, predicate: _Optional[str] = ..., answers: _Optional[_Mapping[str, ProcedureNode]] = ..., target_name: _Optional[str] = ..., target_value: _Optional[str] = ...) -> None: ...
+
 class Confidence(_message.Message):
     __slots__ = ("level", "value")
     class Level(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):

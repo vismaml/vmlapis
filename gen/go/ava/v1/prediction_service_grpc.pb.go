@@ -19,8 +19,9 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	PredictionService_Decide_FullMethodName      = "/ava.v1.PredictionService/Decide"
-	PredictionService_GetDecision_FullMethodName = "/ava.v1.PredictionService/GetDecision"
+	PredictionService_Decide_FullMethodName       = "/ava.v1.PredictionService/Decide"
+	PredictionService_GetDecision_FullMethodName  = "/ava.v1.PredictionService/GetDecision"
+	PredictionService_GetProcedure_FullMethodName = "/ava.v1.PredictionService/GetProcedure"
 )
 
 // PredictionServiceClient is the client API for PredictionService service.
@@ -31,6 +32,8 @@ type PredictionServiceClient interface {
 	Decide(ctx context.Context, in *DecideRequest, opts ...grpc.CallOption) (*DecideResponse, error)
 	// Return a stored decision by the reference Decide returned.
 	GetDecision(ctx context.Context, in *GetDecisionRequest, opts ...grpc.CallOption) (*DecideResponse, error)
+	// Return the procedure a dataset decides an output with, as a tree.
+	GetProcedure(ctx context.Context, in *GetProcedureRequest, opts ...grpc.CallOption) (*GetProcedureResponse, error)
 }
 
 type predictionServiceClient struct {
@@ -59,6 +62,15 @@ func (c *predictionServiceClient) GetDecision(ctx context.Context, in *GetDecisi
 	return out, nil
 }
 
+func (c *predictionServiceClient) GetProcedure(ctx context.Context, in *GetProcedureRequest, opts ...grpc.CallOption) (*GetProcedureResponse, error) {
+	out := new(GetProcedureResponse)
+	err := c.cc.Invoke(ctx, PredictionService_GetProcedure_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // PredictionServiceServer is the server API for PredictionService service.
 // All implementations should embed UnimplementedPredictionServiceServer
 // for forward compatibility
@@ -67,6 +79,8 @@ type PredictionServiceServer interface {
 	Decide(context.Context, *DecideRequest) (*DecideResponse, error)
 	// Return a stored decision by the reference Decide returned.
 	GetDecision(context.Context, *GetDecisionRequest) (*DecideResponse, error)
+	// Return the procedure a dataset decides an output with, as a tree.
+	GetProcedure(context.Context, *GetProcedureRequest) (*GetProcedureResponse, error)
 }
 
 // UnimplementedPredictionServiceServer should be embedded to have forward compatible implementations.
@@ -78,6 +92,9 @@ func (UnimplementedPredictionServiceServer) Decide(context.Context, *DecideReque
 }
 func (UnimplementedPredictionServiceServer) GetDecision(context.Context, *GetDecisionRequest) (*DecideResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetDecision not implemented")
+}
+func (UnimplementedPredictionServiceServer) GetProcedure(context.Context, *GetProcedureRequest) (*GetProcedureResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetProcedure not implemented")
 }
 
 // UnsafePredictionServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -127,6 +144,24 @@ func _PredictionService_GetDecision_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _PredictionService_GetProcedure_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetProcedureRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(PredictionServiceServer).GetProcedure(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: PredictionService_GetProcedure_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(PredictionServiceServer).GetProcedure(ctx, req.(*GetProcedureRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // PredictionService_ServiceDesc is the grpc.ServiceDesc for PredictionService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -141,6 +176,10 @@ var PredictionService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetDecision",
 			Handler:    _PredictionService_GetDecision_Handler,
+		},
+		{
+			MethodName: "GetProcedure",
+			Handler:    _PredictionService_GetProcedure_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

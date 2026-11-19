@@ -24,6 +24,11 @@ class PredictionServiceStub(object):
                 request_serializer=ava_dot_v1_dot_prediction__service__pb2.GetDecisionRequest.SerializeToString,
                 response_deserializer=ava_dot_v1_dot_prediction__service__pb2.DecideResponse.FromString,
                 _registered_method=True)
+        self.GetProcedure = channel.unary_unary(
+                '/ava.v1.PredictionService/GetProcedure',
+                request_serializer=ava_dot_v1_dot_prediction__service__pb2.GetProcedureRequest.SerializeToString,
+                response_deserializer=ava_dot_v1_dot_prediction__service__pb2.GetProcedureResponse.FromString,
+                _registered_method=True)
 
 
 class PredictionServiceServicer(object):
@@ -43,6 +48,13 @@ class PredictionServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetProcedure(self, request, context):
+        """Return the procedure a dataset decides an output with, as a tree.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_PredictionServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -55,6 +67,11 @@ def add_PredictionServiceServicer_to_server(servicer, server):
                     servicer.GetDecision,
                     request_deserializer=ava_dot_v1_dot_prediction__service__pb2.GetDecisionRequest.FromString,
                     response_serializer=ava_dot_v1_dot_prediction__service__pb2.DecideResponse.SerializeToString,
+            ),
+            'GetProcedure': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetProcedure,
+                    request_deserializer=ava_dot_v1_dot_prediction__service__pb2.GetProcedureRequest.FromString,
+                    response_serializer=ava_dot_v1_dot_prediction__service__pb2.GetProcedureResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -111,6 +128,33 @@ class PredictionService(object):
             '/ava.v1.PredictionService/GetDecision',
             ava_dot_v1_dot_prediction__service__pb2.GetDecisionRequest.SerializeToString,
             ava_dot_v1_dot_prediction__service__pb2.DecideResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def GetProcedure(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ava.v1.PredictionService/GetProcedure',
+            ava_dot_v1_dot_prediction__service__pb2.GetProcedureRequest.SerializeToString,
+            ava_dot_v1_dot_prediction__service__pb2.GetProcedureResponse.FromString,
             options,
             channel_credentials,
             insecure,

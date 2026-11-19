@@ -35,6 +35,11 @@ service PredictionService {
   rpc GetDecision(GetDecisionRequest) returns (DecideResponse) {
     option (google.api.http) = {get: "/v2/datasets/{dataset_name}/decisions/{decision_ref}"};
   }
+
+  // Return the procedure a dataset decides an output with, as a tree.
+  rpc GetProcedure(GetProcedureRequest) returns (GetProcedureResponse) {
+    option (google.api.http) = {get: "/v2/datasets/{dataset_name}/outputs/{output_name}/procedure"};
+  }
 }
 
 message DecideRequest {
@@ -137,6 +142,37 @@ message GetDecisionRequest {
   }];
   // Name of the decided output, e.g. Account
   string output_name = 3 [(validate.rules).string.min_len = 1];
+}
+
+message GetProcedureRequest {
+  // Name of the dataset whose procedure to return
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
+    max_bytes: 256
+  }]; // text-no-spaces
+  // Name of the output the procedure decides, e.g. Account
+  string output_name = 2 [(validate.rules).string.min_len = 1];
+  // Version to return; the newest when 0
+  int32 version = 3 [(validate.rules).int32.gte = 0];
+}
+
+message GetProcedureResponse {
+  // Version of the returned procedure
+  int32 procedure_version = 1;
+  // The step every walk starts at
+  ProcedureNode tree = 2;
+}
+
+// A step (predicate and answers), a leaf (target_name and target_value), or empty where the walk escalates.
+message ProcedureNode {
+  // Name of the fact the step tests
+  string predicate = 1;
+  // What follows each answer to the predicate
+  map<string, ProcedureNode> answers = 2;
+  // Name of the output decided at this leaf, e.g. Account
+  string target_name = 3;
+  // The value decided at this leaf
+  string target_value = 4;
 }
 
 message Confidence {

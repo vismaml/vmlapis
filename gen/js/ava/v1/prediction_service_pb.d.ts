@@ -228,6 +228,86 @@ export namespace GetDecisionRequest {
   }
 }
 
+export class GetProcedureRequest extends jspb.Message {
+  getDatasetName(): string;
+  setDatasetName(value: string): GetProcedureRequest;
+
+  getOutputName(): string;
+  setOutputName(value: string): GetProcedureRequest;
+
+  getVersion(): number;
+  setVersion(value: number): GetProcedureRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetProcedureRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetProcedureRequest): GetProcedureRequest.AsObject;
+  static serializeBinaryToWriter(message: GetProcedureRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetProcedureRequest;
+  static deserializeBinaryFromReader(message: GetProcedureRequest, reader: jspb.BinaryReader): GetProcedureRequest;
+}
+
+export namespace GetProcedureRequest {
+  export type AsObject = {
+    datasetName: string,
+    outputName: string,
+    version: number,
+  }
+}
+
+export class GetProcedureResponse extends jspb.Message {
+  getProcedureVersion(): number;
+  setProcedureVersion(value: number): GetProcedureResponse;
+
+  getTree(): ProcedureNode | undefined;
+  setTree(value?: ProcedureNode): GetProcedureResponse;
+  hasTree(): boolean;
+  clearTree(): GetProcedureResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetProcedureResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: GetProcedureResponse): GetProcedureResponse.AsObject;
+  static serializeBinaryToWriter(message: GetProcedureResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetProcedureResponse;
+  static deserializeBinaryFromReader(message: GetProcedureResponse, reader: jspb.BinaryReader): GetProcedureResponse;
+}
+
+export namespace GetProcedureResponse {
+  export type AsObject = {
+    procedureVersion: number,
+    tree?: ProcedureNode.AsObject,
+  }
+}
+
+export class ProcedureNode extends jspb.Message {
+  getPredicate(): string;
+  setPredicate(value: string): ProcedureNode;
+
+  getAnswersMap(): jspb.Map<string, ProcedureNode>;
+  clearAnswersMap(): ProcedureNode;
+
+  getTargetName(): string;
+  setTargetName(value: string): ProcedureNode;
+
+  getTargetValue(): string;
+  setTargetValue(value: string): ProcedureNode;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ProcedureNode.AsObject;
+  static toObject(includeInstance: boolean, msg: ProcedureNode): ProcedureNode.AsObject;
+  static serializeBinaryToWriter(message: ProcedureNode, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ProcedureNode;
+  static deserializeBinaryFromReader(message: ProcedureNode, reader: jspb.BinaryReader): ProcedureNode;
+}
+
+export namespace ProcedureNode {
+  export type AsObject = {
+    predicate: string,
+    answersMap: Array<[string, ProcedureNode.AsObject]>,
+    targetName: string,
+    targetValue: string,
+  }
+}
+
 export class Confidence extends jspb.Message {
   getLevel(): Confidence.Level;
   setLevel(value: Confidence.Level): Confidence;

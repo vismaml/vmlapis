@@ -207,5 +207,66 @@ proto.ava.v1.PredictionServicePromiseClient.prototype.getDecision =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ava.v1.GetProcedureRequest,
+ *   !proto.ava.v1.GetProcedureResponse>}
+ */
+const methodDescriptor_PredictionService_GetProcedure = new grpc.web.MethodDescriptor(
+  '/ava.v1.PredictionService/GetProcedure',
+  grpc.web.MethodType.UNARY,
+  proto.ava.v1.GetProcedureRequest,
+  proto.ava.v1.GetProcedureResponse,
+  /**
+   * @param {!proto.ava.v1.GetProcedureRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ava.v1.GetProcedureResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ava.v1.GetProcedureRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ava.v1.GetProcedureResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ava.v1.GetProcedureResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ava.v1.PredictionServiceClient.prototype.getProcedure =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ava.v1.PredictionService/GetProcedure',
+      request,
+      metadata || {},
+      methodDescriptor_PredictionService_GetProcedure,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ava.v1.GetProcedureRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ava.v1.GetProcedureResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ava.v1.PredictionServicePromiseClient.prototype.getProcedure =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ava.v1.PredictionService/GetProcedure',
+      request,
+      metadata || {},
+      methodDescriptor_PredictionService_GetProcedure);
+};
+
+
 module.exports = proto.ava.v1;
 

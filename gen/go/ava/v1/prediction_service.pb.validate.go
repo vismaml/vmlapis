@@ -952,6 +952,439 @@ var _ interface {
 
 var _GetDecisionRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
+// Validate checks the field values on GetProcedureRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the first error encountered is returned, or nil if there are no violations.
+func (m *GetProcedureRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on GetProcedureRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// GetProcedureRequestMultiError, or nil if none found.
+func (m *GetProcedureRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *GetProcedureRequest) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	if len(m.GetDatasetName()) > 256 {
+		err := GetProcedureRequestValidationError{
+			field:  "DatasetName",
+			reason: "value length must be at most 256 bytes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if !_GetProcedureRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
+		err := GetProcedureRequestValidationError{
+			field:  "DatasetName",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if utf8.RuneCountInString(m.GetOutputName()) < 1 {
+		err := GetProcedureRequestValidationError{
+			field:  "OutputName",
+			reason: "value length must be at least 1 runes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if m.GetVersion() < 0 {
+		err := GetProcedureRequestValidationError{
+			field:  "Version",
+			reason: "value must be greater than or equal to 0",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return GetProcedureRequestMultiError(errors)
+	}
+
+	return nil
+}
+
+// GetProcedureRequestMultiError is an error wrapping multiple validation
+// errors returned by GetProcedureRequest.ValidateAll() if the designated
+// constraints aren't met.
+type GetProcedureRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m GetProcedureRequestMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m GetProcedureRequestMultiError) AllErrors() []error { return m }
+
+// GetProcedureRequestValidationError is the validation error returned by
+// GetProcedureRequest.Validate if the designated constraints aren't met.
+type GetProcedureRequestValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e GetProcedureRequestValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e GetProcedureRequestValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e GetProcedureRequestValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e GetProcedureRequestValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e GetProcedureRequestValidationError) ErrorName() string {
+	return "GetProcedureRequestValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e GetProcedureRequestValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sGetProcedureRequest.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = GetProcedureRequestValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = GetProcedureRequestValidationError{}
+
+var _GetProcedureRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+
+// Validate checks the field values on GetProcedureResponse with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the first error encountered is returned, or nil if there are no violations.
+func (m *GetProcedureResponse) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on GetProcedureResponse with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// GetProcedureResponseMultiError, or nil if none found.
+func (m *GetProcedureResponse) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *GetProcedureResponse) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	// no validation rules for ProcedureVersion
+
+	if all {
+		switch v := interface{}(m.GetTree()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, GetProcedureResponseValidationError{
+					field:  "Tree",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, GetProcedureResponseValidationError{
+					field:  "Tree",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetTree()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return GetProcedureResponseValidationError{
+				field:  "Tree",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if len(errors) > 0 {
+		return GetProcedureResponseMultiError(errors)
+	}
+
+	return nil
+}
+
+// GetProcedureResponseMultiError is an error wrapping multiple validation
+// errors returned by GetProcedureResponse.ValidateAll() if the designated
+// constraints aren't met.
+type GetProcedureResponseMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m GetProcedureResponseMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m GetProcedureResponseMultiError) AllErrors() []error { return m }
+
+// GetProcedureResponseValidationError is the validation error returned by
+// GetProcedureResponse.Validate if the designated constraints aren't met.
+type GetProcedureResponseValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e GetProcedureResponseValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e GetProcedureResponseValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e GetProcedureResponseValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e GetProcedureResponseValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e GetProcedureResponseValidationError) ErrorName() string {
+	return "GetProcedureResponseValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e GetProcedureResponseValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sGetProcedureResponse.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = GetProcedureResponseValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = GetProcedureResponseValidationError{}
+
+// Validate checks the field values on ProcedureNode with the rules defined in
+// the proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
+func (m *ProcedureNode) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on ProcedureNode with the rules defined
+// in the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in ProcedureNodeMultiError, or
+// nil if none found.
+func (m *ProcedureNode) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *ProcedureNode) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	// no validation rules for Predicate
+
+	{
+		sorted_keys := make([]string, len(m.GetAnswers()))
+		i := 0
+		for key := range m.GetAnswers() {
+			sorted_keys[i] = key
+			i++
+		}
+		sort.Slice(sorted_keys, func(i, j int) bool { return sorted_keys[i] < sorted_keys[j] })
+		for _, key := range sorted_keys {
+			val := m.GetAnswers()[key]
+			_ = val
+
+			// no validation rules for Answers[key]
+
+			if all {
+				switch v := interface{}(val).(type) {
+				case interface{ ValidateAll() error }:
+					if err := v.ValidateAll(); err != nil {
+						errors = append(errors, ProcedureNodeValidationError{
+							field:  fmt.Sprintf("Answers[%v]", key),
+							reason: "embedded message failed validation",
+							cause:  err,
+						})
+					}
+				case interface{ Validate() error }:
+					if err := v.Validate(); err != nil {
+						errors = append(errors, ProcedureNodeValidationError{
+							field:  fmt.Sprintf("Answers[%v]", key),
+							reason: "embedded message failed validation",
+							cause:  err,
+						})
+					}
+				}
+			} else if v, ok := interface{}(val).(interface{ Validate() error }); ok {
+				if err := v.Validate(); err != nil {
+					return ProcedureNodeValidationError{
+						field:  fmt.Sprintf("Answers[%v]", key),
+						reason: "embedded message failed validation",
+						cause:  err,
+					}
+				}
+			}
+
+		}
+	}
+
+	// no validation rules for TargetName
+
+	// no validation rules for TargetValue
+
+	if len(errors) > 0 {
+		return ProcedureNodeMultiError(errors)
+	}
+
+	return nil
+}
+
+// ProcedureNodeMultiError is an error wrapping multiple validation errors
+// returned by ProcedureNode.ValidateAll() if the designated constraints
+// aren't met.
+type ProcedureNodeMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m ProcedureNodeMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m ProcedureNodeMultiError) AllErrors() []error { return m }
+
+// ProcedureNodeValidationError is the validation error returned by
+// ProcedureNode.Validate if the designated constraints aren't met.
+type ProcedureNodeValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ProcedureNodeValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ProcedureNodeValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ProcedureNodeValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ProcedureNodeValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ProcedureNodeValidationError) ErrorName() string { return "ProcedureNodeValidationError" }
+
+// Error satisfies the builtin error interface
+func (e ProcedureNodeValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sProcedureNode.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ProcedureNodeValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ProcedureNodeValidationError{}
+
 // Validate checks the field values on Confidence with the rules defined in the
 // proto definition for this message. If any rules are violated, the first
 // error encountered is returned, or nil if there are no violations.
