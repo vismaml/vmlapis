@@ -32,7 +32,6 @@ private static final long serialVersionUID = 0L;
   }
   private DecisionNode() {
     predicate_ = "";
-    question_ = "";
     answer_ = "";
     targetName_ = "";
     targetValue_ = "";
@@ -105,53 +104,6 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       predicate_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int QUESTION_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object question_ = "";
-  /**
-   * <pre>
-   * The question the step asked
-   * </pre>
-   *
-   * <code>string question = 2 [json_name = "question"];</code>
-   * @return The question.
-   */
-  @java.lang.Override
-  public java.lang.String getQuestion() {
-    java.lang.Object ref = question_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      question_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The question the step asked
-   * </pre>
-   *
-   * <code>string question = 2 [json_name = "question"];</code>
-   * @return The bytes for question.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getQuestionBytes() {
-    java.lang.Object ref = question_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      question_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -487,9 +439,6 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(predicate_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, predicate_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(question_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, question_);
-    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(answer_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 3, answer_);
     }
@@ -522,9 +471,6 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     size = 0;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(predicate_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, predicate_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(question_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, question_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(answer_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(3, answer_);
@@ -570,8 +516,6 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
 
     if (!getPredicate()
         .equals(other.getPredicate())) return false;
-    if (!getQuestion()
-        .equals(other.getQuestion())) return false;
     if (!getAnswer()
         .equals(other.getAnswer())) return false;
     if (hasConfidence() != other.hasConfidence()) return false;
@@ -603,8 +547,6 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PREDICATE_FIELD_NUMBER;
     hash = (53 * hash) + getPredicate().hashCode();
-    hash = (37 * hash) + QUESTION_FIELD_NUMBER;
-    hash = (53 * hash) + getQuestion().hashCode();
     hash = (37 * hash) + ANSWER_FIELD_NUMBER;
     hash = (53 * hash) + getAnswer().hashCode();
     if (hasConfidence()) {
@@ -788,7 +730,6 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       super.clear();
       bitField0_ = 0;
       predicate_ = "";
-      question_ = "";
       answer_ = "";
       confidence_ = null;
       if (confidenceBuilder_ != null) {
@@ -840,28 +781,25 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
         result.predicate_ = predicate_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.question_ = question_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.answer_ = answer_;
       }
       int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.confidence_ = confidenceBuilder_ == null
             ? confidence_
             : confidenceBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.answers_ = internalGetAnswers().build(AnswersDefaultEntryHolder.defaultEntry);
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.targetName_ = targetName_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.targetValue_ = targetValue_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.escalation_ = escalationBuilder_ == null
             ? escalation_
             : escalationBuilder_.build();
@@ -887,14 +825,9 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getQuestion().isEmpty()) {
-        question_ = other.question_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
       if (!other.getAnswer().isEmpty()) {
         answer_ = other.answer_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasConfidence()) {
@@ -902,15 +835,15 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       }
       internalGetMutableAnswers().mergeFrom(
           other.internalGetAnswers());
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       if (!other.getTargetName().isEmpty()) {
         targetName_ = other.targetName_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getTargetValue().isEmpty()) {
         targetValue_ = other.targetValue_;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasEscalation()) {
@@ -947,21 +880,16 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              question_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             case 26: {
               answer_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               break;
             } // case 26
             case 34: {
               input.readMessage(
                   getConfidenceFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               break;
             } // case 34
             case 42: {
@@ -970,24 +898,24 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
                   AnswersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               internalGetMutableAnswers().ensureBuilderMap().put(
                   answers__.getKey(), answers__.getValue());
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               break;
             } // case 42
             case 50: {
               targetName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               break;
             } // case 50
             case 58: {
               targetValue_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000020;
               break;
             } // case 58
             case 66: {
               input.readMessage(
                   getEscalationFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000040;
               break;
             } // case 66
             default: {
@@ -1099,98 +1027,6 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       return this;
     }
 
-    private java.lang.Object question_ = "";
-    /**
-     * <pre>
-     * The question the step asked
-     * </pre>
-     *
-     * <code>string question = 2 [json_name = "question"];</code>
-     * @return The question.
-     */
-    public java.lang.String getQuestion() {
-      java.lang.Object ref = question_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        question_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The question the step asked
-     * </pre>
-     *
-     * <code>string question = 2 [json_name = "question"];</code>
-     * @return The bytes for question.
-     */
-    public com.google.protobuf.ByteString
-        getQuestionBytes() {
-      java.lang.Object ref = question_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        question_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The question the step asked
-     * </pre>
-     *
-     * <code>string question = 2 [json_name = "question"];</code>
-     * @param value The question to set.
-     * @return This builder for chaining.
-     */
-    public Builder setQuestion(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      question_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The question the step asked
-     * </pre>
-     *
-     * <code>string question = 2 [json_name = "question"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearQuestion() {
-      question_ = getDefaultInstance().getQuestion();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The question the step asked
-     * </pre>
-     *
-     * <code>string question = 2 [json_name = "question"];</code>
-     * @param value The bytes for question to set.
-     * @return This builder for chaining.
-     */
-    public Builder setQuestionBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      question_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object answer_ = "";
     /**
      * <pre>
@@ -1246,7 +1082,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       answer_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1260,7 +1096,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
      */
     public Builder clearAnswer() {
       answer_ = getDefaultInstance().getAnswer();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1278,7 +1114,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       answer_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1295,7 +1131,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
      * @return Whether the confidence field is set.
      */
     public boolean hasConfidence() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1328,7 +1164,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       } else {
         confidenceBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1346,7 +1182,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       } else {
         confidenceBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1359,7 +1195,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
      */
     public Builder mergeConfidence(ai.visma.ava.v1.Confidence value) {
       if (confidenceBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
+        if (((bitField0_ & 0x00000004) != 0) &&
           confidence_ != null &&
           confidence_ != ai.visma.ava.v1.Confidence.getDefaultInstance()) {
           getConfidenceBuilder().mergeFrom(value);
@@ -1370,7 +1206,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
         confidenceBuilder_.mergeFrom(value);
       }
       if (confidence_ != null) {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       return this;
@@ -1383,7 +1219,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
      * <code>.ava.v1.Confidence confidence = 4 [json_name = "confidence"];</code>
      */
     public Builder clearConfidence() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       confidence_ = null;
       if (confidenceBuilder_ != null) {
         confidenceBuilder_.dispose();
@@ -1400,7 +1236,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
      * <code>.ava.v1.Confidence confidence = 4 [json_name = "confidence"];</code>
      */
     public ai.visma.ava.v1.Confidence.Builder getConfidenceBuilder() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return getConfidenceFieldBuilder().getBuilder();
     }
@@ -1468,7 +1304,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       if (answers_ == null) {
         answers_ = new com.google.protobuf.MapFieldBuilder<>(answersConverter);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return answers_;
     }
@@ -1542,7 +1378,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       return answersConverter.build(map.get(key));
     }
     public Builder clearAnswers() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       internalGetMutableAnswers().clear();
       return this;
     }
@@ -1566,7 +1402,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, ai.visma.ava.v1.DecisionNode>
         getMutableAnswers() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       return internalGetMutableAnswers().ensureMessageMap();
     }
     /**
@@ -1583,7 +1419,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableAnswers().ensureBuilderMap()
           .put(key, value);
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       return this;
     }
     /**
@@ -1602,7 +1438,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       }
       internalGetMutableAnswers().ensureBuilderMap()
           .putAll(values);
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       return this;
     }
     /**
@@ -1682,7 +1518,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       targetName_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1696,7 +1532,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
      */
     public Builder clearTargetName() {
       targetName_ = getDefaultInstance().getTargetName();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1714,7 +1550,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       targetName_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1774,7 +1610,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       targetValue_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1788,7 +1624,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
      */
     public Builder clearTargetValue() {
       targetValue_ = getDefaultInstance().getTargetValue();
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1806,7 +1642,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       targetValue_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1823,7 +1659,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
      * @return Whether the escalation field is set.
      */
     public boolean hasEscalation() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1856,7 +1692,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       } else {
         escalationBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1874,7 +1710,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       } else {
         escalationBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1887,7 +1723,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
      */
     public Builder mergeEscalation(ai.visma.ava.v1.Escalation value) {
       if (escalationBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
+        if (((bitField0_ & 0x00000040) != 0) &&
           escalation_ != null &&
           escalation_ != ai.visma.ava.v1.Escalation.getDefaultInstance()) {
           getEscalationBuilder().mergeFrom(value);
@@ -1898,7 +1734,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
         escalationBuilder_.mergeFrom(value);
       }
       if (escalation_ != null) {
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       return this;
@@ -1911,7 +1747,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
      * <code>.ava.v1.Escalation escalation = 8 [json_name = "escalation"];</code>
      */
     public Builder clearEscalation() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000040);
       escalation_ = null;
       if (escalationBuilder_ != null) {
         escalationBuilder_.dispose();
@@ -1928,7 +1764,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
      * <code>.ava.v1.Escalation escalation = 8 [json_name = "escalation"];</code>
      */
     public ai.visma.ava.v1.Escalation.Builder getEscalationBuilder() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return getEscalationFieldBuilder().getBuilder();
     }

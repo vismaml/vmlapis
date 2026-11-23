@@ -172,7 +172,7 @@ class GetDecisionPathResponse(_message.Message):
     def __init__(self, procedure_version: _Optional[int] = ..., decision_ref: _Optional[str] = ..., decided_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., path: _Optional[_Union[DecisionNode, _Mapping]] = ...) -> None: ...
 
 class DecisionNode(_message.Message):
-    __slots__ = ("predicate", "question", "answer", "confidence", "answers", "target_name", "target_value", "escalation")
+    __slots__ = ("predicate", "answer", "confidence", "answers", "target_name", "target_value", "escalation")
     class AnswersEntry(_message.Message):
         __slots__ = ("key", "value")
         KEY_FIELD_NUMBER: _ClassVar[int]
@@ -181,7 +181,6 @@ class DecisionNode(_message.Message):
         value: DecisionNode
         def __init__(self, key: _Optional[str] = ..., value: _Optional[_Union[DecisionNode, _Mapping]] = ...) -> None: ...
     PREDICATE_FIELD_NUMBER: _ClassVar[int]
-    QUESTION_FIELD_NUMBER: _ClassVar[int]
     ANSWER_FIELD_NUMBER: _ClassVar[int]
     CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
     ANSWERS_FIELD_NUMBER: _ClassVar[int]
@@ -189,14 +188,13 @@ class DecisionNode(_message.Message):
     TARGET_VALUE_FIELD_NUMBER: _ClassVar[int]
     ESCALATION_FIELD_NUMBER: _ClassVar[int]
     predicate: str
-    question: str
     answer: str
     confidence: Confidence
     answers: _containers.MessageMap[str, DecisionNode]
     target_name: str
     target_value: str
     escalation: Escalation
-    def __init__(self, predicate: _Optional[str] = ..., question: _Optional[str] = ..., answer: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ..., answers: _Optional[_Mapping[str, DecisionNode]] = ..., target_name: _Optional[str] = ..., target_value: _Optional[str] = ..., escalation: _Optional[_Union[Escalation, _Mapping]] = ...) -> None: ...
+    def __init__(self, predicate: _Optional[str] = ..., answer: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ..., answers: _Optional[_Mapping[str, DecisionNode]] = ..., target_name: _Optional[str] = ..., target_value: _Optional[str] = ..., escalation: _Optional[_Union[Escalation, _Mapping]] = ...) -> None: ...
 
 class Confidence(_message.Message):
     __slots__ = ("level", "value")

@@ -168,43 +168,43 @@ public final class PredictionServiceProto {
       "ision_ref\030\002 \001(\tR\013decisionRef\0229\n\ndecided_" +
       "at\030\003 \001(\0132\032.google.protobuf.TimestampR\tde" +
       "cidedAt\022(\n\004path\030\004 \001(\0132\024.ava.v1.DecisionN" +
-      "odeR\004path\"\233\003\n\014DecisionNode\022\034\n\tpredicate\030" +
-      "\001 \001(\tR\tpredicate\022\032\n\010question\030\002 \001(\tR\010ques" +
-      "tion\022\026\n\006answer\030\003 \001(\tR\006answer\0222\n\nconfiden" +
-      "ce\030\004 \001(\0132\022.ava.v1.ConfidenceR\nconfidence" +
-      "\022;\n\007answers\030\005 \003(\0132!.ava.v1.DecisionNode." +
-      "AnswersEntryR\007answers\022\037\n\013target_name\030\006 \001" +
-      "(\tR\ntargetName\022!\n\014target_value\030\007 \001(\tR\013ta" +
-      "rgetValue\0222\n\nescalation\030\010 \001(\0132\022.ava.v1.E" +
-      "scalationR\nescalation\032P\n\014AnswersEntry\022\020\n" +
-      "\003key\030\001 \001(\tR\003key\022*\n\005value\030\002 \001(\0132\024.ava.v1." +
-      "DecisionNodeR\005value:\0028\001\"\276\001\n\nConfidence\022." +
-      "\n\005level\030\001 \001(\0162\030.ava.v1.Confidence.LevelR" +
-      "\005level\0221\n\005value\030\002 \001(\0132\033.google.protobuf." +
-      "FloatValueR\005value\"M\n\005Level\022\013\n\007UNKNOWN\020\000\022" +
-      "\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020" +
-      "\004\022\r\n\tVERY_HIGH\020\005*3\n\005Model\022\010\n\004QWEN\020\000\022\010\n\004C" +
-      "LEF\020\001\022\010\n\004BERT\020\002\022\014\n\010RERANKER\020\0032\326\004\n\021Predic" +
-      "tionService\022f\n\006Decide\022\025.ava.v1.DecideReq" +
-      "uest\032\026.ava.v1.DecideResponse\"-\202\323\344\223\002\'\"\"/v" +
-      "2/datasets/{dataset_name}:decide:\001*\022\177\n\013G" +
-      "etDecision\022\032.ava.v1.GetDecisionRequest\032\026" +
-      ".ava.v1.DecideResponse\"<\202\323\344\223\0026\0224/v2/data" +
-      "sets/{dataset_name}/decisions/{decision_" +
-      "ref}\022\216\001\n\014GetProcedure\022\033.ava.v1.GetProced" +
-      "ureRequest\032\034.ava.v1.GetProcedureResponse" +
-      "\"C\202\323\344\223\002=\022;/v2/datasets/{dataset_name}/ou" +
-      "tputs/{output_name}/procedure\022\221\001\n\017GetDec" +
-      "isionPath\022\032.ava.v1.GetDecisionRequest\032\037." +
-      "ava.v1.GetDecisionPathResponse\"A\202\323\344\223\002;\0229" +
-      "/v2/datasets/{dataset_name}/decisions/{d" +
-      "ecision_ref}/path\0323\222A0\022.Decide outputs w" +
-      "ith a dataset\'s AVA procedure.B\303\001\n\017ai.vi" +
-      "sma.ava.v1B\026PredictionServiceProtoP\001Z*gi" +
-      "thub.com/e-conomic/vmlapis/gen/go/ava/v1" +
-      "\242\002\003AXX\252\002\006Ava.V1\312\002\006Ava\\V1\342\002\022Ava\\V1\\GPBMet" +
-      "adata\352\002\007Ava::V1\222A2\022\t\n\003AVA2\002v1*\001\0022\020applic" +
-      "ation/json:\020application/jsonb\006proto3"
+      "odeR\004path\"\217\003\n\014DecisionNode\022\034\n\tpredicate\030" +
+      "\001 \001(\tR\tpredicate\022\026\n\006answer\030\003 \001(\tR\006answer" +
+      "\0222\n\nconfidence\030\004 \001(\0132\022.ava.v1.Confidence" +
+      "R\nconfidence\022;\n\007answers\030\005 \003(\0132!.ava.v1.D" +
+      "ecisionNode.AnswersEntryR\007answers\022\037\n\013tar" +
+      "get_name\030\006 \001(\tR\ntargetName\022!\n\014target_val" +
+      "ue\030\007 \001(\tR\013targetValue\0222\n\nescalation\030\010 \001(" +
+      "\0132\022.ava.v1.EscalationR\nescalation\032P\n\014Ans" +
+      "wersEntry\022\020\n\003key\030\001 \001(\tR\003key\022*\n\005value\030\002 \001" +
+      "(\0132\024.ava.v1.DecisionNodeR\005value:\0028\001J\004\010\002\020" +
+      "\003R\010question\"\276\001\n\nConfidence\022.\n\005level\030\001 \001(" +
+      "\0162\030.ava.v1.Confidence.LevelR\005level\0221\n\005va" +
+      "lue\030\002 \001(\0132\033.google.protobuf.FloatValueR\005" +
+      "value\"M\n\005Level\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020" +
+      "\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HI" +
+      "GH\020\005*3\n\005Model\022\010\n\004QWEN\020\000\022\010\n\004CLEF\020\001\022\010\n\004BER" +
+      "T\020\002\022\014\n\010RERANKER\020\0032\326\004\n\021PredictionService\022" +
+      "f\n\006Decide\022\025.ava.v1.DecideRequest\032\026.ava.v" +
+      "1.DecideResponse\"-\202\323\344\223\002\'\"\"/v2/datasets/{" +
+      "dataset_name}:decide:\001*\022\177\n\013GetDecision\022\032" +
+      ".ava.v1.GetDecisionRequest\032\026.ava.v1.Deci" +
+      "deResponse\"<\202\323\344\223\0026\0224/v2/datasets/{datase" +
+      "t_name}/decisions/{decision_ref}\022\216\001\n\014Get" +
+      "Procedure\022\033.ava.v1.GetProcedureRequest\032\034" +
+      ".ava.v1.GetProcedureResponse\"C\202\323\344\223\002=\022;/v" +
+      "2/datasets/{dataset_name}/outputs/{outpu" +
+      "t_name}/procedure\022\221\001\n\017GetDecisionPath\022\032." +
+      "ava.v1.GetDecisionRequest\032\037.ava.v1.GetDe" +
+      "cisionPathResponse\"A\202\323\344\223\002;\0229/v2/datasets" +
+      "/{dataset_name}/decisions/{decision_ref}" +
+      "/path\0323\222A0\022.Decide outputs with a datase" +
+      "t\'s AVA procedure.B\303\001\n\017ai.visma.ava.v1B\026" +
+      "PredictionServiceProtoP\001Z*github.com/e-c" +
+      "onomic/vmlapis/gen/go/ava/v1\242\002\003AXX\252\002\006Ava" +
+      ".V1\312\002\006Ava\\V1\342\002\022Ava\\V1\\GPBMetadata\352\002\007Ava:" +
+      ":V1\222A2\022\t\n\003AVA2\002v1*\001\0022\020application/json:\020" +
+      "application/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -292,7 +292,7 @@ public final class PredictionServiceProto {
     internal_static_ava_v1_DecisionNode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ava_v1_DecisionNode_descriptor,
-        new java.lang.String[] { "Predicate", "Question", "Answer", "Confidence", "Answers", "TargetName", "TargetValue", "Escalation", });
+        new java.lang.String[] { "Predicate", "Answer", "Confidence", "Answers", "TargetName", "TargetValue", "Escalation", });
     internal_static_ava_v1_DecisionNode_AnswersEntry_descriptor =
       internal_static_ava_v1_DecisionNode_descriptor.getNestedTypes().get(0);
     internal_static_ava_v1_DecisionNode_AnswersEntry_fieldAccessorTable = new

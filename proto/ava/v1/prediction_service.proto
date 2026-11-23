@@ -193,10 +193,10 @@ message GetDecisionPathResponse {
 
 // A walked step (predicate and the one answer taken), the leaf decided, or the node where the walk escalated.
 message DecisionNode {
+  reserved 2;
+  reserved "question";
   // Name of the fact the step tested
   string predicate = 1;
-  // The question the step asked
-  string question = 2;
   // The answer the step read; empty when the question went unanswered
   string answer = 3;
   // Confidence in the answer

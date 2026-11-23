@@ -76,40 +76,39 @@ namespace Ava.V1 {
             "c2lvbhgBIAEoBVIQcHJvY2VkdXJlVmVyc2lvbhIhCgxkZWNpc2lvbl9yZWYY",
             "AiABKAlSC2RlY2lzaW9uUmVmEjkKCmRlY2lkZWRfYXQYAyABKAsyGi5nb29n",
             "bGUucHJvdG9idWYuVGltZXN0YW1wUglkZWNpZGVkQXQSKAoEcGF0aBgEIAEo",
-            "CzIULmF2YS52MS5EZWNpc2lvbk5vZGVSBHBhdGgimwMKDERlY2lzaW9uTm9k",
-            "ZRIcCglwcmVkaWNhdGUYASABKAlSCXByZWRpY2F0ZRIaCghxdWVzdGlvbhgC",
-            "IAEoCVIIcXVlc3Rpb24SFgoGYW5zd2VyGAMgASgJUgZhbnN3ZXISMgoKY29u",
-            "ZmlkZW5jZRgEIAEoCzISLmF2YS52MS5Db25maWRlbmNlUgpjb25maWRlbmNl",
-            "EjsKB2Fuc3dlcnMYBSADKAsyIS5hdmEudjEuRGVjaXNpb25Ob2RlLkFuc3dl",
-            "cnNFbnRyeVIHYW5zd2VycxIfCgt0YXJnZXRfbmFtZRgGIAEoCVIKdGFyZ2V0",
-            "TmFtZRIhCgx0YXJnZXRfdmFsdWUYByABKAlSC3RhcmdldFZhbHVlEjIKCmVz",
-            "Y2FsYXRpb24YCCABKAsyEi5hdmEudjEuRXNjYWxhdGlvblIKZXNjYWxhdGlv",
-            "bhpQCgxBbnN3ZXJzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSKgoFdmFsdWUY",
-            "AiABKAsyFC5hdmEudjEuRGVjaXNpb25Ob2RlUgV2YWx1ZToCOAEivgEKCkNv",
-            "bmZpZGVuY2USLgoFbGV2ZWwYASABKA4yGC5hdmEudjEuQ29uZmlkZW5jZS5M",
-            "ZXZlbFIFbGV2ZWwSMQoFdmFsdWUYAiABKAsyGy5nb29nbGUucHJvdG9idWYu",
-            "RmxvYXRWYWx1ZVIFdmFsdWUiTQoFTGV2ZWwSCwoHVU5LTk9XThAAEgwKCFZF",
-            "UllfTE9XEAESBwoDTE9XEAISBwoDTUlEEAMSCAoESElHSBAEEg0KCVZFUllf",
-            "SElHSBAFKjMKBU1vZGVsEggKBFFXRU4QABIICgRDTEVGEAESCAoEQkVSVBAC",
-            "EgwKCFJFUkFOS0VSEAMy1gQKEVByZWRpY3Rpb25TZXJ2aWNlEmYKBkRlY2lk",
-            "ZRIVLmF2YS52MS5EZWNpZGVSZXF1ZXN0GhYuYXZhLnYxLkRlY2lkZVJlc3Bv",
-            "bnNlIi2C0+STAiciIi92Mi9kYXRhc2V0cy97ZGF0YXNldF9uYW1lfTpkZWNp",
-            "ZGU6ASoSfwoLR2V0RGVjaXNpb24SGi5hdmEudjEuR2V0RGVjaXNpb25SZXF1",
-            "ZXN0GhYuYXZhLnYxLkRlY2lkZVJlc3BvbnNlIjyC0+STAjYSNC92Mi9kYXRh",
-            "c2V0cy97ZGF0YXNldF9uYW1lfS9kZWNpc2lvbnMve2RlY2lzaW9uX3JlZn0S",
-            "jgEKDEdldFByb2NlZHVyZRIbLmF2YS52MS5HZXRQcm9jZWR1cmVSZXF1ZXN0",
-            "GhwuYXZhLnYxLkdldFByb2NlZHVyZVJlc3BvbnNlIkOC0+STAj0SOy92Mi9k",
-            "YXRhc2V0cy97ZGF0YXNldF9uYW1lfS9vdXRwdXRzL3tvdXRwdXRfbmFtZX0v",
-            "cHJvY2VkdXJlEpEBCg9HZXREZWNpc2lvblBhdGgSGi5hdmEudjEuR2V0RGVj",
-            "aXNpb25SZXF1ZXN0Gh8uYXZhLnYxLkdldERlY2lzaW9uUGF0aFJlc3BvbnNl",
-            "IkGC0+STAjsSOS92Mi9kYXRhc2V0cy97ZGF0YXNldF9uYW1lfS9kZWNpc2lv",
-            "bnMve2RlY2lzaW9uX3JlZn0vcGF0aBozkkEwEi5EZWNpZGUgb3V0cHV0cyB3",
-            "aXRoIGEgZGF0YXNldCdzIEFWQSBwcm9jZWR1cmUuQsMBCg9haS52aXNtYS5h",
-            "dmEudjFCFlByZWRpY3Rpb25TZXJ2aWNlUHJvdG9QAVoqZ2l0aHViLmNvbS9l",
-            "LWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXZhL3YxogIDQVhYqgIGQXZhLlYx",
-            "ygIGQXZhXFYx4gISQXZhXFYxXEdQQk1ldGFkYXRh6gIHQXZhOjpWMZJBMhIJ",
-            "CgNBVkEyAnYxKgECMhBhcHBsaWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9q",
-            "c29uYgZwcm90bzM="));
+            "CzIULmF2YS52MS5EZWNpc2lvbk5vZGVSBHBhdGgijwMKDERlY2lzaW9uTm9k",
+            "ZRIcCglwcmVkaWNhdGUYASABKAlSCXByZWRpY2F0ZRIWCgZhbnN3ZXIYAyAB",
+            "KAlSBmFuc3dlchIyCgpjb25maWRlbmNlGAQgASgLMhIuYXZhLnYxLkNvbmZp",
+            "ZGVuY2VSCmNvbmZpZGVuY2USOwoHYW5zd2VycxgFIAMoCzIhLmF2YS52MS5E",
+            "ZWNpc2lvbk5vZGUuQW5zd2Vyc0VudHJ5UgdhbnN3ZXJzEh8KC3RhcmdldF9u",
+            "YW1lGAYgASgJUgp0YXJnZXROYW1lEiEKDHRhcmdldF92YWx1ZRgHIAEoCVIL",
+            "dGFyZ2V0VmFsdWUSMgoKZXNjYWxhdGlvbhgIIAEoCzISLmF2YS52MS5Fc2Nh",
+            "bGF0aW9uUgplc2NhbGF0aW9uGlAKDEFuc3dlcnNFbnRyeRIQCgNrZXkYASAB",
+            "KAlSA2tleRIqCgV2YWx1ZRgCIAEoCzIULmF2YS52MS5EZWNpc2lvbk5vZGVS",
+            "BXZhbHVlOgI4AUoECAIQA1IIcXVlc3Rpb24ivgEKCkNvbmZpZGVuY2USLgoF",
+            "bGV2ZWwYASABKA4yGC5hdmEudjEuQ29uZmlkZW5jZS5MZXZlbFIFbGV2ZWwS",
+            "MQoFdmFsdWUYAiABKAsyGy5nb29nbGUucHJvdG9idWYuRmxvYXRWYWx1ZVIF",
+            "dmFsdWUiTQoFTGV2ZWwSCwoHVU5LTk9XThAAEgwKCFZFUllfTE9XEAESBwoD",
+            "TE9XEAISBwoDTUlEEAMSCAoESElHSBAEEg0KCVZFUllfSElHSBAFKjMKBU1v",
+            "ZGVsEggKBFFXRU4QABIICgRDTEVGEAESCAoEQkVSVBACEgwKCFJFUkFOS0VS",
+            "EAMy1gQKEVByZWRpY3Rpb25TZXJ2aWNlEmYKBkRlY2lkZRIVLmF2YS52MS5E",
+            "ZWNpZGVSZXF1ZXN0GhYuYXZhLnYxLkRlY2lkZVJlc3BvbnNlIi2C0+STAici",
+            "Ii92Mi9kYXRhc2V0cy97ZGF0YXNldF9uYW1lfTpkZWNpZGU6ASoSfwoLR2V0",
+            "RGVjaXNpb24SGi5hdmEudjEuR2V0RGVjaXNpb25SZXF1ZXN0GhYuYXZhLnYx",
+            "LkRlY2lkZVJlc3BvbnNlIjyC0+STAjYSNC92Mi9kYXRhc2V0cy97ZGF0YXNl",
+            "dF9uYW1lfS9kZWNpc2lvbnMve2RlY2lzaW9uX3JlZn0SjgEKDEdldFByb2Nl",
+            "ZHVyZRIbLmF2YS52MS5HZXRQcm9jZWR1cmVSZXF1ZXN0GhwuYXZhLnYxLkdl",
+            "dFByb2NlZHVyZVJlc3BvbnNlIkOC0+STAj0SOy92Mi9kYXRhc2V0cy97ZGF0",
+            "YXNldF9uYW1lfS9vdXRwdXRzL3tvdXRwdXRfbmFtZX0vcHJvY2VkdXJlEpEB",
+            "Cg9HZXREZWNpc2lvblBhdGgSGi5hdmEudjEuR2V0RGVjaXNpb25SZXF1ZXN0",
+            "Gh8uYXZhLnYxLkdldERlY2lzaW9uUGF0aFJlc3BvbnNlIkGC0+STAjsSOS92",
+            "Mi9kYXRhc2V0cy97ZGF0YXNldF9uYW1lfS9kZWNpc2lvbnMve2RlY2lzaW9u",
+            "X3JlZn0vcGF0aBozkkEwEi5EZWNpZGUgb3V0cHV0cyB3aXRoIGEgZGF0YXNl",
+            "dCdzIEFWQSBwcm9jZWR1cmUuQsMBCg9haS52aXNtYS5hdmEudjFCFlByZWRp",
+            "Y3Rpb25TZXJ2aWNlUHJvdG9QAVoqZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1s",
+            "YXBpcy9nZW4vZ28vYXZhL3YxogIDQVhYqgIGQXZhLlYxygIGQXZhXFYx4gIS",
+            "QXZhXFYxXEdQQk1ldGFkYXRh6gIHQXZhOjpWMZJBMhIJCgNBVkEyAnYxKgEC",
+            "MhBhcHBsaWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ava.V1.Model), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -123,7 +122,7 @@ namespace Ava.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.GetProcedureResponse), global::Ava.V1.GetProcedureResponse.Parser, new[]{ "ProcedureVersion", "Tree" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.ProcedureNode), global::Ava.V1.ProcedureNode.Parser, new[]{ "Predicate", "Answers", "TargetName", "TargetValue" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.GetDecisionPathResponse), global::Ava.V1.GetDecisionPathResponse.Parser, new[]{ "ProcedureVersion", "DecisionRef", "DecidedAt", "Path" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.DecisionNode), global::Ava.V1.DecisionNode.Parser, new[]{ "Predicate", "Question", "Answer", "Confidence", "Answers", "TargetName", "TargetValue", "Escalation" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.DecisionNode), global::Ava.V1.DecisionNode.Parser, new[]{ "Predicate", "Answer", "Confidence", "Answers", "TargetName", "TargetValue", "Escalation" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.Confidence), global::Ava.V1.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Ava.V1.Confidence.Types.Level) }, null, null)
           }));
     }
@@ -3518,7 +3517,6 @@ namespace Ava.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DecisionNode(DecisionNode other) : this() {
       predicate_ = other.predicate_;
-      question_ = other.question_;
       answer_ = other.answer_;
       confidence_ = other.confidence_ != null ? other.confidence_.Clone() : null;
       answers_ = other.answers_.Clone();
@@ -3546,21 +3544,6 @@ namespace Ava.V1 {
       get { return predicate_; }
       set {
         predicate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "question" field.</summary>
-    public const int QuestionFieldNumber = 2;
-    private string question_ = "";
-    /// <summary>
-    /// The question the step asked
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Question {
-      get { return question_; }
-      set {
-        question_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -3669,7 +3652,6 @@ namespace Ava.V1 {
         return true;
       }
       if (Predicate != other.Predicate) return false;
-      if (Question != other.Question) return false;
       if (Answer != other.Answer) return false;
       if (!object.Equals(Confidence, other.Confidence)) return false;
       if (!Answers.Equals(other.Answers)) return false;
@@ -3684,7 +3666,6 @@ namespace Ava.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Predicate.Length != 0) hash ^= Predicate.GetHashCode();
-      if (Question.Length != 0) hash ^= Question.GetHashCode();
       if (Answer.Length != 0) hash ^= Answer.GetHashCode();
       if (confidence_ != null) hash ^= Confidence.GetHashCode();
       hash ^= Answers.GetHashCode();
@@ -3712,10 +3693,6 @@ namespace Ava.V1 {
       if (Predicate.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Predicate);
-      }
-      if (Question.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Question);
       }
       if (Answer.Length != 0) {
         output.WriteRawTag(26);
@@ -3752,10 +3729,6 @@ namespace Ava.V1 {
         output.WriteRawTag(10);
         output.WriteString(Predicate);
       }
-      if (Question.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Question);
-      }
       if (Answer.Length != 0) {
         output.WriteRawTag(26);
         output.WriteString(Answer);
@@ -3790,9 +3763,6 @@ namespace Ava.V1 {
       if (Predicate.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Predicate);
       }
-      if (Question.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Question);
-      }
       if (Answer.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Answer);
       }
@@ -3823,9 +3793,6 @@ namespace Ava.V1 {
       }
       if (other.Predicate.Length != 0) {
         Predicate = other.Predicate;
-      }
-      if (other.Question.Length != 0) {
-        Question = other.Question;
       }
       if (other.Answer.Length != 0) {
         Answer = other.Answer;
@@ -3870,10 +3837,6 @@ namespace Ava.V1 {
             break;
           case 10: {
             Predicate = input.ReadString();
-            break;
-          }
-          case 18: {
-            Question = input.ReadString();
             break;
           }
           case 26: {
@@ -3927,10 +3890,6 @@ namespace Ava.V1 {
             break;
           case 10: {
             Predicate = input.ReadString();
-            break;
-          }
-          case 18: {
-            Question = input.ReadString();
             break;
           }
           case 26: {

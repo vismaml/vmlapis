@@ -2835,7 +2835,6 @@ proto.ava.v1.DecisionNode.prototype.toObject = function(opt_includeInstance) {
 proto.ava.v1.DecisionNode.toObject = function(includeInstance, msg) {
   var f, obj = {
     predicate: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    question: jspb.Message.getFieldWithDefault(msg, 2, ""),
     answer: jspb.Message.getFieldWithDefault(msg, 3, ""),
     confidence: (f = msg.getConfidence()) && proto.ava.v1.Confidence.toObject(includeInstance, f),
     answersMap: (f = msg.getAnswersMap()) ? f.toObject(includeInstance, proto.ava.v1.DecisionNode.toObject) : [],
@@ -2881,10 +2880,6 @@ proto.ava.v1.DecisionNode.deserializeBinaryFromReader = function(msg, reader) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
       msg.setPredicate(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setQuestion(value);
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
@@ -2950,13 +2945,6 @@ proto.ava.v1.DecisionNode.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getQuestion();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
   f = message.getAnswer();
   if (f.length > 0) {
     writer.writeString(
@@ -3016,24 +3004,6 @@ proto.ava.v1.DecisionNode.prototype.getPredicate = function() {
  */
 proto.ava.v1.DecisionNode.prototype.setPredicate = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional string question = 2;
- * @return {string}
- */
-proto.ava.v1.DecisionNode.prototype.getQuestion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.ava.v1.DecisionNode} returns this
- */
-proto.ava.v1.DecisionNode.prototype.setQuestion = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 

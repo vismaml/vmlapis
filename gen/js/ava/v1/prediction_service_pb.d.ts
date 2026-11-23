@@ -346,9 +346,6 @@ export class DecisionNode extends jspb.Message {
   getPredicate(): string;
   setPredicate(value: string): DecisionNode;
 
-  getQuestion(): string;
-  setQuestion(value: string): DecisionNode;
-
   getAnswer(): string;
   setAnswer(value: string): DecisionNode;
 
@@ -382,7 +379,6 @@ export class DecisionNode extends jspb.Message {
 export namespace DecisionNode {
   export type AsObject = {
     predicate: string,
-    question: string,
     answer: string,
     confidence?: Confidence.AsObject,
     answersMap: Array<[string, DecisionNode.AsObject]>,

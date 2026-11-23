@@ -31,26 +31,6 @@ public interface DecisionNodeOrBuilder extends
 
   /**
    * <pre>
-   * The question the step asked
-   * </pre>
-   *
-   * <code>string question = 2 [json_name = "question"];</code>
-   * @return The question.
-   */
-  java.lang.String getQuestion();
-  /**
-   * <pre>
-   * The question the step asked
-   * </pre>
-   *
-   * <code>string question = 2 [json_name = "question"];</code>
-   * @return The bytes for question.
-   */
-  com.google.protobuf.ByteString
-      getQuestionBytes();
-
-  /**
-   * <pre>
    * The answer the step read; empty when the question went unanswered
    * </pre>
    *

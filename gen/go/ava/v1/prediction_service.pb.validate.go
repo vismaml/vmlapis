@@ -1573,8 +1573,6 @@ func (m *DecisionNode) validate(all bool) error {
 
 	// no validation rules for Predicate
 
-	// no validation rules for Question
-
 	// no validation rules for Answer
 
 	if all {
