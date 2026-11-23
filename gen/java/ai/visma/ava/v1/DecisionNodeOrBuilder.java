@@ -31,7 +31,7 @@ public interface DecisionNodeOrBuilder extends
 
   /**
    * <pre>
-   * The answer the step read; empty when the question went unanswered
+   * The answer the step read; empty when it went unanswered
    * </pre>
    *
    * <code>string answer = 3 [json_name = "answer"];</code>
@@ -40,7 +40,7 @@ public interface DecisionNodeOrBuilder extends
   java.lang.String getAnswer();
   /**
    * <pre>
-   * The answer the step read; empty when the question went unanswered
+   * The answer the step read; empty when it went unanswered
    * </pre>
    *
    * <code>string answer = 3 [json_name = "answer"];</code>

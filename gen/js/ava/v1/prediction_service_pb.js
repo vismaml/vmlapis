@@ -944,12 +944,12 @@ proto.ava.v1.WalkedStep.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ava.v1.WalkedStep.toObject = function(includeInstance, msg) {
   var f, obj = {
-    question: jspb.Message.getFieldWithDefault(msg, 1, ""),
     answer: jspb.Message.getFieldWithDefault(msg, 2, ""),
     confidence: (f = msg.getConfidence()) && proto.ava.v1.Confidence.toObject(includeInstance, f),
     stepId: jspb.Message.getFieldWithDefault(msg, 4, ""),
     factsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f,
-    branch: (f = msg.getBranch()) && proto.ava.v1.TakenBranch.toObject(includeInstance, f)
+    branch: (f = msg.getBranch()) && proto.ava.v1.TakenBranch.toObject(includeInstance, f),
+    predicate: jspb.Message.getFieldWithDefault(msg, 7, "")
   };
 
   if (includeInstance) {
@@ -986,10 +986,6 @@ proto.ava.v1.WalkedStep.deserializeBinaryFromReader = function(msg, reader) {
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setQuestion(value);
-      break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
       msg.setAnswer(value);
@@ -1011,6 +1007,10 @@ proto.ava.v1.WalkedStep.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ava.v1.TakenBranch;
       reader.readMessage(value,proto.ava.v1.TakenBranch.deserializeBinaryFromReader);
       msg.setBranch(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPredicate(value);
       break;
     default:
       reader.skipField();
@@ -1041,13 +1041,6 @@ proto.ava.v1.WalkedStep.prototype.serializeBinary = function() {
  */
 proto.ava.v1.WalkedStep.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getQuestion();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
   f = message.getAnswer();
   if (f.length > 0) {
     writer.writeString(
@@ -1085,24 +1078,13 @@ proto.ava.v1.WalkedStep.serializeBinaryToWriter = function(message, writer) {
       proto.ava.v1.TakenBranch.serializeBinaryToWriter
     );
   }
-};
-
-
-/**
- * optional string question = 1;
- * @return {string}
- */
-proto.ava.v1.WalkedStep.prototype.getQuestion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.ava.v1.WalkedStep} returns this
- */
-proto.ava.v1.WalkedStep.prototype.setQuestion = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  f = message.getPredicate();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
 };
 
 
@@ -1250,6 +1232,24 @@ proto.ava.v1.WalkedStep.prototype.clearBranch = function() {
  */
 proto.ava.v1.WalkedStep.prototype.hasBranch = function() {
   return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional string predicate = 7;
+ * @return {string}
+ */
+proto.ava.v1.WalkedStep.prototype.getPredicate = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ava.v1.WalkedStep} returns this
+ */
+proto.ava.v1.WalkedStep.prototype.setPredicate = function(value) {
+  return jspb.Message.setProto3StringField(this, 7, value);
 };
 
 

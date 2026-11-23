@@ -86,9 +86,6 @@ export namespace DecideResponse {
 }
 
 export class WalkedStep extends jspb.Message {
-  getQuestion(): string;
-  setQuestion(value: string): WalkedStep;
-
   getAnswer(): string;
   setAnswer(value: string): WalkedStep;
 
@@ -110,6 +107,9 @@ export class WalkedStep extends jspb.Message {
   hasBranch(): boolean;
   clearBranch(): WalkedStep;
 
+  getPredicate(): string;
+  setPredicate(value: string): WalkedStep;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): WalkedStep.AsObject;
   static toObject(includeInstance: boolean, msg: WalkedStep): WalkedStep.AsObject;
@@ -120,12 +120,12 @@ export class WalkedStep extends jspb.Message {
 
 export namespace WalkedStep {
   export type AsObject = {
-    question: string,
     answer: string,
     confidence?: Confidence.AsObject,
     stepId: string,
     factsList: Array<string>,
     branch?: TakenBranch.AsObject,
+    predicate: string,
   }
 }
 

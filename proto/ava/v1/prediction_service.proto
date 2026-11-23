@@ -86,9 +86,9 @@ message DecideResponse {
 }
 
 message WalkedStep {
-  // The question the step asked
-  string question = 1;
-  // The answer the step read; empty when the question went unanswered
+  reserved 1;
+  reserved "question";
+  // The answer the step read; empty when it went unanswered
   string answer = 2;
   // Confidence in the answer
   Confidence confidence = 3;
@@ -98,6 +98,8 @@ message WalkedStep {
   repeated string facts = 5;
   // The branch the step took; absent when it took none
   TakenBranch branch = 6;
+  // Name of the fact the step tested; empty when it read more than one
+  string predicate = 7;
 }
 
 message TakenBranch {
@@ -197,7 +199,7 @@ message DecisionNode {
   reserved "question";
   // Name of the fact the step tested
   string predicate = 1;
-  // The answer the step read; empty when the question went unanswered
+  // The answer the step read; empty when it went unanswered
   string answer = 3;
   // Confidence in the answer
   Confidence confidence = 4;

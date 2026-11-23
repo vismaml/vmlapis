@@ -405,8 +405,6 @@ func (m *WalkedStep) validate(all bool) error {
 
 	var errors []error
 
-	// no validation rules for Question
-
 	// no validation rules for Answer
 
 	if all {
@@ -468,6 +466,8 @@ func (m *WalkedStep) validate(all bool) error {
 			}
 		}
 	}
+
+	// no validation rules for Predicate
 
 	if len(errors) > 0 {
 		return WalkedStepMultiError(errors)

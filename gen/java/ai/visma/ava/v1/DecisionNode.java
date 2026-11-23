@@ -115,7 +115,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object answer_ = "";
   /**
    * <pre>
-   * The answer the step read; empty when the question went unanswered
+   * The answer the step read; empty when it went unanswered
    * </pre>
    *
    * <code>string answer = 3 [json_name = "answer"];</code>
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The answer the step read; empty when the question went unanswered
+   * The answer the step read; empty when it went unanswered
    * </pre>
    *
    * <code>string answer = 3 [json_name = "answer"];</code>
@@ -1030,7 +1030,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     private java.lang.Object answer_ = "";
     /**
      * <pre>
-     * The answer the step read; empty when the question went unanswered
+     * The answer the step read; empty when it went unanswered
      * </pre>
      *
      * <code>string answer = 3 [json_name = "answer"];</code>
@@ -1050,7 +1050,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     }
     /**
      * <pre>
-     * The answer the step read; empty when the question went unanswered
+     * The answer the step read; empty when it went unanswered
      * </pre>
      *
      * <code>string answer = 3 [json_name = "answer"];</code>
@@ -1071,7 +1071,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     }
     /**
      * <pre>
-     * The answer the step read; empty when the question went unanswered
+     * The answer the step read; empty when it went unanswered
      * </pre>
      *
      * <code>string answer = 3 [json_name = "answer"];</code>
@@ -1088,7 +1088,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     }
     /**
      * <pre>
-     * The answer the step read; empty when the question went unanswered
+     * The answer the step read; empty when it went unanswered
      * </pre>
      *
      * <code>string answer = 3 [json_name = "answer"];</code>
@@ -1102,7 +1102,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     }
     /**
      * <pre>
-     * The answer the step read; empty when the question went unanswered
+     * The answer the step read; empty when it went unanswered
      * </pre>
      *
      * <code>string answer = 3 [json_name = "answer"];</code>

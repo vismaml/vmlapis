@@ -63,20 +63,20 @@ class DecideResponse(_message.Message):
     def __init__(self, value: _Optional[str] = ..., escalated: _Optional[bool] = ..., steps: _Optional[_Iterable[_Union[WalkedStep, _Mapping]]] = ..., procedure_version: _Optional[int] = ..., decision_ref: _Optional[str] = ..., escalation: _Optional[_Union[Escalation, _Mapping]] = ..., decided_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
 
 class WalkedStep(_message.Message):
-    __slots__ = ("question", "answer", "confidence", "step_id", "facts", "branch")
-    QUESTION_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("answer", "confidence", "step_id", "facts", "branch", "predicate")
     ANSWER_FIELD_NUMBER: _ClassVar[int]
     CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
     STEP_ID_FIELD_NUMBER: _ClassVar[int]
     FACTS_FIELD_NUMBER: _ClassVar[int]
     BRANCH_FIELD_NUMBER: _ClassVar[int]
-    question: str
+    PREDICATE_FIELD_NUMBER: _ClassVar[int]
     answer: str
     confidence: Confidence
     step_id: str
     facts: _containers.RepeatedScalarFieldContainer[str]
     branch: TakenBranch
-    def __init__(self, question: _Optional[str] = ..., answer: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ..., step_id: _Optional[str] = ..., facts: _Optional[_Iterable[str]] = ..., branch: _Optional[_Union[TakenBranch, _Mapping]] = ...) -> None: ...
+    predicate: str
+    def __init__(self, answer: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ..., step_id: _Optional[str] = ..., facts: _Optional[_Iterable[str]] = ..., branch: _Optional[_Union[TakenBranch, _Mapping]] = ..., predicate: _Optional[str] = ...) -> None: ...
 
 class TakenBranch(_message.Message):
     __slots__ = ("branch_id", "label", "next_step_id", "output_value", "escalates")

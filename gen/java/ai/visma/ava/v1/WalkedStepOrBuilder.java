@@ -11,27 +11,7 @@ public interface WalkedStepOrBuilder extends
 
   /**
    * <pre>
-   * The question the step asked
-   * </pre>
-   *
-   * <code>string question = 1 [json_name = "question"];</code>
-   * @return The question.
-   */
-  java.lang.String getQuestion();
-  /**
-   * <pre>
-   * The question the step asked
-   * </pre>
-   *
-   * <code>string question = 1 [json_name = "question"];</code>
-   * @return The bytes for question.
-   */
-  com.google.protobuf.ByteString
-      getQuestionBytes();
-
-  /**
-   * <pre>
-   * The answer the step read; empty when the question went unanswered
+   * The answer the step read; empty when it went unanswered
    * </pre>
    *
    * <code>string answer = 2 [json_name = "answer"];</code>
@@ -40,7 +20,7 @@ public interface WalkedStepOrBuilder extends
   java.lang.String getAnswer();
   /**
    * <pre>
-   * The answer the step read; empty when the question went unanswered
+   * The answer the step read; empty when it went unanswered
    * </pre>
    *
    * <code>string answer = 2 [json_name = "answer"];</code>
@@ -163,4 +143,24 @@ public interface WalkedStepOrBuilder extends
    * <code>.ava.v1.TakenBranch branch = 6 [json_name = "branch"];</code>
    */
   ai.visma.ava.v1.TakenBranchOrBuilder getBranchOrBuilder();
+
+  /**
+   * <pre>
+   * Name of the fact the step tested; empty when it read more than one
+   * </pre>
+   *
+   * <code>string predicate = 7 [json_name = "predicate"];</code>
+   * @return The predicate.
+   */
+  java.lang.String getPredicate();
+  /**
+   * <pre>
+   * Name of the fact the step tested; empty when it read more than one
+   * </pre>
+   *
+   * <code>string predicate = 7 [json_name = "predicate"];</code>
+   * @return The bytes for predicate.
+   */
+  com.google.protobuf.ByteString
+      getPredicateBytes();
 }
