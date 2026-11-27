@@ -50,50 +50,6 @@ public interface DecideResponseOrBuilder extends
 
   /**
    * <pre>
-   * Not set; the walk is in path
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  java.util.List<ai.visma.ava.v1.WalkedStep> 
-      getStepsList();
-  /**
-   * <pre>
-   * Not set; the walk is in path
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  ai.visma.ava.v1.WalkedStep getSteps(int index);
-  /**
-   * <pre>
-   * Not set; the walk is in path
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  int getStepsCount();
-  /**
-   * <pre>
-   * Not set; the walk is in path
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  java.util.List<? extends ai.visma.ava.v1.WalkedStepOrBuilder> 
-      getStepsOrBuilderList();
-  /**
-   * <pre>
-   * Not set; the walk is in path
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  ai.visma.ava.v1.WalkedStepOrBuilder getStepsOrBuilder(
-      int index);
-
-  /**
-   * <pre>
    * Version of the procedure that decided
    * </pre>
    *
@@ -178,7 +134,7 @@ public interface DecideResponseOrBuilder extends
 
   /**
    * <pre>
-   * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+   * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
    * </pre>
    *
    * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
@@ -187,7 +143,7 @@ public interface DecideResponseOrBuilder extends
   boolean hasPath();
   /**
    * <pre>
-   * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+   * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
    * </pre>
    *
    * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
@@ -196,7 +152,7 @@ public interface DecideResponseOrBuilder extends
   ai.visma.ava.v1.DecisionNode getPath();
   /**
    * <pre>
-   * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+   * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
    * </pre>
    *
    * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>

@@ -19,10 +19,9 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	PredictionService_Decide_FullMethodName          = "/ava.v1.PredictionService/Decide"
-	PredictionService_GetDecision_FullMethodName     = "/ava.v1.PredictionService/GetDecision"
-	PredictionService_GetProcedure_FullMethodName    = "/ava.v1.PredictionService/GetProcedure"
-	PredictionService_GetDecisionPath_FullMethodName = "/ava.v1.PredictionService/GetDecisionPath"
+	PredictionService_Decide_FullMethodName       = "/ava.v1.PredictionService/Decide"
+	PredictionService_GetDecision_FullMethodName  = "/ava.v1.PredictionService/GetDecision"
+	PredictionService_GetProcedure_FullMethodName = "/ava.v1.PredictionService/GetProcedure"
 )
 
 // PredictionServiceClient is the client API for PredictionService service.
@@ -31,12 +30,10 @@ const (
 type PredictionServiceClient interface {
 	// Decide one output for one document with the dataset's promoted procedure.
 	Decide(ctx context.Context, in *DecideRequest, opts ...grpc.CallOption) (*DecideResponse, error)
-	// Return a stored decision by the reference Decide returned.
+	// Return a stored decision by the reference Decide returned, with the path it walked.
 	GetDecision(ctx context.Context, in *GetDecisionRequest, opts ...grpc.CallOption) (*DecideResponse, error)
 	// Return the procedure a dataset decides an output with, as a tree.
 	GetProcedure(ctx context.Context, in *GetProcedureRequest, opts ...grpc.CallOption) (*GetProcedureResponse, error)
-	// Return a stored decision as the path it walked through the procedure tree.
-	GetDecisionPath(ctx context.Context, in *GetDecisionRequest, opts ...grpc.CallOption) (*GetDecisionPathResponse, error)
 }
 
 type predictionServiceClient struct {
@@ -74,27 +71,16 @@ func (c *predictionServiceClient) GetProcedure(ctx context.Context, in *GetProce
 	return out, nil
 }
 
-func (c *predictionServiceClient) GetDecisionPath(ctx context.Context, in *GetDecisionRequest, opts ...grpc.CallOption) (*GetDecisionPathResponse, error) {
-	out := new(GetDecisionPathResponse)
-	err := c.cc.Invoke(ctx, PredictionService_GetDecisionPath_FullMethodName, in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 // PredictionServiceServer is the server API for PredictionService service.
 // All implementations should embed UnimplementedPredictionServiceServer
 // for forward compatibility
 type PredictionServiceServer interface {
 	// Decide one output for one document with the dataset's promoted procedure.
 	Decide(context.Context, *DecideRequest) (*DecideResponse, error)
-	// Return a stored decision by the reference Decide returned.
+	// Return a stored decision by the reference Decide returned, with the path it walked.
 	GetDecision(context.Context, *GetDecisionRequest) (*DecideResponse, error)
 	// Return the procedure a dataset decides an output with, as a tree.
 	GetProcedure(context.Context, *GetProcedureRequest) (*GetProcedureResponse, error)
-	// Return a stored decision as the path it walked through the procedure tree.
-	GetDecisionPath(context.Context, *GetDecisionRequest) (*GetDecisionPathResponse, error)
 }
 
 // UnimplementedPredictionServiceServer should be embedded to have forward compatible implementations.
@@ -109,9 +95,6 @@ func (UnimplementedPredictionServiceServer) GetDecision(context.Context, *GetDec
 }
 func (UnimplementedPredictionServiceServer) GetProcedure(context.Context, *GetProcedureRequest) (*GetProcedureResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetProcedure not implemented")
-}
-func (UnimplementedPredictionServiceServer) GetDecisionPath(context.Context, *GetDecisionRequest) (*GetDecisionPathResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetDecisionPath not implemented")
 }
 
 // UnsafePredictionServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -179,24 +162,6 @@ func _PredictionService_GetProcedure_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PredictionService_GetDecisionPath_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetDecisionRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(PredictionServiceServer).GetDecisionPath(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: PredictionService_GetDecisionPath_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PredictionServiceServer).GetDecisionPath(ctx, req.(*GetDecisionRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 // PredictionService_ServiceDesc is the grpc.ServiceDesc for PredictionService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -215,10 +180,6 @@ var PredictionService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetProcedure",
 			Handler:    _PredictionService_GetProcedure_Handler,
-		},
-		{
-			MethodName: "GetDecisionPath",
-			Handler:    _PredictionService_GetDecisionPath_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

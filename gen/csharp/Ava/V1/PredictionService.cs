@@ -35,98 +35,75 @@ namespace Ava.V1 {
             "KAsyIS5hdmEudjEuRGVjaWRlUmVxdWVzdC5GaWVsZHNFbnRyeVIGZmllbGRz",
             "Ei0KBW1vZGVsGAQgASgOMg0uYXZhLnYxLk1vZGVsQgj6QgWCAQIQAVIFbW9k",
             "ZWwaOQoLRmllbGRzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUY",
-            "AiABKAlSBXZhbHVlOgI4ASLmAgoORGVjaWRlUmVzcG9uc2USGQoFdmFsdWUY",
+            "AiABKAlSBXZhbHVlOgI4ASLJAgoORGVjaWRlUmVzcG9uc2USGQoFdmFsdWUY",
             "ASABKAlIAFIFdmFsdWWIAQESHAoJZXNjYWxhdGVkGAIgASgIUgllc2NhbGF0",
-            "ZWQSKAoFc3RlcHMYAyADKAsyEi5hdmEudjEuV2Fsa2VkU3RlcFIFc3RlcHMS",
-            "KwoRcHJvY2VkdXJlX3ZlcnNpb24YBCABKAVSEHByb2NlZHVyZVZlcnNpb24S",
-            "IQoMZGVjaXNpb25fcmVmGAUgASgJUgtkZWNpc2lvblJlZhIyCgplc2NhbGF0",
-            "aW9uGAYgASgLMhIuYXZhLnYxLkVzY2FsYXRpb25SCmVzY2FsYXRpb24SOQoK",
-            "ZGVjaWRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBS",
-            "CWRlY2lkZWRBdBIoCgRwYXRoGAggASgLMhQuYXZhLnYxLkRlY2lzaW9uTm9k",
-            "ZVIEcGF0aEIICgZfdmFsdWUi8gEKCldhbGtlZFN0ZXASGwoGYW5zd2VyGAIg",
-            "ASgJSABSBmFuc3dlcogBARIyCgpjb25maWRlbmNlGAMgASgLMhIuYXZhLnYx",
-            "LkNvbmZpZGVuY2VSCmNvbmZpZGVuY2USFwoHc3RlcF9pZBgEIAEoCVIGc3Rl",
-            "cElkEhQKBWZhY3RzGAUgAygJUgVmYWN0cxIrCgZicmFuY2gYBiABKAsyEy5h",
-            "dmEudjEuVGFrZW5CcmFuY2hSBmJyYW5jaBIcCglwcmVkaWNhdGUYByABKAlS",
-            "CXByZWRpY2F0ZUIJCgdfYW5zd2VySgQIARACUghxdWVzdGlvbiK0AQoLVGFr",
-            "ZW5CcmFuY2gSGwoJYnJhbmNoX2lkGAEgASgJUghicmFuY2hJZBIUCgVsYWJl",
-            "bBgCIAEoCVIFbGFiZWwSIgoMbmV4dF9zdGVwX2lkGAMgASgJSABSCm5leHRT",
-            "dGVwSWQSIwoMb3V0cHV0X3ZhbHVlGAQgASgJSABSC291dHB1dFZhbHVlEh4K",
-            "CWVzY2FsYXRlcxgFIAEoCEgAUgllc2NhbGF0ZXNCCQoHb3V0Y29tZSLRAQoK",
-            "RXNjYWxhdGlvbhIrCgRraW5kGAEgASgOMhcuYXZhLnYxLkVzY2FsYXRpb24u",
-            "S2luZFIEa2luZBIXCgdzdGVwX2lkGAIgASgJUgZzdGVwSWQifQoES2luZBIU",
-            "ChBLSU5EX1VOU1BFQ0lGSUVEEAASFwoTTUlTU0lOR19JTkZPUk1BVElPThAB",
-            "EhYKEk5PX01BVENISU5HX0JSQU5DSBACEhgKFFBST0NFRFVSRV9FU0NBTEFU",
-            "SU9OEAMSFAoQRVZBTFVBVElPTl9FUlJPUhAEIrkBChJHZXREZWNpc2lvblJl",
-            "cXVlc3QSSwoMZGF0YXNldF9uYW1lGAEgASgJQij6QiVyIyiAAjIeXltBLVph",
-            "LXowLTkuXVtBLVphLXowLTlfLj4tXSokUgtkYXRhc2V0TmFtZRIsCgxkZWNp",
-            "c2lvbl9yZWYYAiABKAlCCfpCBnIEEAEoJFILZGVjaXNpb25SZWYSKAoLb3V0",
-            "cHV0X25hbWUYAyABKAlCB/pCBHICEAFSCm91dHB1dE5hbWUirwEKE0dldFBy",
-            "b2NlZHVyZVJlcXVlc3QSSwoMZGF0YXNldF9uYW1lGAEgASgJQij6QiVyIyiA",
-            "AjIeXltBLVphLXowLTkuXVtBLVphLXowLTlfLj4tXSokUgtkYXRhc2V0TmFt",
-            "ZRIoCgtvdXRwdXRfbmFtZRgCIAEoCUIH+kIEcgIQAVIKb3V0cHV0TmFtZRIh",
-            "Cgd2ZXJzaW9uGAMgASgFQgf6QgQaAigAUgd2ZXJzaW9uIm4KFEdldFByb2Nl",
-            "ZHVyZVJlc3BvbnNlEisKEXByb2NlZHVyZV92ZXJzaW9uGAEgASgFUhBwcm9j",
-            "ZWR1cmVWZXJzaW9uEikKBHRyZWUYAiABKAsyFS5hdmEudjEuUHJvY2VkdXJl",
-            "Tm9kZVIEdHJlZSKCAgoNUHJvY2VkdXJlTm9kZRIcCglwcmVkaWNhdGUYASAB",
-            "KAlSCXByZWRpY2F0ZRI8CgdhbnN3ZXJzGAIgAygLMiIuYXZhLnYxLlByb2Nl",
-            "ZHVyZU5vZGUuQW5zd2Vyc0VudHJ5UgdhbnN3ZXJzEh8KC3RhcmdldF9uYW1l",
-            "GAMgASgJUgp0YXJnZXROYW1lEiEKDHRhcmdldF92YWx1ZRgEIAEoCVILdGFy",
-            "Z2V0VmFsdWUaUQoMQW5zd2Vyc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EisK",
-            "BXZhbHVlGAIgASgLMhUuYXZhLnYxLlByb2NlZHVyZU5vZGVSBXZhbHVlOgI4",
-            "ASLFAgoXR2V0RGVjaXNpb25QYXRoUmVzcG9uc2USKwoRcHJvY2VkdXJlX3Zl",
-            "cnNpb24YASABKAVSEHByb2NlZHVyZVZlcnNpb24SIQoMZGVjaXNpb25fcmVm",
-            "GAIgASgJUgtkZWNpc2lvblJlZhI5CgpkZWNpZGVkX2F0GAMgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJZGVjaWRlZEF0EigKBHBhdGgYBCAB",
-            "KAsyFC5hdmEudjEuRGVjaXNpb25Ob2RlUgRwYXRoEhkKBXZhbHVlGAUgASgJ",
-            "SABSBXZhbHVliAEBEhwKCWVzY2FsYXRlZBgGIAEoCFIJZXNjYWxhdGVkEjIK",
-            "CmVzY2FsYXRpb24YByABKAsyEi5hdmEudjEuRXNjYWxhdGlvblIKZXNjYWxh",
-            "dGlvbkIICgZfdmFsdWUinwMKDERlY2lzaW9uTm9kZRIcCglwcmVkaWNhdGUY",
-            "ASABKAlSCXByZWRpY2F0ZRIbCgZhbnN3ZXIYAyABKAlIAFIGYW5zd2VyiAEB",
-            "EjIKCmNvbmZpZGVuY2UYBCABKAsyEi5hdmEudjEuQ29uZmlkZW5jZVIKY29u",
-            "ZmlkZW5jZRI7CgdhbnN3ZXJzGAUgAygLMiEuYXZhLnYxLkRlY2lzaW9uTm9k",
-            "ZS5BbnN3ZXJzRW50cnlSB2Fuc3dlcnMSHwoLdGFyZ2V0X25hbWUYBiABKAlS",
-            "CnRhcmdldE5hbWUSIQoMdGFyZ2V0X3ZhbHVlGAcgASgJUgt0YXJnZXRWYWx1",
-            "ZRIyCgplc2NhbGF0aW9uGAggASgLMhIuYXZhLnYxLkVzY2FsYXRpb25SCmVz",
-            "Y2FsYXRpb24aUAoMQW5zd2Vyc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EioK",
-            "BXZhbHVlGAIgASgLMhQuYXZhLnYxLkRlY2lzaW9uTm9kZVIFdmFsdWU6AjgB",
-            "QgkKB19hbnN3ZXJKBAgCEANSCHF1ZXN0aW9uIr4BCgpDb25maWRlbmNlEi4K",
-            "BWxldmVsGAEgASgOMhguYXZhLnYxLkNvbmZpZGVuY2UuTGV2ZWxSBWxldmVs",
-            "EjEKBXZhbHVlGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFsdWVS",
-            "BXZhbHVlIk0KBUxldmVsEgsKB1VOS05PV04QABIMCghWRVJZX0xPVxABEgcK",
-            "A0xPVxACEgcKA01JRBADEggKBEhJR0gQBBINCglWRVJZX0hJR0gQBSozCgVN",
-            "b2RlbBIICgRRV0VOEAASCAoEQ0xFRhABEggKBEJFUlQQAhIMCghSRVJBTktF",
-            "UhADMtYEChFQcmVkaWN0aW9uU2VydmljZRJmCgZEZWNpZGUSFS5hdmEudjEu",
-            "RGVjaWRlUmVxdWVzdBoWLmF2YS52MS5EZWNpZGVSZXNwb25zZSItgtPkkwIn",
-            "IiIvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX06ZGVjaWRlOgEqEn8KC0dl",
-            "dERlY2lzaW9uEhouYXZhLnYxLkdldERlY2lzaW9uUmVxdWVzdBoWLmF2YS52",
-            "MS5EZWNpZGVSZXNwb25zZSI8gtPkkwI2EjQvdjIvZGF0YXNldHMve2RhdGFz",
-            "ZXRfbmFtZX0vZGVjaXNpb25zL3tkZWNpc2lvbl9yZWZ9Eo4BCgxHZXRQcm9j",
-            "ZWR1cmUSGy5hdmEudjEuR2V0UHJvY2VkdXJlUmVxdWVzdBocLmF2YS52MS5H",
-            "ZXRQcm9jZWR1cmVSZXNwb25zZSJDgtPkkwI9EjsvdjIvZGF0YXNldHMve2Rh",
-            "dGFzZXRfbmFtZX0vb3V0cHV0cy97b3V0cHV0X25hbWV9L3Byb2NlZHVyZRKR",
-            "AQoPR2V0RGVjaXNpb25QYXRoEhouYXZhLnYxLkdldERlY2lzaW9uUmVxdWVz",
-            "dBofLmF2YS52MS5HZXREZWNpc2lvblBhdGhSZXNwb25zZSJBgtPkkwI7Ejkv",
-            "djIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX0vZGVjaXNpb25zL3tkZWNpc2lv",
-            "bl9yZWZ9L3BhdGgaM5JBMBIuRGVjaWRlIG91dHB1dHMgd2l0aCBhIGRhdGFz",
-            "ZXQncyBBVkEgcHJvY2VkdXJlLkLDAQoPYWkudmlzbWEuYXZhLnYxQhZQcmVk",
-            "aWN0aW9uU2VydmljZVByb3RvUAFaKmdpdGh1Yi5jb20vZS1jb25vbWljL3Zt",
-            "bGFwaXMvZ2VuL2dvL2F2YS92MaICA0FYWKoCBkF2YS5WMcoCBkF2YVxWMeIC",
-            "EkF2YVxWMVxHUEJNZXRhZGF0YeoCB0F2YTo6VjGSQTISCQoDQVZBMgJ2MSoB",
-            "AjIQYXBwbGljYXRpb24vanNvbjoQYXBwbGljYXRpb24vanNvbmIGcHJvdG8z"));
+            "ZWQSKwoRcHJvY2VkdXJlX3ZlcnNpb24YBCABKAVSEHByb2NlZHVyZVZlcnNp",
+            "b24SIQoMZGVjaXNpb25fcmVmGAUgASgJUgtkZWNpc2lvblJlZhIyCgplc2Nh",
+            "bGF0aW9uGAYgASgLMhIuYXZhLnYxLkVzY2FsYXRpb25SCmVzY2FsYXRpb24S",
+            "OQoKZGVjaWRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBSCWRlY2lkZWRBdBIoCgRwYXRoGAggASgLMhQuYXZhLnYxLkRlY2lzaW9u",
+            "Tm9kZVIEcGF0aEIICgZfdmFsdWVKBAgDEARSBXN0ZXBzItEBCgpFc2NhbGF0",
+            "aW9uEisKBGtpbmQYASABKA4yFy5hdmEudjEuRXNjYWxhdGlvbi5LaW5kUgRr",
+            "aW5kEhcKB3N0ZXBfaWQYAiABKAlSBnN0ZXBJZCJ9CgRLaW5kEhQKEEtJTkRf",
+            "VU5TUEVDSUZJRUQQABIXChNNSVNTSU5HX0lORk9STUFUSU9OEAESFgoSTk9f",
+            "TUFUQ0hJTkdfQlJBTkNIEAISGAoUUFJPQ0VEVVJFX0VTQ0FMQVRJT04QAxIU",
+            "ChBFVkFMVUFUSU9OX0VSUk9SEAQiuQEKEkdldERlY2lzaW9uUmVxdWVzdBJL",
+            "CgxkYXRhc2V0X25hbWUYASABKAlCKPpCJXIjKIACMh5eW0EtWmEtejAtOS5d",
+            "W0EtWmEtejAtOV8uPi1dKiRSC2RhdGFzZXROYW1lEiwKDGRlY2lzaW9uX3Jl",
+            "ZhgCIAEoCUIJ+kIGcgQQASgkUgtkZWNpc2lvblJlZhIoCgtvdXRwdXRfbmFt",
+            "ZRgDIAEoCUIH+kIEcgIQAVIKb3V0cHV0TmFtZSKvAQoTR2V0UHJvY2VkdXJl",
+            "UmVxdWVzdBJLCgxkYXRhc2V0X25hbWUYASABKAlCKPpCJXIjKIACMh5eW0Et",
+            "WmEtejAtOS5dW0EtWmEtejAtOV8uPi1dKiRSC2RhdGFzZXROYW1lEigKC291",
+            "dHB1dF9uYW1lGAIgASgJQgf6QgRyAhABUgpvdXRwdXROYW1lEiEKB3ZlcnNp",
+            "b24YAyABKAVCB/pCBBoCKABSB3ZlcnNpb24ibgoUR2V0UHJvY2VkdXJlUmVz",
+            "cG9uc2USKwoRcHJvY2VkdXJlX3ZlcnNpb24YASABKAVSEHByb2NlZHVyZVZl",
+            "cnNpb24SKQoEdHJlZRgCIAEoCzIVLmF2YS52MS5Qcm9jZWR1cmVOb2RlUgR0",
+            "cmVlIoICCg1Qcm9jZWR1cmVOb2RlEhwKCXByZWRpY2F0ZRgBIAEoCVIJcHJl",
+            "ZGljYXRlEjwKB2Fuc3dlcnMYAiADKAsyIi5hdmEudjEuUHJvY2VkdXJlTm9k",
+            "ZS5BbnN3ZXJzRW50cnlSB2Fuc3dlcnMSHwoLdGFyZ2V0X25hbWUYAyABKAlS",
+            "CnRhcmdldE5hbWUSIQoMdGFyZ2V0X3ZhbHVlGAQgASgJUgt0YXJnZXRWYWx1",
+            "ZRpRCgxBbnN3ZXJzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSKwoFdmFsdWUY",
+            "AiABKAsyFS5hdmEudjEuUHJvY2VkdXJlTm9kZVIFdmFsdWU6AjgBIp8DCgxE",
+            "ZWNpc2lvbk5vZGUSHAoJcHJlZGljYXRlGAEgASgJUglwcmVkaWNhdGUSGwoG",
+            "YW5zd2VyGAMgASgJSABSBmFuc3dlcogBARIyCgpjb25maWRlbmNlGAQgASgL",
+            "MhIuYXZhLnYxLkNvbmZpZGVuY2VSCmNvbmZpZGVuY2USOwoHYW5zd2VycxgF",
+            "IAMoCzIhLmF2YS52MS5EZWNpc2lvbk5vZGUuQW5zd2Vyc0VudHJ5UgdhbnN3",
+            "ZXJzEh8KC3RhcmdldF9uYW1lGAYgASgJUgp0YXJnZXROYW1lEiEKDHRhcmdl",
+            "dF92YWx1ZRgHIAEoCVILdGFyZ2V0VmFsdWUSMgoKZXNjYWxhdGlvbhgIIAEo",
+            "CzISLmF2YS52MS5Fc2NhbGF0aW9uUgplc2NhbGF0aW9uGlAKDEFuc3dlcnNF",
+            "bnRyeRIQCgNrZXkYASABKAlSA2tleRIqCgV2YWx1ZRgCIAEoCzIULmF2YS52",
+            "MS5EZWNpc2lvbk5vZGVSBXZhbHVlOgI4AUIJCgdfYW5zd2VySgQIAhADUghx",
+            "dWVzdGlvbiK+AQoKQ29uZmlkZW5jZRIuCgVsZXZlbBgBIAEoDjIYLmF2YS52",
+            "MS5Db25maWRlbmNlLkxldmVsUgVsZXZlbBIxCgV2YWx1ZRgCIAEoCzIbLmdv",
+            "b2dsZS5wcm90b2J1Zi5GbG9hdFZhbHVlUgV2YWx1ZSJNCgVMZXZlbBILCgdV",
+            "TktOT1dOEAASDAoIVkVSWV9MT1cQARIHCgNMT1cQAhIHCgNNSUQQAxIICgRI",
+            "SUdIEAQSDQoJVkVSWV9ISUdIEAUqMwoFTW9kZWwSCAoEUVdFThAAEggKBENM",
+            "RUYQARIICgRCRVJUEAISDAoIUkVSQU5LRVIQAzLCAwoRUHJlZGljdGlvblNl",
+            "cnZpY2USZgoGRGVjaWRlEhUuYXZhLnYxLkRlY2lkZVJlcXVlc3QaFi5hdmEu",
+            "djEuRGVjaWRlUmVzcG9uc2UiLYLT5JMCJyIiL3YyL2RhdGFzZXRzL3tkYXRh",
+            "c2V0X25hbWV9OmRlY2lkZToBKhJ/CgtHZXREZWNpc2lvbhIaLmF2YS52MS5H",
+            "ZXREZWNpc2lvblJlcXVlc3QaFi5hdmEudjEuRGVjaWRlUmVzcG9uc2UiPILT",
+            "5JMCNhI0L3YyL2RhdGFzZXRzL3tkYXRhc2V0X25hbWV9L2RlY2lzaW9ucy97",
+            "ZGVjaXNpb25fcmVmfRKOAQoMR2V0UHJvY2VkdXJlEhsuYXZhLnYxLkdldFBy",
+            "b2NlZHVyZVJlcXVlc3QaHC5hdmEudjEuR2V0UHJvY2VkdXJlUmVzcG9uc2Ui",
+            "Q4LT5JMCPRI7L3YyL2RhdGFzZXRzL3tkYXRhc2V0X25hbWV9L291dHB1dHMv",
+            "e291dHB1dF9uYW1lfS9wcm9jZWR1cmUaM5JBMBIuRGVjaWRlIG91dHB1dHMg",
+            "d2l0aCBhIGRhdGFzZXQncyBBVkEgcHJvY2VkdXJlLkLDAQoPYWkudmlzbWEu",
+            "YXZhLnYxQhZQcmVkaWN0aW9uU2VydmljZVByb3RvUAFaKmdpdGh1Yi5jb20v",
+            "ZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2F2YS92MaICA0FYWKoCBkF2YS5W",
+            "McoCBkF2YVxWMeICEkF2YVxWMVxHUEJNZXRhZGF0YeoCB0F2YTo6VjGSQTIS",
+            "CQoDQVZBMgJ2MSoBAjIQYXBwbGljYXRpb24vanNvbjoQYXBwbGljYXRpb24v",
+            "anNvbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ava.V1.Model), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.DecideRequest), global::Ava.V1.DecideRequest.Parser, new[]{ "DatasetName", "OutputName", "Fields", "Model" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.DecideResponse), global::Ava.V1.DecideResponse.Parser, new[]{ "Value", "Escalated", "Steps", "ProcedureVersion", "DecisionRef", "Escalation", "DecidedAt", "Path" }, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.WalkedStep), global::Ava.V1.WalkedStep.Parser, new[]{ "Answer", "Confidence", "StepId", "Facts", "Branch", "Predicate" }, new[]{ "Answer" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.TakenBranch), global::Ava.V1.TakenBranch.Parser, new[]{ "BranchId", "Label", "NextStepId", "OutputValue", "Escalates" }, new[]{ "Outcome" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.DecideResponse), global::Ava.V1.DecideResponse.Parser, new[]{ "Value", "Escalated", "ProcedureVersion", "DecisionRef", "Escalation", "DecidedAt", "Path" }, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.Escalation), global::Ava.V1.Escalation.Parser, new[]{ "Kind", "StepId" }, null, new[]{ typeof(global::Ava.V1.Escalation.Types.Kind) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.GetDecisionRequest), global::Ava.V1.GetDecisionRequest.Parser, new[]{ "DatasetName", "DecisionRef", "OutputName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.GetProcedureRequest), global::Ava.V1.GetProcedureRequest.Parser, new[]{ "DatasetName", "OutputName", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.GetProcedureResponse), global::Ava.V1.GetProcedureResponse.Parser, new[]{ "ProcedureVersion", "Tree" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.ProcedureNode), global::Ava.V1.ProcedureNode.Parser, new[]{ "Predicate", "Answers", "TargetName", "TargetValue" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.GetDecisionPathResponse), global::Ava.V1.GetDecisionPathResponse.Parser, new[]{ "ProcedureVersion", "DecisionRef", "DecidedAt", "Path", "Value", "Escalated", "Escalation" }, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.DecisionNode), global::Ava.V1.DecisionNode.Parser, new[]{ "Predicate", "Answer", "Confidence", "Answers", "TargetName", "TargetValue", "Escalation" }, new[]{ "Answer" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.Confidence), global::Ava.V1.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Ava.V1.Confidence.Types.Level) }, null, null)
           }));
@@ -492,7 +469,6 @@ namespace Ava.V1 {
     public DecideResponse(DecideResponse other) : this() {
       value_ = other.value_;
       escalated_ = other.escalated_;
-      steps_ = other.steps_.Clone();
       procedureVersion_ = other.procedureVersion_;
       decisionRef_ = other.decisionRef_;
       escalation_ = other.escalation_ != null ? other.escalation_.Clone() : null;
@@ -549,20 +525,6 @@ namespace Ava.V1 {
       set {
         escalated_ = value;
       }
-    }
-
-    /// <summary>Field number for the "steps" field.</summary>
-    public const int StepsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Ava.V1.WalkedStep> _repeated_steps_codec
-        = pb::FieldCodec.ForMessage(26, global::Ava.V1.WalkedStep.Parser);
-    private readonly pbc::RepeatedField<global::Ava.V1.WalkedStep> steps_ = new pbc::RepeatedField<global::Ava.V1.WalkedStep>();
-    /// <summary>
-    /// Not set; the walk is in path
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ava.V1.WalkedStep> Steps {
-      get { return steps_; }
     }
 
     /// <summary>Field number for the "procedure_version" field.</summary>
@@ -629,7 +591,7 @@ namespace Ava.V1 {
     public const int PathFieldNumber = 8;
     private global::Ava.V1.DecisionNode path_;
     /// <summary>
-    /// The walk nested like the procedure's tree; absent when it cannot be shown as a path
+    /// The path walked through the procedure's tree, root first; absent when it cannot be shown as one
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -657,7 +619,6 @@ namespace Ava.V1 {
       }
       if (Value != other.Value) return false;
       if (Escalated != other.Escalated) return false;
-      if(!steps_.Equals(other.steps_)) return false;
       if (ProcedureVersion != other.ProcedureVersion) return false;
       if (DecisionRef != other.DecisionRef) return false;
       if (!object.Equals(Escalation, other.Escalation)) return false;
@@ -672,7 +633,6 @@ namespace Ava.V1 {
       int hash = 1;
       if (HasValue) hash ^= Value.GetHashCode();
       if (Escalated != false) hash ^= Escalated.GetHashCode();
-      hash ^= steps_.GetHashCode();
       if (ProcedureVersion != 0) hash ^= ProcedureVersion.GetHashCode();
       if (DecisionRef.Length != 0) hash ^= DecisionRef.GetHashCode();
       if (escalation_ != null) hash ^= Escalation.GetHashCode();
@@ -704,7 +664,6 @@ namespace Ava.V1 {
         output.WriteRawTag(16);
         output.WriteBool(Escalated);
       }
-      steps_.WriteTo(output, _repeated_steps_codec);
       if (ProcedureVersion != 0) {
         output.WriteRawTag(32);
         output.WriteInt32(ProcedureVersion);
@@ -743,7 +702,6 @@ namespace Ava.V1 {
         output.WriteRawTag(16);
         output.WriteBool(Escalated);
       }
-      steps_.WriteTo(ref output, _repeated_steps_codec);
       if (ProcedureVersion != 0) {
         output.WriteRawTag(32);
         output.WriteInt32(ProcedureVersion);
@@ -780,7 +738,6 @@ namespace Ava.V1 {
       if (Escalated != false) {
         size += 1 + 1;
       }
-      size += steps_.CalculateSize(_repeated_steps_codec);
       if (ProcedureVersion != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProcedureVersion);
       }
@@ -814,7 +771,6 @@ namespace Ava.V1 {
       if (other.Escalated != false) {
         Escalated = other.Escalated;
       }
-      steps_.Add(other.steps_);
       if (other.ProcedureVersion != 0) {
         ProcedureVersion = other.ProcedureVersion;
       }
@@ -866,10 +822,6 @@ namespace Ava.V1 {
             Escalated = input.ReadBool();
             break;
           }
-          case 26: {
-            steps_.AddEntriesFrom(input, _repeated_steps_codec);
-            break;
-          }
           case 32: {
             ProcedureVersion = input.ReadInt32();
             break;
@@ -926,10 +878,6 @@ namespace Ava.V1 {
             Escalated = input.ReadBool();
             break;
           }
-          case 26: {
-            steps_.AddEntriesFrom(ref input, _repeated_steps_codec);
-            break;
-          }
           case 32: {
             ProcedureVersion = input.ReadInt32();
             break;
@@ -967,867 +915,6 @@ namespace Ava.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class WalkedStep : pb::IMessage<WalkedStep>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<WalkedStep> _parser = new pb::MessageParser<WalkedStep>(() => new WalkedStep());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<WalkedStep> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public WalkedStep() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public WalkedStep(WalkedStep other) : this() {
-      answer_ = other.answer_;
-      confidence_ = other.confidence_ != null ? other.confidence_.Clone() : null;
-      stepId_ = other.stepId_;
-      facts_ = other.facts_.Clone();
-      branch_ = other.branch_ != null ? other.branch_.Clone() : null;
-      predicate_ = other.predicate_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public WalkedStep Clone() {
-      return new WalkedStep(this);
-    }
-
-    /// <summary>Field number for the "answer" field.</summary>
-    public const int AnswerFieldNumber = 2;
-    private readonly static string AnswerDefaultValue = "";
-
-    private string answer_;
-    /// <summary>
-    /// The answer the step read; absent when it went unanswered
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Answer {
-      get { return answer_ ?? AnswerDefaultValue; }
-      set {
-        answer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "answer" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasAnswer {
-      get { return answer_ != null; }
-    }
-    /// <summary>Clears the value of the "answer" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearAnswer() {
-      answer_ = null;
-    }
-
-    /// <summary>Field number for the "confidence" field.</summary>
-    public const int ConfidenceFieldNumber = 3;
-    private global::Ava.V1.Confidence confidence_;
-    /// <summary>
-    /// Confidence in the answer
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ava.V1.Confidence Confidence {
-      get { return confidence_; }
-      set {
-        confidence_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "step_id" field.</summary>
-    public const int StepIdFieldNumber = 4;
-    private string stepId_ = "";
-    /// <summary>
-    /// Identifier of the step within the procedure
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string StepId {
-      get { return stepId_; }
-      set {
-        stepId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "facts" field.</summary>
-    public const int FactsFieldNumber = 5;
-    private static readonly pb::FieldCodec<string> _repeated_facts_codec
-        = pb::FieldCodec.ForString(42);
-    private readonly pbc::RepeatedField<string> facts_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// Names of the facts the step read, sorted
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> Facts {
-      get { return facts_; }
-    }
-
-    /// <summary>Field number for the "branch" field.</summary>
-    public const int BranchFieldNumber = 6;
-    private global::Ava.V1.TakenBranch branch_;
-    /// <summary>
-    /// The branch the step took; absent when it took none
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ava.V1.TakenBranch Branch {
-      get { return branch_; }
-      set {
-        branch_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "predicate" field.</summary>
-    public const int PredicateFieldNumber = 7;
-    private string predicate_ = "";
-    /// <summary>
-    /// Name of the fact the step tested; empty when it read more than one
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Predicate {
-      get { return predicate_; }
-      set {
-        predicate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as WalkedStep);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(WalkedStep other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Answer != other.Answer) return false;
-      if (!object.Equals(Confidence, other.Confidence)) return false;
-      if (StepId != other.StepId) return false;
-      if(!facts_.Equals(other.facts_)) return false;
-      if (!object.Equals(Branch, other.Branch)) return false;
-      if (Predicate != other.Predicate) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (HasAnswer) hash ^= Answer.GetHashCode();
-      if (confidence_ != null) hash ^= Confidence.GetHashCode();
-      if (StepId.Length != 0) hash ^= StepId.GetHashCode();
-      hash ^= facts_.GetHashCode();
-      if (branch_ != null) hash ^= Branch.GetHashCode();
-      if (Predicate.Length != 0) hash ^= Predicate.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (HasAnswer) {
-        output.WriteRawTag(18);
-        output.WriteString(Answer);
-      }
-      if (confidence_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Confidence);
-      }
-      if (StepId.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(StepId);
-      }
-      facts_.WriteTo(output, _repeated_facts_codec);
-      if (branch_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Branch);
-      }
-      if (Predicate.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(Predicate);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasAnswer) {
-        output.WriteRawTag(18);
-        output.WriteString(Answer);
-      }
-      if (confidence_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Confidence);
-      }
-      if (StepId.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(StepId);
-      }
-      facts_.WriteTo(ref output, _repeated_facts_codec);
-      if (branch_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Branch);
-      }
-      if (Predicate.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(Predicate);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (HasAnswer) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Answer);
-      }
-      if (confidence_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Confidence);
-      }
-      if (StepId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(StepId);
-      }
-      size += facts_.CalculateSize(_repeated_facts_codec);
-      if (branch_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Branch);
-      }
-      if (Predicate.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Predicate);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(WalkedStep other) {
-      if (other == null) {
-        return;
-      }
-      if (other.HasAnswer) {
-        Answer = other.Answer;
-      }
-      if (other.confidence_ != null) {
-        if (confidence_ == null) {
-          Confidence = new global::Ava.V1.Confidence();
-        }
-        Confidence.MergeFrom(other.Confidence);
-      }
-      if (other.StepId.Length != 0) {
-        StepId = other.StepId;
-      }
-      facts_.Add(other.facts_);
-      if (other.branch_ != null) {
-        if (branch_ == null) {
-          Branch = new global::Ava.V1.TakenBranch();
-        }
-        Branch.MergeFrom(other.Branch);
-      }
-      if (other.Predicate.Length != 0) {
-        Predicate = other.Predicate;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 18: {
-            Answer = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (confidence_ == null) {
-              Confidence = new global::Ava.V1.Confidence();
-            }
-            input.ReadMessage(Confidence);
-            break;
-          }
-          case 34: {
-            StepId = input.ReadString();
-            break;
-          }
-          case 42: {
-            facts_.AddEntriesFrom(input, _repeated_facts_codec);
-            break;
-          }
-          case 50: {
-            if (branch_ == null) {
-              Branch = new global::Ava.V1.TakenBranch();
-            }
-            input.ReadMessage(Branch);
-            break;
-          }
-          case 58: {
-            Predicate = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 18: {
-            Answer = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (confidence_ == null) {
-              Confidence = new global::Ava.V1.Confidence();
-            }
-            input.ReadMessage(Confidence);
-            break;
-          }
-          case 34: {
-            StepId = input.ReadString();
-            break;
-          }
-          case 42: {
-            facts_.AddEntriesFrom(ref input, _repeated_facts_codec);
-            break;
-          }
-          case 50: {
-            if (branch_ == null) {
-              Branch = new global::Ava.V1.TakenBranch();
-            }
-            input.ReadMessage(Branch);
-            break;
-          }
-          case 58: {
-            Predicate = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class TakenBranch : pb::IMessage<TakenBranch>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<TakenBranch> _parser = new pb::MessageParser<TakenBranch>(() => new TakenBranch());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<TakenBranch> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TakenBranch() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TakenBranch(TakenBranch other) : this() {
-      branchId_ = other.branchId_;
-      label_ = other.label_;
-      switch (other.OutcomeCase) {
-        case OutcomeOneofCase.NextStepId:
-          NextStepId = other.NextStepId;
-          break;
-        case OutcomeOneofCase.OutputValue:
-          OutputValue = other.OutputValue;
-          break;
-        case OutcomeOneofCase.Escalates:
-          Escalates = other.Escalates;
-          break;
-      }
-
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TakenBranch Clone() {
-      return new TakenBranch(this);
-    }
-
-    /// <summary>Field number for the "branch_id" field.</summary>
-    public const int BranchIdFieldNumber = 1;
-    private string branchId_ = "";
-    /// <summary>
-    /// Identifier of the branch within its step
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string BranchId {
-      get { return branchId_; }
-      set {
-        branchId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "label" field.</summary>
-    public const int LabelFieldNumber = 2;
-    private string label_ = "";
-    /// <summary>
-    /// The answer the branch stands for
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Label {
-      get { return label_; }
-      set {
-        label_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "next_step_id" field.</summary>
-    public const int NextStepIdFieldNumber = 3;
-    /// <summary>
-    /// The step walked next
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string NextStepId {
-      get { return HasNextStepId ? (string) outcome_ : ""; }
-      set {
-        outcome_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-        outcomeCase_ = OutcomeOneofCase.NextStepId;
-      }
-    }
-    /// <summary>Gets whether the "next_step_id" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasNextStepId {
-      get { return outcomeCase_ == OutcomeOneofCase.NextStepId; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "next_step_id" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearNextStepId() {
-      if (HasNextStepId) {
-        ClearOutcome();
-      }
-    }
-
-    /// <summary>Field number for the "output_value" field.</summary>
-    public const int OutputValueFieldNumber = 4;
-    /// <summary>
-    /// The value decided
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string OutputValue {
-      get { return HasOutputValue ? (string) outcome_ : ""; }
-      set {
-        outcome_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-        outcomeCase_ = OutcomeOneofCase.OutputValue;
-      }
-    }
-    /// <summary>Gets whether the "output_value" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasOutputValue {
-      get { return outcomeCase_ == OutcomeOneofCase.OutputValue; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "output_value" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearOutputValue() {
-      if (HasOutputValue) {
-        ClearOutcome();
-      }
-    }
-
-    /// <summary>Field number for the "escalates" field.</summary>
-    public const int EscalatesFieldNumber = 5;
-    /// <summary>
-    /// True when the branch escalates
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Escalates {
-      get { return HasEscalates ? (bool) outcome_ : false; }
-      set {
-        outcome_ = value;
-        outcomeCase_ = OutcomeOneofCase.Escalates;
-      }
-    }
-    /// <summary>Gets whether the "escalates" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasEscalates {
-      get { return outcomeCase_ == OutcomeOneofCase.Escalates; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "escalates" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearEscalates() {
-      if (HasEscalates) {
-        ClearOutcome();
-      }
-    }
-
-    private object outcome_;
-    /// <summary>Enum of possible cases for the "outcome" oneof.</summary>
-    public enum OutcomeOneofCase {
-      None = 0,
-      NextStepId = 3,
-      OutputValue = 4,
-      Escalates = 5,
-    }
-    private OutcomeOneofCase outcomeCase_ = OutcomeOneofCase.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public OutcomeOneofCase OutcomeCase {
-      get { return outcomeCase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearOutcome() {
-      outcomeCase_ = OutcomeOneofCase.None;
-      outcome_ = null;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as TakenBranch);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(TakenBranch other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (BranchId != other.BranchId) return false;
-      if (Label != other.Label) return false;
-      if (NextStepId != other.NextStepId) return false;
-      if (OutputValue != other.OutputValue) return false;
-      if (Escalates != other.Escalates) return false;
-      if (OutcomeCase != other.OutcomeCase) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (BranchId.Length != 0) hash ^= BranchId.GetHashCode();
-      if (Label.Length != 0) hash ^= Label.GetHashCode();
-      if (HasNextStepId) hash ^= NextStepId.GetHashCode();
-      if (HasOutputValue) hash ^= OutputValue.GetHashCode();
-      if (HasEscalates) hash ^= Escalates.GetHashCode();
-      hash ^= (int) outcomeCase_;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (BranchId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(BranchId);
-      }
-      if (Label.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Label);
-      }
-      if (HasNextStepId) {
-        output.WriteRawTag(26);
-        output.WriteString(NextStepId);
-      }
-      if (HasOutputValue) {
-        output.WriteRawTag(34);
-        output.WriteString(OutputValue);
-      }
-      if (HasEscalates) {
-        output.WriteRawTag(40);
-        output.WriteBool(Escalates);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BranchId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(BranchId);
-      }
-      if (Label.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Label);
-      }
-      if (HasNextStepId) {
-        output.WriteRawTag(26);
-        output.WriteString(NextStepId);
-      }
-      if (HasOutputValue) {
-        output.WriteRawTag(34);
-        output.WriteString(OutputValue);
-      }
-      if (HasEscalates) {
-        output.WriteRawTag(40);
-        output.WriteBool(Escalates);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (BranchId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BranchId);
-      }
-      if (Label.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Label);
-      }
-      if (HasNextStepId) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextStepId);
-      }
-      if (HasOutputValue) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(OutputValue);
-      }
-      if (HasEscalates) {
-        size += 1 + 1;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(TakenBranch other) {
-      if (other == null) {
-        return;
-      }
-      if (other.BranchId.Length != 0) {
-        BranchId = other.BranchId;
-      }
-      if (other.Label.Length != 0) {
-        Label = other.Label;
-      }
-      switch (other.OutcomeCase) {
-        case OutcomeOneofCase.NextStepId:
-          NextStepId = other.NextStepId;
-          break;
-        case OutcomeOneofCase.OutputValue:
-          OutputValue = other.OutputValue;
-          break;
-        case OutcomeOneofCase.Escalates:
-          Escalates = other.Escalates;
-          break;
-      }
-
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            BranchId = input.ReadString();
-            break;
-          }
-          case 18: {
-            Label = input.ReadString();
-            break;
-          }
-          case 26: {
-            NextStepId = input.ReadString();
-            break;
-          }
-          case 34: {
-            OutputValue = input.ReadString();
-            break;
-          }
-          case 40: {
-            Escalates = input.ReadBool();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            BranchId = input.ReadString();
-            break;
-          }
-          case 18: {
-            Label = input.ReadString();
-            break;
-          }
-          case 26: {
-            NextStepId = input.ReadString();
-            break;
-          }
-          case 34: {
-            OutputValue = input.ReadString();
-            break;
-          }
-          case 40: {
-            Escalates = input.ReadBool();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Escalation : pb::IMessage<Escalation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1842,7 +929,7 @@ namespace Ava.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2111,7 +1198,7 @@ namespace Ava.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2392,7 +1479,7 @@ namespace Ava.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2673,7 +1760,7 @@ namespace Ava.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2926,7 +2013,7 @@ namespace Ava.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3221,488 +2308,6 @@ namespace Ava.V1 {
 
   }
 
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class GetDecisionPathResponse : pb::IMessage<GetDecisionPathResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<GetDecisionPathResponse> _parser = new pb::MessageParser<GetDecisionPathResponse>(() => new GetDecisionPathResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GetDecisionPathResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[9]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetDecisionPathResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetDecisionPathResponse(GetDecisionPathResponse other) : this() {
-      procedureVersion_ = other.procedureVersion_;
-      decisionRef_ = other.decisionRef_;
-      decidedAt_ = other.decidedAt_ != null ? other.decidedAt_.Clone() : null;
-      path_ = other.path_ != null ? other.path_.Clone() : null;
-      value_ = other.value_;
-      escalated_ = other.escalated_;
-      escalation_ = other.escalation_ != null ? other.escalation_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetDecisionPathResponse Clone() {
-      return new GetDecisionPathResponse(this);
-    }
-
-    /// <summary>Field number for the "procedure_version" field.</summary>
-    public const int ProcedureVersionFieldNumber = 1;
-    private int procedureVersion_;
-    /// <summary>
-    /// Version of the procedure that decided
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int ProcedureVersion {
-      get { return procedureVersion_; }
-      set {
-        procedureVersion_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "decision_ref" field.</summary>
-    public const int DecisionRefFieldNumber = 2;
-    private string decisionRef_ = "";
-    /// <summary>
-    /// Reference the decision was looked up by
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string DecisionRef {
-      get { return decisionRef_; }
-      set {
-        decisionRef_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "decided_at" field.</summary>
-    public const int DecidedAtFieldNumber = 3;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp decidedAt_;
-    /// <summary>
-    /// When the decision was made
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp DecidedAt {
-      get { return decidedAt_; }
-      set {
-        decidedAt_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "path" field.</summary>
-    public const int PathFieldNumber = 4;
-    private global::Ava.V1.DecisionNode path_;
-    /// <summary>
-    /// The step the walk started at
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ava.V1.DecisionNode Path {
-      get { return path_; }
-      set {
-        path_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "value" field.</summary>
-    public const int ValueFieldNumber = 5;
-    private readonly static string ValueDefaultValue = "";
-
-    private string value_;
-    /// <summary>
-    /// The decided value; absent when escalated
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Value {
-      get { return value_ ?? ValueDefaultValue; }
-      set {
-        value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "value" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasValue {
-      get { return value_ != null; }
-    }
-    /// <summary>Clears the value of the "value" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearValue() {
-      value_ = null;
-    }
-
-    /// <summary>Field number for the "escalated" field.</summary>
-    public const int EscalatedFieldNumber = 6;
-    private bool escalated_;
-    /// <summary>
-    /// True when the procedure did not decide
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Escalated {
-      get { return escalated_; }
-      set {
-        escalated_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "escalation" field.</summary>
-    public const int EscalationFieldNumber = 7;
-    private global::Ava.V1.Escalation escalation_;
-    /// <summary>
-    /// Why the procedure did not decide; set only when escalated
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ava.V1.Escalation Escalation {
-      get { return escalation_; }
-      set {
-        escalation_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as GetDecisionPathResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GetDecisionPathResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (ProcedureVersion != other.ProcedureVersion) return false;
-      if (DecisionRef != other.DecisionRef) return false;
-      if (!object.Equals(DecidedAt, other.DecidedAt)) return false;
-      if (!object.Equals(Path, other.Path)) return false;
-      if (Value != other.Value) return false;
-      if (Escalated != other.Escalated) return false;
-      if (!object.Equals(Escalation, other.Escalation)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (ProcedureVersion != 0) hash ^= ProcedureVersion.GetHashCode();
-      if (DecisionRef.Length != 0) hash ^= DecisionRef.GetHashCode();
-      if (decidedAt_ != null) hash ^= DecidedAt.GetHashCode();
-      if (path_ != null) hash ^= Path.GetHashCode();
-      if (HasValue) hash ^= Value.GetHashCode();
-      if (Escalated != false) hash ^= Escalated.GetHashCode();
-      if (escalation_ != null) hash ^= Escalation.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (ProcedureVersion != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(ProcedureVersion);
-      }
-      if (DecisionRef.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(DecisionRef);
-      }
-      if (decidedAt_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(DecidedAt);
-      }
-      if (path_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(Path);
-      }
-      if (HasValue) {
-        output.WriteRawTag(42);
-        output.WriteString(Value);
-      }
-      if (Escalated != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(Escalated);
-      }
-      if (escalation_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(Escalation);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ProcedureVersion != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(ProcedureVersion);
-      }
-      if (DecisionRef.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(DecisionRef);
-      }
-      if (decidedAt_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(DecidedAt);
-      }
-      if (path_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(Path);
-      }
-      if (HasValue) {
-        output.WriteRawTag(42);
-        output.WriteString(Value);
-      }
-      if (Escalated != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(Escalated);
-      }
-      if (escalation_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(Escalation);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (ProcedureVersion != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProcedureVersion);
-      }
-      if (DecisionRef.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DecisionRef);
-      }
-      if (decidedAt_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DecidedAt);
-      }
-      if (path_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Path);
-      }
-      if (HasValue) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
-      }
-      if (Escalated != false) {
-        size += 1 + 1;
-      }
-      if (escalation_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Escalation);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GetDecisionPathResponse other) {
-      if (other == null) {
-        return;
-      }
-      if (other.ProcedureVersion != 0) {
-        ProcedureVersion = other.ProcedureVersion;
-      }
-      if (other.DecisionRef.Length != 0) {
-        DecisionRef = other.DecisionRef;
-      }
-      if (other.decidedAt_ != null) {
-        if (decidedAt_ == null) {
-          DecidedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        DecidedAt.MergeFrom(other.DecidedAt);
-      }
-      if (other.path_ != null) {
-        if (path_ == null) {
-          Path = new global::Ava.V1.DecisionNode();
-        }
-        Path.MergeFrom(other.Path);
-      }
-      if (other.HasValue) {
-        Value = other.Value;
-      }
-      if (other.Escalated != false) {
-        Escalated = other.Escalated;
-      }
-      if (other.escalation_ != null) {
-        if (escalation_ == null) {
-          Escalation = new global::Ava.V1.Escalation();
-        }
-        Escalation.MergeFrom(other.Escalation);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            ProcedureVersion = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            DecisionRef = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (decidedAt_ == null) {
-              DecidedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(DecidedAt);
-            break;
-          }
-          case 34: {
-            if (path_ == null) {
-              Path = new global::Ava.V1.DecisionNode();
-            }
-            input.ReadMessage(Path);
-            break;
-          }
-          case 42: {
-            Value = input.ReadString();
-            break;
-          }
-          case 48: {
-            Escalated = input.ReadBool();
-            break;
-          }
-          case 58: {
-            if (escalation_ == null) {
-              Escalation = new global::Ava.V1.Escalation();
-            }
-            input.ReadMessage(Escalation);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            ProcedureVersion = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            DecisionRef = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (decidedAt_ == null) {
-              DecidedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(DecidedAt);
-            break;
-          }
-          case 34: {
-            if (path_ == null) {
-              Path = new global::Ava.V1.DecisionNode();
-            }
-            input.ReadMessage(Path);
-            break;
-          }
-          case 42: {
-            Value = input.ReadString();
-            break;
-          }
-          case 48: {
-            Escalated = input.ReadBool();
-            break;
-          }
-          case 58: {
-            if (escalation_ == null) {
-              Escalation = new global::Ava.V1.Escalation();
-            }
-            input.ReadMessage(Escalation);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   /// <summary>
   /// A walked step (predicate and the one answer taken), the leaf decided, or the node where the walk escalated.
   /// </summary>
@@ -3721,7 +2326,7 @@ namespace Ava.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4183,7 +2788,7 @@ namespace Ava.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Ava.V1.PredictionServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

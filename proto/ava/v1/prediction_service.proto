@@ -31,7 +31,7 @@ service PredictionService {
     };
   }
 
-  // Return a stored decision by the reference Decide returned.
+  // Return a stored decision by the reference Decide returned, with the path it walked.
   rpc GetDecision(GetDecisionRequest) returns (DecideResponse) {
     option (google.api.http) = {get: "/v2/datasets/{dataset_name}/decisions/{decision_ref}"};
   }
@@ -39,11 +39,6 @@ service PredictionService {
   // Return the procedure a dataset decides an output with, as a tree.
   rpc GetProcedure(GetProcedureRequest) returns (GetProcedureResponse) {
     option (google.api.http) = {get: "/v2/datasets/{dataset_name}/outputs/{output_name}/procedure"};
-  }
-
-  // Return a stored decision as the path it walked through the procedure tree.
-  rpc GetDecisionPath(GetDecisionRequest) returns (GetDecisionPathResponse) {
-    option (google.api.http) = {get: "/v2/datasets/{dataset_name}/decisions/{decision_ref}/path"};
   }
 }
 
@@ -69,12 +64,12 @@ enum Model {
 }
 
 message DecideResponse {
+  reserved 3;
+  reserved "steps";
   // The decided value; absent when escalated
   optional string value = 1;
   // True when the procedure did not decide
   bool escalated = 2;
-  // Not set; the walk is in path
-  repeated WalkedStep steps = 3;
   // Version of the procedure that decided
   int32 procedure_version = 4;
   // Reference to look the decision up again with GetDecision
@@ -83,41 +78,8 @@ message DecideResponse {
   Escalation escalation = 6;
   // When the decision was made; set only by GetDecision
   google.protobuf.Timestamp decided_at = 7;
-  // The walk nested like the procedure's tree; absent when it cannot be shown as a path
+  // The path walked through the procedure's tree, root first; absent when it cannot be shown as one
   DecisionNode path = 8;
-}
-
-message WalkedStep {
-  reserved 1;
-  reserved "question";
-  // The answer the step read; absent when it went unanswered
-  optional string answer = 2;
-  // Confidence in the answer
-  Confidence confidence = 3;
-  // Identifier of the step within the procedure
-  string step_id = 4;
-  // Names of the facts the step read, sorted
-  repeated string facts = 5;
-  // The branch the step took; absent when it took none
-  TakenBranch branch = 6;
-  // Name of the fact the step tested; empty when it read more than one
-  string predicate = 7;
-}
-
-message TakenBranch {
-  // Identifier of the branch within its step
-  string branch_id = 1;
-  // The answer the branch stands for
-  string label = 2;
-  // What taking the branch led to
-  oneof outcome {
-    // The step walked next
-    string next_step_id = 3;
-    // The value decided
-    string output_value = 4;
-    // True when the branch escalates
-    bool escalates = 5;
-  }
 }
 
 message Escalation {
@@ -182,23 +144,6 @@ message ProcedureNode {
   string target_name = 3;
   // The value decided at this leaf
   string target_value = 4;
-}
-
-message GetDecisionPathResponse {
-  // Version of the procedure that decided
-  int32 procedure_version = 1;
-  // Reference the decision was looked up by
-  string decision_ref = 2;
-  // When the decision was made
-  google.protobuf.Timestamp decided_at = 3;
-  // The step the walk started at
-  DecisionNode path = 4;
-  // The decided value; absent when escalated
-  optional string value = 5;
-  // True when the procedure did not decide
-  bool escalated = 6;
-  // Why the procedure did not decide; set only when escalated
-  Escalation escalation = 7;
 }
 
 // A walked step (predicate and the one answer taken), the leaf decided, or the node where the walk escalated.

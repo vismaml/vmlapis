@@ -9,7 +9,7 @@ from google.protobuf.internal import containers as _containers
 from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from collections.abc import Iterable as _Iterable, Mapping as _Mapping
+from collections.abc import Mapping as _Mapping
 from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 
 DESCRIPTOR: _descriptor.FileDescriptor
@@ -45,10 +45,9 @@ class DecideRequest(_message.Message):
     def __init__(self, dataset_name: _Optional[str] = ..., output_name: _Optional[str] = ..., fields: _Optional[_Mapping[str, str]] = ..., model: _Optional[_Union[Model, str]] = ...) -> None: ...
 
 class DecideResponse(_message.Message):
-    __slots__ = ("value", "escalated", "steps", "procedure_version", "decision_ref", "escalation", "decided_at", "path")
+    __slots__ = ("value", "escalated", "procedure_version", "decision_ref", "escalation", "decided_at", "path")
     VALUE_FIELD_NUMBER: _ClassVar[int]
     ESCALATED_FIELD_NUMBER: _ClassVar[int]
-    STEPS_FIELD_NUMBER: _ClassVar[int]
     PROCEDURE_VERSION_FIELD_NUMBER: _ClassVar[int]
     DECISION_REF_FIELD_NUMBER: _ClassVar[int]
     ESCALATION_FIELD_NUMBER: _ClassVar[int]
@@ -56,43 +55,12 @@ class DecideResponse(_message.Message):
     PATH_FIELD_NUMBER: _ClassVar[int]
     value: str
     escalated: bool
-    steps: _containers.RepeatedCompositeFieldContainer[WalkedStep]
     procedure_version: int
     decision_ref: str
     escalation: Escalation
     decided_at: _timestamp_pb2.Timestamp
     path: DecisionNode
-    def __init__(self, value: _Optional[str] = ..., escalated: _Optional[bool] = ..., steps: _Optional[_Iterable[_Union[WalkedStep, _Mapping]]] = ..., procedure_version: _Optional[int] = ..., decision_ref: _Optional[str] = ..., escalation: _Optional[_Union[Escalation, _Mapping]] = ..., decided_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., path: _Optional[_Union[DecisionNode, _Mapping]] = ...) -> None: ...
-
-class WalkedStep(_message.Message):
-    __slots__ = ("answer", "confidence", "step_id", "facts", "branch", "predicate")
-    ANSWER_FIELD_NUMBER: _ClassVar[int]
-    CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
-    STEP_ID_FIELD_NUMBER: _ClassVar[int]
-    FACTS_FIELD_NUMBER: _ClassVar[int]
-    BRANCH_FIELD_NUMBER: _ClassVar[int]
-    PREDICATE_FIELD_NUMBER: _ClassVar[int]
-    answer: str
-    confidence: Confidence
-    step_id: str
-    facts: _containers.RepeatedScalarFieldContainer[str]
-    branch: TakenBranch
-    predicate: str
-    def __init__(self, answer: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ..., step_id: _Optional[str] = ..., facts: _Optional[_Iterable[str]] = ..., branch: _Optional[_Union[TakenBranch, _Mapping]] = ..., predicate: _Optional[str] = ...) -> None: ...
-
-class TakenBranch(_message.Message):
-    __slots__ = ("branch_id", "label", "next_step_id", "output_value", "escalates")
-    BRANCH_ID_FIELD_NUMBER: _ClassVar[int]
-    LABEL_FIELD_NUMBER: _ClassVar[int]
-    NEXT_STEP_ID_FIELD_NUMBER: _ClassVar[int]
-    OUTPUT_VALUE_FIELD_NUMBER: _ClassVar[int]
-    ESCALATES_FIELD_NUMBER: _ClassVar[int]
-    branch_id: str
-    label: str
-    next_step_id: str
-    output_value: str
-    escalates: bool
-    def __init__(self, branch_id: _Optional[str] = ..., label: _Optional[str] = ..., next_step_id: _Optional[str] = ..., output_value: _Optional[str] = ..., escalates: _Optional[bool] = ...) -> None: ...
+    def __init__(self, value: _Optional[str] = ..., escalated: _Optional[bool] = ..., procedure_version: _Optional[int] = ..., decision_ref: _Optional[str] = ..., escalation: _Optional[_Union[Escalation, _Mapping]] = ..., decided_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., path: _Optional[_Union[DecisionNode, _Mapping]] = ...) -> None: ...
 
 class Escalation(_message.Message):
     __slots__ = ("kind", "step_id")
@@ -160,24 +128,6 @@ class ProcedureNode(_message.Message):
     target_name: str
     target_value: str
     def __init__(self, predicate: _Optional[str] = ..., answers: _Optional[_Mapping[str, ProcedureNode]] = ..., target_name: _Optional[str] = ..., target_value: _Optional[str] = ...) -> None: ...
-
-class GetDecisionPathResponse(_message.Message):
-    __slots__ = ("procedure_version", "decision_ref", "decided_at", "path", "value", "escalated", "escalation")
-    PROCEDURE_VERSION_FIELD_NUMBER: _ClassVar[int]
-    DECISION_REF_FIELD_NUMBER: _ClassVar[int]
-    DECIDED_AT_FIELD_NUMBER: _ClassVar[int]
-    PATH_FIELD_NUMBER: _ClassVar[int]
-    VALUE_FIELD_NUMBER: _ClassVar[int]
-    ESCALATED_FIELD_NUMBER: _ClassVar[int]
-    ESCALATION_FIELD_NUMBER: _ClassVar[int]
-    procedure_version: int
-    decision_ref: str
-    decided_at: _timestamp_pb2.Timestamp
-    path: DecisionNode
-    value: str
-    escalated: bool
-    escalation: Escalation
-    def __init__(self, procedure_version: _Optional[int] = ..., decision_ref: _Optional[str] = ..., decided_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., path: _Optional[_Union[DecisionNode, _Mapping]] = ..., value: _Optional[str] = ..., escalated: _Optional[bool] = ..., escalation: _Optional[_Union[Escalation, _Mapping]] = ...) -> None: ...
 
 class DecisionNode(_message.Message):
     __slots__ = ("predicate", "answer", "confidence", "answers", "target_name", "target_value", "escalation")
