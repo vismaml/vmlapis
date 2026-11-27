@@ -11,19 +11,28 @@ public interface DecideResponseOrBuilder extends
 
   /**
    * <pre>
-   * The decided value; empty when escalated
+   * The decided value; absent when escalated
    * </pre>
    *
-   * <code>string value = 1 [json_name = "value"];</code>
+   * <code>optional string value = 1 [json_name = "value"];</code>
+   * @return Whether the value field is set.
+   */
+  boolean hasValue();
+  /**
+   * <pre>
+   * The decided value; absent when escalated
+   * </pre>
+   *
+   * <code>optional string value = 1 [json_name = "value"];</code>
    * @return The value.
    */
   java.lang.String getValue();
   /**
    * <pre>
-   * The decided value; empty when escalated
+   * The decided value; absent when escalated
    * </pre>
    *
-   * <code>string value = 1 [json_name = "value"];</code>
+   * <code>optional string value = 1 [json_name = "value"];</code>
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString
@@ -41,50 +50,6 @@ public interface DecideResponseOrBuilder extends
 
   /**
    * <pre>
-   * The steps walked, root first
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  java.util.List<ai.visma.ava.v1.WalkedStep> 
-      getStepsList();
-  /**
-   * <pre>
-   * The steps walked, root first
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  ai.visma.ava.v1.WalkedStep getSteps(int index);
-  /**
-   * <pre>
-   * The steps walked, root first
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  int getStepsCount();
-  /**
-   * <pre>
-   * The steps walked, root first
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  java.util.List<? extends ai.visma.ava.v1.WalkedStepOrBuilder> 
-      getStepsOrBuilderList();
-  /**
-   * <pre>
-   * The steps walked, root first
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  ai.visma.ava.v1.WalkedStepOrBuilder getStepsOrBuilder(
-      int index);
-
-  /**
-   * <pre>
    * Version of the procedure that decided
    * </pre>
    *
@@ -92,4 +57,105 @@ public interface DecideResponseOrBuilder extends
    * @return The procedureVersion.
    */
   int getProcedureVersion();
+
+  /**
+   * <pre>
+   * Reference to look the decision up again with GetDecision
+   * </pre>
+   *
+   * <code>string decision_ref = 5 [json_name = "decisionRef"];</code>
+   * @return The decisionRef.
+   */
+  java.lang.String getDecisionRef();
+  /**
+   * <pre>
+   * Reference to look the decision up again with GetDecision
+   * </pre>
+   *
+   * <code>string decision_ref = 5 [json_name = "decisionRef"];</code>
+   * @return The bytes for decisionRef.
+   */
+  com.google.protobuf.ByteString
+      getDecisionRefBytes();
+
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+   * @return Whether the escalation field is set.
+   */
+  boolean hasEscalation();
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+   * @return The escalation.
+   */
+  ai.visma.ava.v1.Escalation getEscalation();
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+   */
+  ai.visma.ava.v1.EscalationOrBuilder getEscalationOrBuilder();
+
+  /**
+   * <pre>
+   * When the decision was made; set only by GetDecision
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+   * @return Whether the decidedAt field is set.
+   */
+  boolean hasDecidedAt();
+  /**
+   * <pre>
+   * When the decision was made; set only by GetDecision
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+   * @return The decidedAt.
+   */
+  com.google.protobuf.Timestamp getDecidedAt();
+  /**
+   * <pre>
+   * When the decision was made; set only by GetDecision
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDecidedAtOrBuilder();
+
+  /**
+   * <pre>
+   * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+   * </pre>
+   *
+   * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+   * @return Whether the path field is set.
+   */
+  boolean hasPath();
+  /**
+   * <pre>
+   * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+   * </pre>
+   *
+   * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+   * @return The path.
+   */
+  ai.visma.ava.v1.DecisionNode getPath();
+  /**
+   * <pre>
+   * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+   * </pre>
+   *
+   * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+   */
+  ai.visma.ava.v1.DecisionNodeOrBuilder getPathOrBuilder();
 }

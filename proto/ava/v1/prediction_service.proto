@@ -3,6 +3,7 @@ syntax = "proto3";
 package ava.v1;
 
 import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "validate/validate.proto";
@@ -29,6 +30,16 @@ service PredictionService {
       body: "*"
     };
   }
+
+  // Return a stored decision by the reference Decide returned, with the path it walked.
+  rpc GetDecision(GetDecisionRequest) returns (DecideResponse) {
+    option (google.api.http) = {get: "/v2/datasets/{dataset_name}/decisions/{decision_ref}"};
+  }
+
+  // Return the procedure a dataset decides an output with, as a tree.
+  rpc GetProcedure(GetProcedureRequest) returns (GetProcedureResponse) {
+    option (google.api.http) = {get: "/v2/datasets/{dataset_name}/outputs/{output_name}/procedure"};
+  }
 }
 
 message DecideRequest {
@@ -53,23 +64,106 @@ enum Model {
 }
 
 message DecideResponse {
-  // The decided value; empty when escalated
-  string value = 1;
+  reserved 3;
+  reserved "steps";
+  // The decided value; absent when escalated
+  optional string value = 1;
   // True when the procedure did not decide
   bool escalated = 2;
-  // The steps walked, root first
-  repeated WalkedStep steps = 3;
   // Version of the procedure that decided
   int32 procedure_version = 4;
+  // Reference to look the decision up again with GetDecision
+  string decision_ref = 5;
+  // Why the procedure did not decide; set only when escalated
+  Escalation escalation = 6;
+  // When the decision was made; set only by GetDecision
+  google.protobuf.Timestamp decided_at = 7;
+  // The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+  DecisionNode path = 8;
 }
 
-message WalkedStep {
-  // The question the step asked
-  string question = 1;
-  // The answer the step read; empty when the question went unanswered
-  string answer = 2;
+message Escalation {
+  enum Kind {
+    KIND_UNSPECIFIED = 0;
+    // A fact the step needed could not be answered
+    MISSING_INFORMATION = 1;
+    // The answers are known but the step has no branch for them
+    NO_MATCHING_BRANCH = 2;
+    // The procedure routes this case to a human on purpose
+    PROCEDURE_ESCALATION = 3;
+    // A branch could not be evaluated
+    EVALUATION_ERROR = 4;
+  }
+  // Why the procedure escalated
+  Kind kind = 1;
+  // The step where the walk stopped
+  string step_id = 2;
+}
+
+message GetDecisionRequest {
+  // Name of the dataset the decision was made for
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
+    max_bytes: 256
+  }]; // text-no-spaces
+  // The decision_ref Decide returned
+  string decision_ref = 2 [(validate.rules).string = {
+    min_len: 1
+    max_bytes: 36
+  }];
+  // Name of the decided output, e.g. Account
+  string output_name = 3 [(validate.rules).string.min_len = 1];
+}
+
+message GetProcedureRequest {
+  // Name of the dataset whose procedure to return
+  string dataset_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
+    max_bytes: 256
+  }]; // text-no-spaces
+  // Name of the output the procedure decides, e.g. Account
+  string output_name = 2 [(validate.rules).string.min_len = 1];
+  // Version to return; the newest when 0
+  int32 version = 3 [(validate.rules).int32.gte = 0];
+}
+
+message GetProcedureResponse {
+  // Version of the returned procedure
+  int32 procedure_version = 1;
+  // The step every walk starts at
+  ProcedureNode tree = 2;
+}
+
+// A step (predicate and answers), a leaf (target_name and target_value), or empty where the walk escalates.
+message ProcedureNode {
+  // Name of the fact the step tests
+  string predicate = 1;
+  // What follows each answer to the predicate
+  map<string, ProcedureNode> answers = 2;
+  // Name of the output decided at this leaf, e.g. Account
+  string target_name = 3;
+  // The value decided at this leaf
+  string target_value = 4;
+}
+
+// A walked step (predicate and the one answer taken), the leaf decided, or the node where the walk escalated.
+message DecisionNode {
+  reserved 2;
+  reserved "question";
+  // Name of the fact the step tested
+  string predicate = 1;
+  // The answer the step read; absent when it went unanswered
+  optional string answer = 3;
   // Confidence in the answer
-  Confidence confidence = 3;
+  Confidence confidence = 4;
+  // The node that followed, keyed by the label of the branch taken; at most one entry
+  map<string, DecisionNode> answers = 5;
+  // Name of the output decided at this leaf, e.g. Account
+  string target_name = 6;
+  // The value decided at this leaf
+  string target_value = 7;
+  // Why the walk stopped here; set only on the node where it escalated
+  Escalation escalation = 8;
 }
 
 message Confidence {

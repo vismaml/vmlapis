@@ -28,7 +28,7 @@ private static final long serialVersionUID = 0L;
   }
   private DecideResponse() {
     value_ = "";
-    steps_ = java.util.Collections.emptyList();
+    decisionRef_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -44,15 +44,28 @@ private static final long serialVersionUID = 0L;
             ai.visma.ava.v1.DecideResponse.class, ai.visma.ava.v1.DecideResponse.Builder.class);
   }
 
+  private int bitField0_;
   public static final int VALUE_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object value_ = "";
   /**
    * <pre>
-   * The decided value; empty when escalated
+   * The decided value; absent when escalated
    * </pre>
    *
-   * <code>string value = 1 [json_name = "value"];</code>
+   * <code>optional string value = 1 [json_name = "value"];</code>
+   * @return Whether the value field is set.
+   */
+  @java.lang.Override
+  public boolean hasValue() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * The decided value; absent when escalated
+   * </pre>
+   *
+   * <code>optional string value = 1 [json_name = "value"];</code>
    * @return The value.
    */
   @java.lang.Override
@@ -70,10 +83,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The decided value; empty when escalated
+   * The decided value; absent when escalated
    * </pre>
    *
-   * <code>string value = 1 [json_name = "value"];</code>
+   * <code>optional string value = 1 [json_name = "value"];</code>
    * @return The bytes for value.
    */
   @java.lang.Override
@@ -106,67 +119,6 @@ private static final long serialVersionUID = 0L;
     return escalated_;
   }
 
-  public static final int STEPS_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ava.v1.WalkedStep> steps_;
-  /**
-   * <pre>
-   * The steps walked, root first
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<ai.visma.ava.v1.WalkedStep> getStepsList() {
-    return steps_;
-  }
-  /**
-   * <pre>
-   * The steps walked, root first
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends ai.visma.ava.v1.WalkedStepOrBuilder> 
-      getStepsOrBuilderList() {
-    return steps_;
-  }
-  /**
-   * <pre>
-   * The steps walked, root first
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  @java.lang.Override
-  public int getStepsCount() {
-    return steps_.size();
-  }
-  /**
-   * <pre>
-   * The steps walked, root first
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ava.v1.WalkedStep getSteps(int index) {
-    return steps_.get(index);
-  }
-  /**
-   * <pre>
-   * The steps walked, root first
-   * </pre>
-   *
-   * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ava.v1.WalkedStepOrBuilder getStepsOrBuilder(
-      int index) {
-    return steps_.get(index);
-  }
-
   public static final int PROCEDURE_VERSION_FIELD_NUMBER = 4;
   private int procedureVersion_ = 0;
   /**
@@ -180,6 +132,167 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public int getProcedureVersion() {
     return procedureVersion_;
+  }
+
+  public static final int DECISION_REF_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object decisionRef_ = "";
+  /**
+   * <pre>
+   * Reference to look the decision up again with GetDecision
+   * </pre>
+   *
+   * <code>string decision_ref = 5 [json_name = "decisionRef"];</code>
+   * @return The decisionRef.
+   */
+  @java.lang.Override
+  public java.lang.String getDecisionRef() {
+    java.lang.Object ref = decisionRef_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      decisionRef_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Reference to look the decision up again with GetDecision
+   * </pre>
+   *
+   * <code>string decision_ref = 5 [json_name = "decisionRef"];</code>
+   * @return The bytes for decisionRef.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDecisionRefBytes() {
+    java.lang.Object ref = decisionRef_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      decisionRef_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ESCALATION_FIELD_NUMBER = 6;
+  private ai.visma.ava.v1.Escalation escalation_;
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+   * @return Whether the escalation field is set.
+   */
+  @java.lang.Override
+  public boolean hasEscalation() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+   * @return The escalation.
+   */
+  @java.lang.Override
+  public ai.visma.ava.v1.Escalation getEscalation() {
+    return escalation_ == null ? ai.visma.ava.v1.Escalation.getDefaultInstance() : escalation_;
+  }
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ava.v1.EscalationOrBuilder getEscalationOrBuilder() {
+    return escalation_ == null ? ai.visma.ava.v1.Escalation.getDefaultInstance() : escalation_;
+  }
+
+  public static final int DECIDED_AT_FIELD_NUMBER = 7;
+  private com.google.protobuf.Timestamp decidedAt_;
+  /**
+   * <pre>
+   * When the decision was made; set only by GetDecision
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+   * @return Whether the decidedAt field is set.
+   */
+  @java.lang.Override
+  public boolean hasDecidedAt() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * When the decision was made; set only by GetDecision
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+   * @return The decidedAt.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getDecidedAt() {
+    return decidedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : decidedAt_;
+  }
+  /**
+   * <pre>
+   * When the decision was made; set only by GetDecision
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getDecidedAtOrBuilder() {
+    return decidedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : decidedAt_;
+  }
+
+  public static final int PATH_FIELD_NUMBER = 8;
+  private ai.visma.ava.v1.DecisionNode path_;
+  /**
+   * <pre>
+   * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+   * </pre>
+   *
+   * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+   * @return Whether the path field is set.
+   */
+  @java.lang.Override
+  public boolean hasPath() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+   * </pre>
+   *
+   * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+   * @return The path.
+   */
+  @java.lang.Override
+  public ai.visma.ava.v1.DecisionNode getPath() {
+    return path_ == null ? ai.visma.ava.v1.DecisionNode.getDefaultInstance() : path_;
+  }
+  /**
+   * <pre>
+   * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+   * </pre>
+   *
+   * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ava.v1.DecisionNodeOrBuilder getPathOrBuilder() {
+    return path_ == null ? ai.visma.ava.v1.DecisionNode.getDefaultInstance() : path_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -196,17 +309,26 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, value_);
     }
     if (escalated_ != false) {
       output.writeBool(2, escalated_);
     }
-    for (int i = 0; i < steps_.size(); i++) {
-      output.writeMessage(3, steps_.get(i));
-    }
     if (procedureVersion_ != 0) {
       output.writeInt32(4, procedureVersion_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(decisionRef_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 5, decisionRef_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(6, getEscalation());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(7, getDecidedAt());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(8, getPath());
     }
     getUnknownFields().writeTo(output);
   }
@@ -217,20 +339,31 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, value_);
     }
     if (escalated_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(2, escalated_);
     }
-    for (int i = 0; i < steps_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, steps_.get(i));
-    }
     if (procedureVersion_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(4, procedureVersion_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(decisionRef_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(5, decisionRef_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getEscalation());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getDecidedAt());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getPath());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -247,14 +380,32 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.ava.v1.DecideResponse other = (ai.visma.ava.v1.DecideResponse) obj;
 
-    if (!getValue()
-        .equals(other.getValue())) return false;
+    if (hasValue() != other.hasValue()) return false;
+    if (hasValue()) {
+      if (!getValue()
+          .equals(other.getValue())) return false;
+    }
     if (getEscalated()
         != other.getEscalated()) return false;
-    if (!getStepsList()
-        .equals(other.getStepsList())) return false;
     if (getProcedureVersion()
         != other.getProcedureVersion()) return false;
+    if (!getDecisionRef()
+        .equals(other.getDecisionRef())) return false;
+    if (hasEscalation() != other.hasEscalation()) return false;
+    if (hasEscalation()) {
+      if (!getEscalation()
+          .equals(other.getEscalation())) return false;
+    }
+    if (hasDecidedAt() != other.hasDecidedAt()) return false;
+    if (hasDecidedAt()) {
+      if (!getDecidedAt()
+          .equals(other.getDecidedAt())) return false;
+    }
+    if (hasPath() != other.hasPath()) return false;
+    if (hasPath()) {
+      if (!getPath()
+          .equals(other.getPath())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -266,17 +417,29 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + VALUE_FIELD_NUMBER;
-    hash = (53 * hash) + getValue().hashCode();
+    if (hasValue()) {
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+    }
     hash = (37 * hash) + ESCALATED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getEscalated());
-    if (getStepsCount() > 0) {
-      hash = (37 * hash) + STEPS_FIELD_NUMBER;
-      hash = (53 * hash) + getStepsList().hashCode();
-    }
     hash = (37 * hash) + PROCEDURE_VERSION_FIELD_NUMBER;
     hash = (53 * hash) + getProcedureVersion();
+    hash = (37 * hash) + DECISION_REF_FIELD_NUMBER;
+    hash = (53 * hash) + getDecisionRef().hashCode();
+    if (hasEscalation()) {
+      hash = (37 * hash) + ESCALATION_FIELD_NUMBER;
+      hash = (53 * hash) + getEscalation().hashCode();
+    }
+    if (hasDecidedAt()) {
+      hash = (37 * hash) + DECIDED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + getDecidedAt().hashCode();
+    }
+    if (hasPath()) {
+      hash = (37 * hash) + PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getPath().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -396,13 +559,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using ai.visma.ava.v1.DecideResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        getEscalationFieldBuilder();
+        getDecidedAtFieldBuilder();
+        getPathFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -410,14 +581,23 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       value_ = "";
       escalated_ = false;
-      if (stepsBuilder_ == null) {
-        steps_ = java.util.Collections.emptyList();
-      } else {
-        steps_ = null;
-        stepsBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000004);
       procedureVersion_ = 0;
+      decisionRef_ = "";
+      escalation_ = null;
+      if (escalationBuilder_ != null) {
+        escalationBuilder_.dispose();
+        escalationBuilder_ = null;
+      }
+      decidedAt_ = null;
+      if (decidedAtBuilder_ != null) {
+        decidedAtBuilder_.dispose();
+        decidedAtBuilder_ = null;
+      }
+      path_ = null;
+      if (pathBuilder_ != null) {
+        pathBuilder_.dispose();
+        pathBuilder_ = null;
+      }
       return this;
     }
 
@@ -444,35 +624,46 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public ai.visma.ava.v1.DecideResponse buildPartial() {
       ai.visma.ava.v1.DecideResponse result = new ai.visma.ava.v1.DecideResponse(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(ai.visma.ava.v1.DecideResponse result) {
-      if (stepsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
-          steps_ = java.util.Collections.unmodifiableList(steps_);
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.steps_ = steps_;
-      } else {
-        result.steps_ = stepsBuilder_.build();
-      }
-    }
-
     private void buildPartial0(ai.visma.ava.v1.DecideResponse result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.value_ = value_;
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.escalated_ = escalated_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.procedureVersion_ = procedureVersion_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.decisionRef_ = decisionRef_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.escalation_ = escalationBuilder_ == null
+            ? escalation_
+            : escalationBuilder_.build();
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.decidedAt_ = decidedAtBuilder_ == null
+            ? decidedAt_
+            : decidedAtBuilder_.build();
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.path_ = pathBuilder_ == null
+            ? path_
+            : pathBuilder_.build();
+        to_bitField0_ |= 0x00000008;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -487,7 +678,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.ava.v1.DecideResponse other) {
       if (other == ai.visma.ava.v1.DecideResponse.getDefaultInstance()) return this;
-      if (!other.getValue().isEmpty()) {
+      if (other.hasValue()) {
         value_ = other.value_;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -495,34 +686,22 @@ private static final long serialVersionUID = 0L;
       if (other.getEscalated() != false) {
         setEscalated(other.getEscalated());
       }
-      if (stepsBuilder_ == null) {
-        if (!other.steps_.isEmpty()) {
-          if (steps_.isEmpty()) {
-            steps_ = other.steps_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-          } else {
-            ensureStepsIsMutable();
-            steps_.addAll(other.steps_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.steps_.isEmpty()) {
-          if (stepsBuilder_.isEmpty()) {
-            stepsBuilder_.dispose();
-            stepsBuilder_ = null;
-            steps_ = other.steps_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-            stepsBuilder_ = 
-              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getStepsFieldBuilder() : null;
-          } else {
-            stepsBuilder_.addAllMessages(other.steps_);
-          }
-        }
-      }
       if (other.getProcedureVersion() != 0) {
         setProcedureVersion(other.getProcedureVersion());
+      }
+      if (!other.getDecisionRef().isEmpty()) {
+        decisionRef_ = other.decisionRef_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      if (other.hasEscalation()) {
+        mergeEscalation(other.getEscalation());
+      }
+      if (other.hasDecidedAt()) {
+        mergeDecidedAt(other.getDecidedAt());
+      }
+      if (other.hasPath()) {
+        mergePath(other.getPath());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -560,24 +739,37 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
-            case 26: {
-              ai.visma.ava.v1.WalkedStep m =
-                  input.readMessage(
-                      ai.visma.ava.v1.WalkedStep.parser(),
-                      extensionRegistry);
-              if (stepsBuilder_ == null) {
-                ensureStepsIsMutable();
-                steps_.add(m);
-              } else {
-                stepsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 26
             case 32: {
               procedureVersion_ = input.readInt32();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               break;
             } // case 32
+            case 42: {
+              decisionRef_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getEscalationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getDecidedAtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getPathFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -598,10 +790,21 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object value_ = "";
     /**
      * <pre>
-     * The decided value; empty when escalated
+     * The decided value; absent when escalated
      * </pre>
      *
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>optional string value = 1 [json_name = "value"];</code>
+     * @return Whether the value field is set.
+     */
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The decided value; absent when escalated
+     * </pre>
+     *
+     * <code>optional string value = 1 [json_name = "value"];</code>
      * @return The value.
      */
     public java.lang.String getValue() {
@@ -618,10 +821,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The decided value; empty when escalated
+     * The decided value; absent when escalated
      * </pre>
      *
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>optional string value = 1 [json_name = "value"];</code>
      * @return The bytes for value.
      */
     public com.google.protobuf.ByteString
@@ -639,10 +842,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The decided value; empty when escalated
+     * The decided value; absent when escalated
      * </pre>
      *
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>optional string value = 1 [json_name = "value"];</code>
      * @param value The value to set.
      * @return This builder for chaining.
      */
@@ -656,10 +859,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The decided value; empty when escalated
+     * The decided value; absent when escalated
      * </pre>
      *
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>optional string value = 1 [json_name = "value"];</code>
      * @return This builder for chaining.
      */
     public Builder clearValue() {
@@ -670,10 +873,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The decided value; empty when escalated
+     * The decided value; absent when escalated
      * </pre>
      *
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>optional string value = 1 [json_name = "value"];</code>
      * @param value The bytes for value to set.
      * @return This builder for chaining.
      */
@@ -731,318 +934,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<ai.visma.ava.v1.WalkedStep> steps_ =
-      java.util.Collections.emptyList();
-    private void ensureStepsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
-        steps_ = new java.util.ArrayList<ai.visma.ava.v1.WalkedStep>(steps_);
-        bitField0_ |= 0x00000004;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ava.v1.WalkedStep, ai.visma.ava.v1.WalkedStep.Builder, ai.visma.ava.v1.WalkedStepOrBuilder> stepsBuilder_;
-
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public java.util.List<ai.visma.ava.v1.WalkedStep> getStepsList() {
-      if (stepsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(steps_);
-      } else {
-        return stepsBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public int getStepsCount() {
-      if (stepsBuilder_ == null) {
-        return steps_.size();
-      } else {
-        return stepsBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public ai.visma.ava.v1.WalkedStep getSteps(int index) {
-      if (stepsBuilder_ == null) {
-        return steps_.get(index);
-      } else {
-        return stepsBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public Builder setSteps(
-        int index, ai.visma.ava.v1.WalkedStep value) {
-      if (stepsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureStepsIsMutable();
-        steps_.set(index, value);
-        onChanged();
-      } else {
-        stepsBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public Builder setSteps(
-        int index, ai.visma.ava.v1.WalkedStep.Builder builderForValue) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        stepsBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public Builder addSteps(ai.visma.ava.v1.WalkedStep value) {
-      if (stepsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureStepsIsMutable();
-        steps_.add(value);
-        onChanged();
-      } else {
-        stepsBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public Builder addSteps(
-        int index, ai.visma.ava.v1.WalkedStep value) {
-      if (stepsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureStepsIsMutable();
-        steps_.add(index, value);
-        onChanged();
-      } else {
-        stepsBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public Builder addSteps(
-        ai.visma.ava.v1.WalkedStep.Builder builderForValue) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.add(builderForValue.build());
-        onChanged();
-      } else {
-        stepsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public Builder addSteps(
-        int index, ai.visma.ava.v1.WalkedStep.Builder builderForValue) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        stepsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public Builder addAllSteps(
-        java.lang.Iterable<? extends ai.visma.ava.v1.WalkedStep> values) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, steps_);
-        onChanged();
-      } else {
-        stepsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public Builder clearSteps() {
-      if (stepsBuilder_ == null) {
-        steps_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-      } else {
-        stepsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public Builder removeSteps(int index) {
-      if (stepsBuilder_ == null) {
-        ensureStepsIsMutable();
-        steps_.remove(index);
-        onChanged();
-      } else {
-        stepsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public ai.visma.ava.v1.WalkedStep.Builder getStepsBuilder(
-        int index) {
-      return getStepsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public ai.visma.ava.v1.WalkedStepOrBuilder getStepsOrBuilder(
-        int index) {
-      if (stepsBuilder_ == null) {
-        return steps_.get(index);  } else {
-        return stepsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public java.util.List<? extends ai.visma.ava.v1.WalkedStepOrBuilder> 
-         getStepsOrBuilderList() {
-      if (stepsBuilder_ != null) {
-        return stepsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(steps_);
-      }
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public ai.visma.ava.v1.WalkedStep.Builder addStepsBuilder() {
-      return getStepsFieldBuilder().addBuilder(
-          ai.visma.ava.v1.WalkedStep.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public ai.visma.ava.v1.WalkedStep.Builder addStepsBuilder(
-        int index) {
-      return getStepsFieldBuilder().addBuilder(
-          index, ai.visma.ava.v1.WalkedStep.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * The steps walked, root first
-     * </pre>
-     *
-     * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
-     */
-    public java.util.List<ai.visma.ava.v1.WalkedStep.Builder> 
-         getStepsBuilderList() {
-      return getStepsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ava.v1.WalkedStep, ai.visma.ava.v1.WalkedStep.Builder, ai.visma.ava.v1.WalkedStepOrBuilder> 
-        getStepsFieldBuilder() {
-      if (stepsBuilder_ == null) {
-        stepsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            ai.visma.ava.v1.WalkedStep, ai.visma.ava.v1.WalkedStep.Builder, ai.visma.ava.v1.WalkedStepOrBuilder>(
-                steps_,
-                ((bitField0_ & 0x00000004) != 0),
-                getParentForChildren(),
-                isClean());
-        steps_ = null;
-      }
-      return stepsBuilder_;
-    }
-
     private int procedureVersion_ ;
     /**
      * <pre>
@@ -1068,7 +959,7 @@ private static final long serialVersionUID = 0L;
     public Builder setProcedureVersion(int value) {
 
       procedureVersion_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1081,10 +972,573 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProcedureVersion() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       procedureVersion_ = 0;
       onChanged();
       return this;
+    }
+
+    private java.lang.Object decisionRef_ = "";
+    /**
+     * <pre>
+     * Reference to look the decision up again with GetDecision
+     * </pre>
+     *
+     * <code>string decision_ref = 5 [json_name = "decisionRef"];</code>
+     * @return The decisionRef.
+     */
+    public java.lang.String getDecisionRef() {
+      java.lang.Object ref = decisionRef_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        decisionRef_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Reference to look the decision up again with GetDecision
+     * </pre>
+     *
+     * <code>string decision_ref = 5 [json_name = "decisionRef"];</code>
+     * @return The bytes for decisionRef.
+     */
+    public com.google.protobuf.ByteString
+        getDecisionRefBytes() {
+      java.lang.Object ref = decisionRef_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        decisionRef_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Reference to look the decision up again with GetDecision
+     * </pre>
+     *
+     * <code>string decision_ref = 5 [json_name = "decisionRef"];</code>
+     * @param value The decisionRef to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDecisionRef(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      decisionRef_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Reference to look the decision up again with GetDecision
+     * </pre>
+     *
+     * <code>string decision_ref = 5 [json_name = "decisionRef"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDecisionRef() {
+      decisionRef_ = getDefaultInstance().getDecisionRef();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Reference to look the decision up again with GetDecision
+     * </pre>
+     *
+     * <code>string decision_ref = 5 [json_name = "decisionRef"];</code>
+     * @param value The bytes for decisionRef to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDecisionRefBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      decisionRef_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private ai.visma.ava.v1.Escalation escalation_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ava.v1.Escalation, ai.visma.ava.v1.Escalation.Builder, ai.visma.ava.v1.EscalationOrBuilder> escalationBuilder_;
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+     * @return Whether the escalation field is set.
+     */
+    public boolean hasEscalation() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+     * @return The escalation.
+     */
+    public ai.visma.ava.v1.Escalation getEscalation() {
+      if (escalationBuilder_ == null) {
+        return escalation_ == null ? ai.visma.ava.v1.Escalation.getDefaultInstance() : escalation_;
+      } else {
+        return escalationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+     */
+    public Builder setEscalation(ai.visma.ava.v1.Escalation value) {
+      if (escalationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        escalation_ = value;
+      } else {
+        escalationBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+     */
+    public Builder setEscalation(
+        ai.visma.ava.v1.Escalation.Builder builderForValue) {
+      if (escalationBuilder_ == null) {
+        escalation_ = builderForValue.build();
+      } else {
+        escalationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+     */
+    public Builder mergeEscalation(ai.visma.ava.v1.Escalation value) {
+      if (escalationBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          escalation_ != null &&
+          escalation_ != ai.visma.ava.v1.Escalation.getDefaultInstance()) {
+          getEscalationBuilder().mergeFrom(value);
+        } else {
+          escalation_ = value;
+        }
+      } else {
+        escalationBuilder_.mergeFrom(value);
+      }
+      if (escalation_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+     */
+    public Builder clearEscalation() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      escalation_ = null;
+      if (escalationBuilder_ != null) {
+        escalationBuilder_.dispose();
+        escalationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+     */
+    public ai.visma.ava.v1.Escalation.Builder getEscalationBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getEscalationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+     */
+    public ai.visma.ava.v1.EscalationOrBuilder getEscalationOrBuilder() {
+      if (escalationBuilder_ != null) {
+        return escalationBuilder_.getMessageOrBuilder();
+      } else {
+        return escalation_ == null ?
+            ai.visma.ava.v1.Escalation.getDefaultInstance() : escalation_;
+      }
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 6 [json_name = "escalation"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ava.v1.Escalation, ai.visma.ava.v1.Escalation.Builder, ai.visma.ava.v1.EscalationOrBuilder> 
+        getEscalationFieldBuilder() {
+      if (escalationBuilder_ == null) {
+        escalationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ava.v1.Escalation, ai.visma.ava.v1.Escalation.Builder, ai.visma.ava.v1.EscalationOrBuilder>(
+                getEscalation(),
+                getParentForChildren(),
+                isClean());
+        escalation_ = null;
+      }
+      return escalationBuilder_;
+    }
+
+    private com.google.protobuf.Timestamp decidedAt_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> decidedAtBuilder_;
+    /**
+     * <pre>
+     * When the decision was made; set only by GetDecision
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+     * @return Whether the decidedAt field is set.
+     */
+    public boolean hasDecidedAt() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * When the decision was made; set only by GetDecision
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+     * @return The decidedAt.
+     */
+    public com.google.protobuf.Timestamp getDecidedAt() {
+      if (decidedAtBuilder_ == null) {
+        return decidedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : decidedAt_;
+      } else {
+        return decidedAtBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * When the decision was made; set only by GetDecision
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+     */
+    public Builder setDecidedAt(com.google.protobuf.Timestamp value) {
+      if (decidedAtBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        decidedAt_ = value;
+      } else {
+        decidedAtBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When the decision was made; set only by GetDecision
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+     */
+    public Builder setDecidedAt(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (decidedAtBuilder_ == null) {
+        decidedAt_ = builderForValue.build();
+      } else {
+        decidedAtBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When the decision was made; set only by GetDecision
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+     */
+    public Builder mergeDecidedAt(com.google.protobuf.Timestamp value) {
+      if (decidedAtBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          decidedAt_ != null &&
+          decidedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getDecidedAtBuilder().mergeFrom(value);
+        } else {
+          decidedAt_ = value;
+        }
+      } else {
+        decidedAtBuilder_.mergeFrom(value);
+      }
+      if (decidedAt_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * When the decision was made; set only by GetDecision
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+     */
+    public Builder clearDecidedAt() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      decidedAt_ = null;
+      if (decidedAtBuilder_ != null) {
+        decidedAtBuilder_.dispose();
+        decidedAtBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When the decision was made; set only by GetDecision
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getDecidedAtBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getDecidedAtFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * When the decision was made; set only by GetDecision
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDecidedAtOrBuilder() {
+      if (decidedAtBuilder_ != null) {
+        return decidedAtBuilder_.getMessageOrBuilder();
+      } else {
+        return decidedAt_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : decidedAt_;
+      }
+    }
+    /**
+     * <pre>
+     * When the decision was made; set only by GetDecision
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getDecidedAtFieldBuilder() {
+      if (decidedAtBuilder_ == null) {
+        decidedAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getDecidedAt(),
+                getParentForChildren(),
+                isClean());
+        decidedAt_ = null;
+      }
+      return decidedAtBuilder_;
+    }
+
+    private ai.visma.ava.v1.DecisionNode path_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ava.v1.DecisionNode, ai.visma.ava.v1.DecisionNode.Builder, ai.visma.ava.v1.DecisionNodeOrBuilder> pathBuilder_;
+    /**
+     * <pre>
+     * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     * @return Whether the path field is set.
+     */
+    public boolean hasPath() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     * @return The path.
+     */
+    public ai.visma.ava.v1.DecisionNode getPath() {
+      if (pathBuilder_ == null) {
+        return path_ == null ? ai.visma.ava.v1.DecisionNode.getDefaultInstance() : path_;
+      } else {
+        return pathBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     */
+    public Builder setPath(ai.visma.ava.v1.DecisionNode value) {
+      if (pathBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        path_ = value;
+      } else {
+        pathBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     */
+    public Builder setPath(
+        ai.visma.ava.v1.DecisionNode.Builder builderForValue) {
+      if (pathBuilder_ == null) {
+        path_ = builderForValue.build();
+      } else {
+        pathBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     */
+    public Builder mergePath(ai.visma.ava.v1.DecisionNode value) {
+      if (pathBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          path_ != null &&
+          path_ != ai.visma.ava.v1.DecisionNode.getDefaultInstance()) {
+          getPathBuilder().mergeFrom(value);
+        } else {
+          path_ = value;
+        }
+      } else {
+        pathBuilder_.mergeFrom(value);
+      }
+      if (path_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     */
+    public Builder clearPath() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      path_ = null;
+      if (pathBuilder_ != null) {
+        pathBuilder_.dispose();
+        pathBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     */
+    public ai.visma.ava.v1.DecisionNode.Builder getPathBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getPathFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     */
+    public ai.visma.ava.v1.DecisionNodeOrBuilder getPathOrBuilder() {
+      if (pathBuilder_ != null) {
+        return pathBuilder_.getMessageOrBuilder();
+      } else {
+        return path_ == null ?
+            ai.visma.ava.v1.DecisionNode.getDefaultInstance() : path_;
+      }
+    }
+    /**
+     * <pre>
+     * The path walked through the procedure's tree, root first; absent when it cannot be shown as one
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ava.v1.DecisionNode, ai.visma.ava.v1.DecisionNode.Builder, ai.visma.ava.v1.DecisionNodeOrBuilder> 
+        getPathFieldBuilder() {
+      if (pathBuilder_ == null) {
+        pathBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ava.v1.DecisionNode, ai.visma.ava.v1.DecisionNode.Builder, ai.visma.ava.v1.DecisionNodeOrBuilder>(
+                getPath(),
+                getParentForChildren(),
+                isClean());
+        path_ = null;
+      }
+      return pathBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ava.v1.DecideResponse)

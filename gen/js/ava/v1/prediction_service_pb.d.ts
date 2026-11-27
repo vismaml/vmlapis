@@ -1,6 +1,7 @@
 import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
+import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb'; // proto import: "google/protobuf/timestamp.proto"
 import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb'; // proto import: "google/protobuf/wrappers.proto"
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
 import * as validate_validate_pb from '../../validate/validate_pb'; // proto import: "validate/validate.proto"
@@ -39,17 +40,32 @@ export namespace DecideRequest {
 export class DecideResponse extends jspb.Message {
   getValue(): string;
   setValue(value: string): DecideResponse;
+  hasValue(): boolean;
+  clearValue(): DecideResponse;
 
   getEscalated(): boolean;
   setEscalated(value: boolean): DecideResponse;
 
-  getStepsList(): Array<WalkedStep>;
-  setStepsList(value: Array<WalkedStep>): DecideResponse;
-  clearStepsList(): DecideResponse;
-  addSteps(value?: WalkedStep, index?: number): WalkedStep;
-
   getProcedureVersion(): number;
   setProcedureVersion(value: number): DecideResponse;
+
+  getDecisionRef(): string;
+  setDecisionRef(value: string): DecideResponse;
+
+  getEscalation(): Escalation | undefined;
+  setEscalation(value?: Escalation): DecideResponse;
+  hasEscalation(): boolean;
+  clearEscalation(): DecideResponse;
+
+  getDecidedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setDecidedAt(value?: google_protobuf_timestamp_pb.Timestamp): DecideResponse;
+  hasDecidedAt(): boolean;
+  clearDecidedAt(): DecideResponse;
+
+  getPath(): DecisionNode | undefined;
+  setPath(value?: DecisionNode): DecideResponse;
+  hasPath(): boolean;
+  clearPath(): DecideResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DecideResponse.AsObject;
@@ -61,38 +77,207 @@ export class DecideResponse extends jspb.Message {
 
 export namespace DecideResponse {
   export type AsObject = {
-    value: string,
+    value?: string,
     escalated: boolean,
-    stepsList: Array<WalkedStep.AsObject>,
     procedureVersion: number,
+    decisionRef: string,
+    escalation?: Escalation.AsObject,
+    decidedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    path?: DecisionNode.AsObject,
+  }
+
+  export enum ValueCase { 
+    _VALUE_NOT_SET = 0,
+    VALUE = 1,
   }
 }
 
-export class WalkedStep extends jspb.Message {
-  getQuestion(): string;
-  setQuestion(value: string): WalkedStep;
+export class Escalation extends jspb.Message {
+  getKind(): Escalation.Kind;
+  setKind(value: Escalation.Kind): Escalation;
 
-  getAnswer(): string;
-  setAnswer(value: string): WalkedStep;
-
-  getConfidence(): Confidence | undefined;
-  setConfidence(value?: Confidence): WalkedStep;
-  hasConfidence(): boolean;
-  clearConfidence(): WalkedStep;
+  getStepId(): string;
+  setStepId(value: string): Escalation;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): WalkedStep.AsObject;
-  static toObject(includeInstance: boolean, msg: WalkedStep): WalkedStep.AsObject;
-  static serializeBinaryToWriter(message: WalkedStep, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): WalkedStep;
-  static deserializeBinaryFromReader(message: WalkedStep, reader: jspb.BinaryReader): WalkedStep;
+  toObject(includeInstance?: boolean): Escalation.AsObject;
+  static toObject(includeInstance: boolean, msg: Escalation): Escalation.AsObject;
+  static serializeBinaryToWriter(message: Escalation, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Escalation;
+  static deserializeBinaryFromReader(message: Escalation, reader: jspb.BinaryReader): Escalation;
 }
 
-export namespace WalkedStep {
+export namespace Escalation {
   export type AsObject = {
-    question: string,
-    answer: string,
+    kind: Escalation.Kind,
+    stepId: string,
+  }
+
+  export enum Kind { 
+    KIND_UNSPECIFIED = 0,
+    MISSING_INFORMATION = 1,
+    NO_MATCHING_BRANCH = 2,
+    PROCEDURE_ESCALATION = 3,
+    EVALUATION_ERROR = 4,
+  }
+}
+
+export class GetDecisionRequest extends jspb.Message {
+  getDatasetName(): string;
+  setDatasetName(value: string): GetDecisionRequest;
+
+  getDecisionRef(): string;
+  setDecisionRef(value: string): GetDecisionRequest;
+
+  getOutputName(): string;
+  setOutputName(value: string): GetDecisionRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetDecisionRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetDecisionRequest): GetDecisionRequest.AsObject;
+  static serializeBinaryToWriter(message: GetDecisionRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetDecisionRequest;
+  static deserializeBinaryFromReader(message: GetDecisionRequest, reader: jspb.BinaryReader): GetDecisionRequest;
+}
+
+export namespace GetDecisionRequest {
+  export type AsObject = {
+    datasetName: string,
+    decisionRef: string,
+    outputName: string,
+  }
+}
+
+export class GetProcedureRequest extends jspb.Message {
+  getDatasetName(): string;
+  setDatasetName(value: string): GetProcedureRequest;
+
+  getOutputName(): string;
+  setOutputName(value: string): GetProcedureRequest;
+
+  getVersion(): number;
+  setVersion(value: number): GetProcedureRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetProcedureRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetProcedureRequest): GetProcedureRequest.AsObject;
+  static serializeBinaryToWriter(message: GetProcedureRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetProcedureRequest;
+  static deserializeBinaryFromReader(message: GetProcedureRequest, reader: jspb.BinaryReader): GetProcedureRequest;
+}
+
+export namespace GetProcedureRequest {
+  export type AsObject = {
+    datasetName: string,
+    outputName: string,
+    version: number,
+  }
+}
+
+export class GetProcedureResponse extends jspb.Message {
+  getProcedureVersion(): number;
+  setProcedureVersion(value: number): GetProcedureResponse;
+
+  getTree(): ProcedureNode | undefined;
+  setTree(value?: ProcedureNode): GetProcedureResponse;
+  hasTree(): boolean;
+  clearTree(): GetProcedureResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetProcedureResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: GetProcedureResponse): GetProcedureResponse.AsObject;
+  static serializeBinaryToWriter(message: GetProcedureResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetProcedureResponse;
+  static deserializeBinaryFromReader(message: GetProcedureResponse, reader: jspb.BinaryReader): GetProcedureResponse;
+}
+
+export namespace GetProcedureResponse {
+  export type AsObject = {
+    procedureVersion: number,
+    tree?: ProcedureNode.AsObject,
+  }
+}
+
+export class ProcedureNode extends jspb.Message {
+  getPredicate(): string;
+  setPredicate(value: string): ProcedureNode;
+
+  getAnswersMap(): jspb.Map<string, ProcedureNode>;
+  clearAnswersMap(): ProcedureNode;
+
+  getTargetName(): string;
+  setTargetName(value: string): ProcedureNode;
+
+  getTargetValue(): string;
+  setTargetValue(value: string): ProcedureNode;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ProcedureNode.AsObject;
+  static toObject(includeInstance: boolean, msg: ProcedureNode): ProcedureNode.AsObject;
+  static serializeBinaryToWriter(message: ProcedureNode, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ProcedureNode;
+  static deserializeBinaryFromReader(message: ProcedureNode, reader: jspb.BinaryReader): ProcedureNode;
+}
+
+export namespace ProcedureNode {
+  export type AsObject = {
+    predicate: string,
+    answersMap: Array<[string, ProcedureNode.AsObject]>,
+    targetName: string,
+    targetValue: string,
+  }
+}
+
+export class DecisionNode extends jspb.Message {
+  getPredicate(): string;
+  setPredicate(value: string): DecisionNode;
+
+  getAnswer(): string;
+  setAnswer(value: string): DecisionNode;
+  hasAnswer(): boolean;
+  clearAnswer(): DecisionNode;
+
+  getConfidence(): Confidence | undefined;
+  setConfidence(value?: Confidence): DecisionNode;
+  hasConfidence(): boolean;
+  clearConfidence(): DecisionNode;
+
+  getAnswersMap(): jspb.Map<string, DecisionNode>;
+  clearAnswersMap(): DecisionNode;
+
+  getTargetName(): string;
+  setTargetName(value: string): DecisionNode;
+
+  getTargetValue(): string;
+  setTargetValue(value: string): DecisionNode;
+
+  getEscalation(): Escalation | undefined;
+  setEscalation(value?: Escalation): DecisionNode;
+  hasEscalation(): boolean;
+  clearEscalation(): DecisionNode;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DecisionNode.AsObject;
+  static toObject(includeInstance: boolean, msg: DecisionNode): DecisionNode.AsObject;
+  static serializeBinaryToWriter(message: DecisionNode, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DecisionNode;
+  static deserializeBinaryFromReader(message: DecisionNode, reader: jspb.BinaryReader): DecisionNode;
+}
+
+export namespace DecisionNode {
+  export type AsObject = {
+    predicate: string,
+    answer?: string,
     confidence?: Confidence.AsObject,
+    answersMap: Array<[string, DecisionNode.AsObject]>,
+    targetName: string,
+    targetValue: string,
+    escalation?: Escalation.AsObject,
+  }
+
+  export enum AnswerCase { 
+    _ANSWER_NOT_SET = 0,
+    ANSWER = 3,
   }
 }
 
