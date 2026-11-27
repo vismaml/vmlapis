@@ -51,10 +51,22 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object value_ = "";
   /**
    * <pre>
-   * The decided value; empty when escalated
+   * The decided value; absent when escalated
    * </pre>
    *
-   * <code>string value = 1 [json_name = "value"];</code>
+   * <code>optional string value = 1 [json_name = "value"];</code>
+   * @return Whether the value field is set.
+   */
+  @java.lang.Override
+  public boolean hasValue() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * The decided value; absent when escalated
+   * </pre>
+   *
+   * <code>optional string value = 1 [json_name = "value"];</code>
    * @return The value.
    */
   @java.lang.Override
@@ -72,10 +84,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The decided value; empty when escalated
+   * The decided value; absent when escalated
    * </pre>
    *
-   * <code>string value = 1 [json_name = "value"];</code>
+   * <code>optional string value = 1 [json_name = "value"];</code>
    * @return The bytes for value.
    */
   @java.lang.Override
@@ -243,7 +255,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEscalation() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -281,7 +293,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDecidedAt() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -321,7 +333,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, value_);
     }
     if (escalated_ != false) {
@@ -336,10 +348,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(decisionRef_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 5, decisionRef_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(6, getEscalation());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(7, getDecidedAt());
     }
     getUnknownFields().writeTo(output);
@@ -351,7 +363,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, value_);
     }
     if (escalated_ != false) {
@@ -369,11 +381,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(decisionRef_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(5, decisionRef_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getEscalation());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getDecidedAt());
     }
@@ -392,8 +404,11 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.ava.v1.DecideResponse other = (ai.visma.ava.v1.DecideResponse) obj;
 
-    if (!getValue()
-        .equals(other.getValue())) return false;
+    if (hasValue() != other.hasValue()) return false;
+    if (hasValue()) {
+      if (!getValue()
+          .equals(other.getValue())) return false;
+    }
     if (getEscalated()
         != other.getEscalated()) return false;
     if (!getStepsList()
@@ -423,8 +438,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + VALUE_FIELD_NUMBER;
-    hash = (53 * hash) + getValue().hashCode();
+    if (hasValue()) {
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+    }
     hash = (37 * hash) + ESCALATED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getEscalated());
@@ -650,8 +667,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(ai.visma.ava.v1.DecideResponse result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.value_ = value_;
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.escalated_ = escalated_;
@@ -662,18 +681,17 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.decisionRef_ = decisionRef_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.escalation_ = escalationBuilder_ == null
             ? escalation_
             : escalationBuilder_.build();
-        to_bitField0_ |= 0x00000001;
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.decidedAt_ = decidedAtBuilder_ == null
             ? decidedAt_
             : decidedAtBuilder_.build();
-        to_bitField0_ |= 0x00000002;
+        to_bitField0_ |= 0x00000004;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -690,7 +708,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.ava.v1.DecideResponse other) {
       if (other == ai.visma.ava.v1.DecideResponse.getDefaultInstance()) return this;
-      if (!other.getValue().isEmpty()) {
+      if (other.hasValue()) {
         value_ = other.value_;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -831,10 +849,21 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object value_ = "";
     /**
      * <pre>
-     * The decided value; empty when escalated
+     * The decided value; absent when escalated
      * </pre>
      *
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>optional string value = 1 [json_name = "value"];</code>
+     * @return Whether the value field is set.
+     */
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The decided value; absent when escalated
+     * </pre>
+     *
+     * <code>optional string value = 1 [json_name = "value"];</code>
      * @return The value.
      */
     public java.lang.String getValue() {
@@ -851,10 +880,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The decided value; empty when escalated
+     * The decided value; absent when escalated
      * </pre>
      *
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>optional string value = 1 [json_name = "value"];</code>
      * @return The bytes for value.
      */
     public com.google.protobuf.ByteString
@@ -872,10 +901,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The decided value; empty when escalated
+     * The decided value; absent when escalated
      * </pre>
      *
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>optional string value = 1 [json_name = "value"];</code>
      * @param value The value to set.
      * @return This builder for chaining.
      */
@@ -889,10 +918,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The decided value; empty when escalated
+     * The decided value; absent when escalated
      * </pre>
      *
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>optional string value = 1 [json_name = "value"];</code>
      * @return This builder for chaining.
      */
     public Builder clearValue() {
@@ -903,10 +932,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The decided value; empty when escalated
+     * The decided value; absent when escalated
      * </pre>
      *
-     * <code>string value = 1 [json_name = "value"];</code>
+     * <code>optional string value = 1 [json_name = "value"];</code>
      * @param value The bytes for value to set.
      * @return This builder for chaining.
      */

@@ -666,8 +666,8 @@ proto.ava.v1.DecideResponse.prototype.serializeBinary = function() {
  */
 proto.ava.v1.DecideResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getValue();
-  if (f.length > 0) {
+  f = /** @type {string} */ (jspb.Message.getField(message, 1));
+  if (f != null) {
     writer.writeString(
       1,
       f
@@ -735,7 +735,25 @@ proto.ava.v1.DecideResponse.prototype.getValue = function() {
  * @return {!proto.ava.v1.DecideResponse} returns this
  */
 proto.ava.v1.DecideResponse.prototype.setValue = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return jspb.Message.setField(this, 1, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ava.v1.DecideResponse} returns this
+ */
+proto.ava.v1.DecideResponse.prototype.clearValue = function() {
+  return jspb.Message.setField(this, 1, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ava.v1.DecideResponse.prototype.hasValue = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
@@ -1041,8 +1059,8 @@ proto.ava.v1.WalkedStep.prototype.serializeBinary = function() {
  */
 proto.ava.v1.WalkedStep.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getAnswer();
-  if (f.length > 0) {
+  f = /** @type {string} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
     writer.writeString(
       2,
       f
@@ -1102,7 +1120,25 @@ proto.ava.v1.WalkedStep.prototype.getAnswer = function() {
  * @return {!proto.ava.v1.WalkedStep} returns this
  */
 proto.ava.v1.WalkedStep.prototype.setAnswer = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setField(this, 2, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ava.v1.WalkedStep} returns this
+ */
+proto.ava.v1.WalkedStep.prototype.clearAnswer = function() {
+  return jspb.Message.setField(this, 2, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ava.v1.WalkedStep.prototype.hasAnswer = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
@@ -2575,7 +2611,10 @@ proto.ava.v1.GetDecisionPathResponse.toObject = function(includeInstance, msg) {
     procedureVersion: jspb.Message.getFieldWithDefault(msg, 1, 0),
     decisionRef: jspb.Message.getFieldWithDefault(msg, 2, ""),
     decidedAt: (f = msg.getDecidedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    path: (f = msg.getPath()) && proto.ava.v1.DecisionNode.toObject(includeInstance, f)
+    path: (f = msg.getPath()) && proto.ava.v1.DecisionNode.toObject(includeInstance, f),
+    value: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    escalated: jspb.Message.getBooleanFieldWithDefault(msg, 6, false),
+    escalation: (f = msg.getEscalation()) && proto.ava.v1.Escalation.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2629,6 +2668,19 @@ proto.ava.v1.GetDecisionPathResponse.deserializeBinaryFromReader = function(msg,
       var value = new proto.ava.v1.DecisionNode;
       reader.readMessage(value,proto.ava.v1.DecisionNode.deserializeBinaryFromReader);
       msg.setPath(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setValue(value);
+      break;
+    case 6:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setEscalated(value);
+      break;
+    case 7:
+      var value = new proto.ava.v1.Escalation;
+      reader.readMessage(value,proto.ava.v1.Escalation.deserializeBinaryFromReader);
+      msg.setEscalation(value);
       break;
     default:
       reader.skipField();
@@ -2687,6 +2739,28 @@ proto.ava.v1.GetDecisionPathResponse.serializeBinaryToWriter = function(message,
       4,
       f,
       proto.ava.v1.DecisionNode.serializeBinaryToWriter
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+  f = message.getEscalated();
+  if (f) {
+    writer.writeBool(
+      6,
+      f
+    );
+  }
+  f = message.getEscalation();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      proto.ava.v1.Escalation.serializeBinaryToWriter
     );
   }
 };
@@ -2799,6 +2873,97 @@ proto.ava.v1.GetDecisionPathResponse.prototype.clearPath = function() {
  */
 proto.ava.v1.GetDecisionPathResponse.prototype.hasPath = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional string value = 5;
+ * @return {string}
+ */
+proto.ava.v1.GetDecisionPathResponse.prototype.getValue = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ava.v1.GetDecisionPathResponse} returns this
+ */
+proto.ava.v1.GetDecisionPathResponse.prototype.setValue = function(value) {
+  return jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ava.v1.GetDecisionPathResponse} returns this
+ */
+proto.ava.v1.GetDecisionPathResponse.prototype.clearValue = function() {
+  return jspb.Message.setField(this, 5, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ava.v1.GetDecisionPathResponse.prototype.hasValue = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional bool escalated = 6;
+ * @return {boolean}
+ */
+proto.ava.v1.GetDecisionPathResponse.prototype.getEscalated = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ava.v1.GetDecisionPathResponse} returns this
+ */
+proto.ava.v1.GetDecisionPathResponse.prototype.setEscalated = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 6, value);
+};
+
+
+/**
+ * optional Escalation escalation = 7;
+ * @return {?proto.ava.v1.Escalation}
+ */
+proto.ava.v1.GetDecisionPathResponse.prototype.getEscalation = function() {
+  return /** @type{?proto.ava.v1.Escalation} */ (
+    jspb.Message.getWrapperField(this, proto.ava.v1.Escalation, 7));
+};
+
+
+/**
+ * @param {?proto.ava.v1.Escalation|undefined} value
+ * @return {!proto.ava.v1.GetDecisionPathResponse} returns this
+*/
+proto.ava.v1.GetDecisionPathResponse.prototype.setEscalation = function(value) {
+  return jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ava.v1.GetDecisionPathResponse} returns this
+ */
+proto.ava.v1.GetDecisionPathResponse.prototype.clearEscalation = function() {
+  return this.setEscalation(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ava.v1.GetDecisionPathResponse.prototype.hasEscalation = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 
@@ -2945,8 +3110,8 @@ proto.ava.v1.DecisionNode.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getAnswer();
-  if (f.length > 0) {
+  f = /** @type {string} */ (jspb.Message.getField(message, 3));
+  if (f != null) {
     writer.writeString(
       3,
       f
@@ -3021,7 +3186,25 @@ proto.ava.v1.DecisionNode.prototype.getAnswer = function() {
  * @return {!proto.ava.v1.DecisionNode} returns this
  */
 proto.ava.v1.DecisionNode.prototype.setAnswer = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setField(this, 3, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.ava.v1.DecisionNode} returns this
+ */
+proto.ava.v1.DecisionNode.prototype.clearAnswer = function() {
+  return jspb.Message.setField(this, 3, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ava.v1.DecisionNode.prototype.hasAnswer = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 

@@ -28,6 +28,7 @@ private static final long serialVersionUID = 0L;
   }
   private GetDecisionPathResponse() {
     decisionRef_ = "";
+    value_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -182,6 +183,118 @@ private static final long serialVersionUID = 0L;
     return path_ == null ? ai.visma.ava.v1.DecisionNode.getDefaultInstance() : path_;
   }
 
+  public static final int VALUE_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object value_ = "";
+  /**
+   * <pre>
+   * The decided value; absent when escalated
+   * </pre>
+   *
+   * <code>optional string value = 5 [json_name = "value"];</code>
+   * @return Whether the value field is set.
+   */
+  @java.lang.Override
+  public boolean hasValue() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * The decided value; absent when escalated
+   * </pre>
+   *
+   * <code>optional string value = 5 [json_name = "value"];</code>
+   * @return The value.
+   */
+  @java.lang.Override
+  public java.lang.String getValue() {
+    java.lang.Object ref = value_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      value_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The decided value; absent when escalated
+   * </pre>
+   *
+   * <code>optional string value = 5 [json_name = "value"];</code>
+   * @return The bytes for value.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getValueBytes() {
+    java.lang.Object ref = value_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      value_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ESCALATED_FIELD_NUMBER = 6;
+  private boolean escalated_ = false;
+  /**
+   * <pre>
+   * True when the procedure did not decide
+   * </pre>
+   *
+   * <code>bool escalated = 6 [json_name = "escalated"];</code>
+   * @return The escalated.
+   */
+  @java.lang.Override
+  public boolean getEscalated() {
+    return escalated_;
+  }
+
+  public static final int ESCALATION_FIELD_NUMBER = 7;
+  private ai.visma.ava.v1.Escalation escalation_;
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+   * @return Whether the escalation field is set.
+   */
+  @java.lang.Override
+  public boolean hasEscalation() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+   * @return The escalation.
+   */
+  @java.lang.Override
+  public ai.visma.ava.v1.Escalation getEscalation() {
+    return escalation_ == null ? ai.visma.ava.v1.Escalation.getDefaultInstance() : escalation_;
+  }
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ava.v1.EscalationOrBuilder getEscalationOrBuilder() {
+    return escalation_ == null ? ai.visma.ava.v1.Escalation.getDefaultInstance() : escalation_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -208,6 +321,15 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(4, getPath());
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 5, value_);
+    }
+    if (escalated_ != false) {
+      output.writeBool(6, escalated_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(7, getEscalation());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -231,6 +353,17 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getPath());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(5, value_);
+    }
+    if (escalated_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(6, escalated_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getEscalation());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -261,6 +394,18 @@ private static final long serialVersionUID = 0L;
       if (!getPath()
           .equals(other.getPath())) return false;
     }
+    if (hasValue() != other.hasValue()) return false;
+    if (hasValue()) {
+      if (!getValue()
+          .equals(other.getValue())) return false;
+    }
+    if (getEscalated()
+        != other.getEscalated()) return false;
+    if (hasEscalation() != other.hasEscalation()) return false;
+    if (hasEscalation()) {
+      if (!getEscalation()
+          .equals(other.getEscalation())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -283,6 +428,17 @@ private static final long serialVersionUID = 0L;
     if (hasPath()) {
       hash = (37 * hash) + PATH_FIELD_NUMBER;
       hash = (53 * hash) + getPath().hashCode();
+    }
+    if (hasValue()) {
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+    }
+    hash = (37 * hash) + ESCALATED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEscalated());
+    if (hasEscalation()) {
+      hash = (37 * hash) + ESCALATION_FIELD_NUMBER;
+      hash = (53 * hash) + getEscalation().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -416,6 +572,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getDecidedAtFieldBuilder();
         getPathFieldBuilder();
+        getEscalationFieldBuilder();
       }
     }
     @java.lang.Override
@@ -433,6 +590,13 @@ private static final long serialVersionUID = 0L;
       if (pathBuilder_ != null) {
         pathBuilder_.dispose();
         pathBuilder_ = null;
+      }
+      value_ = "";
+      escalated_ = false;
+      escalation_ = null;
+      if (escalationBuilder_ != null) {
+        escalationBuilder_.dispose();
+        escalationBuilder_ = null;
       }
       return this;
     }
@@ -486,6 +650,19 @@ private static final long serialVersionUID = 0L;
             : pathBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.value_ = value_;
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.escalated_ = escalated_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.escalation_ = escalationBuilder_ == null
+            ? escalation_
+            : escalationBuilder_.build();
+        to_bitField0_ |= 0x00000008;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -514,6 +691,17 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPath()) {
         mergePath(other.getPath());
+      }
+      if (other.hasValue()) {
+        value_ = other.value_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (other.getEscalated() != false) {
+        setEscalated(other.getEscalated());
+      }
+      if (other.hasEscalation()) {
+        mergeEscalation(other.getEscalation());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -565,6 +753,23 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              value_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 48: {
+              escalated_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 58: {
+              input.readMessage(
+                  getEscalationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1030,6 +1235,310 @@ private static final long serialVersionUID = 0L;
         path_ = null;
       }
       return pathBuilder_;
+    }
+
+    private java.lang.Object value_ = "";
+    /**
+     * <pre>
+     * The decided value; absent when escalated
+     * </pre>
+     *
+     * <code>optional string value = 5 [json_name = "value"];</code>
+     * @return Whether the value field is set.
+     */
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The decided value; absent when escalated
+     * </pre>
+     *
+     * <code>optional string value = 5 [json_name = "value"];</code>
+     * @return The value.
+     */
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The decided value; absent when escalated
+     * </pre>
+     *
+     * <code>optional string value = 5 [json_name = "value"];</code>
+     * @return The bytes for value.
+     */
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The decided value; absent when escalated
+     * </pre>
+     *
+     * <code>optional string value = 5 [json_name = "value"];</code>
+     * @param value The value to set.
+     * @return This builder for chaining.
+     */
+    public Builder setValue(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      value_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The decided value; absent when escalated
+     * </pre>
+     *
+     * <code>optional string value = 5 [json_name = "value"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearValue() {
+      value_ = getDefaultInstance().getValue();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The decided value; absent when escalated
+     * </pre>
+     *
+     * <code>optional string value = 5 [json_name = "value"];</code>
+     * @param value The bytes for value to set.
+     * @return This builder for chaining.
+     */
+    public Builder setValueBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      value_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private boolean escalated_ ;
+    /**
+     * <pre>
+     * True when the procedure did not decide
+     * </pre>
+     *
+     * <code>bool escalated = 6 [json_name = "escalated"];</code>
+     * @return The escalated.
+     */
+    @java.lang.Override
+    public boolean getEscalated() {
+      return escalated_;
+    }
+    /**
+     * <pre>
+     * True when the procedure did not decide
+     * </pre>
+     *
+     * <code>bool escalated = 6 [json_name = "escalated"];</code>
+     * @param value The escalated to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEscalated(boolean value) {
+
+      escalated_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * True when the procedure did not decide
+     * </pre>
+     *
+     * <code>bool escalated = 6 [json_name = "escalated"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEscalated() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      escalated_ = false;
+      onChanged();
+      return this;
+    }
+
+    private ai.visma.ava.v1.Escalation escalation_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ava.v1.Escalation, ai.visma.ava.v1.Escalation.Builder, ai.visma.ava.v1.EscalationOrBuilder> escalationBuilder_;
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+     * @return Whether the escalation field is set.
+     */
+    public boolean hasEscalation() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+     * @return The escalation.
+     */
+    public ai.visma.ava.v1.Escalation getEscalation() {
+      if (escalationBuilder_ == null) {
+        return escalation_ == null ? ai.visma.ava.v1.Escalation.getDefaultInstance() : escalation_;
+      } else {
+        return escalationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+     */
+    public Builder setEscalation(ai.visma.ava.v1.Escalation value) {
+      if (escalationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        escalation_ = value;
+      } else {
+        escalationBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+     */
+    public Builder setEscalation(
+        ai.visma.ava.v1.Escalation.Builder builderForValue) {
+      if (escalationBuilder_ == null) {
+        escalation_ = builderForValue.build();
+      } else {
+        escalationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+     */
+    public Builder mergeEscalation(ai.visma.ava.v1.Escalation value) {
+      if (escalationBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          escalation_ != null &&
+          escalation_ != ai.visma.ava.v1.Escalation.getDefaultInstance()) {
+          getEscalationBuilder().mergeFrom(value);
+        } else {
+          escalation_ = value;
+        }
+      } else {
+        escalationBuilder_.mergeFrom(value);
+      }
+      if (escalation_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+     */
+    public Builder clearEscalation() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      escalation_ = null;
+      if (escalationBuilder_ != null) {
+        escalationBuilder_.dispose();
+        escalationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+     */
+    public ai.visma.ava.v1.Escalation.Builder getEscalationBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getEscalationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+     */
+    public ai.visma.ava.v1.EscalationOrBuilder getEscalationOrBuilder() {
+      if (escalationBuilder_ != null) {
+        return escalationBuilder_.getMessageOrBuilder();
+      } else {
+        return escalation_ == null ?
+            ai.visma.ava.v1.Escalation.getDefaultInstance() : escalation_;
+      }
+    }
+    /**
+     * <pre>
+     * Why the procedure did not decide; set only when escalated
+     * </pre>
+     *
+     * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ava.v1.Escalation, ai.visma.ava.v1.Escalation.Builder, ai.visma.ava.v1.EscalationOrBuilder> 
+        getEscalationFieldBuilder() {
+      if (escalationBuilder_ == null) {
+        escalationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ava.v1.Escalation, ai.visma.ava.v1.Escalation.Builder, ai.visma.ava.v1.EscalationOrBuilder>(
+                getEscalation(),
+                getParentForChildren(),
+                isClean());
+        escalation_ = null;
+      }
+      return escalationBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ava.v1.GetDecisionPathResponse)

@@ -69,8 +69,8 @@ enum Model {
 }
 
 message DecideResponse {
-  // The decided value; empty when escalated
-  string value = 1;
+  // The decided value; absent when escalated
+  optional string value = 1;
   // True when the procedure did not decide
   bool escalated = 2;
   // The steps walked, root first
@@ -88,8 +88,8 @@ message DecideResponse {
 message WalkedStep {
   reserved 1;
   reserved "question";
-  // The answer the step read; empty when it went unanswered
-  string answer = 2;
+  // The answer the step read; absent when it went unanswered
+  optional string answer = 2;
   // Confidence in the answer
   Confidence confidence = 3;
   // Identifier of the step within the procedure
@@ -191,6 +191,12 @@ message GetDecisionPathResponse {
   google.protobuf.Timestamp decided_at = 3;
   // The step the walk started at
   DecisionNode path = 4;
+  // The decided value; absent when escalated
+  optional string value = 5;
+  // True when the procedure did not decide
+  bool escalated = 6;
+  // Why the procedure did not decide; set only when escalated
+  Escalation escalation = 7;
 }
 
 // A walked step (predicate and the one answer taken), the leaf decided, or the node where the walk escalated.
@@ -199,8 +205,8 @@ message DecisionNode {
   reserved "question";
   // Name of the fact the step tested
   string predicate = 1;
-  // The answer the step read; empty when it went unanswered
-  string answer = 3;
+  // The answer the step read; absent when it went unanswered
+  optional string answer = 3;
   // Confidence in the answer
   Confidence confidence = 4;
   // The node that followed, keyed by the label of the branch taken; at most one entry

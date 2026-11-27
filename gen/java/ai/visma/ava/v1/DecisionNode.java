@@ -115,10 +115,22 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object answer_ = "";
   /**
    * <pre>
-   * The answer the step read; empty when it went unanswered
+   * The answer the step read; absent when it went unanswered
    * </pre>
    *
-   * <code>string answer = 3 [json_name = "answer"];</code>
+   * <code>optional string answer = 3 [json_name = "answer"];</code>
+   * @return Whether the answer field is set.
+   */
+  @java.lang.Override
+  public boolean hasAnswer() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * The answer the step read; absent when it went unanswered
+   * </pre>
+   *
+   * <code>optional string answer = 3 [json_name = "answer"];</code>
    * @return The answer.
    */
   @java.lang.Override
@@ -136,10 +148,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The answer the step read; empty when it went unanswered
+   * The answer the step read; absent when it went unanswered
    * </pre>
    *
-   * <code>string answer = 3 [json_name = "answer"];</code>
+   * <code>optional string answer = 3 [json_name = "answer"];</code>
    * @return The bytes for answer.
    */
   @java.lang.Override
@@ -169,7 +181,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConfidence() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -396,7 +408,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
    */
   @java.lang.Override
   public boolean hasEscalation() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -439,10 +451,10 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(predicate_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, predicate_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(answer_)) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 3, answer_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(4, getConfidence());
     }
     com.google.protobuf.GeneratedMessage
@@ -457,7 +469,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(targetValue_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 7, targetValue_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(8, getEscalation());
     }
     getUnknownFields().writeTo(output);
@@ -472,10 +484,10 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(predicate_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, predicate_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(answer_)) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(3, answer_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getConfidence());
     }
@@ -495,7 +507,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(targetValue_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(7, targetValue_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getEscalation());
     }
@@ -516,8 +528,11 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
 
     if (!getPredicate()
         .equals(other.getPredicate())) return false;
-    if (!getAnswer()
-        .equals(other.getAnswer())) return false;
+    if (hasAnswer() != other.hasAnswer()) return false;
+    if (hasAnswer()) {
+      if (!getAnswer()
+          .equals(other.getAnswer())) return false;
+    }
     if (hasConfidence() != other.hasConfidence()) return false;
     if (hasConfidence()) {
       if (!getConfidence()
@@ -547,8 +562,10 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PREDICATE_FIELD_NUMBER;
     hash = (53 * hash) + getPredicate().hashCode();
-    hash = (37 * hash) + ANSWER_FIELD_NUMBER;
-    hash = (53 * hash) + getAnswer().hashCode();
+    if (hasAnswer()) {
+      hash = (37 * hash) + ANSWER_FIELD_NUMBER;
+      hash = (53 * hash) + getAnswer().hashCode();
+    }
     if (hasConfidence()) {
       hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
       hash = (53 * hash) + getConfidence().hashCode();
@@ -780,15 +797,16 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.predicate_ = predicate_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.answer_ = answer_;
+        to_bitField0_ |= 0x00000001;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.confidence_ = confidenceBuilder_ == null
             ? confidence_
             : confidenceBuilder_.build();
-        to_bitField0_ |= 0x00000001;
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.answers_ = internalGetAnswers().build(AnswersDefaultEntryHolder.defaultEntry);
@@ -803,7 +821,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
         result.escalation_ = escalationBuilder_ == null
             ? escalation_
             : escalationBuilder_.build();
-        to_bitField0_ |= 0x00000002;
+        to_bitField0_ |= 0x00000004;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -825,7 +843,7 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getAnswer().isEmpty()) {
+      if (other.hasAnswer()) {
         answer_ = other.answer_;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -1030,10 +1048,21 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     private java.lang.Object answer_ = "";
     /**
      * <pre>
-     * The answer the step read; empty when it went unanswered
+     * The answer the step read; absent when it went unanswered
      * </pre>
      *
-     * <code>string answer = 3 [json_name = "answer"];</code>
+     * <code>optional string answer = 3 [json_name = "answer"];</code>
+     * @return Whether the answer field is set.
+     */
+    public boolean hasAnswer() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The answer the step read; absent when it went unanswered
+     * </pre>
+     *
+     * <code>optional string answer = 3 [json_name = "answer"];</code>
      * @return The answer.
      */
     public java.lang.String getAnswer() {
@@ -1050,10 +1079,10 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     }
     /**
      * <pre>
-     * The answer the step read; empty when it went unanswered
+     * The answer the step read; absent when it went unanswered
      * </pre>
      *
-     * <code>string answer = 3 [json_name = "answer"];</code>
+     * <code>optional string answer = 3 [json_name = "answer"];</code>
      * @return The bytes for answer.
      */
     public com.google.protobuf.ByteString
@@ -1071,10 +1100,10 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     }
     /**
      * <pre>
-     * The answer the step read; empty when it went unanswered
+     * The answer the step read; absent when it went unanswered
      * </pre>
      *
-     * <code>string answer = 3 [json_name = "answer"];</code>
+     * <code>optional string answer = 3 [json_name = "answer"];</code>
      * @param value The answer to set.
      * @return This builder for chaining.
      */
@@ -1088,10 +1117,10 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     }
     /**
      * <pre>
-     * The answer the step read; empty when it went unanswered
+     * The answer the step read; absent when it went unanswered
      * </pre>
      *
-     * <code>string answer = 3 [json_name = "answer"];</code>
+     * <code>optional string answer = 3 [json_name = "answer"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAnswer() {
@@ -1102,10 +1131,10 @@ ai.visma.ava.v1.DecisionNode defaultValue) {
     }
     /**
      * <pre>
-     * The answer the step read; empty when it went unanswered
+     * The answer the step read; absent when it went unanswered
      * </pre>
      *
-     * <code>string answer = 3 [json_name = "answer"];</code>
+     * <code>optional string answer = 3 [json_name = "answer"];</code>
      * @param value The bytes for answer to set.
      * @return This builder for chaining.
      */

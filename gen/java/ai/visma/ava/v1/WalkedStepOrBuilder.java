@@ -11,19 +11,28 @@ public interface WalkedStepOrBuilder extends
 
   /**
    * <pre>
-   * The answer the step read; empty when it went unanswered
+   * The answer the step read; absent when it went unanswered
    * </pre>
    *
-   * <code>string answer = 2 [json_name = "answer"];</code>
+   * <code>optional string answer = 2 [json_name = "answer"];</code>
+   * @return Whether the answer field is set.
+   */
+  boolean hasAnswer();
+  /**
+   * <pre>
+   * The answer the step read; absent when it went unanswered
+   * </pre>
+   *
+   * <code>optional string answer = 2 [json_name = "answer"];</code>
    * @return The answer.
    */
   java.lang.String getAnswer();
   /**
    * <pre>
-   * The answer the step read; empty when it went unanswered
+   * The answer the step read; absent when it went unanswered
    * </pre>
    *
-   * <code>string answer = 2 [json_name = "answer"];</code>
+   * <code>optional string answer = 2 [json_name = "answer"];</code>
    * @return The bytes for answer.
    */
   com.google.protobuf.ByteString

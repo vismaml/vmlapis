@@ -35,95 +35,99 @@ namespace Ava.V1 {
             "KAsyIS5hdmEudjEuRGVjaWRlUmVxdWVzdC5GaWVsZHNFbnRyeVIGZmllbGRz",
             "Ei0KBW1vZGVsGAQgASgOMg0uYXZhLnYxLk1vZGVsQgj6QgWCAQIQAVIFbW9k",
             "ZWwaOQoLRmllbGRzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUY",
-            "AiABKAlSBXZhbHVlOgI4ASKtAgoORGVjaWRlUmVzcG9uc2USFAoFdmFsdWUY",
-            "ASABKAlSBXZhbHVlEhwKCWVzY2FsYXRlZBgCIAEoCFIJZXNjYWxhdGVkEigK",
-            "BXN0ZXBzGAMgAygLMhIuYXZhLnYxLldhbGtlZFN0ZXBSBXN0ZXBzEisKEXBy",
-            "b2NlZHVyZV92ZXJzaW9uGAQgASgFUhBwcm9jZWR1cmVWZXJzaW9uEiEKDGRl",
-            "Y2lzaW9uX3JlZhgFIAEoCVILZGVjaXNpb25SZWYSMgoKZXNjYWxhdGlvbhgG",
-            "IAEoCzISLmF2YS52MS5Fc2NhbGF0aW9uUgplc2NhbGF0aW9uEjkKCmRlY2lk",
-            "ZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglkZWNp",
-            "ZGVkQXQi4gEKCldhbGtlZFN0ZXASFgoGYW5zd2VyGAIgASgJUgZhbnN3ZXIS",
-            "MgoKY29uZmlkZW5jZRgDIAEoCzISLmF2YS52MS5Db25maWRlbmNlUgpjb25m",
-            "aWRlbmNlEhcKB3N0ZXBfaWQYBCABKAlSBnN0ZXBJZBIUCgVmYWN0cxgFIAMo",
-            "CVIFZmFjdHMSKwoGYnJhbmNoGAYgASgLMhMuYXZhLnYxLlRha2VuQnJhbmNo",
-            "UgZicmFuY2gSHAoJcHJlZGljYXRlGAcgASgJUglwcmVkaWNhdGVKBAgBEAJS",
-            "CHF1ZXN0aW9uIrQBCgtUYWtlbkJyYW5jaBIbCglicmFuY2hfaWQYASABKAlS",
-            "CGJyYW5jaElkEhQKBWxhYmVsGAIgASgJUgVsYWJlbBIiCgxuZXh0X3N0ZXBf",
-            "aWQYAyABKAlIAFIKbmV4dFN0ZXBJZBIjCgxvdXRwdXRfdmFsdWUYBCABKAlI",
-            "AFILb3V0cHV0VmFsdWUSHgoJZXNjYWxhdGVzGAUgASgISABSCWVzY2FsYXRl",
-            "c0IJCgdvdXRjb21lItEBCgpFc2NhbGF0aW9uEisKBGtpbmQYASABKA4yFy5h",
-            "dmEudjEuRXNjYWxhdGlvbi5LaW5kUgRraW5kEhcKB3N0ZXBfaWQYAiABKAlS",
-            "BnN0ZXBJZCJ9CgRLaW5kEhQKEEtJTkRfVU5TUEVDSUZJRUQQABIXChNNSVNT",
-            "SU5HX0lORk9STUFUSU9OEAESFgoSTk9fTUFUQ0hJTkdfQlJBTkNIEAISGAoU",
-            "UFJPQ0VEVVJFX0VTQ0FMQVRJT04QAxIUChBFVkFMVUFUSU9OX0VSUk9SEAQi",
-            "uQEKEkdldERlY2lzaW9uUmVxdWVzdBJLCgxkYXRhc2V0X25hbWUYASABKAlC",
-            "KPpCJXIjKIACMh5eW0EtWmEtejAtOS5dW0EtWmEtejAtOV8uPi1dKiRSC2Rh",
-            "dGFzZXROYW1lEiwKDGRlY2lzaW9uX3JlZhgCIAEoCUIJ+kIGcgQQASgkUgtk",
-            "ZWNpc2lvblJlZhIoCgtvdXRwdXRfbmFtZRgDIAEoCUIH+kIEcgIQAVIKb3V0",
-            "cHV0TmFtZSKvAQoTR2V0UHJvY2VkdXJlUmVxdWVzdBJLCgxkYXRhc2V0X25h",
-            "bWUYASABKAlCKPpCJXIjKIACMh5eW0EtWmEtejAtOS5dW0EtWmEtejAtOV8u",
-            "Pi1dKiRSC2RhdGFzZXROYW1lEigKC291dHB1dF9uYW1lGAIgASgJQgf6QgRy",
-            "AhABUgpvdXRwdXROYW1lEiEKB3ZlcnNpb24YAyABKAVCB/pCBBoCKABSB3Zl",
-            "cnNpb24ibgoUR2V0UHJvY2VkdXJlUmVzcG9uc2USKwoRcHJvY2VkdXJlX3Zl",
-            "cnNpb24YASABKAVSEHByb2NlZHVyZVZlcnNpb24SKQoEdHJlZRgCIAEoCzIV",
-            "LmF2YS52MS5Qcm9jZWR1cmVOb2RlUgR0cmVlIoICCg1Qcm9jZWR1cmVOb2Rl",
-            "EhwKCXByZWRpY2F0ZRgBIAEoCVIJcHJlZGljYXRlEjwKB2Fuc3dlcnMYAiAD",
-            "KAsyIi5hdmEudjEuUHJvY2VkdXJlTm9kZS5BbnN3ZXJzRW50cnlSB2Fuc3dl",
-            "cnMSHwoLdGFyZ2V0X25hbWUYAyABKAlSCnRhcmdldE5hbWUSIQoMdGFyZ2V0",
-            "X3ZhbHVlGAQgASgJUgt0YXJnZXRWYWx1ZRpRCgxBbnN3ZXJzRW50cnkSEAoD",
-            "a2V5GAEgASgJUgNrZXkSKwoFdmFsdWUYAiABKAsyFS5hdmEudjEuUHJvY2Vk",
-            "dXJlTm9kZVIFdmFsdWU6AjgBIs4BChdHZXREZWNpc2lvblBhdGhSZXNwb25z",
-            "ZRIrChFwcm9jZWR1cmVfdmVyc2lvbhgBIAEoBVIQcHJvY2VkdXJlVmVyc2lv",
-            "bhIhCgxkZWNpc2lvbl9yZWYYAiABKAlSC2RlY2lzaW9uUmVmEjkKCmRlY2lk",
-            "ZWRfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglkZWNp",
-            "ZGVkQXQSKAoEcGF0aBgEIAEoCzIULmF2YS52MS5EZWNpc2lvbk5vZGVSBHBh",
-            "dGgijwMKDERlY2lzaW9uTm9kZRIcCglwcmVkaWNhdGUYASABKAlSCXByZWRp",
-            "Y2F0ZRIWCgZhbnN3ZXIYAyABKAlSBmFuc3dlchIyCgpjb25maWRlbmNlGAQg",
-            "ASgLMhIuYXZhLnYxLkNvbmZpZGVuY2VSCmNvbmZpZGVuY2USOwoHYW5zd2Vy",
-            "cxgFIAMoCzIhLmF2YS52MS5EZWNpc2lvbk5vZGUuQW5zd2Vyc0VudHJ5Ugdh",
-            "bnN3ZXJzEh8KC3RhcmdldF9uYW1lGAYgASgJUgp0YXJnZXROYW1lEiEKDHRh",
-            "cmdldF92YWx1ZRgHIAEoCVILdGFyZ2V0VmFsdWUSMgoKZXNjYWxhdGlvbhgI",
-            "IAEoCzISLmF2YS52MS5Fc2NhbGF0aW9uUgplc2NhbGF0aW9uGlAKDEFuc3dl",
-            "cnNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIqCgV2YWx1ZRgCIAEoCzIULmF2",
-            "YS52MS5EZWNpc2lvbk5vZGVSBXZhbHVlOgI4AUoECAIQA1IIcXVlc3Rpb24i",
-            "vgEKCkNvbmZpZGVuY2USLgoFbGV2ZWwYASABKA4yGC5hdmEudjEuQ29uZmlk",
-            "ZW5jZS5MZXZlbFIFbGV2ZWwSMQoFdmFsdWUYAiABKAsyGy5nb29nbGUucHJv",
-            "dG9idWYuRmxvYXRWYWx1ZVIFdmFsdWUiTQoFTGV2ZWwSCwoHVU5LTk9XThAA",
-            "EgwKCFZFUllfTE9XEAESBwoDTE9XEAISBwoDTUlEEAMSCAoESElHSBAEEg0K",
-            "CVZFUllfSElHSBAFKjMKBU1vZGVsEggKBFFXRU4QABIICgRDTEVGEAESCAoE",
-            "QkVSVBACEgwKCFJFUkFOS0VSEAMy1gQKEVByZWRpY3Rpb25TZXJ2aWNlEmYK",
-            "BkRlY2lkZRIVLmF2YS52MS5EZWNpZGVSZXF1ZXN0GhYuYXZhLnYxLkRlY2lk",
-            "ZVJlc3BvbnNlIi2C0+STAiciIi92Mi9kYXRhc2V0cy97ZGF0YXNldF9uYW1l",
-            "fTpkZWNpZGU6ASoSfwoLR2V0RGVjaXNpb24SGi5hdmEudjEuR2V0RGVjaXNp",
-            "b25SZXF1ZXN0GhYuYXZhLnYxLkRlY2lkZVJlc3BvbnNlIjyC0+STAjYSNC92",
-            "Mi9kYXRhc2V0cy97ZGF0YXNldF9uYW1lfS9kZWNpc2lvbnMve2RlY2lzaW9u",
-            "X3JlZn0SjgEKDEdldFByb2NlZHVyZRIbLmF2YS52MS5HZXRQcm9jZWR1cmVS",
-            "ZXF1ZXN0GhwuYXZhLnYxLkdldFByb2NlZHVyZVJlc3BvbnNlIkOC0+STAj0S",
-            "Oy92Mi9kYXRhc2V0cy97ZGF0YXNldF9uYW1lfS9vdXRwdXRzL3tvdXRwdXRf",
-            "bmFtZX0vcHJvY2VkdXJlEpEBCg9HZXREZWNpc2lvblBhdGgSGi5hdmEudjEu",
-            "R2V0RGVjaXNpb25SZXF1ZXN0Gh8uYXZhLnYxLkdldERlY2lzaW9uUGF0aFJl",
-            "c3BvbnNlIkGC0+STAjsSOS92Mi9kYXRhc2V0cy97ZGF0YXNldF9uYW1lfS9k",
-            "ZWNpc2lvbnMve2RlY2lzaW9uX3JlZn0vcGF0aBozkkEwEi5EZWNpZGUgb3V0",
-            "cHV0cyB3aXRoIGEgZGF0YXNldCdzIEFWQSBwcm9jZWR1cmUuQsMBCg9haS52",
-            "aXNtYS5hdmEudjFCFlByZWRpY3Rpb25TZXJ2aWNlUHJvdG9QAVoqZ2l0aHVi",
-            "LmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXZhL3YxogIDQVhYqgIG",
-            "QXZhLlYxygIGQXZhXFYx4gISQXZhXFYxXEdQQk1ldGFkYXRh6gIHQXZhOjpW",
-            "MZJBMhIJCgNBVkEyAnYxKgECMhBhcHBsaWNhdGlvbi9qc29uOhBhcHBsaWNh",
-            "dGlvbi9qc29uYgZwcm90bzM="));
+            "AiABKAlSBXZhbHVlOgI4ASK8AgoORGVjaWRlUmVzcG9uc2USGQoFdmFsdWUY",
+            "ASABKAlIAFIFdmFsdWWIAQESHAoJZXNjYWxhdGVkGAIgASgIUgllc2NhbGF0",
+            "ZWQSKAoFc3RlcHMYAyADKAsyEi5hdmEudjEuV2Fsa2VkU3RlcFIFc3RlcHMS",
+            "KwoRcHJvY2VkdXJlX3ZlcnNpb24YBCABKAVSEHByb2NlZHVyZVZlcnNpb24S",
+            "IQoMZGVjaXNpb25fcmVmGAUgASgJUgtkZWNpc2lvblJlZhIyCgplc2NhbGF0",
+            "aW9uGAYgASgLMhIuYXZhLnYxLkVzY2FsYXRpb25SCmVzY2FsYXRpb24SOQoK",
+            "ZGVjaWRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBS",
+            "CWRlY2lkZWRBdEIICgZfdmFsdWUi8gEKCldhbGtlZFN0ZXASGwoGYW5zd2Vy",
+            "GAIgASgJSABSBmFuc3dlcogBARIyCgpjb25maWRlbmNlGAMgASgLMhIuYXZh",
+            "LnYxLkNvbmZpZGVuY2VSCmNvbmZpZGVuY2USFwoHc3RlcF9pZBgEIAEoCVIG",
+            "c3RlcElkEhQKBWZhY3RzGAUgAygJUgVmYWN0cxIrCgZicmFuY2gYBiABKAsy",
+            "Ey5hdmEudjEuVGFrZW5CcmFuY2hSBmJyYW5jaBIcCglwcmVkaWNhdGUYByAB",
+            "KAlSCXByZWRpY2F0ZUIJCgdfYW5zd2VySgQIARACUghxdWVzdGlvbiK0AQoL",
+            "VGFrZW5CcmFuY2gSGwoJYnJhbmNoX2lkGAEgASgJUghicmFuY2hJZBIUCgVs",
+            "YWJlbBgCIAEoCVIFbGFiZWwSIgoMbmV4dF9zdGVwX2lkGAMgASgJSABSCm5l",
+            "eHRTdGVwSWQSIwoMb3V0cHV0X3ZhbHVlGAQgASgJSABSC291dHB1dFZhbHVl",
+            "Eh4KCWVzY2FsYXRlcxgFIAEoCEgAUgllc2NhbGF0ZXNCCQoHb3V0Y29tZSLR",
+            "AQoKRXNjYWxhdGlvbhIrCgRraW5kGAEgASgOMhcuYXZhLnYxLkVzY2FsYXRp",
+            "b24uS2luZFIEa2luZBIXCgdzdGVwX2lkGAIgASgJUgZzdGVwSWQifQoES2lu",
+            "ZBIUChBLSU5EX1VOU1BFQ0lGSUVEEAASFwoTTUlTU0lOR19JTkZPUk1BVElP",
+            "ThABEhYKEk5PX01BVENISU5HX0JSQU5DSBACEhgKFFBST0NFRFVSRV9FU0NB",
+            "TEFUSU9OEAMSFAoQRVZBTFVBVElPTl9FUlJPUhAEIrkBChJHZXREZWNpc2lv",
+            "blJlcXVlc3QSSwoMZGF0YXNldF9uYW1lGAEgASgJQij6QiVyIyiAAjIeXltB",
+            "LVphLXowLTkuXVtBLVphLXowLTlfLj4tXSokUgtkYXRhc2V0TmFtZRIsCgxk",
+            "ZWNpc2lvbl9yZWYYAiABKAlCCfpCBnIEEAEoJFILZGVjaXNpb25SZWYSKAoL",
+            "b3V0cHV0X25hbWUYAyABKAlCB/pCBHICEAFSCm91dHB1dE5hbWUirwEKE0dl",
+            "dFByb2NlZHVyZVJlcXVlc3QSSwoMZGF0YXNldF9uYW1lGAEgASgJQij6QiVy",
+            "IyiAAjIeXltBLVphLXowLTkuXVtBLVphLXowLTlfLj4tXSokUgtkYXRhc2V0",
+            "TmFtZRIoCgtvdXRwdXRfbmFtZRgCIAEoCUIH+kIEcgIQAVIKb3V0cHV0TmFt",
+            "ZRIhCgd2ZXJzaW9uGAMgASgFQgf6QgQaAigAUgd2ZXJzaW9uIm4KFEdldFBy",
+            "b2NlZHVyZVJlc3BvbnNlEisKEXByb2NlZHVyZV92ZXJzaW9uGAEgASgFUhBw",
+            "cm9jZWR1cmVWZXJzaW9uEikKBHRyZWUYAiABKAsyFS5hdmEudjEuUHJvY2Vk",
+            "dXJlTm9kZVIEdHJlZSKCAgoNUHJvY2VkdXJlTm9kZRIcCglwcmVkaWNhdGUY",
+            "ASABKAlSCXByZWRpY2F0ZRI8CgdhbnN3ZXJzGAIgAygLMiIuYXZhLnYxLlBy",
+            "b2NlZHVyZU5vZGUuQW5zd2Vyc0VudHJ5UgdhbnN3ZXJzEh8KC3RhcmdldF9u",
+            "YW1lGAMgASgJUgp0YXJnZXROYW1lEiEKDHRhcmdldF92YWx1ZRgEIAEoCVIL",
+            "dGFyZ2V0VmFsdWUaUQoMQW5zd2Vyc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5",
+            "EisKBXZhbHVlGAIgASgLMhUuYXZhLnYxLlByb2NlZHVyZU5vZGVSBXZhbHVl",
+            "OgI4ASLFAgoXR2V0RGVjaXNpb25QYXRoUmVzcG9uc2USKwoRcHJvY2VkdXJl",
+            "X3ZlcnNpb24YASABKAVSEHByb2NlZHVyZVZlcnNpb24SIQoMZGVjaXNpb25f",
+            "cmVmGAIgASgJUgtkZWNpc2lvblJlZhI5CgpkZWNpZGVkX2F0GAMgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJZGVjaWRlZEF0EigKBHBhdGgY",
+            "BCABKAsyFC5hdmEudjEuRGVjaXNpb25Ob2RlUgRwYXRoEhkKBXZhbHVlGAUg",
+            "ASgJSABSBXZhbHVliAEBEhwKCWVzY2FsYXRlZBgGIAEoCFIJZXNjYWxhdGVk",
+            "EjIKCmVzY2FsYXRpb24YByABKAsyEi5hdmEudjEuRXNjYWxhdGlvblIKZXNj",
+            "YWxhdGlvbkIICgZfdmFsdWUinwMKDERlY2lzaW9uTm9kZRIcCglwcmVkaWNh",
+            "dGUYASABKAlSCXByZWRpY2F0ZRIbCgZhbnN3ZXIYAyABKAlIAFIGYW5zd2Vy",
+            "iAEBEjIKCmNvbmZpZGVuY2UYBCABKAsyEi5hdmEudjEuQ29uZmlkZW5jZVIK",
+            "Y29uZmlkZW5jZRI7CgdhbnN3ZXJzGAUgAygLMiEuYXZhLnYxLkRlY2lzaW9u",
+            "Tm9kZS5BbnN3ZXJzRW50cnlSB2Fuc3dlcnMSHwoLdGFyZ2V0X25hbWUYBiAB",
+            "KAlSCnRhcmdldE5hbWUSIQoMdGFyZ2V0X3ZhbHVlGAcgASgJUgt0YXJnZXRW",
+            "YWx1ZRIyCgplc2NhbGF0aW9uGAggASgLMhIuYXZhLnYxLkVzY2FsYXRpb25S",
+            "CmVzY2FsYXRpb24aUAoMQW5zd2Vyc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5",
+            "EioKBXZhbHVlGAIgASgLMhQuYXZhLnYxLkRlY2lzaW9uTm9kZVIFdmFsdWU6",
+            "AjgBQgkKB19hbnN3ZXJKBAgCEANSCHF1ZXN0aW9uIr4BCgpDb25maWRlbmNl",
+            "Ei4KBWxldmVsGAEgASgOMhguYXZhLnYxLkNvbmZpZGVuY2UuTGV2ZWxSBWxl",
+            "dmVsEjEKBXZhbHVlGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFs",
+            "dWVSBXZhbHVlIk0KBUxldmVsEgsKB1VOS05PV04QABIMCghWRVJZX0xPVxAB",
+            "EgcKA0xPVxACEgcKA01JRBADEggKBEhJR0gQBBINCglWRVJZX0hJR0gQBSoz",
+            "CgVNb2RlbBIICgRRV0VOEAASCAoEQ0xFRhABEggKBEJFUlQQAhIMCghSRVJB",
+            "TktFUhADMtYEChFQcmVkaWN0aW9uU2VydmljZRJmCgZEZWNpZGUSFS5hdmEu",
+            "djEuRGVjaWRlUmVxdWVzdBoWLmF2YS52MS5EZWNpZGVSZXNwb25zZSItgtPk",
+            "kwInIiIvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX06ZGVjaWRlOgEqEn8K",
+            "C0dldERlY2lzaW9uEhouYXZhLnYxLkdldERlY2lzaW9uUmVxdWVzdBoWLmF2",
+            "YS52MS5EZWNpZGVSZXNwb25zZSI8gtPkkwI2EjQvdjIvZGF0YXNldHMve2Rh",
+            "dGFzZXRfbmFtZX0vZGVjaXNpb25zL3tkZWNpc2lvbl9yZWZ9Eo4BCgxHZXRQ",
+            "cm9jZWR1cmUSGy5hdmEudjEuR2V0UHJvY2VkdXJlUmVxdWVzdBocLmF2YS52",
+            "MS5HZXRQcm9jZWR1cmVSZXNwb25zZSJDgtPkkwI9EjsvdjIvZGF0YXNldHMv",
+            "e2RhdGFzZXRfbmFtZX0vb3V0cHV0cy97b3V0cHV0X25hbWV9L3Byb2NlZHVy",
+            "ZRKRAQoPR2V0RGVjaXNpb25QYXRoEhouYXZhLnYxLkdldERlY2lzaW9uUmVx",
+            "dWVzdBofLmF2YS52MS5HZXREZWNpc2lvblBhdGhSZXNwb25zZSJBgtPkkwI7",
+            "EjkvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX0vZGVjaXNpb25zL3tkZWNp",
+            "c2lvbl9yZWZ9L3BhdGgaM5JBMBIuRGVjaWRlIG91dHB1dHMgd2l0aCBhIGRh",
+            "dGFzZXQncyBBVkEgcHJvY2VkdXJlLkLDAQoPYWkudmlzbWEuYXZhLnYxQhZQ",
+            "cmVkaWN0aW9uU2VydmljZVByb3RvUAFaKmdpdGh1Yi5jb20vZS1jb25vbWlj",
+            "L3ZtbGFwaXMvZ2VuL2dvL2F2YS92MaICA0FYWKoCBkF2YS5WMcoCBkF2YVxW",
+            "MeICEkF2YVxWMVxHUEJNZXRhZGF0YeoCB0F2YTo6VjGSQTISCQoDQVZBMgJ2",
+            "MSoBAjIQYXBwbGljYXRpb24vanNvbjoQYXBwbGljYXRpb24vanNvbmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ava.V1.Model), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.DecideRequest), global::Ava.V1.DecideRequest.Parser, new[]{ "DatasetName", "OutputName", "Fields", "Model" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.DecideResponse), global::Ava.V1.DecideResponse.Parser, new[]{ "Value", "Escalated", "Steps", "ProcedureVersion", "DecisionRef", "Escalation", "DecidedAt" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.WalkedStep), global::Ava.V1.WalkedStep.Parser, new[]{ "Answer", "Confidence", "StepId", "Facts", "Branch", "Predicate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.DecideResponse), global::Ava.V1.DecideResponse.Parser, new[]{ "Value", "Escalated", "Steps", "ProcedureVersion", "DecisionRef", "Escalation", "DecidedAt" }, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.WalkedStep), global::Ava.V1.WalkedStep.Parser, new[]{ "Answer", "Confidence", "StepId", "Facts", "Branch", "Predicate" }, new[]{ "Answer" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.TakenBranch), global::Ava.V1.TakenBranch.Parser, new[]{ "BranchId", "Label", "NextStepId", "OutputValue", "Escalates" }, new[]{ "Outcome" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.Escalation), global::Ava.V1.Escalation.Parser, new[]{ "Kind", "StepId" }, null, new[]{ typeof(global::Ava.V1.Escalation.Types.Kind) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.GetDecisionRequest), global::Ava.V1.GetDecisionRequest.Parser, new[]{ "DatasetName", "DecisionRef", "OutputName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.GetProcedureRequest), global::Ava.V1.GetProcedureRequest.Parser, new[]{ "DatasetName", "OutputName", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.GetProcedureResponse), global::Ava.V1.GetProcedureResponse.Parser, new[]{ "ProcedureVersion", "Tree" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.ProcedureNode), global::Ava.V1.ProcedureNode.Parser, new[]{ "Predicate", "Answers", "TargetName", "TargetValue" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.GetDecisionPathResponse), global::Ava.V1.GetDecisionPathResponse.Parser, new[]{ "ProcedureVersion", "DecisionRef", "DecidedAt", "Path" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.DecisionNode), global::Ava.V1.DecisionNode.Parser, new[]{ "Predicate", "Answer", "Confidence", "Answers", "TargetName", "TargetValue", "Escalation" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.GetDecisionPathResponse), global::Ava.V1.GetDecisionPathResponse.Parser, new[]{ "ProcedureVersion", "DecisionRef", "DecidedAt", "Path", "Value", "Escalated", "Escalation" }, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.DecisionNode), global::Ava.V1.DecisionNode.Parser, new[]{ "Predicate", "Answer", "Confidence", "Answers", "TargetName", "TargetValue", "Escalation" }, new[]{ "Answer" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.Confidence), global::Ava.V1.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Ava.V1.Confidence.Types.Level) }, null, null)
           }));
     }
@@ -504,17 +508,31 @@ namespace Ava.V1 {
 
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 1;
-    private string value_ = "";
+    private readonly static string ValueDefaultValue = "";
+
+    private string value_;
     /// <summary>
-    /// The decided value; empty when escalated
+    /// The decided value; absent when escalated
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Value {
-      get { return value_; }
+      get { return value_ ?? ValueDefaultValue; }
       set {
         value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasValue {
+      get { return value_ != null; }
+    }
+    /// <summary>Clears the value of the "value" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearValue() {
+      value_ = null;
     }
 
     /// <summary>Field number for the "escalated" field.</summary>
@@ -635,7 +653,7 @@ namespace Ava.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Value.Length != 0) hash ^= Value.GetHashCode();
+      if (HasValue) hash ^= Value.GetHashCode();
       if (Escalated != false) hash ^= Escalated.GetHashCode();
       hash ^= steps_.GetHashCode();
       if (ProcedureVersion != 0) hash ^= ProcedureVersion.GetHashCode();
@@ -660,7 +678,7 @@ namespace Ava.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Value.Length != 0) {
+      if (HasValue) {
         output.WriteRawTag(10);
         output.WriteString(Value);
       }
@@ -695,7 +713,7 @@ namespace Ava.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Value.Length != 0) {
+      if (HasValue) {
         output.WriteRawTag(10);
         output.WriteString(Value);
       }
@@ -730,7 +748,7 @@ namespace Ava.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Value.Length != 0) {
+      if (HasValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
       }
       if (Escalated != false) {
@@ -761,7 +779,7 @@ namespace Ava.V1 {
       if (other == null) {
         return;
       }
-      if (other.Value.Length != 0) {
+      if (other.HasValue) {
         Value = other.Value;
       }
       if (other.Escalated != false) {
@@ -951,17 +969,31 @@ namespace Ava.V1 {
 
     /// <summary>Field number for the "answer" field.</summary>
     public const int AnswerFieldNumber = 2;
-    private string answer_ = "";
+    private readonly static string AnswerDefaultValue = "";
+
+    private string answer_;
     /// <summary>
-    /// The answer the step read; empty when it went unanswered
+    /// The answer the step read; absent when it went unanswered
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Answer {
-      get { return answer_; }
+      get { return answer_ ?? AnswerDefaultValue; }
       set {
         answer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "answer" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAnswer {
+      get { return answer_ != null; }
+    }
+    /// <summary>Clears the value of the "answer" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAnswer() {
+      answer_ = null;
     }
 
     /// <summary>Field number for the "confidence" field.</summary>
@@ -1066,7 +1098,7 @@ namespace Ava.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Answer.Length != 0) hash ^= Answer.GetHashCode();
+      if (HasAnswer) hash ^= Answer.GetHashCode();
       if (confidence_ != null) hash ^= Confidence.GetHashCode();
       if (StepId.Length != 0) hash ^= StepId.GetHashCode();
       hash ^= facts_.GetHashCode();
@@ -1090,7 +1122,7 @@ namespace Ava.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Answer.Length != 0) {
+      if (HasAnswer) {
         output.WriteRawTag(18);
         output.WriteString(Answer);
       }
@@ -1121,7 +1153,7 @@ namespace Ava.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Answer.Length != 0) {
+      if (HasAnswer) {
         output.WriteRawTag(18);
         output.WriteString(Answer);
       }
@@ -1152,7 +1184,7 @@ namespace Ava.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Answer.Length != 0) {
+      if (HasAnswer) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Answer);
       }
       if (confidence_ != null) {
@@ -1180,7 +1212,7 @@ namespace Ava.V1 {
       if (other == null) {
         return;
       }
-      if (other.Answer.Length != 0) {
+      if (other.HasAnswer) {
         Answer = other.Answer;
       }
       if (other.confidence_ != null) {
@@ -3179,6 +3211,9 @@ namespace Ava.V1 {
       decisionRef_ = other.decisionRef_;
       decidedAt_ = other.decidedAt_ != null ? other.decidedAt_.Clone() : null;
       path_ = other.path_ != null ? other.path_.Clone() : null;
+      value_ = other.value_;
+      escalated_ = other.escalated_;
+      escalation_ = other.escalation_ != null ? other.escalation_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3248,6 +3283,65 @@ namespace Ava.V1 {
       }
     }
 
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 5;
+    private readonly static string ValueDefaultValue = "";
+
+    private string value_;
+    /// <summary>
+    /// The decided value; absent when escalated
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Value {
+      get { return value_ ?? ValueDefaultValue; }
+      set {
+        value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasValue {
+      get { return value_ != null; }
+    }
+    /// <summary>Clears the value of the "value" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearValue() {
+      value_ = null;
+    }
+
+    /// <summary>Field number for the "escalated" field.</summary>
+    public const int EscalatedFieldNumber = 6;
+    private bool escalated_;
+    /// <summary>
+    /// True when the procedure did not decide
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Escalated {
+      get { return escalated_; }
+      set {
+        escalated_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "escalation" field.</summary>
+    public const int EscalationFieldNumber = 7;
+    private global::Ava.V1.Escalation escalation_;
+    /// <summary>
+    /// Why the procedure did not decide; set only when escalated
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ava.V1.Escalation Escalation {
+      get { return escalation_; }
+      set {
+        escalation_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3267,6 +3361,9 @@ namespace Ava.V1 {
       if (DecisionRef != other.DecisionRef) return false;
       if (!object.Equals(DecidedAt, other.DecidedAt)) return false;
       if (!object.Equals(Path, other.Path)) return false;
+      if (Value != other.Value) return false;
+      if (Escalated != other.Escalated) return false;
+      if (!object.Equals(Escalation, other.Escalation)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3278,6 +3375,9 @@ namespace Ava.V1 {
       if (DecisionRef.Length != 0) hash ^= DecisionRef.GetHashCode();
       if (decidedAt_ != null) hash ^= DecidedAt.GetHashCode();
       if (path_ != null) hash ^= Path.GetHashCode();
+      if (HasValue) hash ^= Value.GetHashCode();
+      if (Escalated != false) hash ^= Escalated.GetHashCode();
+      if (escalation_ != null) hash ^= Escalation.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3312,6 +3412,18 @@ namespace Ava.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(Path);
       }
+      if (HasValue) {
+        output.WriteRawTag(42);
+        output.WriteString(Value);
+      }
+      if (Escalated != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(Escalated);
+      }
+      if (escalation_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Escalation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3338,6 +3450,18 @@ namespace Ava.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(Path);
       }
+      if (HasValue) {
+        output.WriteRawTag(42);
+        output.WriteString(Value);
+      }
+      if (Escalated != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(Escalated);
+      }
+      if (escalation_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Escalation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3359,6 +3483,15 @@ namespace Ava.V1 {
       }
       if (path_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Path);
+      }
+      if (HasValue) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
+      }
+      if (Escalated != false) {
+        size += 1 + 1;
+      }
+      if (escalation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Escalation);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3389,6 +3522,18 @@ namespace Ava.V1 {
           Path = new global::Ava.V1.DecisionNode();
         }
         Path.MergeFrom(other.Path);
+      }
+      if (other.HasValue) {
+        Value = other.Value;
+      }
+      if (other.Escalated != false) {
+        Escalated = other.Escalated;
+      }
+      if (other.escalation_ != null) {
+        if (escalation_ == null) {
+          Escalation = new global::Ava.V1.Escalation();
+        }
+        Escalation.MergeFrom(other.Escalation);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3431,6 +3576,21 @@ namespace Ava.V1 {
             input.ReadMessage(Path);
             break;
           }
+          case 42: {
+            Value = input.ReadString();
+            break;
+          }
+          case 48: {
+            Escalated = input.ReadBool();
+            break;
+          }
+          case 58: {
+            if (escalation_ == null) {
+              Escalation = new global::Ava.V1.Escalation();
+            }
+            input.ReadMessage(Escalation);
+            break;
+          }
         }
       }
     #endif
@@ -3470,6 +3630,21 @@ namespace Ava.V1 {
               Path = new global::Ava.V1.DecisionNode();
             }
             input.ReadMessage(Path);
+            break;
+          }
+          case 42: {
+            Value = input.ReadString();
+            break;
+          }
+          case 48: {
+            Escalated = input.ReadBool();
+            break;
+          }
+          case 58: {
+            if (escalation_ == null) {
+              Escalation = new global::Ava.V1.Escalation();
+            }
+            input.ReadMessage(Escalation);
             break;
           }
         }
@@ -3550,17 +3725,31 @@ namespace Ava.V1 {
 
     /// <summary>Field number for the "answer" field.</summary>
     public const int AnswerFieldNumber = 3;
-    private string answer_ = "";
+    private readonly static string AnswerDefaultValue = "";
+
+    private string answer_;
     /// <summary>
-    /// The answer the step read; empty when it went unanswered
+    /// The answer the step read; absent when it went unanswered
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Answer {
-      get { return answer_; }
+      get { return answer_ ?? AnswerDefaultValue; }
       set {
         answer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "answer" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAnswer {
+      get { return answer_ != null; }
+    }
+    /// <summary>Clears the value of the "answer" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAnswer() {
+      answer_ = null;
     }
 
     /// <summary>Field number for the "confidence" field.</summary>
@@ -3667,7 +3856,7 @@ namespace Ava.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Predicate.Length != 0) hash ^= Predicate.GetHashCode();
-      if (Answer.Length != 0) hash ^= Answer.GetHashCode();
+      if (HasAnswer) hash ^= Answer.GetHashCode();
       if (confidence_ != null) hash ^= Confidence.GetHashCode();
       hash ^= Answers.GetHashCode();
       if (TargetName.Length != 0) hash ^= TargetName.GetHashCode();
@@ -3695,7 +3884,7 @@ namespace Ava.V1 {
         output.WriteRawTag(10);
         output.WriteString(Predicate);
       }
-      if (Answer.Length != 0) {
+      if (HasAnswer) {
         output.WriteRawTag(26);
         output.WriteString(Answer);
       }
@@ -3730,7 +3919,7 @@ namespace Ava.V1 {
         output.WriteRawTag(10);
         output.WriteString(Predicate);
       }
-      if (Answer.Length != 0) {
+      if (HasAnswer) {
         output.WriteRawTag(26);
         output.WriteString(Answer);
       }
@@ -3764,7 +3953,7 @@ namespace Ava.V1 {
       if (Predicate.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Predicate);
       }
-      if (Answer.Length != 0) {
+      if (HasAnswer) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Answer);
       }
       if (confidence_ != null) {
@@ -3795,7 +3984,7 @@ namespace Ava.V1 {
       if (other.Predicate.Length != 0) {
         Predicate = other.Predicate;
       }
-      if (other.Answer.Length != 0) {
+      if (other.HasAnswer) {
         Answer = other.Answer;
       }
       if (other.confidence_ != null) {

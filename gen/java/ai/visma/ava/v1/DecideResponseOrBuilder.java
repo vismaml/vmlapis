@@ -11,19 +11,28 @@ public interface DecideResponseOrBuilder extends
 
   /**
    * <pre>
-   * The decided value; empty when escalated
+   * The decided value; absent when escalated
    * </pre>
    *
-   * <code>string value = 1 [json_name = "value"];</code>
+   * <code>optional string value = 1 [json_name = "value"];</code>
+   * @return Whether the value field is set.
+   */
+  boolean hasValue();
+  /**
+   * <pre>
+   * The decided value; absent when escalated
+   * </pre>
+   *
+   * <code>optional string value = 1 [json_name = "value"];</code>
    * @return The value.
    */
   java.lang.String getValue();
   /**
    * <pre>
-   * The decided value; empty when escalated
+   * The decided value; absent when escalated
    * </pre>
    *
-   * <code>string value = 1 [json_name = "value"];</code>
+   * <code>optional string value = 1 [json_name = "value"];</code>
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString

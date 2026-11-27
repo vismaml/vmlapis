@@ -92,4 +92,70 @@ public interface GetDecisionPathResponseOrBuilder extends
    * <code>.ava.v1.DecisionNode path = 4 [json_name = "path"];</code>
    */
   ai.visma.ava.v1.DecisionNodeOrBuilder getPathOrBuilder();
+
+  /**
+   * <pre>
+   * The decided value; absent when escalated
+   * </pre>
+   *
+   * <code>optional string value = 5 [json_name = "value"];</code>
+   * @return Whether the value field is set.
+   */
+  boolean hasValue();
+  /**
+   * <pre>
+   * The decided value; absent when escalated
+   * </pre>
+   *
+   * <code>optional string value = 5 [json_name = "value"];</code>
+   * @return The value.
+   */
+  java.lang.String getValue();
+  /**
+   * <pre>
+   * The decided value; absent when escalated
+   * </pre>
+   *
+   * <code>optional string value = 5 [json_name = "value"];</code>
+   * @return The bytes for value.
+   */
+  com.google.protobuf.ByteString
+      getValueBytes();
+
+  /**
+   * <pre>
+   * True when the procedure did not decide
+   * </pre>
+   *
+   * <code>bool escalated = 6 [json_name = "escalated"];</code>
+   * @return The escalated.
+   */
+  boolean getEscalated();
+
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+   * @return Whether the escalation field is set.
+   */
+  boolean hasEscalation();
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+   * @return The escalation.
+   */
+  ai.visma.ava.v1.Escalation getEscalation();
+  /**
+   * <pre>
+   * Why the procedure did not decide; set only when escalated
+   * </pre>
+   *
+   * <code>.ava.v1.Escalation escalation = 7 [json_name = "escalation"];</code>
+   */
+  ai.visma.ava.v1.EscalationOrBuilder getEscalationOrBuilder();
 }

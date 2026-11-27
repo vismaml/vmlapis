@@ -40,6 +40,8 @@ export namespace DecideRequest {
 export class DecideResponse extends jspb.Message {
   getValue(): string;
   setValue(value: string): DecideResponse;
+  hasValue(): boolean;
+  clearValue(): DecideResponse;
 
   getEscalated(): boolean;
   setEscalated(value: boolean): DecideResponse;
@@ -75,7 +77,7 @@ export class DecideResponse extends jspb.Message {
 
 export namespace DecideResponse {
   export type AsObject = {
-    value: string,
+    value?: string,
     escalated: boolean,
     stepsList: Array<WalkedStep.AsObject>,
     procedureVersion: number,
@@ -83,11 +85,18 @@ export namespace DecideResponse {
     escalation?: Escalation.AsObject,
     decidedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
   }
+
+  export enum ValueCase { 
+    _VALUE_NOT_SET = 0,
+    VALUE = 1,
+  }
 }
 
 export class WalkedStep extends jspb.Message {
   getAnswer(): string;
   setAnswer(value: string): WalkedStep;
+  hasAnswer(): boolean;
+  clearAnswer(): WalkedStep;
 
   getConfidence(): Confidence | undefined;
   setConfidence(value?: Confidence): WalkedStep;
@@ -120,12 +129,17 @@ export class WalkedStep extends jspb.Message {
 
 export namespace WalkedStep {
   export type AsObject = {
-    answer: string,
+    answer?: string,
     confidence?: Confidence.AsObject,
     stepId: string,
     factsList: Array<string>,
     branch?: TakenBranch.AsObject,
     predicate: string,
+  }
+
+  export enum AnswerCase { 
+    _ANSWER_NOT_SET = 0,
+    ANSWER = 2,
   }
 }
 
@@ -325,6 +339,19 @@ export class GetDecisionPathResponse extends jspb.Message {
   hasPath(): boolean;
   clearPath(): GetDecisionPathResponse;
 
+  getValue(): string;
+  setValue(value: string): GetDecisionPathResponse;
+  hasValue(): boolean;
+  clearValue(): GetDecisionPathResponse;
+
+  getEscalated(): boolean;
+  setEscalated(value: boolean): GetDecisionPathResponse;
+
+  getEscalation(): Escalation | undefined;
+  setEscalation(value?: Escalation): GetDecisionPathResponse;
+  hasEscalation(): boolean;
+  clearEscalation(): GetDecisionPathResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetDecisionPathResponse.AsObject;
   static toObject(includeInstance: boolean, msg: GetDecisionPathResponse): GetDecisionPathResponse.AsObject;
@@ -339,6 +366,14 @@ export namespace GetDecisionPathResponse {
     decisionRef: string,
     decidedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     path?: DecisionNode.AsObject,
+    value?: string,
+    escalated: boolean,
+    escalation?: Escalation.AsObject,
+  }
+
+  export enum ValueCase { 
+    _VALUE_NOT_SET = 0,
+    VALUE = 5,
   }
 }
 
@@ -348,6 +383,8 @@ export class DecisionNode extends jspb.Message {
 
   getAnswer(): string;
   setAnswer(value: string): DecisionNode;
+  hasAnswer(): boolean;
+  clearAnswer(): DecisionNode;
 
   getConfidence(): Confidence | undefined;
   setConfidence(value?: Confidence): DecisionNode;
@@ -379,12 +416,17 @@ export class DecisionNode extends jspb.Message {
 export namespace DecisionNode {
   export type AsObject = {
     predicate: string,
-    answer: string,
+    answer?: string,
     confidence?: Confidence.AsObject,
     answersMap: Array<[string, DecisionNode.AsObject]>,
     targetName: string,
     targetValue: string,
     escalation?: Escalation.AsObject,
+  }
+
+  export enum AnswerCase { 
+    _ANSWER_NOT_SET = 0,
+    ANSWER = 3,
   }
 }
 

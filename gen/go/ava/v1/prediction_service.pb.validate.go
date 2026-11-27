@@ -205,8 +205,6 @@ func (m *DecideResponse) validate(all bool) error {
 
 	var errors []error
 
-	// no validation rules for Value
-
 	// no validation rules for Escalated
 
 	for idx, item := range m.GetSteps() {
@@ -303,6 +301,10 @@ func (m *DecideResponse) validate(all bool) error {
 				cause:  err,
 			}
 		}
+	}
+
+	if m.Value != nil {
+		// no validation rules for Value
 	}
 
 	if len(errors) > 0 {
@@ -405,8 +407,6 @@ func (m *WalkedStep) validate(all bool) error {
 
 	var errors []error
 
-	// no validation rules for Answer
-
 	if all {
 		switch v := interface{}(m.GetConfidence()).(type) {
 		case interface{ ValidateAll() error }:
@@ -468,6 +468,10 @@ func (m *WalkedStep) validate(all bool) error {
 	}
 
 	// no validation rules for Predicate
+
+	if m.Answer != nil {
+		// no validation rules for Answer
+	}
 
 	if len(errors) > 0 {
 		return WalkedStepMultiError(errors)
@@ -1469,6 +1473,41 @@ func (m *GetDecisionPathResponse) validate(all bool) error {
 		}
 	}
 
+	// no validation rules for Escalated
+
+	if all {
+		switch v := interface{}(m.GetEscalation()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, GetDecisionPathResponseValidationError{
+					field:  "Escalation",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, GetDecisionPathResponseValidationError{
+					field:  "Escalation",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetEscalation()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return GetDecisionPathResponseValidationError{
+				field:  "Escalation",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if m.Value != nil {
+		// no validation rules for Value
+	}
+
 	if len(errors) > 0 {
 		return GetDecisionPathResponseMultiError(errors)
 	}
@@ -1572,8 +1611,6 @@ func (m *DecisionNode) validate(all bool) error {
 	var errors []error
 
 	// no validation rules for Predicate
-
-	// no validation rules for Answer
 
 	if all {
 		switch v := interface{}(m.GetConfidence()).(type) {
@@ -1681,6 +1718,10 @@ func (m *DecisionNode) validate(all bool) error {
 				cause:  err,
 			}
 		}
+	}
+
+	if m.Answer != nil {
+		// no validation rules for Answer
 	}
 
 	if len(errors) > 0 {

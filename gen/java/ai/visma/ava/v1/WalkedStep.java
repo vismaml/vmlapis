@@ -53,10 +53,22 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object answer_ = "";
   /**
    * <pre>
-   * The answer the step read; empty when it went unanswered
+   * The answer the step read; absent when it went unanswered
    * </pre>
    *
-   * <code>string answer = 2 [json_name = "answer"];</code>
+   * <code>optional string answer = 2 [json_name = "answer"];</code>
+   * @return Whether the answer field is set.
+   */
+  @java.lang.Override
+  public boolean hasAnswer() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * The answer the step read; absent when it went unanswered
+   * </pre>
+   *
+   * <code>optional string answer = 2 [json_name = "answer"];</code>
    * @return The answer.
    */
   @java.lang.Override
@@ -74,10 +86,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The answer the step read; empty when it went unanswered
+   * The answer the step read; absent when it went unanswered
    * </pre>
    *
-   * <code>string answer = 2 [json_name = "answer"];</code>
+   * <code>optional string answer = 2 [json_name = "answer"];</code>
    * @return The bytes for answer.
    */
   @java.lang.Override
@@ -107,7 +119,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConfidence() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -245,7 +257,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasBranch() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -332,10 +344,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(answer_)) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, answer_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getConfidence());
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(stepId_)) {
@@ -344,7 +356,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < facts_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 5, facts_.getRaw(i));
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(6, getBranch());
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(predicate_)) {
@@ -359,10 +371,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(answer_)) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, answer_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getConfidence());
     }
@@ -377,7 +389,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getFactsList().size();
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getBranch());
     }
@@ -399,8 +411,11 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.ava.v1.WalkedStep other = (ai.visma.ava.v1.WalkedStep) obj;
 
-    if (!getAnswer()
-        .equals(other.getAnswer())) return false;
+    if (hasAnswer() != other.hasAnswer()) return false;
+    if (hasAnswer()) {
+      if (!getAnswer()
+          .equals(other.getAnswer())) return false;
+    }
     if (hasConfidence() != other.hasConfidence()) return false;
     if (hasConfidence()) {
       if (!getConfidence()
@@ -428,8 +443,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ANSWER_FIELD_NUMBER;
-    hash = (53 * hash) + getAnswer().hashCode();
+    if (hasAnswer()) {
+      hash = (37 * hash) + ANSWER_FIELD_NUMBER;
+      hash = (53 * hash) + getAnswer().hashCode();
+    }
     if (hasConfidence()) {
       hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
       hash = (53 * hash) + getConfidence().hashCode();
@@ -632,15 +649,16 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(ai.visma.ava.v1.WalkedStep result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.answer_ = answer_;
+        to_bitField0_ |= 0x00000001;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.confidence_ = confidenceBuilder_ == null
             ? confidence_
             : confidenceBuilder_.build();
-        to_bitField0_ |= 0x00000001;
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.stepId_ = stepId_;
@@ -653,7 +671,7 @@ private static final long serialVersionUID = 0L;
         result.branch_ = branchBuilder_ == null
             ? branch_
             : branchBuilder_.build();
-        to_bitField0_ |= 0x00000002;
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.predicate_ = predicate_;
@@ -673,7 +691,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.ava.v1.WalkedStep other) {
       if (other == ai.visma.ava.v1.WalkedStep.getDefaultInstance()) return this;
-      if (!other.getAnswer().isEmpty()) {
+      if (other.hasAnswer()) {
         answer_ = other.answer_;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -785,10 +803,21 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object answer_ = "";
     /**
      * <pre>
-     * The answer the step read; empty when it went unanswered
+     * The answer the step read; absent when it went unanswered
      * </pre>
      *
-     * <code>string answer = 2 [json_name = "answer"];</code>
+     * <code>optional string answer = 2 [json_name = "answer"];</code>
+     * @return Whether the answer field is set.
+     */
+    public boolean hasAnswer() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The answer the step read; absent when it went unanswered
+     * </pre>
+     *
+     * <code>optional string answer = 2 [json_name = "answer"];</code>
      * @return The answer.
      */
     public java.lang.String getAnswer() {
@@ -805,10 +834,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The answer the step read; empty when it went unanswered
+     * The answer the step read; absent when it went unanswered
      * </pre>
      *
-     * <code>string answer = 2 [json_name = "answer"];</code>
+     * <code>optional string answer = 2 [json_name = "answer"];</code>
      * @return The bytes for answer.
      */
     public com.google.protobuf.ByteString
@@ -826,10 +855,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The answer the step read; empty when it went unanswered
+     * The answer the step read; absent when it went unanswered
      * </pre>
      *
-     * <code>string answer = 2 [json_name = "answer"];</code>
+     * <code>optional string answer = 2 [json_name = "answer"];</code>
      * @param value The answer to set.
      * @return This builder for chaining.
      */
@@ -843,10 +872,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The answer the step read; empty when it went unanswered
+     * The answer the step read; absent when it went unanswered
      * </pre>
      *
-     * <code>string answer = 2 [json_name = "answer"];</code>
+     * <code>optional string answer = 2 [json_name = "answer"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAnswer() {
@@ -857,10 +886,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The answer the step read; empty when it went unanswered
+     * The answer the step read; absent when it went unanswered
      * </pre>
      *
-     * <code>string answer = 2 [json_name = "answer"];</code>
+     * <code>optional string answer = 2 [json_name = "answer"];</code>
      * @param value The bytes for answer to set.
      * @return This builder for chaining.
      */

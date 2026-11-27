@@ -160,16 +160,22 @@ class ProcedureNode(_message.Message):
     def __init__(self, predicate: _Optional[str] = ..., answers: _Optional[_Mapping[str, ProcedureNode]] = ..., target_name: _Optional[str] = ..., target_value: _Optional[str] = ...) -> None: ...
 
 class GetDecisionPathResponse(_message.Message):
-    __slots__ = ("procedure_version", "decision_ref", "decided_at", "path")
+    __slots__ = ("procedure_version", "decision_ref", "decided_at", "path", "value", "escalated", "escalation")
     PROCEDURE_VERSION_FIELD_NUMBER: _ClassVar[int]
     DECISION_REF_FIELD_NUMBER: _ClassVar[int]
     DECIDED_AT_FIELD_NUMBER: _ClassVar[int]
     PATH_FIELD_NUMBER: _ClassVar[int]
+    VALUE_FIELD_NUMBER: _ClassVar[int]
+    ESCALATED_FIELD_NUMBER: _ClassVar[int]
+    ESCALATION_FIELD_NUMBER: _ClassVar[int]
     procedure_version: int
     decision_ref: str
     decided_at: _timestamp_pb2.Timestamp
     path: DecisionNode
-    def __init__(self, procedure_version: _Optional[int] = ..., decision_ref: _Optional[str] = ..., decided_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., path: _Optional[_Union[DecisionNode, _Mapping]] = ...) -> None: ...
+    value: str
+    escalated: bool
+    escalation: Escalation
+    def __init__(self, procedure_version: _Optional[int] = ..., decision_ref: _Optional[str] = ..., decided_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., path: _Optional[_Union[DecisionNode, _Mapping]] = ..., value: _Optional[str] = ..., escalated: _Optional[bool] = ..., escalation: _Optional[_Union[Escalation, _Mapping]] = ...) -> None: ...
 
 class DecisionNode(_message.Message):
     __slots__ = ("predicate", "answer", "confidence", "answers", "target_name", "target_value", "escalation")
