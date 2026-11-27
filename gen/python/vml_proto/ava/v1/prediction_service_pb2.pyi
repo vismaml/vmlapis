@@ -45,7 +45,7 @@ class DecideRequest(_message.Message):
     def __init__(self, dataset_name: _Optional[str] = ..., output_name: _Optional[str] = ..., fields: _Optional[_Mapping[str, str]] = ..., model: _Optional[_Union[Model, str]] = ...) -> None: ...
 
 class DecideResponse(_message.Message):
-    __slots__ = ("value", "escalated", "steps", "procedure_version", "decision_ref", "escalation", "decided_at")
+    __slots__ = ("value", "escalated", "steps", "procedure_version", "decision_ref", "escalation", "decided_at", "path")
     VALUE_FIELD_NUMBER: _ClassVar[int]
     ESCALATED_FIELD_NUMBER: _ClassVar[int]
     STEPS_FIELD_NUMBER: _ClassVar[int]
@@ -53,6 +53,7 @@ class DecideResponse(_message.Message):
     DECISION_REF_FIELD_NUMBER: _ClassVar[int]
     ESCALATION_FIELD_NUMBER: _ClassVar[int]
     DECIDED_AT_FIELD_NUMBER: _ClassVar[int]
+    PATH_FIELD_NUMBER: _ClassVar[int]
     value: str
     escalated: bool
     steps: _containers.RepeatedCompositeFieldContainer[WalkedStep]
@@ -60,7 +61,8 @@ class DecideResponse(_message.Message):
     decision_ref: str
     escalation: Escalation
     decided_at: _timestamp_pb2.Timestamp
-    def __init__(self, value: _Optional[str] = ..., escalated: _Optional[bool] = ..., steps: _Optional[_Iterable[_Union[WalkedStep, _Mapping]]] = ..., procedure_version: _Optional[int] = ..., decision_ref: _Optional[str] = ..., escalation: _Optional[_Union[Escalation, _Mapping]] = ..., decided_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
+    path: DecisionNode
+    def __init__(self, value: _Optional[str] = ..., escalated: _Optional[bool] = ..., steps: _Optional[_Iterable[_Union[WalkedStep, _Mapping]]] = ..., procedure_version: _Optional[int] = ..., decision_ref: _Optional[str] = ..., escalation: _Optional[_Union[Escalation, _Mapping]] = ..., decided_at: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., path: _Optional[_Union[DecisionNode, _Mapping]] = ...) -> None: ...
 
 class WalkedStep(_message.Message):
     __slots__ = ("answer", "confidence", "step_id", "facts", "branch", "predicate")

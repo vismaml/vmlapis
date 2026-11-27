@@ -67,6 +67,11 @@ export class DecideResponse extends jspb.Message {
   hasDecidedAt(): boolean;
   clearDecidedAt(): DecideResponse;
 
+  getPath(): DecisionNode | undefined;
+  setPath(value?: DecisionNode): DecideResponse;
+  hasPath(): boolean;
+  clearPath(): DecideResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DecideResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DecideResponse): DecideResponse.AsObject;
@@ -84,6 +89,7 @@ export namespace DecideResponse {
     decisionRef: string,
     escalation?: Escalation.AsObject,
     decidedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    path?: DecisionNode.AsObject,
   }
 
   export enum ValueCase { 

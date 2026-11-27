@@ -35,90 +35,90 @@ namespace Ava.V1 {
             "KAsyIS5hdmEudjEuRGVjaWRlUmVxdWVzdC5GaWVsZHNFbnRyeVIGZmllbGRz",
             "Ei0KBW1vZGVsGAQgASgOMg0uYXZhLnYxLk1vZGVsQgj6QgWCAQIQAVIFbW9k",
             "ZWwaOQoLRmllbGRzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUY",
-            "AiABKAlSBXZhbHVlOgI4ASK8AgoORGVjaWRlUmVzcG9uc2USGQoFdmFsdWUY",
+            "AiABKAlSBXZhbHVlOgI4ASLmAgoORGVjaWRlUmVzcG9uc2USGQoFdmFsdWUY",
             "ASABKAlIAFIFdmFsdWWIAQESHAoJZXNjYWxhdGVkGAIgASgIUgllc2NhbGF0",
             "ZWQSKAoFc3RlcHMYAyADKAsyEi5hdmEudjEuV2Fsa2VkU3RlcFIFc3RlcHMS",
             "KwoRcHJvY2VkdXJlX3ZlcnNpb24YBCABKAVSEHByb2NlZHVyZVZlcnNpb24S",
             "IQoMZGVjaXNpb25fcmVmGAUgASgJUgtkZWNpc2lvblJlZhIyCgplc2NhbGF0",
             "aW9uGAYgASgLMhIuYXZhLnYxLkVzY2FsYXRpb25SCmVzY2FsYXRpb24SOQoK",
             "ZGVjaWRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBS",
-            "CWRlY2lkZWRBdEIICgZfdmFsdWUi8gEKCldhbGtlZFN0ZXASGwoGYW5zd2Vy",
-            "GAIgASgJSABSBmFuc3dlcogBARIyCgpjb25maWRlbmNlGAMgASgLMhIuYXZh",
-            "LnYxLkNvbmZpZGVuY2VSCmNvbmZpZGVuY2USFwoHc3RlcF9pZBgEIAEoCVIG",
-            "c3RlcElkEhQKBWZhY3RzGAUgAygJUgVmYWN0cxIrCgZicmFuY2gYBiABKAsy",
-            "Ey5hdmEudjEuVGFrZW5CcmFuY2hSBmJyYW5jaBIcCglwcmVkaWNhdGUYByAB",
-            "KAlSCXByZWRpY2F0ZUIJCgdfYW5zd2VySgQIARACUghxdWVzdGlvbiK0AQoL",
-            "VGFrZW5CcmFuY2gSGwoJYnJhbmNoX2lkGAEgASgJUghicmFuY2hJZBIUCgVs",
-            "YWJlbBgCIAEoCVIFbGFiZWwSIgoMbmV4dF9zdGVwX2lkGAMgASgJSABSCm5l",
-            "eHRTdGVwSWQSIwoMb3V0cHV0X3ZhbHVlGAQgASgJSABSC291dHB1dFZhbHVl",
-            "Eh4KCWVzY2FsYXRlcxgFIAEoCEgAUgllc2NhbGF0ZXNCCQoHb3V0Y29tZSLR",
-            "AQoKRXNjYWxhdGlvbhIrCgRraW5kGAEgASgOMhcuYXZhLnYxLkVzY2FsYXRp",
-            "b24uS2luZFIEa2luZBIXCgdzdGVwX2lkGAIgASgJUgZzdGVwSWQifQoES2lu",
-            "ZBIUChBLSU5EX1VOU1BFQ0lGSUVEEAASFwoTTUlTU0lOR19JTkZPUk1BVElP",
-            "ThABEhYKEk5PX01BVENISU5HX0JSQU5DSBACEhgKFFBST0NFRFVSRV9FU0NB",
-            "TEFUSU9OEAMSFAoQRVZBTFVBVElPTl9FUlJPUhAEIrkBChJHZXREZWNpc2lv",
-            "blJlcXVlc3QSSwoMZGF0YXNldF9uYW1lGAEgASgJQij6QiVyIyiAAjIeXltB",
-            "LVphLXowLTkuXVtBLVphLXowLTlfLj4tXSokUgtkYXRhc2V0TmFtZRIsCgxk",
-            "ZWNpc2lvbl9yZWYYAiABKAlCCfpCBnIEEAEoJFILZGVjaXNpb25SZWYSKAoL",
-            "b3V0cHV0X25hbWUYAyABKAlCB/pCBHICEAFSCm91dHB1dE5hbWUirwEKE0dl",
-            "dFByb2NlZHVyZVJlcXVlc3QSSwoMZGF0YXNldF9uYW1lGAEgASgJQij6QiVy",
-            "IyiAAjIeXltBLVphLXowLTkuXVtBLVphLXowLTlfLj4tXSokUgtkYXRhc2V0",
-            "TmFtZRIoCgtvdXRwdXRfbmFtZRgCIAEoCUIH+kIEcgIQAVIKb3V0cHV0TmFt",
-            "ZRIhCgd2ZXJzaW9uGAMgASgFQgf6QgQaAigAUgd2ZXJzaW9uIm4KFEdldFBy",
-            "b2NlZHVyZVJlc3BvbnNlEisKEXByb2NlZHVyZV92ZXJzaW9uGAEgASgFUhBw",
-            "cm9jZWR1cmVWZXJzaW9uEikKBHRyZWUYAiABKAsyFS5hdmEudjEuUHJvY2Vk",
-            "dXJlTm9kZVIEdHJlZSKCAgoNUHJvY2VkdXJlTm9kZRIcCglwcmVkaWNhdGUY",
-            "ASABKAlSCXByZWRpY2F0ZRI8CgdhbnN3ZXJzGAIgAygLMiIuYXZhLnYxLlBy",
-            "b2NlZHVyZU5vZGUuQW5zd2Vyc0VudHJ5UgdhbnN3ZXJzEh8KC3RhcmdldF9u",
-            "YW1lGAMgASgJUgp0YXJnZXROYW1lEiEKDHRhcmdldF92YWx1ZRgEIAEoCVIL",
-            "dGFyZ2V0VmFsdWUaUQoMQW5zd2Vyc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5",
-            "EisKBXZhbHVlGAIgASgLMhUuYXZhLnYxLlByb2NlZHVyZU5vZGVSBXZhbHVl",
-            "OgI4ASLFAgoXR2V0RGVjaXNpb25QYXRoUmVzcG9uc2USKwoRcHJvY2VkdXJl",
-            "X3ZlcnNpb24YASABKAVSEHByb2NlZHVyZVZlcnNpb24SIQoMZGVjaXNpb25f",
-            "cmVmGAIgASgJUgtkZWNpc2lvblJlZhI5CgpkZWNpZGVkX2F0GAMgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJZGVjaWRlZEF0EigKBHBhdGgY",
-            "BCABKAsyFC5hdmEudjEuRGVjaXNpb25Ob2RlUgRwYXRoEhkKBXZhbHVlGAUg",
-            "ASgJSABSBXZhbHVliAEBEhwKCWVzY2FsYXRlZBgGIAEoCFIJZXNjYWxhdGVk",
-            "EjIKCmVzY2FsYXRpb24YByABKAsyEi5hdmEudjEuRXNjYWxhdGlvblIKZXNj",
-            "YWxhdGlvbkIICgZfdmFsdWUinwMKDERlY2lzaW9uTm9kZRIcCglwcmVkaWNh",
-            "dGUYASABKAlSCXByZWRpY2F0ZRIbCgZhbnN3ZXIYAyABKAlIAFIGYW5zd2Vy",
-            "iAEBEjIKCmNvbmZpZGVuY2UYBCABKAsyEi5hdmEudjEuQ29uZmlkZW5jZVIK",
-            "Y29uZmlkZW5jZRI7CgdhbnN3ZXJzGAUgAygLMiEuYXZhLnYxLkRlY2lzaW9u",
-            "Tm9kZS5BbnN3ZXJzRW50cnlSB2Fuc3dlcnMSHwoLdGFyZ2V0X25hbWUYBiAB",
-            "KAlSCnRhcmdldE5hbWUSIQoMdGFyZ2V0X3ZhbHVlGAcgASgJUgt0YXJnZXRW",
-            "YWx1ZRIyCgplc2NhbGF0aW9uGAggASgLMhIuYXZhLnYxLkVzY2FsYXRpb25S",
-            "CmVzY2FsYXRpb24aUAoMQW5zd2Vyc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5",
-            "EioKBXZhbHVlGAIgASgLMhQuYXZhLnYxLkRlY2lzaW9uTm9kZVIFdmFsdWU6",
-            "AjgBQgkKB19hbnN3ZXJKBAgCEANSCHF1ZXN0aW9uIr4BCgpDb25maWRlbmNl",
-            "Ei4KBWxldmVsGAEgASgOMhguYXZhLnYxLkNvbmZpZGVuY2UuTGV2ZWxSBWxl",
-            "dmVsEjEKBXZhbHVlGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFs",
-            "dWVSBXZhbHVlIk0KBUxldmVsEgsKB1VOS05PV04QABIMCghWRVJZX0xPVxAB",
-            "EgcKA0xPVxACEgcKA01JRBADEggKBEhJR0gQBBINCglWRVJZX0hJR0gQBSoz",
-            "CgVNb2RlbBIICgRRV0VOEAASCAoEQ0xFRhABEggKBEJFUlQQAhIMCghSRVJB",
-            "TktFUhADMtYEChFQcmVkaWN0aW9uU2VydmljZRJmCgZEZWNpZGUSFS5hdmEu",
-            "djEuRGVjaWRlUmVxdWVzdBoWLmF2YS52MS5EZWNpZGVSZXNwb25zZSItgtPk",
-            "kwInIiIvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX06ZGVjaWRlOgEqEn8K",
-            "C0dldERlY2lzaW9uEhouYXZhLnYxLkdldERlY2lzaW9uUmVxdWVzdBoWLmF2",
-            "YS52MS5EZWNpZGVSZXNwb25zZSI8gtPkkwI2EjQvdjIvZGF0YXNldHMve2Rh",
-            "dGFzZXRfbmFtZX0vZGVjaXNpb25zL3tkZWNpc2lvbl9yZWZ9Eo4BCgxHZXRQ",
-            "cm9jZWR1cmUSGy5hdmEudjEuR2V0UHJvY2VkdXJlUmVxdWVzdBocLmF2YS52",
-            "MS5HZXRQcm9jZWR1cmVSZXNwb25zZSJDgtPkkwI9EjsvdjIvZGF0YXNldHMv",
-            "e2RhdGFzZXRfbmFtZX0vb3V0cHV0cy97b3V0cHV0X25hbWV9L3Byb2NlZHVy",
-            "ZRKRAQoPR2V0RGVjaXNpb25QYXRoEhouYXZhLnYxLkdldERlY2lzaW9uUmVx",
-            "dWVzdBofLmF2YS52MS5HZXREZWNpc2lvblBhdGhSZXNwb25zZSJBgtPkkwI7",
-            "EjkvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX0vZGVjaXNpb25zL3tkZWNp",
-            "c2lvbl9yZWZ9L3BhdGgaM5JBMBIuRGVjaWRlIG91dHB1dHMgd2l0aCBhIGRh",
-            "dGFzZXQncyBBVkEgcHJvY2VkdXJlLkLDAQoPYWkudmlzbWEuYXZhLnYxQhZQ",
-            "cmVkaWN0aW9uU2VydmljZVByb3RvUAFaKmdpdGh1Yi5jb20vZS1jb25vbWlj",
-            "L3ZtbGFwaXMvZ2VuL2dvL2F2YS92MaICA0FYWKoCBkF2YS5WMcoCBkF2YVxW",
-            "MeICEkF2YVxWMVxHUEJNZXRhZGF0YeoCB0F2YTo6VjGSQTISCQoDQVZBMgJ2",
-            "MSoBAjIQYXBwbGljYXRpb24vanNvbjoQYXBwbGljYXRpb24vanNvbmIGcHJv",
-            "dG8z"));
+            "CWRlY2lkZWRBdBIoCgRwYXRoGAggASgLMhQuYXZhLnYxLkRlY2lzaW9uTm9k",
+            "ZVIEcGF0aEIICgZfdmFsdWUi8gEKCldhbGtlZFN0ZXASGwoGYW5zd2VyGAIg",
+            "ASgJSABSBmFuc3dlcogBARIyCgpjb25maWRlbmNlGAMgASgLMhIuYXZhLnYx",
+            "LkNvbmZpZGVuY2VSCmNvbmZpZGVuY2USFwoHc3RlcF9pZBgEIAEoCVIGc3Rl",
+            "cElkEhQKBWZhY3RzGAUgAygJUgVmYWN0cxIrCgZicmFuY2gYBiABKAsyEy5h",
+            "dmEudjEuVGFrZW5CcmFuY2hSBmJyYW5jaBIcCglwcmVkaWNhdGUYByABKAlS",
+            "CXByZWRpY2F0ZUIJCgdfYW5zd2VySgQIARACUghxdWVzdGlvbiK0AQoLVGFr",
+            "ZW5CcmFuY2gSGwoJYnJhbmNoX2lkGAEgASgJUghicmFuY2hJZBIUCgVsYWJl",
+            "bBgCIAEoCVIFbGFiZWwSIgoMbmV4dF9zdGVwX2lkGAMgASgJSABSCm5leHRT",
+            "dGVwSWQSIwoMb3V0cHV0X3ZhbHVlGAQgASgJSABSC291dHB1dFZhbHVlEh4K",
+            "CWVzY2FsYXRlcxgFIAEoCEgAUgllc2NhbGF0ZXNCCQoHb3V0Y29tZSLRAQoK",
+            "RXNjYWxhdGlvbhIrCgRraW5kGAEgASgOMhcuYXZhLnYxLkVzY2FsYXRpb24u",
+            "S2luZFIEa2luZBIXCgdzdGVwX2lkGAIgASgJUgZzdGVwSWQifQoES2luZBIU",
+            "ChBLSU5EX1VOU1BFQ0lGSUVEEAASFwoTTUlTU0lOR19JTkZPUk1BVElPThAB",
+            "EhYKEk5PX01BVENISU5HX0JSQU5DSBACEhgKFFBST0NFRFVSRV9FU0NBTEFU",
+            "SU9OEAMSFAoQRVZBTFVBVElPTl9FUlJPUhAEIrkBChJHZXREZWNpc2lvblJl",
+            "cXVlc3QSSwoMZGF0YXNldF9uYW1lGAEgASgJQij6QiVyIyiAAjIeXltBLVph",
+            "LXowLTkuXVtBLVphLXowLTlfLj4tXSokUgtkYXRhc2V0TmFtZRIsCgxkZWNp",
+            "c2lvbl9yZWYYAiABKAlCCfpCBnIEEAEoJFILZGVjaXNpb25SZWYSKAoLb3V0",
+            "cHV0X25hbWUYAyABKAlCB/pCBHICEAFSCm91dHB1dE5hbWUirwEKE0dldFBy",
+            "b2NlZHVyZVJlcXVlc3QSSwoMZGF0YXNldF9uYW1lGAEgASgJQij6QiVyIyiA",
+            "AjIeXltBLVphLXowLTkuXVtBLVphLXowLTlfLj4tXSokUgtkYXRhc2V0TmFt",
+            "ZRIoCgtvdXRwdXRfbmFtZRgCIAEoCUIH+kIEcgIQAVIKb3V0cHV0TmFtZRIh",
+            "Cgd2ZXJzaW9uGAMgASgFQgf6QgQaAigAUgd2ZXJzaW9uIm4KFEdldFByb2Nl",
+            "ZHVyZVJlc3BvbnNlEisKEXByb2NlZHVyZV92ZXJzaW9uGAEgASgFUhBwcm9j",
+            "ZWR1cmVWZXJzaW9uEikKBHRyZWUYAiABKAsyFS5hdmEudjEuUHJvY2VkdXJl",
+            "Tm9kZVIEdHJlZSKCAgoNUHJvY2VkdXJlTm9kZRIcCglwcmVkaWNhdGUYASAB",
+            "KAlSCXByZWRpY2F0ZRI8CgdhbnN3ZXJzGAIgAygLMiIuYXZhLnYxLlByb2Nl",
+            "ZHVyZU5vZGUuQW5zd2Vyc0VudHJ5UgdhbnN3ZXJzEh8KC3RhcmdldF9uYW1l",
+            "GAMgASgJUgp0YXJnZXROYW1lEiEKDHRhcmdldF92YWx1ZRgEIAEoCVILdGFy",
+            "Z2V0VmFsdWUaUQoMQW5zd2Vyc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EisK",
+            "BXZhbHVlGAIgASgLMhUuYXZhLnYxLlByb2NlZHVyZU5vZGVSBXZhbHVlOgI4",
+            "ASLFAgoXR2V0RGVjaXNpb25QYXRoUmVzcG9uc2USKwoRcHJvY2VkdXJlX3Zl",
+            "cnNpb24YASABKAVSEHByb2NlZHVyZVZlcnNpb24SIQoMZGVjaXNpb25fcmVm",
+            "GAIgASgJUgtkZWNpc2lvblJlZhI5CgpkZWNpZGVkX2F0GAMgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJZGVjaWRlZEF0EigKBHBhdGgYBCAB",
+            "KAsyFC5hdmEudjEuRGVjaXNpb25Ob2RlUgRwYXRoEhkKBXZhbHVlGAUgASgJ",
+            "SABSBXZhbHVliAEBEhwKCWVzY2FsYXRlZBgGIAEoCFIJZXNjYWxhdGVkEjIK",
+            "CmVzY2FsYXRpb24YByABKAsyEi5hdmEudjEuRXNjYWxhdGlvblIKZXNjYWxh",
+            "dGlvbkIICgZfdmFsdWUinwMKDERlY2lzaW9uTm9kZRIcCglwcmVkaWNhdGUY",
+            "ASABKAlSCXByZWRpY2F0ZRIbCgZhbnN3ZXIYAyABKAlIAFIGYW5zd2VyiAEB",
+            "EjIKCmNvbmZpZGVuY2UYBCABKAsyEi5hdmEudjEuQ29uZmlkZW5jZVIKY29u",
+            "ZmlkZW5jZRI7CgdhbnN3ZXJzGAUgAygLMiEuYXZhLnYxLkRlY2lzaW9uTm9k",
+            "ZS5BbnN3ZXJzRW50cnlSB2Fuc3dlcnMSHwoLdGFyZ2V0X25hbWUYBiABKAlS",
+            "CnRhcmdldE5hbWUSIQoMdGFyZ2V0X3ZhbHVlGAcgASgJUgt0YXJnZXRWYWx1",
+            "ZRIyCgplc2NhbGF0aW9uGAggASgLMhIuYXZhLnYxLkVzY2FsYXRpb25SCmVz",
+            "Y2FsYXRpb24aUAoMQW5zd2Vyc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EioK",
+            "BXZhbHVlGAIgASgLMhQuYXZhLnYxLkRlY2lzaW9uTm9kZVIFdmFsdWU6AjgB",
+            "QgkKB19hbnN3ZXJKBAgCEANSCHF1ZXN0aW9uIr4BCgpDb25maWRlbmNlEi4K",
+            "BWxldmVsGAEgASgOMhguYXZhLnYxLkNvbmZpZGVuY2UuTGV2ZWxSBWxldmVs",
+            "EjEKBXZhbHVlGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFsdWVS",
+            "BXZhbHVlIk0KBUxldmVsEgsKB1VOS05PV04QABIMCghWRVJZX0xPVxABEgcK",
+            "A0xPVxACEgcKA01JRBADEggKBEhJR0gQBBINCglWRVJZX0hJR0gQBSozCgVN",
+            "b2RlbBIICgRRV0VOEAASCAoEQ0xFRhABEggKBEJFUlQQAhIMCghSRVJBTktF",
+            "UhADMtYEChFQcmVkaWN0aW9uU2VydmljZRJmCgZEZWNpZGUSFS5hdmEudjEu",
+            "RGVjaWRlUmVxdWVzdBoWLmF2YS52MS5EZWNpZGVSZXNwb25zZSItgtPkkwIn",
+            "IiIvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX06ZGVjaWRlOgEqEn8KC0dl",
+            "dERlY2lzaW9uEhouYXZhLnYxLkdldERlY2lzaW9uUmVxdWVzdBoWLmF2YS52",
+            "MS5EZWNpZGVSZXNwb25zZSI8gtPkkwI2EjQvdjIvZGF0YXNldHMve2RhdGFz",
+            "ZXRfbmFtZX0vZGVjaXNpb25zL3tkZWNpc2lvbl9yZWZ9Eo4BCgxHZXRQcm9j",
+            "ZWR1cmUSGy5hdmEudjEuR2V0UHJvY2VkdXJlUmVxdWVzdBocLmF2YS52MS5H",
+            "ZXRQcm9jZWR1cmVSZXNwb25zZSJDgtPkkwI9EjsvdjIvZGF0YXNldHMve2Rh",
+            "dGFzZXRfbmFtZX0vb3V0cHV0cy97b3V0cHV0X25hbWV9L3Byb2NlZHVyZRKR",
+            "AQoPR2V0RGVjaXNpb25QYXRoEhouYXZhLnYxLkdldERlY2lzaW9uUmVxdWVz",
+            "dBofLmF2YS52MS5HZXREZWNpc2lvblBhdGhSZXNwb25zZSJBgtPkkwI7Ejkv",
+            "djIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX0vZGVjaXNpb25zL3tkZWNpc2lv",
+            "bl9yZWZ9L3BhdGgaM5JBMBIuRGVjaWRlIG91dHB1dHMgd2l0aCBhIGRhdGFz",
+            "ZXQncyBBVkEgcHJvY2VkdXJlLkLDAQoPYWkudmlzbWEuYXZhLnYxQhZQcmVk",
+            "aWN0aW9uU2VydmljZVByb3RvUAFaKmdpdGh1Yi5jb20vZS1jb25vbWljL3Zt",
+            "bGFwaXMvZ2VuL2dvL2F2YS92MaICA0FYWKoCBkF2YS5WMcoCBkF2YVxWMeIC",
+            "EkF2YVxWMVxHUEJNZXRhZGF0YeoCB0F2YTo6VjGSQTISCQoDQVZBMgJ2MSoB",
+            "AjIQYXBwbGljYXRpb24vanNvbjoQYXBwbGljYXRpb24vanNvbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ava.V1.Model), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.DecideRequest), global::Ava.V1.DecideRequest.Parser, new[]{ "DatasetName", "OutputName", "Fields", "Model" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.DecideResponse), global::Ava.V1.DecideResponse.Parser, new[]{ "Value", "Escalated", "Steps", "ProcedureVersion", "DecisionRef", "Escalation", "DecidedAt" }, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.DecideResponse), global::Ava.V1.DecideResponse.Parser, new[]{ "Value", "Escalated", "Steps", "ProcedureVersion", "DecisionRef", "Escalation", "DecidedAt", "Path" }, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.WalkedStep), global::Ava.V1.WalkedStep.Parser, new[]{ "Answer", "Confidence", "StepId", "Facts", "Branch", "Predicate" }, new[]{ "Answer" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.TakenBranch), global::Ava.V1.TakenBranch.Parser, new[]{ "BranchId", "Label", "NextStepId", "OutputValue", "Escalates" }, new[]{ "Outcome" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.V1.Escalation), global::Ava.V1.Escalation.Parser, new[]{ "Kind", "StepId" }, null, new[]{ typeof(global::Ava.V1.Escalation.Types.Kind) }, null, null),
@@ -497,6 +497,7 @@ namespace Ava.V1 {
       decisionRef_ = other.decisionRef_;
       escalation_ = other.escalation_ != null ? other.escalation_.Clone() : null;
       decidedAt_ = other.decidedAt_ != null ? other.decidedAt_.Clone() : null;
+      path_ = other.path_ != null ? other.path_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -556,7 +557,7 @@ namespace Ava.V1 {
         = pb::FieldCodec.ForMessage(26, global::Ava.V1.WalkedStep.Parser);
     private readonly pbc::RepeatedField<global::Ava.V1.WalkedStep> steps_ = new pbc::RepeatedField<global::Ava.V1.WalkedStep>();
     /// <summary>
-    /// The steps walked, root first
+    /// Not set; the walk is in path
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -624,6 +625,21 @@ namespace Ava.V1 {
       }
     }
 
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 8;
+    private global::Ava.V1.DecisionNode path_;
+    /// <summary>
+    /// The walk nested like the procedure's tree; absent when it cannot be shown as a path
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ava.V1.DecisionNode Path {
+      get { return path_; }
+      set {
+        path_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -646,6 +662,7 @@ namespace Ava.V1 {
       if (DecisionRef != other.DecisionRef) return false;
       if (!object.Equals(Escalation, other.Escalation)) return false;
       if (!object.Equals(DecidedAt, other.DecidedAt)) return false;
+      if (!object.Equals(Path, other.Path)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -660,6 +677,7 @@ namespace Ava.V1 {
       if (DecisionRef.Length != 0) hash ^= DecisionRef.GetHashCode();
       if (escalation_ != null) hash ^= Escalation.GetHashCode();
       if (decidedAt_ != null) hash ^= DecidedAt.GetHashCode();
+      if (path_ != null) hash ^= Path.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -703,6 +721,10 @@ namespace Ava.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(DecidedAt);
       }
+      if (path_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Path);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -738,6 +760,10 @@ namespace Ava.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(DecidedAt);
       }
+      if (path_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Path);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -766,6 +792,9 @@ namespace Ava.V1 {
       }
       if (decidedAt_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DecidedAt);
+      }
+      if (path_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Path);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -803,6 +832,12 @@ namespace Ava.V1 {
           DecidedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         DecidedAt.MergeFrom(other.DecidedAt);
+      }
+      if (other.path_ != null) {
+        if (path_ == null) {
+          Path = new global::Ava.V1.DecisionNode();
+        }
+        Path.MergeFrom(other.Path);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -857,6 +892,13 @@ namespace Ava.V1 {
             input.ReadMessage(DecidedAt);
             break;
           }
+          case 66: {
+            if (path_ == null) {
+              Path = new global::Ava.V1.DecisionNode();
+            }
+            input.ReadMessage(Path);
+            break;
+          }
         }
       }
     #endif
@@ -908,6 +950,13 @@ namespace Ava.V1 {
               DecidedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(DecidedAt);
+            break;
+          }
+          case 66: {
+            if (path_ == null) {
+              Path = new global::Ava.V1.DecisionNode();
+            }
+            input.ReadMessage(Path);
             break;
           }
         }

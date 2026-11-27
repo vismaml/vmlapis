@@ -569,7 +569,8 @@ proto.ava.v1.DecideResponse.toObject = function(includeInstance, msg) {
     procedureVersion: jspb.Message.getFieldWithDefault(msg, 4, 0),
     decisionRef: jspb.Message.getFieldWithDefault(msg, 5, ""),
     escalation: (f = msg.getEscalation()) && proto.ava.v1.Escalation.toObject(includeInstance, f),
-    decidedAt: (f = msg.getDecidedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    decidedAt: (f = msg.getDecidedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    path: (f = msg.getPath()) && proto.ava.v1.DecisionNode.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -636,6 +637,11 @@ proto.ava.v1.DecideResponse.deserializeBinaryFromReader = function(msg, reader) 
       var value = new google_protobuf_timestamp_pb.Timestamp;
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setDecidedAt(value);
+      break;
+    case 8:
+      var value = new proto.ava.v1.DecisionNode;
+      reader.readMessage(value,proto.ava.v1.DecisionNode.deserializeBinaryFromReader);
+      msg.setPath(value);
       break;
     default:
       reader.skipField();
@@ -716,6 +722,14 @@ proto.ava.v1.DecideResponse.serializeBinaryToWriter = function(message, writer) 
       7,
       f,
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getPath();
+  if (f != null) {
+    writer.writeMessage(
+      8,
+      f,
+      proto.ava.v1.DecisionNode.serializeBinaryToWriter
     );
   }
 };
@@ -920,6 +934,43 @@ proto.ava.v1.DecideResponse.prototype.clearDecidedAt = function() {
  */
 proto.ava.v1.DecideResponse.prototype.hasDecidedAt = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional DecisionNode path = 8;
+ * @return {?proto.ava.v1.DecisionNode}
+ */
+proto.ava.v1.DecideResponse.prototype.getPath = function() {
+  return /** @type{?proto.ava.v1.DecisionNode} */ (
+    jspb.Message.getWrapperField(this, proto.ava.v1.DecisionNode, 8));
+};
+
+
+/**
+ * @param {?proto.ava.v1.DecisionNode|undefined} value
+ * @return {!proto.ava.v1.DecideResponse} returns this
+*/
+proto.ava.v1.DecideResponse.prototype.setPath = function(value) {
+  return jspb.Message.setWrapperField(this, 8, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ava.v1.DecideResponse} returns this
+ */
+proto.ava.v1.DecideResponse.prototype.clearPath = function() {
+  return this.setPath(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ava.v1.DecideResponse.prototype.hasPath = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 

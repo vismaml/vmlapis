@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ava.v1.WalkedStep> steps_;
   /**
    * <pre>
-   * The steps walked, root first
+   * Not set; the walk is in path
    * </pre>
    *
    * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The steps walked, root first
+   * Not set; the walk is in path
    * </pre>
    *
    * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -148,7 +148,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The steps walked, root first
+   * Not set; the walk is in path
    * </pre>
    *
    * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The steps walked, root first
+   * Not set; the walk is in path
    * </pre>
    *
    * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The steps walked, root first
+   * Not set; the walk is in path
    * </pre>
    *
    * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -319,6 +319,44 @@ private static final long serialVersionUID = 0L;
     return decidedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : decidedAt_;
   }
 
+  public static final int PATH_FIELD_NUMBER = 8;
+  private ai.visma.ava.v1.DecisionNode path_;
+  /**
+   * <pre>
+   * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+   * </pre>
+   *
+   * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+   * @return Whether the path field is set.
+   */
+  @java.lang.Override
+  public boolean hasPath() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+   * </pre>
+   *
+   * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+   * @return The path.
+   */
+  @java.lang.Override
+  public ai.visma.ava.v1.DecisionNode getPath() {
+    return path_ == null ? ai.visma.ava.v1.DecisionNode.getDefaultInstance() : path_;
+  }
+  /**
+   * <pre>
+   * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+   * </pre>
+   *
+   * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ava.v1.DecisionNodeOrBuilder getPathOrBuilder() {
+    return path_ == null ? ai.visma.ava.v1.DecisionNode.getDefaultInstance() : path_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -354,6 +392,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(7, getDecidedAt());
     }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(8, getPath());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -388,6 +429,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getDecidedAt());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getPath());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -427,6 +472,11 @@ private static final long serialVersionUID = 0L;
       if (!getDecidedAt()
           .equals(other.getDecidedAt())) return false;
     }
+    if (hasPath() != other.hasPath()) return false;
+    if (hasPath()) {
+      if (!getPath()
+          .equals(other.getPath())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -460,6 +510,10 @@ private static final long serialVersionUID = 0L;
     if (hasDecidedAt()) {
       hash = (37 * hash) + DECIDED_AT_FIELD_NUMBER;
       hash = (53 * hash) + getDecidedAt().hashCode();
+    }
+    if (hasPath()) {
+      hash = (37 * hash) + PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getPath().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -594,6 +648,7 @@ private static final long serialVersionUID = 0L;
         getStepsFieldBuilder();
         getEscalationFieldBuilder();
         getDecidedAtFieldBuilder();
+        getPathFieldBuilder();
       }
     }
     @java.lang.Override
@@ -620,6 +675,11 @@ private static final long serialVersionUID = 0L;
       if (decidedAtBuilder_ != null) {
         decidedAtBuilder_.dispose();
         decidedAtBuilder_ = null;
+      }
+      path_ = null;
+      if (pathBuilder_ != null) {
+        pathBuilder_.dispose();
+        pathBuilder_ = null;
       }
       return this;
     }
@@ -693,6 +753,12 @@ private static final long serialVersionUID = 0L;
             : decidedAtBuilder_.build();
         to_bitField0_ |= 0x00000004;
       }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.path_ = pathBuilder_ == null
+            ? path_
+            : pathBuilder_.build();
+        to_bitField0_ |= 0x00000008;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -755,6 +821,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDecidedAt()) {
         mergeDecidedAt(other.getDecidedAt());
+      }
+      if (other.hasPath()) {
+        mergePath(other.getPath());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -829,6 +898,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 58
+            case 66: {
+              input.readMessage(
+                  getPathFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1007,7 +1083,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1021,7 +1097,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1035,7 +1111,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1049,7 +1125,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1070,7 +1146,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1088,7 +1164,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1108,7 +1184,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1129,7 +1205,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1147,7 +1223,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1165,7 +1241,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1184,7 +1260,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1201,7 +1277,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1218,7 +1294,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1229,7 +1305,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1243,7 +1319,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1258,7 +1334,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1269,7 +1345,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1281,7 +1357,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The steps walked, root first
+     * Not set; the walk is in path
      * </pre>
      *
      * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -1753,6 +1829,163 @@ private static final long serialVersionUID = 0L;
         decidedAt_ = null;
       }
       return decidedAtBuilder_;
+    }
+
+    private ai.visma.ava.v1.DecisionNode path_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ava.v1.DecisionNode, ai.visma.ava.v1.DecisionNode.Builder, ai.visma.ava.v1.DecisionNodeOrBuilder> pathBuilder_;
+    /**
+     * <pre>
+     * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     * @return Whether the path field is set.
+     */
+    public boolean hasPath() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     * @return The path.
+     */
+    public ai.visma.ava.v1.DecisionNode getPath() {
+      if (pathBuilder_ == null) {
+        return path_ == null ? ai.visma.ava.v1.DecisionNode.getDefaultInstance() : path_;
+      } else {
+        return pathBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     */
+    public Builder setPath(ai.visma.ava.v1.DecisionNode value) {
+      if (pathBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        path_ = value;
+      } else {
+        pathBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     */
+    public Builder setPath(
+        ai.visma.ava.v1.DecisionNode.Builder builderForValue) {
+      if (pathBuilder_ == null) {
+        path_ = builderForValue.build();
+      } else {
+        pathBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     */
+    public Builder mergePath(ai.visma.ava.v1.DecisionNode value) {
+      if (pathBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0) &&
+          path_ != null &&
+          path_ != ai.visma.ava.v1.DecisionNode.getDefaultInstance()) {
+          getPathBuilder().mergeFrom(value);
+        } else {
+          path_ = value;
+        }
+      } else {
+        pathBuilder_.mergeFrom(value);
+      }
+      if (path_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     */
+    public Builder clearPath() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      path_ = null;
+      if (pathBuilder_ != null) {
+        pathBuilder_.dispose();
+        pathBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     */
+    public ai.visma.ava.v1.DecisionNode.Builder getPathBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return getPathFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     */
+    public ai.visma.ava.v1.DecisionNodeOrBuilder getPathOrBuilder() {
+      if (pathBuilder_ != null) {
+        return pathBuilder_.getMessageOrBuilder();
+      } else {
+        return path_ == null ?
+            ai.visma.ava.v1.DecisionNode.getDefaultInstance() : path_;
+      }
+    }
+    /**
+     * <pre>
+     * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+     * </pre>
+     *
+     * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ava.v1.DecisionNode, ai.visma.ava.v1.DecisionNode.Builder, ai.visma.ava.v1.DecisionNodeOrBuilder> 
+        getPathFieldBuilder() {
+      if (pathBuilder_ == null) {
+        pathBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ava.v1.DecisionNode, ai.visma.ava.v1.DecisionNode.Builder, ai.visma.ava.v1.DecisionNodeOrBuilder>(
+                getPath(),
+                getParentForChildren(),
+                isClean());
+        path_ = null;
+      }
+      return pathBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ava.v1.DecideResponse)

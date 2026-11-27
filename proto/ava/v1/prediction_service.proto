@@ -73,7 +73,7 @@ message DecideResponse {
   optional string value = 1;
   // True when the procedure did not decide
   bool escalated = 2;
-  // The steps walked, root first
+  // Not set; the walk is in path
   repeated WalkedStep steps = 3;
   // Version of the procedure that decided
   int32 procedure_version = 4;
@@ -83,6 +83,8 @@ message DecideResponse {
   Escalation escalation = 6;
   // When the decision was made; set only by GetDecision
   google.protobuf.Timestamp decided_at = 7;
+  // The walk nested like the procedure's tree; absent when it cannot be shown as a path
+  DecisionNode path = 8;
 }
 
 message WalkedStep {

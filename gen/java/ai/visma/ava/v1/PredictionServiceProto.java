@@ -121,7 +121,7 @@ public final class PredictionServiceProto {
       "(\0132!.ava.v1.DecideRequest.FieldsEntryR\006f" +
       "ields\022-\n\005model\030\004 \001(\0162\r.ava.v1.ModelB\010\372B\005" +
       "\202\001\002\020\001R\005model\0329\n\013FieldsEntry\022\020\n\003key\030\001 \001(\t" +
-      "R\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\274\002\n\016Deci" +
+      "R\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\346\002\n\016Deci" +
       "deResponse\022\031\n\005value\030\001 \001(\tH\000R\005value\210\001\001\022\034\n" +
       "\tescalated\030\002 \001(\010R\tescalated\022(\n\005steps\030\003 \003" +
       "(\0132\022.ava.v1.WalkedStepR\005steps\022+\n\021procedu" +
@@ -129,87 +129,88 @@ public final class PredictionServiceProto {
       "cision_ref\030\005 \001(\tR\013decisionRef\0222\n\nescalat" +
       "ion\030\006 \001(\0132\022.ava.v1.EscalationR\nescalatio" +
       "n\0229\n\ndecided_at\030\007 \001(\0132\032.google.protobuf." +
-      "TimestampR\tdecidedAtB\010\n\006_value\"\362\001\n\nWalke" +
-      "dStep\022\033\n\006answer\030\002 \001(\tH\000R\006answer\210\001\001\0222\n\nco" +
-      "nfidence\030\003 \001(\0132\022.ava.v1.ConfidenceR\nconf" +
-      "idence\022\027\n\007step_id\030\004 \001(\tR\006stepId\022\024\n\005facts" +
-      "\030\005 \003(\tR\005facts\022+\n\006branch\030\006 \001(\0132\023.ava.v1.T" +
-      "akenBranchR\006branch\022\034\n\tpredicate\030\007 \001(\tR\tp" +
-      "redicateB\t\n\007_answerJ\004\010\001\020\002R\010question\"\264\001\n\013" +
-      "TakenBranch\022\033\n\tbranch_id\030\001 \001(\tR\010branchId" +
-      "\022\024\n\005label\030\002 \001(\tR\005label\022\"\n\014next_step_id\030\003" +
-      " \001(\tH\000R\nnextStepId\022#\n\014output_value\030\004 \001(\t" +
-      "H\000R\013outputValue\022\036\n\tescalates\030\005 \001(\010H\000R\tes" +
-      "calatesB\t\n\007outcome\"\321\001\n\nEscalation\022+\n\004kin" +
-      "d\030\001 \001(\0162\027.ava.v1.Escalation.KindR\004kind\022\027" +
-      "\n\007step_id\030\002 \001(\tR\006stepId\"}\n\004Kind\022\024\n\020KIND_" +
-      "UNSPECIFIED\020\000\022\027\n\023MISSING_INFORMATION\020\001\022\026" +
-      "\n\022NO_MATCHING_BRANCH\020\002\022\030\n\024PROCEDURE_ESCA" +
-      "LATION\020\003\022\024\n\020EVALUATION_ERROR\020\004\"\271\001\n\022GetDe" +
-      "cisionRequest\022K\n\014dataset_name\030\001 \001(\tB(\372B%" +
-      "r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013d" +
-      "atasetName\022,\n\014decision_ref\030\002 \001(\tB\t\372B\006r\004\020" +
-      "\001($R\013decisionRef\022(\n\013output_name\030\003 \001(\tB\007\372" +
-      "B\004r\002\020\001R\noutputName\"\257\001\n\023GetProcedureReque" +
-      "st\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-" +
-      "Za-z0-9.][A-Za-z0-9_.>-]*$R\013datasetName\022" +
-      "(\n\013output_name\030\002 \001(\tB\007\372B\004r\002\020\001R\noutputNam" +
-      "e\022!\n\007version\030\003 \001(\005B\007\372B\004\032\002(\000R\007version\"n\n\024" +
-      "GetProcedureResponse\022+\n\021procedure_versio" +
-      "n\030\001 \001(\005R\020procedureVersion\022)\n\004tree\030\002 \001(\0132" +
-      "\025.ava.v1.ProcedureNodeR\004tree\"\202\002\n\rProcedu" +
-      "reNode\022\034\n\tpredicate\030\001 \001(\tR\tpredicate\022<\n\007" +
-      "answers\030\002 \003(\0132\".ava.v1.ProcedureNode.Ans" +
-      "wersEntryR\007answers\022\037\n\013target_name\030\003 \001(\tR" +
-      "\ntargetName\022!\n\014target_value\030\004 \001(\tR\013targe" +
-      "tValue\032Q\n\014AnswersEntry\022\020\n\003key\030\001 \001(\tR\003key" +
-      "\022+\n\005value\030\002 \001(\0132\025.ava.v1.ProcedureNodeR\005" +
-      "value:\0028\001\"\305\002\n\027GetDecisionPathResponse\022+\n" +
-      "\021procedure_version\030\001 \001(\005R\020procedureVersi" +
-      "on\022!\n\014decision_ref\030\002 \001(\tR\013decisionRef\0229\n" +
-      "\ndecided_at\030\003 \001(\0132\032.google.protobuf.Time" +
-      "stampR\tdecidedAt\022(\n\004path\030\004 \001(\0132\024.ava.v1." +
-      "DecisionNodeR\004path\022\031\n\005value\030\005 \001(\tH\000R\005val" +
-      "ue\210\001\001\022\034\n\tescalated\030\006 \001(\010R\tescalated\0222\n\ne" +
-      "scalation\030\007 \001(\0132\022.ava.v1.EscalationR\nesc" +
-      "alationB\010\n\006_value\"\237\003\n\014DecisionNode\022\034\n\tpr" +
-      "edicate\030\001 \001(\tR\tpredicate\022\033\n\006answer\030\003 \001(\t" +
-      "H\000R\006answer\210\001\001\0222\n\nconfidence\030\004 \001(\0132\022.ava." +
-      "v1.ConfidenceR\nconfidence\022;\n\007answers\030\005 \003" +
-      "(\0132!.ava.v1.DecisionNode.AnswersEntryR\007a" +
-      "nswers\022\037\n\013target_name\030\006 \001(\tR\ntargetName\022" +
-      "!\n\014target_value\030\007 \001(\tR\013targetValue\0222\n\nes" +
-      "calation\030\010 \001(\0132\022.ava.v1.EscalationR\nesca" +
-      "lation\032P\n\014AnswersEntry\022\020\n\003key\030\001 \001(\tR\003key" +
-      "\022*\n\005value\030\002 \001(\0132\024.ava.v1.DecisionNodeR\005v" +
-      "alue:\0028\001B\t\n\007_answerJ\004\010\002\020\003R\010question\"\276\001\n\n" +
-      "Confidence\022.\n\005level\030\001 \001(\0162\030.ava.v1.Confi" +
-      "dence.LevelR\005level\0221\n\005value\030\002 \001(\0132\033.goog" +
-      "le.protobuf.FloatValueR\005value\"M\n\005Level\022\013" +
-      "\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MI" +
-      "D\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005*3\n\005Model\022\010\n" +
-      "\004QWEN\020\000\022\010\n\004CLEF\020\001\022\010\n\004BERT\020\002\022\014\n\010RERANKER\020" +
-      "\0032\326\004\n\021PredictionService\022f\n\006Decide\022\025.ava." +
-      "v1.DecideRequest\032\026.ava.v1.DecideResponse" +
-      "\"-\202\323\344\223\002\'\"\"/v2/datasets/{dataset_name}:de" +
-      "cide:\001*\022\177\n\013GetDecision\022\032.ava.v1.GetDecis" +
-      "ionRequest\032\026.ava.v1.DecideResponse\"<\202\323\344\223" +
-      "\0026\0224/v2/datasets/{dataset_name}/decision" +
-      "s/{decision_ref}\022\216\001\n\014GetProcedure\022\033.ava." +
-      "v1.GetProcedureRequest\032\034.ava.v1.GetProce" +
-      "dureResponse\"C\202\323\344\223\002=\022;/v2/datasets/{data" +
-      "set_name}/outputs/{output_name}/procedur" +
-      "e\022\221\001\n\017GetDecisionPath\022\032.ava.v1.GetDecisi" +
-      "onRequest\032\037.ava.v1.GetDecisionPathRespon" +
-      "se\"A\202\323\344\223\002;\0229/v2/datasets/{dataset_name}/" +
-      "decisions/{decision_ref}/path\0323\222A0\022.Deci" +
-      "de outputs with a dataset\'s AVA procedur" +
-      "e.B\303\001\n\017ai.visma.ava.v1B\026PredictionServic" +
-      "eProtoP\001Z*github.com/e-conomic/vmlapis/g" +
-      "en/go/ava/v1\242\002\003AXX\252\002\006Ava.V1\312\002\006Ava\\V1\342\002\022A" +
-      "va\\V1\\GPBMetadata\352\002\007Ava::V1\222A2\022\t\n\003AVA2\002v" +
-      "1*\001\0022\020application/json:\020application/json" +
-      "b\006proto3"
+      "TimestampR\tdecidedAt\022(\n\004path\030\010 \001(\0132\024.ava" +
+      ".v1.DecisionNodeR\004pathB\010\n\006_value\"\362\001\n\nWal" +
+      "kedStep\022\033\n\006answer\030\002 \001(\tH\000R\006answer\210\001\001\0222\n\n" +
+      "confidence\030\003 \001(\0132\022.ava.v1.ConfidenceR\nco" +
+      "nfidence\022\027\n\007step_id\030\004 \001(\tR\006stepId\022\024\n\005fac" +
+      "ts\030\005 \003(\tR\005facts\022+\n\006branch\030\006 \001(\0132\023.ava.v1" +
+      ".TakenBranchR\006branch\022\034\n\tpredicate\030\007 \001(\tR" +
+      "\tpredicateB\t\n\007_answerJ\004\010\001\020\002R\010question\"\264\001" +
+      "\n\013TakenBranch\022\033\n\tbranch_id\030\001 \001(\tR\010branch" +
+      "Id\022\024\n\005label\030\002 \001(\tR\005label\022\"\n\014next_step_id" +
+      "\030\003 \001(\tH\000R\nnextStepId\022#\n\014output_value\030\004 \001" +
+      "(\tH\000R\013outputValue\022\036\n\tescalates\030\005 \001(\010H\000R\t" +
+      "escalatesB\t\n\007outcome\"\321\001\n\nEscalation\022+\n\004k" +
+      "ind\030\001 \001(\0162\027.ava.v1.Escalation.KindR\004kind" +
+      "\022\027\n\007step_id\030\002 \001(\tR\006stepId\"}\n\004Kind\022\024\n\020KIN" +
+      "D_UNSPECIFIED\020\000\022\027\n\023MISSING_INFORMATION\020\001" +
+      "\022\026\n\022NO_MATCHING_BRANCH\020\002\022\030\n\024PROCEDURE_ES" +
+      "CALATION\020\003\022\024\n\020EVALUATION_ERROR\020\004\"\271\001\n\022Get" +
+      "DecisionRequest\022K\n\014dataset_name\030\001 \001(\tB(\372" +
+      "B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R" +
+      "\013datasetName\022,\n\014decision_ref\030\002 \001(\tB\t\372B\006r" +
+      "\004\020\001($R\013decisionRef\022(\n\013output_name\030\003 \001(\tB" +
+      "\007\372B\004r\002\020\001R\noutputName\"\257\001\n\023GetProcedureReq" +
+      "uest\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[" +
+      "A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013datasetNam" +
+      "e\022(\n\013output_name\030\002 \001(\tB\007\372B\004r\002\020\001R\noutputN" +
+      "ame\022!\n\007version\030\003 \001(\005B\007\372B\004\032\002(\000R\007version\"n" +
+      "\n\024GetProcedureResponse\022+\n\021procedure_vers" +
+      "ion\030\001 \001(\005R\020procedureVersion\022)\n\004tree\030\002 \001(" +
+      "\0132\025.ava.v1.ProcedureNodeR\004tree\"\202\002\n\rProce" +
+      "dureNode\022\034\n\tpredicate\030\001 \001(\tR\tpredicate\022<" +
+      "\n\007answers\030\002 \003(\0132\".ava.v1.ProcedureNode.A" +
+      "nswersEntryR\007answers\022\037\n\013target_name\030\003 \001(" +
+      "\tR\ntargetName\022!\n\014target_value\030\004 \001(\tR\013tar" +
+      "getValue\032Q\n\014AnswersEntry\022\020\n\003key\030\001 \001(\tR\003k" +
+      "ey\022+\n\005value\030\002 \001(\0132\025.ava.v1.ProcedureNode" +
+      "R\005value:\0028\001\"\305\002\n\027GetDecisionPathResponse\022" +
+      "+\n\021procedure_version\030\001 \001(\005R\020procedureVer" +
+      "sion\022!\n\014decision_ref\030\002 \001(\tR\013decisionRef\022" +
+      "9\n\ndecided_at\030\003 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\tdecidedAt\022(\n\004path\030\004 \001(\0132\024.ava.v" +
+      "1.DecisionNodeR\004path\022\031\n\005value\030\005 \001(\tH\000R\005v" +
+      "alue\210\001\001\022\034\n\tescalated\030\006 \001(\010R\tescalated\0222\n" +
+      "\nescalation\030\007 \001(\0132\022.ava.v1.EscalationR\ne" +
+      "scalationB\010\n\006_value\"\237\003\n\014DecisionNode\022\034\n\t" +
+      "predicate\030\001 \001(\tR\tpredicate\022\033\n\006answer\030\003 \001" +
+      "(\tH\000R\006answer\210\001\001\0222\n\nconfidence\030\004 \001(\0132\022.av" +
+      "a.v1.ConfidenceR\nconfidence\022;\n\007answers\030\005" +
+      " \003(\0132!.ava.v1.DecisionNode.AnswersEntryR" +
+      "\007answers\022\037\n\013target_name\030\006 \001(\tR\ntargetNam" +
+      "e\022!\n\014target_value\030\007 \001(\tR\013targetValue\0222\n\n" +
+      "escalation\030\010 \001(\0132\022.ava.v1.EscalationR\nes" +
+      "calation\032P\n\014AnswersEntry\022\020\n\003key\030\001 \001(\tR\003k" +
+      "ey\022*\n\005value\030\002 \001(\0132\024.ava.v1.DecisionNodeR" +
+      "\005value:\0028\001B\t\n\007_answerJ\004\010\002\020\003R\010question\"\276\001" +
+      "\n\nConfidence\022.\n\005level\030\001 \001(\0162\030.ava.v1.Con" +
+      "fidence.LevelR\005level\0221\n\005value\030\002 \001(\0132\033.go" +
+      "ogle.protobuf.FloatValueR\005value\"M\n\005Level" +
+      "\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003" +
+      "MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005*3\n\005Model\022" +
+      "\010\n\004QWEN\020\000\022\010\n\004CLEF\020\001\022\010\n\004BERT\020\002\022\014\n\010RERANKE" +
+      "R\020\0032\326\004\n\021PredictionService\022f\n\006Decide\022\025.av" +
+      "a.v1.DecideRequest\032\026.ava.v1.DecideRespon" +
+      "se\"-\202\323\344\223\002\'\"\"/v2/datasets/{dataset_name}:" +
+      "decide:\001*\022\177\n\013GetDecision\022\032.ava.v1.GetDec" +
+      "isionRequest\032\026.ava.v1.DecideResponse\"<\202\323" +
+      "\344\223\0026\0224/v2/datasets/{dataset_name}/decisi" +
+      "ons/{decision_ref}\022\216\001\n\014GetProcedure\022\033.av" +
+      "a.v1.GetProcedureRequest\032\034.ava.v1.GetPro" +
+      "cedureResponse\"C\202\323\344\223\002=\022;/v2/datasets/{da" +
+      "taset_name}/outputs/{output_name}/proced" +
+      "ure\022\221\001\n\017GetDecisionPath\022\032.ava.v1.GetDeci" +
+      "sionRequest\032\037.ava.v1.GetDecisionPathResp" +
+      "onse\"A\202\323\344\223\002;\0229/v2/datasets/{dataset_name" +
+      "}/decisions/{decision_ref}/path\0323\222A0\022.De" +
+      "cide outputs with a dataset\'s AVA proced" +
+      "ure.B\303\001\n\017ai.visma.ava.v1B\026PredictionServ" +
+      "iceProtoP\001Z*github.com/e-conomic/vmlapis" +
+      "/gen/go/ava/v1\242\002\003AXX\252\002\006Ava.V1\312\002\006Ava\\V1\342\002" +
+      "\022Ava\\V1\\GPBMetadata\352\002\007Ava::V1\222A2\022\t\n\003AVA2" +
+      "\002v1*\001\0022\020application/json:\020application/js" +
+      "onb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -237,7 +238,7 @@ public final class PredictionServiceProto {
     internal_static_ava_v1_DecideResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ava_v1_DecideResponse_descriptor,
-        new java.lang.String[] { "Value", "Escalated", "Steps", "ProcedureVersion", "DecisionRef", "Escalation", "DecidedAt", });
+        new java.lang.String[] { "Value", "Escalated", "Steps", "ProcedureVersion", "DecisionRef", "Escalation", "DecidedAt", "Path", });
     internal_static_ava_v1_WalkedStep_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ava_v1_WalkedStep_fieldAccessorTable = new

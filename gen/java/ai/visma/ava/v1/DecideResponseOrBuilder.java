@@ -50,7 +50,7 @@ public interface DecideResponseOrBuilder extends
 
   /**
    * <pre>
-   * The steps walked, root first
+   * Not set; the walk is in path
    * </pre>
    *
    * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -59,7 +59,7 @@ public interface DecideResponseOrBuilder extends
       getStepsList();
   /**
    * <pre>
-   * The steps walked, root first
+   * Not set; the walk is in path
    * </pre>
    *
    * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -67,7 +67,7 @@ public interface DecideResponseOrBuilder extends
   ai.visma.ava.v1.WalkedStep getSteps(int index);
   /**
    * <pre>
-   * The steps walked, root first
+   * Not set; the walk is in path
    * </pre>
    *
    * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -75,7 +75,7 @@ public interface DecideResponseOrBuilder extends
   int getStepsCount();
   /**
    * <pre>
-   * The steps walked, root first
+   * Not set; the walk is in path
    * </pre>
    *
    * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -84,7 +84,7 @@ public interface DecideResponseOrBuilder extends
       getStepsOrBuilderList();
   /**
    * <pre>
-   * The steps walked, root first
+   * Not set; the walk is in path
    * </pre>
    *
    * <code>repeated .ava.v1.WalkedStep steps = 3 [json_name = "steps"];</code>
@@ -175,4 +175,31 @@ public interface DecideResponseOrBuilder extends
    * <code>.google.protobuf.Timestamp decided_at = 7 [json_name = "decidedAt"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getDecidedAtOrBuilder();
+
+  /**
+   * <pre>
+   * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+   * </pre>
+   *
+   * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+   * @return Whether the path field is set.
+   */
+  boolean hasPath();
+  /**
+   * <pre>
+   * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+   * </pre>
+   *
+   * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+   * @return The path.
+   */
+  ai.visma.ava.v1.DecisionNode getPath();
+  /**
+   * <pre>
+   * The walk nested like the procedure's tree; absent when it cannot be shown as a path
+   * </pre>
+   *
+   * <code>.ava.v1.DecisionNode path = 8 [json_name = "path"];</code>
+   */
+  ai.visma.ava.v1.DecisionNodeOrBuilder getPathOrBuilder();
 }
